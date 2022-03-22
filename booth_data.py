@@ -2,12 +2,19 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 import pandas as pd
+import openpyxl
+import urllib.request
+import requests
+import json
+
+event_list = ["dice01","df2204","game03","vidol04"] ###URL에 들어갈 행사 주소 문자열들을 리스트로 먼저 선언.
+
 
 #크롬드라이버로 원하는 url로 접속
-event_list = ["dice01","df2204","game03","vidol04"] ###URL에 들어갈 행사 주소 문자열들을 리스트로 먼저 선언.
 driver = webdriver.Chrome('/Users/jinwoojeong/Desktop/Study/DF/chromedriver')  ##크롬드라이버 실행해서 창을 띄움.
 
 for currunt_event in event_list:
+
     url = 'https://dongne.co/event/'+str(currunt_event)+'/circles?page=1&per_page=1000'
     driver.get(url)
     time.sleep(5) #로딩시간을 위해 지연.
@@ -20,12 +27,12 @@ for currunt_event in event_list:
 
     #가져올 css셀렉터를 리스트로 선언하고 빈 데이터프레임을 생성.
     div_list = ["div > div > div.col-sm-8.col-12","div > div > div.col-sm-12.col-12"]
-    save_df = pd.DataFrame(columns=['부스명','대표자','부스',"대표 작품(원작)","그 외 다루는 작품",'쁘띠존','캐릭터','커플링','커플링 성향','그 외 커플링','매체'])
+    save_df = pd.DataFrame(columns=['부스명','대표자','부스',"대표 작품(원작)","그 외 다루는 작품",'쁘띠존','캐릭터','커플링','커플링 성향','그 외 커플링','매체',"링크"])
 
     '''
-    반복문으로 부스데이터들을 리스트로 1차로 변환. 출력되는 형태 중,  key: value 형식으로 표형해야 하는 string값이 있으므로 리스트에서 
+    반복문으로 부스데이터들을 리스트로 1차로 변환. 출력되는 형태 중,  key: value 형식으로 표형해야 하는 string값이 있으므로 리스트에서
     딕셔너리 형태로 변환합니다.
-    그 후 딕셔너리의 key값과 데이터프레임의 열 값을 매치하여 한 행 씩 빈 데이터프레임에 추가합니다. 
+    그 후 딕셔너리의 key값과 데이터프레임의 열 값을 매치하여 한 행 씩 빈 데이터프레임에 추가합니다.
     '''
     for div_element in div_list:
         booth_titles = driver.find_elements_by_css_selector(div_element) #div_element는 line22에 있는 리스트의 원소들.
@@ -51,7 +58,6 @@ for currunt_event in event_list:
             list_range = range(0,list_len)
 
 
-
             for current_list_number in list_range: #리스트 반복문으로 돌면서 : 이 있으면 구분자로 슬라이싱후(1회만) 새 리스트에 추가하기.
                 if ":" in temp_list[current_list_number]:
                     divide_list = temp_list[current_list_number].split(":",1)
@@ -70,14 +76,13 @@ for currunt_event in event_list:
 
 
             second_list = string_list + first_list #맨 앞에 "부스명" 추가.
-            final_list = [] #마지막에 들어갈 리스트 선언
+            final_list = [] #마지막에 들어갈 리스트 선언&초기호
 
             # 리스트의 element들의 앞뒤 공백을 제거하기 위해 반복문으로 element를 돌면서 공백 삭제후, 새로운 리스트에 하나씩 추가합니다.
             for i in range(0,len(second_list)):
                 temp_string = second_list[i].strip()
                 final_list.append(temp_string)
             # print(final_list) #전체 리스트 확인
-
 
             # 딕셔너리로 만들기 위해 홀수번째 element는 key값으로, 짝수번째 element는 value값으로 나눠서 리스트를 만든 후 zip을 통해 딕셔너리를 생성
             key_index = final_list[0::2]
@@ -94,6 +99,10 @@ for currunt_event in event_list:
 
     print(save_df.head(10))
     save_df.to_csv(str(currunt_event)+"_booth_data.csv",encoding="utf-8-sig")
+
+
+
+
 
 
 
