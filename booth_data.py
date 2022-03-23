@@ -60,8 +60,9 @@ for currunt_event in event_list:
 
 
             list_len = len(temp_list)
-            list_range = range(0,list_len)
+            list_range = range(1,list_len)
 
+            first_list.append(temp_list[0].strip())# 부스명만 따로 예외 처리해서 넣도록 함. 앞에 넣었을때 : 구분자에 쓸려서 처리됨.
 
             for current_list_number in list_range: #리스트 반복문으로 돌면서 : 이 있으면 구분자로 슬라이싱후(1회만) 새 리스트에 추가하기.
                 if ":" in temp_list[current_list_number]:
@@ -70,7 +71,7 @@ for currunt_event in event_list:
                         first_list.append(divide_list[i]) #두개로 나뉘어져 있는데 리스트로 긁으면 안되니까 반복문으로 요소 추가하기
                 else:
                     first_list.append(temp_list[current_list_number]) # :가 없는건 그냥 추가하기
-
+            print(first_list)
 
             #필요없는 내용 딕셔너리로 만들기 전에 삭제하기
             first_list.remove('공유')

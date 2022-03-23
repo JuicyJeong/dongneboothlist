@@ -1,3 +1,5 @@
+import time
+
 import requests
 import json
 import pandas as pd
@@ -7,7 +9,7 @@ event_dict = {"다이스 페스타":event_list[0],"제 18회 디페스타":event
 day_dict = {"다이스 페스타":'day1',"제 18회 디페스타":"day1","제 3회 오락관":"day2", "제 4회 어나더 스테이지":"day2"}
 
 
-# event_list = ["novel02","df220102"] ###URL에 들어갈 행사 주소 문자열들을 리스트로 먼저 선언.
+# event_list = ["novel02","df220102"]
 # event_dict = {"아이소2회":event_list[0],"1월디페":event_list[1]}
 # day_dict = {"아이소2회":"일요일","1월디페":"토요일"}
 
@@ -23,21 +25,27 @@ for currunt_event in event_list:
     j_text = req.text
     j_data =json.loads(j_text)
 
-    srl_list = []
+    srl_dict ={}
 
     #부스 주소를 json에서 갖고와서 리스트에 저장하고 칼럼에 집어넣기.
     for i in range(0,len(j_data["list"])):
 
-        # print(j_data["list"][i]["application_srl"])
+        print(j_data["list"][i])
         booth_url ="https://dongne.co/event/" +str(currunt_event)+ "/circles/" +str(j_data["list"][i]["application_srl"])
-        srl_list.append(booth_url)
+        circle_name = str(j_data["list"][i]["circle_name"])
+        circle_name = circle_name.strip()
+        srl_dict[circle_name] = booth_url
         #부스명과 부스주소를 딕셔너리로 생성
-    print(srl_list)
-
+    print(srl_dict)
+#
     new_df = pd.read_csv(str(currunt_event) + "_booth_data.csv")
-    # print(new_df.info())
-    new_df["링크"] = srl_list
+    time.sleep(1)
+    for i in range(0,len(new_df)) :
 
+        df_circle_name = new_df.loc[i,"부스명"]
+        temp_address = srl_dict[df_circle_name]
+        new_df.loc[i, '링크'] = temp_address
+        print(temp_address)
     # print(new_df.head())
 
     if "Unnamed: 0" in new_df.columns:
@@ -75,6 +83,7 @@ for i in range(0,len(event_list)):
 total_df.to_csv("행사 부스 통합본.csv",index=False,encoding="utf-8-sig") #변수 처리 해둬야함
 
 
+######부스 요일 추가>>스프레드 시트에서 조건을 추가하기 위해 생성#############
 
 total_df = pd.read_csv("행사 부스 통합본.csv")
 
@@ -93,5 +102,6 @@ if "Unnamed: 0" in total_df.columns:
     total_df = total_df.drop(columns=["Unnamed: 0"])
 print(total_df.head())
 
+# total_df.style.Styler.hide_columns(subset="개최일")
 total_df.to_csv("행사 부스 통합본.csv",index=False,encoding="utf-8-sig") #변수 처리 해둬야함
 
