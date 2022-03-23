@@ -8,6 +8,8 @@ import requests
 import json
 
 event_list = ["dice01","df2204","game03","vidol04"] ###URL에 들어갈 행사 주소 문자열들을 리스트로 먼저 선언.
+# event_list = ["novel02","df220102"] ###URL에 들어갈 행사 주소 문자열들을 리스트로 먼저 선언.
+
 
 
 #크롬드라이버로 원하는 url로 접속
@@ -17,7 +19,9 @@ for currunt_event in event_list:
 
     url = 'https://dongne.co/event/'+str(currunt_event)+'/circles?page=1&per_page=1000'
     driver.get(url)
-    time.sleep(5) #로딩시간을 위해 지연.
+
+    print("페이지 로딩중...")
+    time.sleep(10) #로딩시간을 위해 지연.
 
     '''
     부스 페이지에는 부스컷(이미지)가 삽입되어있는지 아닌지에 따라서 따와야 하는 css셀렉터가 다릅니다.(가로열, 세로열 길이 값이 다르므로)
@@ -27,7 +31,8 @@ for currunt_event in event_list:
 
     #가져올 css셀렉터를 리스트로 선언하고 빈 데이터프레임을 생성.
     div_list = ["div > div > div.col-sm-8.col-12","div > div > div.col-sm-12.col-12"]
-    save_df = pd.DataFrame(columns=['부스명','대표자','부스',"대표 작품(원작)","그 외 다루는 작품",'쁘띠존','캐릭터','커플링','커플링 성향','그 외 커플링','매체',"링크"])
+    # save_df = pd.DataFrame(columns=['부스명','대표자','부스',"대표 작품(원작)","그 외 다루는 작품",'쁘띠존','캐릭터','커플링','커플링 성향','그 외 커플링','매체',"링크","부스위치"])
+    save_df = pd.DataFrame(columns=['부스명','대표자','위치','부스',"대표 작품(원작)","그 외 다루는 작품",'쁘띠존','캐릭터','커플링','커플링 성향','그 외 커플링','매체',"링크"])
 
     '''
     반복문으로 부스데이터들을 리스트로 1차로 변환. 출력되는 형태 중,  key: value 형식으로 표형해야 하는 string값이 있으므로 리스트에서
@@ -95,6 +100,8 @@ for currunt_event in event_list:
 
             #딕셔너리의 key값과 데이터프레임의 열 값을 매치하면서 한 행씩 데이터프레임에 값을 추가합니다.
             save_df.loc[len(save_df)] = dict_list
+            # save_df["부스위치"] = "업데이트 예정"
+
 
 
     print(save_df.head(10))

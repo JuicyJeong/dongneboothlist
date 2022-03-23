@@ -4,6 +4,12 @@ import pandas as pd
 
 event_list = ["dice01","df2204","game03","vidol04"] ###URL에 들어갈 행사 주소 문자열들을 리스트로 먼저 선언.
 event_dict = {"다이스 페스타":event_list[0],"제 18회 디페스타":event_list[1],"제 3회 오락관":event_list[2],"제 4회 어나더 스테이지":event_list[3]}
+day_dict = {"다이스 페스타":'day1',"제 18회 디페스타":"day1","제 3회 오락관":"day2", "제 4회 어나더 스테이지":"day2"}
+
+
+# event_list = ["novel02","df220102"] ###URL에 들어갈 행사 주소 문자열들을 리스트로 먼저 선언.
+# event_dict = {"아이소2회":event_list[0],"1월디페":event_list[1]}
+# day_dict = {"아이소2회":"일요일","1월디페":"토요일"}
 
 ### 부스 주소를 따로 api를 통해 갖고 오기
 for currunt_event in event_list:
@@ -29,9 +35,10 @@ for currunt_event in event_list:
     print(srl_list)
 
     new_df = pd.read_csv(str(currunt_event) + "_booth_data.csv")
-    print(new_df.info())
+    # print(new_df.info())
     new_df["링크"] = srl_list
-    print(new_df.head())
+
+    # print(new_df.head())
 
     if "Unnamed: 0" in new_df.columns:
         new_df = new_df.drop(columns=["Unnamed: 0"])
@@ -53,15 +60,38 @@ def get_key(val): #value 값으로 key값을 리턴하는 함수
 
     return "There is no such Key"
 
-
+#행사별 행사명 입력해두기
 total_df = pd.DataFrame()
 for i in range(0,len(event_list)):
 
     save_df= pd.read_csv(str(event_list[i])+"_booth_data.csv")
     save_df["행사명"] = str(get_key(event_list[i]))
     total_df = total_df.append(save_df)
+
     if "Unnamed: 0" in total_df.columns:
         total_df = total_df.drop(columns=["Unnamed: 0"])
     print(total_df.head())
 
-total_df.to_csv("행사 부스 통합본.csv",index=False,encoding="utf-8-sig")
+total_df.to_csv("행사 부스 통합본.csv",index=False,encoding="utf-8-sig") #변수 처리 해둬야함
+
+
+
+total_df = pd.read_csv("행사 부스 통합본.csv")
+
+#부스 요일 입력
+total_df["개최일"] = "..."
+
+for i in range(0,len(total_df)):
+     temp_event = total_df.loc[i]["행사명"]
+     temp_day = day_dict[temp_event]
+     # print(temp_day)
+     total_df.loc[i,'개최일'] = temp_day
+
+
+
+if "Unnamed: 0" in total_df.columns:
+    total_df = total_df.drop(columns=["Unnamed: 0"])
+print(total_df.head())
+
+total_df.to_csv("행사 부스 통합본.csv",index=False,encoding="utf-8-sig") #변수 처리 해둬야함
+
