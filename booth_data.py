@@ -2,13 +2,12 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 import pandas as pd
-import openpyxl
 import urllib.request
-import requests
-import json
+
 
 event_list = ["dice01","df2204","game03","vidol04"] ###URL에 들어갈 행사 주소 문자열들을 리스트로 먼저 선언.
-# event_list = ["novel02","df220102"] ###URL에 들어갈 행사 주소 문자열들을 리스트로 먼저 선언.
+
+# event_list = ["df2201","novel02","df220102"] #테스트(지난 행사용)
 
 
 

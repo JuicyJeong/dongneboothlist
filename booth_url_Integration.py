@@ -3,15 +3,15 @@ import time
 import requests
 import json
 import pandas as pd
-
+#
 event_list = ["dice01","df2204","game03","vidol04"] ###URL에 들어갈 행사 주소 문자열들을 리스트로 먼저 선언.
 event_dict = {"다이스 페스타":event_list[0],"제 18회 디페스타":event_list[1],"제 3회 오락관":event_list[2],"제 4회 어나더 스테이지":event_list[3]}
 day_dict = {"다이스 페스타":'day1',"제 18회 디페스타":"day1","제 3회 오락관":"day2", "제 4회 어나더 스테이지":"day2"}
 
 
-# event_list = ["novel02","df220102"]
-# event_dict = {"아이소2회":event_list[0],"1월디페":event_list[1]}
-# day_dict = {"아이소2회":"일요일","1월디페":"토요일"}
+# event_list = ["df2201","novel02","df220102"] #테스트(지난 행사용)
+# event_dict = {"제17회 디페스타(토요일)":event_list[0],"아아─, 이것이 『소설』이라는 것이다. Chapter 2":event_list[1],"제 17회 디페스타(일요일)":event_list[2]}
+# day_dict = {"제17회 디페스타(토요일)":"day1","아아─, 이것이 『소설』이라는 것이다. Chapter 2":"day2","제 17회 디페스타(일요일)":"day2"}
 
 ### 부스 주소를 따로 api를 통해 갖고 오기
 for currunt_event in event_list:
