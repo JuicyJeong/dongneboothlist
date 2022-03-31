@@ -3,16 +3,25 @@ import requests
 import json
 import pandas as pd
 
+print("*****************동인네트워크 부스 정리 프로그램 실행합니다*****************")
+print("****************MADE BY PPJ(Twitter: @Juicy_Wave)****************")
+
+
 event_list = ["dice01","df2204","game03","vidol04"] ###URL에 들어갈 행사 주소 문자열들을 리스트로 먼저 선언.
 event_dict = {event_list[0]:"다이스 페스타",event_list[1]:"제 18회 디페스타",event_list[2]:"제 3회 오락관",event_list[3]:"제 4회 어나더 스테이지"}
 day_dict = {"다이스 페스타":'day1',"제 18회 디페스타":"day1","제 3회 오락관":"day2", "제 4회 어나더 스테이지":"day2"}
+time_now = time.strftime('%Y-%m-%d', time.localtime(time.time()))
+count = 1
+print("**********************오늘의 날짜는",time_now,"**********************")
+
+
+
 
 save_df = pd.DataFrame(
         columns=['부스명', '대표자', '위치', '부스', '대표 작품(원작)', '그 외 다루는 작품', '쁘띠존', '캐릭터', '커플링', '커플링 성향', '그 외 커플링', '매체',
                  "링크","행사명","개최일"])
 
 for currunt_event in event_list:
-
     init_df = pd.DataFrame(
         columns=['부스명', '대표자', '위치', '부스', '대표 작품(원작)', '그 외 다루는 작품', '쁘띠존', '캐릭터', '커플링', '커플링 성향', '그 외 커플링', '매체',
                  "링크","행사명","개최일"])
@@ -33,8 +42,7 @@ for currunt_event in event_list:
         petit_dict[str(j_data["list"][i]["petit_id"])] = str(j_data["list"][i]["title"])
 
     petit_dict[""] =""
-    print(petit_dict)
-
+    # print(event_dict[currunt_event],"에서 개최되는 쁘띠존들은?",petit_dict)
 
     #부스 데이터 긁어서 딕셔너리로 반환하기
 
@@ -70,11 +78,11 @@ for currunt_event in event_list:
 
         if "rule_main" in new_extra_values: # 다이스페스타 한정
             info_dict['대표 작품(원작)']= new_extra_values["rule_main"]
-            print(info_dict)
+            # print(info_dict)
         if "rule_sub" in new_extra_values: # 다이스페스타 한정
             rule_sub = new_extra_values["rule_sub"]
             info_dict['그 외 다루는 작품'] = rule_sub
-            print(info_dict)
+            # print(info_dict)
         if "10229" in new_extra_values: #대표작품(원작)
             wonjac = new_extra_values['10229']
             info_dict['대표 작품(원작)']= wonjac
@@ -82,7 +90,6 @@ for currunt_event in event_list:
         if "10200" in new_extra_values: #10200: 그 외 다루는 작품
             otherjac = new_extra_values['10200']
             info_dict["그 외 다루는 작품"] = otherjac
-
 
         if "petitzone" in new_extra_values: #쁘띠존
             petit_number =  new_extra_values["petitzone"]
@@ -118,15 +125,20 @@ for currunt_event in event_list:
         init_df.loc[len(init_df)] = info_dict
         rule_main = rule_sub = wonjac = otherjac = petit_str = character = couple = couple_s = other_couple = media = " "
 
-    print(init_df.head())
+    # print(init_df.head())
 
-    save_df = save_df.append(init_df)
-    init_df.to_csv(str(currunt_event)+"_booth_data.csv",encoding="utf-8-sig")
-save_df.to_csv("booth_data.csv",index=False,encoding="utf-8-sig")
+    save_df = pd.concat([save_df,init_df],ignore_index=True)
+    init_df.to_csv("event_booth/"+str(time_now)+"_"+str(currunt_event)+"_booth_data.csv",encoding="utf-8-sig")
+
+    print(count,"번째 행사 작성 완료. 다음 행사로 넘어갑니다...")
+    count = count + 1
+
+save_df.to_csv("total_booth/"+str(time_now)+"_booth_data.csv",index=False,encoding="utf-8-sig")
+
+print("*****************실행 완료. 다음 실행은 다음 이 시간에...*****************")
+
 
 """ 
-'부스명', '대표자', '위치', '부스', "대표 작품(원작)", "그 외 다루는 작품", '쁘띠존', '캐릭터', '커플링', '커플링 성향', '그 외 커플링', '매체',
-                 "링크"
 application_srl: 주소 넘버
 circle_name: 부스명
 owner_name: 대표자
