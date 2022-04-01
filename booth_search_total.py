@@ -10,7 +10,7 @@ print("****************MADE BY PPJ(Twitter: @Juicy_Wave)****************")
 event_list = ["dice01","df2204","game03","vidol04"] ###URL에 들어갈 행사 주소 문자열들을 리스트로 먼저 선언.
 event_dict = {event_list[0]:"다이스 페스타",event_list[1]:"제 18회 디페스타",event_list[2]:"제 3회 오락관",event_list[3]:"제 4회 어나더 스테이지"}
 day_dict = {"다이스 페스타":'day1',"제 18회 디페스타":"day1","제 3회 오락관":"day2", "제 4회 어나더 스테이지":"day2"}
-time_now = time.strftime('%Y-%m-%d', time.localtime(time.time()))
+time_now = time.strftime('%Y-%m-%d-%H:%M', time.localtime(time.time()))
 count = 1
 print("**********************오늘의 날짜는",time_now,"**********************")
 
