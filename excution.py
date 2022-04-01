@@ -15,7 +15,7 @@ def pr():
     print("test...")
 
 def now():
-    time_now = time.strftime('%Y-%m-%d-%H-%M', time.localtime(time.time()))
+    time_now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
     print("현재시간:",time_now)
 
 
@@ -26,8 +26,8 @@ def now():
         print("실행중...")
 
 
-schedule.every(60).seconds.do(now)
-schedule.every().day.at("10:17").do(exec,open("booth_search_total.py").read())
+schedule.every(30).seconds.do(now)
+schedule.every().day.at("00:00").do(exec,open("booth_search_total.py").read())
 schedule.every().day.at("06:00").do(exec,open("booth_search_total.py").read())
 schedule.every().day.at("12:00").do(exec,open("booth_search_total.py").read())
 schedule.every().day.at("18:00").do(exec,open("booth_search_total.py").read())
@@ -40,7 +40,7 @@ schedule.every().day.at("18:00").do(exec,open("booth_search_total.py").read())
 while True:
 
     schedule.run_pending()
-    time.sleep(10)
+    time.sleep(1)
 
 
 
