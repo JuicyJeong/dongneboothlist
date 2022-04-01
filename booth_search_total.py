@@ -26,36 +26,42 @@ for currunt_event in event_list:
         columns=['부스명', '대표자', '위치', '부스', '대표 작품(원작)', '그 외 다루는 작품', '쁘띠존', '캐릭터', '커플링', '커플링 성향', '그 외 커플링', '매체',
                  "링크","행사명","개최일"])
 
+    try:
+        #쁘띠존 리스트 딕셔너리로 먼저 긁어오기
+        petit_dict = {}
+        petitzone_url = "https://api.dongne.co/events/petits?event_id="+ str(currunt_event) + \
+                        "&page=1&per_page=50&keyword=&desc=DESC&last=false" #50개 이상 되는 적이 없음
+        req = requests.get(petitzone_url)
+        j_text = req.text
+        j_data = json.loads(j_text)
 
-    #쁘띠존 리스트 딕셔너리로 먼저 긁어오기
-    petit_dict = {}
-    petitzone_url = "https://api.dongne.co/events/petits?event_id="+ str(currunt_event) + \
-                    "&page=1&per_page=50&keyword=&desc=DESC&last=false" #50개 이상 되는 적이 없음
-    req = requests.get(petitzone_url)
-    j_text = req.text
-    j_data = json.loads(j_text)
+        for i in range(0,len(j_data["list"])):
 
-    for i in range(0,len(j_data["list"])):
+            # print(str(j_data["list"][i]["petit_id"]))
+            # print(str(j_data["list"][i]["title"]))
+            petit_dict[str(j_data["list"][i]["petit_id"])] = str(j_data["list"][i]["title"])
 
-        # print(str(j_data["list"][i]["petit_id"]))
-        # print(str(j_data["list"][i]["title"]))
-        petit_dict[str(j_data["list"][i]["petit_id"])] = str(j_data["list"][i]["title"])
-
-    petit_dict[""] =""
-    # print(event_dict[currunt_event],"에서 개최되는 쁘띠존들은?",petit_dict)
+        petit_dict[""] =""
+        # print(event_dict[currunt_event],"에서 개최되는 쁘띠존들은?",petit_dict)
+    except:
+        print("로딩에러가 발생. 주소를 다시한번 확인해주세요.")
+        pass
 
     #부스 데이터 긁어서 딕셔너리로 반환하기
 
-    srl_get = "https://api.dongne.co/circles?event_id="+ str(currunt_event) +\
-              "&form=owner_name,twitter,seat,booth,petit_promotion_booth,10155,10199,10229,rule_main,rule_sub,10200," \
-              "petitzone,10202,10225,10204,10233,10226,10232,10208,10209&page=1&per_page=1000" \
-              "&original=&petitzone=&fav=&color=&target=&keyword=&orderby=&sort=&sorting=false&last=false"
+    try:
+        srl_get = "https://api.dongne.co/circles?event_id="+ str(currunt_event) +\
+                  "&form=owner_name,twitter,seat,booth,petit_promotion_booth,10155,10199,10229,rule_main,rule_sub,10200," \
+                  "petitzone,10202,10225,10204,10233,10226,10232,10208,10209&page=1&per_page=1000" \
+                  "&original=&petitzone=&fav=&color=&target=&keyword=&orderby=&sort=&sorting=false&last=false"
 
 
-    req = requests.get(srl_get)
-    j_text = req.text
-    j_data = json.loads(j_text)
-
+        req = requests.get(srl_get)
+        j_text = req.text
+        j_data = json.loads(j_text)
+    except:
+        print("url에러 발생. 주소를 다시 확인해주세요.")
+        pass
 
     #부스 주소를 json에서 갖고와서 리스트에 저장하고 칼럼에 집어넣기.
     for i in range(0,len(j_data["list"])):
@@ -134,6 +140,7 @@ for currunt_event in event_list:
     count = count + 1
 
 save_df.to_csv("total_booth/"+str(time_now)+"_booth_data.csv",index=False,encoding="utf-8-sig")
+save_df.to_csv("total_booth_data.csv",index=False,encoding="utf-8-sig")
 
 print("*****************실행 완료. 다음 실행은 다음 이 시간에...*****************")
 
