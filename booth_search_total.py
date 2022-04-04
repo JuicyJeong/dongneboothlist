@@ -134,7 +134,7 @@ for currunt_event in event_list:
     # print(init_df.head())
 
     save_df = pd.concat([save_df,init_df],ignore_index=True)
-    init_df.to_csv("event_booth/"+str(time_now)+"_"+str(currunt_event)+"_booth_data.csv",encoding="utf-8-sig")
+    # init_df.to_csv("event_booth/"+str(time_now)+"_"+str(currunt_event)+"_booth_data.csv",encoding="utf-8-sig")
 
     print(count,"번째 행사 작성 완료. 다음 행사로 넘어갑니다...")
     count = count + 1

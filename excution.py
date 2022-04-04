@@ -26,7 +26,7 @@ def now():
         print("실행중...")
 
 
-schedule.every(30).seconds.do(now)
+schedule.every(10).minutes.do(now)
 schedule.every().day.at("00:00").do(exec,open("booth_search_total.py").read())
 schedule.every().day.at("06:00").do(exec,open("booth_search_total.py").read())
 schedule.every().day.at("12:00").do(exec,open("booth_search_total.py").read())
