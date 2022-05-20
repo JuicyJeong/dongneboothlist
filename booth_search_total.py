@@ -7,9 +7,9 @@ print("*****************동인네트워크 부스 정리 프로그램 실행합�
 print("****************MADE BY PPJ(Twitter: @Juicy_Wave)****************")
 
 
-event_list = ["dice01","df2204","game03","vidol04"] ###URL에 들어갈 행사 주소 문자열들을 리스트로 먼저 선언.
-event_dict = {event_list[0]:"다이스 페스타",event_list[1]:"제 18회 디페스타",event_list[2]:"제 3회 오락관",event_list[3]:"제 4회 어나더 스테이지"}
-day_dict = {"다이스 페스타":'day1',"제 18회 디페스타":"day1","제 3회 오락관":"day2", "제 4회 어나더 스테이지":"day2"}
+event_list = ["df2207","df220702","25d05","sports06"] ###URL에 들어갈 행사 주소 문자열들을 리스트로 먼저 선언.
+event_dict = {event_list[0]:"7월 토 디페",event_list[1]:"7월 일 디페",event_list[2]:"제 5회 쩜오 어워드",event_list[3]:"제 6회 대운동회"}
+day_dict = {"7월 토 디페":'day1',"7월 일 디페":"day2","제 5회 쩜오 어워드":"day2", "제 6회 대운동회":"day2"}
 time_now = time.strftime('%Y-%m-%d-%H:%M', time.localtime(time.time()))
 count = 1
 print("**********************오늘의 날짜는",time_now,"**********************")
@@ -52,7 +52,7 @@ for currunt_event in event_list:
     try:
         srl_get = "https://api.dongne.co/circles?event_id="+ str(currunt_event) +\
                   "&form=owner_name,twitter,seat,booth,petit_promotion_booth,10155,10199,10229,rule_main,rule_sub,10200," \
-                  "petitzone,10202,10225,10204,10233,10226,10232,10208,10209&page=1&per_page=1000" \
+                  "petitzone,10202,10225,10204,10233,10226,10232,10208,10209&page=1&per_page=50" \
                   "&original=&petitzone=&fav=&color=&target=&keyword=&orderby=&sort=&sorting=false&last=false"
 
 
@@ -66,9 +66,12 @@ for currunt_event in event_list:
     #부스 주소를 json에서 갖고와서 리스트에 저장하고 칼럼에 집어넣기.
     for i in range(0,len(j_data["list"])):
         info_dict = {}
-
+        print(i)
         # print(j_data["list"][i])
+        a = str(j_data["list"][i]["circle_name"])
         info_dict["부스명"]= str(j_data["list"][i]["circle_name"])
+        info_dict["부스명"].replace(",","a")
+        print(i, "번쨰 부스명",info_dict["부스명"])
         info_dict["대표자"] = str(j_data["list"][i]["owner_name"])
         info_dict["위치"] = str(j_data["list"][i]["seat"])
         info_dict["부스"] = str(j_data["list"][i]["booth"])+"sp"
@@ -139,7 +142,7 @@ for currunt_event in event_list:
     print(count,"번째 행사 작성 완료. 다음 행사로 넘어갑니다...")
     count = count + 1
 
-save_df.to_csv("total_booth/"+str(time_now)+"_booth_data.csv",index=False,encoding="utf-8-sig")
+# save_df.to_csv("total_booth/"+str(time_now)+"_booth_data.csv",index=False,encoding="utf-8-sig")
 save_df.to_csv("total_booth_data.csv",index=False,encoding="utf-8-sig")
 
 print("*****************실행 완료. 다음 실행은 다음 이 시간에...*****************")
