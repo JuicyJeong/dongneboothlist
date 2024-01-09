@@ -8,7 +8,7 @@ print("****************MADE BY PPJ(Twitter: @Juicy_Wave)****************")
 
 
 # JSON 파일 경로 설정
-json_file_path = 'aaa.json'
+json_file_path = 'EVENT_INFORMATION.json'
 
 # JSON 파일 읽기
 with open(json_file_path, 'r', encoding='utf-8') as json_file:
@@ -27,23 +27,6 @@ event_dict = {event['CODE']: event['NAME'] for event in selected_events}
 day_dict = {event['NAME']: event['DAY'] for event in selected_events}
 # event_list = ["df2301","novel03"] ###URL에 들어갈 행사 주소 문자열들을 리스트로 먼저 선언. #23년 1월
 
-# event_dict = {event_list[0]:"7월 토 디페",event_list[1]:"7월 일 디페",event_list[2]:"제 5회 쩜오 어워드",event_list[3]:"제 6회 대운동회"}
-# event_dict = {event_list[0]:"제 20회 디페스타",event_list[1]:"아아─, 이것이 『소설』이라는 것이다. Chapter 3"}#23년 1월
-# day_dict = {"제 20회 디페스타":'day1',"아아─, 이것이 『소설』이라는 것이다. Chapter 3":"day2"}
-#event_list = ["df2304","df230402","dice02","game04","vidol05"] ###URL에 들어갈 행사 주소 문자열들을 리스트로 먼저 선언.
-
-# ################################# 23년 10월##############################################
-# event_list = ["df2310","sports08"] ###URL에 들어갈 행사 주소 문자열들을 리스트로 먼저 선언.
-# event_dict = {event_list[0]:"제23회 디. 페스타",event_list[1]:"제 8회 대운동회"}
-# day_dict = {"제23회 디. 페스타":'day1',"제 8회 대운동회":'day2'}
-# ################################# 23년 10월##############################################
-
-################################# 24년 01월##############################################
-# event_list = ["df2401","novel04"] ###URL에 들어갈 행사 주소 문자열들을 리스트로 먼저 선언.
-# event_dict = {event_list[0]:"제24회 디. 페스타",event_list[1]:"아아─, 이것이 『소설』이라는 것이다. Chapter 4"}
-# day_dict = {"제24회 디. 페스타":'Day1',"아아─, 이것이 『소설』이라는 것이다. Chapter 4":'Day2'}
-################################# 23년 10월##############################################
-
 
 time_now = time.strftime('%Y-%m-%d-%H:%M', time.localtime(time.time()))
 count = 1
@@ -54,12 +37,12 @@ print("**********************오늘의 날짜는",time_now,"********************
 
 save_df = pd.DataFrame(
         columns=['부스명', '대표자', '위치', '부스', '대표 작품(원작)', '그 외 다루는 작품', '쁘띠존', '캐릭터', '커플링', '커플링 성향', '그 외 커플링', '매체',
-                 "링크","행사명","개최일"])
+                 "트위터","링크","행사명","개최일"])
 
 for currunt_event in event_list:
     init_df = pd.DataFrame(
         columns=['부스명', '대표자', '위치', '부스', '대표 작품(원작)', '그 외 다루는 작품', '쁘띠존', '캐릭터', '커플링', '커플링 성향', '그 외 커플링', '매체',
-                 "링크","행사명","개최일"])
+                 "트위터","링크","행사명","개최일"])
 
     try:
         #쁘띠존 리스트 딕셔너리로 먼저 긁어오기
@@ -156,13 +139,19 @@ for currunt_event in event_list:
             media = new_extra_values["10209"]
             info_dict["매체"] = media
 
+        if "twitter" in new_extra_values: #트위터 아이디
+            twitter_acc_info = new_extra_values["twitter"]
+            print(twitter_acc_info)
+            info_dict["트위터"] = twitter_acc_info
+            
+
         info_dict["링크"] ="https://dongne.co/event/"+ str(currunt_event)+"/circles/" +str(j_data["list"][i]["application_srl"])
         info_dict["행사명"] = event_dict[currunt_event]
         info_dict["개최일"] = day_dict[event_dict[currunt_event]]
 
         # print(info_dict)
         init_df.loc[len(init_df)] = info_dict
-        rule_main = rule_sub = wonjac = otherjac = petit_str = character = couple = couple_s = other_couple = media = " "
+        rule_main = rule_sub = wonjac = otherjac = petit_str = character = couple = couple_s = other_couple = media =twitter_acc_info =  " "
 
     # print(init_df.head())
 
@@ -175,7 +164,7 @@ for currunt_event in event_list:
 # save_df.to_csv("total_booth/"+str(time_now)+"_booth_data.csv",index=False,encoding="utf-8-sig")
 # save_df.to_csv("total_booth_data.csv",index=False,encoding="utf-8-sig")
 # save_df.to_csv("23년7월.csv",index=False,encoding="utf-8-sig")
-save_df.to_csv("24년1월.csv",index=False,encoding="utf-8-sig")
+save_df.to_csv(selected_date+".csv",index=False,encoding="utf-8-sig")
 
 
 
