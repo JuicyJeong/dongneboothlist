@@ -161,9 +161,7 @@ for currunt_event in event_list:
     print(count,"번째 행사 작성 완료. 다음 행사로 넘어갑니다...")
     count = count + 1
 
-# save_df.to_csv("total_booth/"+str(time_now)+"_booth_data.csv",index=False,encoding="utf-8-sig")
-# save_df.to_csv("total_booth_data.csv",index=False,encoding="utf-8-sig")
-# save_df.to_csv("23년7월.csv",index=False,encoding="utf-8-sig")
+
 save_df.to_csv(selected_date+".csv",index=False,encoding="utf-8-sig")
 
 

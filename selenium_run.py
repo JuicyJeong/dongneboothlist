@@ -31,11 +31,20 @@ def get_twitter_user_data(driver, input_ID):
     driver.get(url='https://twitter.com/'+user_twitter_ID)
     sleep_random_sec(6,15)
     try:
-        # a = driver.find_elements(By.CLASS_NAME,'css-1qaijid.r-bcqeeo.r-qvutc0.r-poiln3')
+        a = driver.find_elements(By.CLASS_NAME,'css-1qaijid.r-bcqeeo.r-qvutc0.r-poiln3')
         num_of_follower = driver.find_element(By.CSS_SELECTOR,PAGE_Account_info_Num_of_follower).text
         # if '만' in num_of_follower:
         #     print("계정 단위가 만이 넘어서... 숫자로 변환합니다.")
         #     num_of_follower = float(num_of_follower[:-1]) * 10000
+
+        # first_tweet_text = driver.find_element(By.CSS_SELECTOR, turtle_selectors['articles'])
+        # print('turtle test: ', first_tweet_text.text)
+        # first_tweet_text = first_tweet_text.find_element(By.CSS_SELECTOR, turtle_selectors['tweet_div'])
+        # print('turtle test: ', first_tweet_text.text)
+        # first_tweet_text = first_tweet_text.find_elements(By.CSS_SELECTOR, turtle_selectors['spans'])
+        # print('turtle test: ', first_tweet_text.text)
+        # first_tweet_text = ''.join(list(map(lambda x: x.text, list(first_tweet_text))))
+        # print('turtle test: ', first_tweet_text.text)
 
         first_tweet_info = driver.find_element(By.CSS_SELECTOR,PAGE_Account_info_First_tweet_info)
         raw_tweet_data = first_tweet_info.text
@@ -88,11 +97,31 @@ def get_twitter_user_data(driver, input_ID):
 계정 페이지 - 팔로워(CSS셀렉터):#react-root > div > div > div.css-175oi2r.r-13qz1uu.r-417010.r-18u37iz > main > div > div > div > div > div > div:nth-child(3) > div > div > div > div > div.css-175oi2r.r-13awgt0.r-18u37iz.r-1w6e6rj > div:nth-child(2) > a > span.css-1qaijid.r-bcqeeo.r-qvutc0.r-poiln3.r-1b43r93.r-1cwl3u0.r-b88u0q > span
 계정 페이지 - 첫번째 트윗: #react-root > div > div > div.css-175oi2r.r-13qz1uu.r-417010.r-18u37iz > main > div > div > div > div > div > div:nth-child(3) > div > div > section > div > div > div:nth-child(1)
 
-트윗 내용: #react-root > div > div > div.css-175oi2r.r-13qz1uu.r-417010.r-18u37iz > main > div > div > div > div > div > section > div > div > div:nth-child(1) > div > div > article > div > div > div:nth-child(3) > div:nth-child(1)
+첫번째 트윗 내용: main > div > div > div > div > div > section > div > div > div:nth-child(1) > div > div > article > div > div > div:nth-child(3) > div:nth-child(1)
+
+
+
+엄휘용
+---
+
+driver.find_element(By.CSS_SELECTOR, ???)
+
+article들 (article하나는 트윗 하나를 가짐):
+'article'
+
+An article 중 트윗 내용을 담은 div를 select (div는 text span과 img span을 가짐)
+'& > .css-175oi2r.r-eqz5dr.r-16y2uox.r-1wbh5a2 > .css-175oi2r.r-16y2uox.r-1wbh5a2.r-1ny4l3l > .css-175oi2r.r-18u37iz > .css-185oi2r.r-1iusvr4.r-16y2uox.r-1777fci.r-kzbkwu > .css-175oi2r:not(.r-zl2h9q) > .css-1rynq56.r-8akbws.r-krxsd3.r-dnmrzs.r-1udh08x.r-bcqeeo.r-qvutc0.r-37j5jr.r-a023e6.r-rjixqe.r-16dba41.r-bnwqim'
+
+find_elements(By.CSS_SELECTOR, 'span')
 '''
 PAGE_login_field = 'r-30o5oe.r-1dz5y72.r-13qz1uu.r-1niwhzg.r-17gur6a.r-1yadl64.r-deolkf.r-homxoj.r-poiln3.r-7cikom.r-1ny4l3l.r-t60dpp.r-fdjqy7'
 PAGE_Account_info_Num_of_follower = '#react-root > div > div > div.css-175oi2r.r-13qz1uu.r-417010.r-18u37iz > main > div > div > div > div > div > div:nth-child(3) > div > div > div > div > div.css-175oi2r.r-13awgt0.r-18u37iz.r-1w6e6rj > div:nth-child(2) > a > span.css-1qaijid.r-bcqeeo.r-qvutc0.r-poiln3.r-1b43r93.r-1cwl3u0.r-b88u0q > span'
 PAGE_Account_info_First_tweet_info = '#react-root > div > div > div.css-175oi2r.r-13qz1uu.r-417010.r-18u37iz > main > div > div > div > div > div > div:nth-child(3) > div > div > section > div > div > div:nth-child(1)'
+turtle_selectors = {
+    'articles': 'article',
+    'tweet_div': '& > .css-175oi2r.r-eqz5dr.r-16y2uox.r-1wbh5a2 > .css-175oi2r.r-16y2uox.r-1wbh5a2.r-1ny4l3l > .css-175oi2r.r-18u37iz > .css-185oi2r.r-1iusvr4.r-16y2uox.r-1777fci.r-kzbkwu > .css-175oi2r:not(.r-zl2h9q) > .css-1rynq56.r-8akbws.r-krxsd3.r-dnmrzs.r-1udh08x.r-bcqeeo.r-qvutc0.r-37j5jr.r-a023e6.r-rjixqe.r-16dba41.r-bnwqim',
+    'spans': 'span',
+}
 ##############################START##############################
 # 브라우저 꺼짐 방지 옵션
 chrome_options = Options()
@@ -111,7 +140,7 @@ driver.find_element(By.CLASS_NAME,PAGE_login_field).click()
 
 ##########################################################계정정보 다른곳에 넣기################################################################
 ##########################################################계정정보 다른곳에 넣기################################################################
-driver.find_element(By.CLASS_NAME,PAGE_login_field).send_keys("YOUR_TWITTER_ACCUNT")
+driver.find_element(By.CLASS_NAME,PAGE_login_field).send_keys("***")
 ##########################################################계정정보 다른곳에 넣기################################################################
 ##########################################################계정정보 다른곳에 넣기################################################################
 
@@ -123,7 +152,7 @@ driver.find_element(By.CLASS_NAME,PAGE_login_field).click()
 
 ##########################################################계정정보 다른곳에 넣기################################################################
 ##########################################################계정정보 다른곳에 넣기################################################################
-driver.find_element(By.CLASS_NAME,PAGE_login_field).send_keys("YOUR_PASSWORD")
+driver.find_element(By.CLASS_NAME,PAGE_login_field).send_keys("***")
 ##########################################################계정정보 다른곳에 넣기################################################################
 ##########################################################계정정보 다른곳에 넣기################################################################
 
@@ -133,13 +162,13 @@ sleep_random_sec(3,6)
 
 ##############################LOGIN_PHASE_DONE##############################
 
-data = pd.read_csv('final.csv')
+data = pd.read_csv('final.csv') 
 id_list = data["계정아이디"] #비어있는 값들도 있음
 
 
-for i, item in enumerate(id_list[1000:],1000):
+for i, item in enumerate(id_list[600:],600):
     
-    if i > 1200:
+    if i > 1500:
         print("목표 달성 종료. 루프를 중지합니다.")
         break
     if isinstance(item, float) and math.isnan(item):
@@ -160,13 +189,6 @@ for i, item in enumerate(id_list[1000:],1000):
 data.to_csv("final.csv",index=False,encoding="utf-8-sig")
 print("파일 저장 완료!")
 
-
-
-
-
-
-
-# ADD_account_name, ADD_num_of_follower, ADD_tweet_content, ADD_num_of_retweeted, ADD_num_of_liked, ADD_num_of_exposed=  get_twitter_user_data(driver,"foolramzi")
 
 
 driver.quit()
