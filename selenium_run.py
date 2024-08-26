@@ -122,101 +122,85 @@ turtle_selectors = {
     'tweet_div': '& > .css-175oi2r.r-eqz5dr.r-16y2uox.r-1wbh5a2 > .css-175oi2r.r-16y2uox.r-1wbh5a2.r-1ny4l3l > .css-175oi2r.r-18u37iz > .css-185oi2r.r-1iusvr4.r-16y2uox.r-1777fci.r-kzbkwu > .css-175oi2r:not(.r-zl2h9q) > .css-1rynq56.r-8akbws.r-krxsd3.r-dnmrzs.r-1udh08x.r-bcqeeo.r-qvutc0.r-37j5jr.r-a023e6.r-rjixqe.r-16dba41.r-bnwqim',
     'spans': 'span',
 }
-##############################START##############################
-# 브라우저 꺼짐 방지 옵션
-chrome_options = Options()
-chrome_options.add_experimental_option("detach", True)
-
-# 크롬 드라이버 생성
-driver = webdriver.Chrome(options=chrome_options)
-
-# 페이지 로딩이 완료될 때 까지 기다리는 코드
-driver.implicitly_wait(3)
-
-# 사이트 접속하기
-driver.get(url='https://twitter.com/i/flow/login')
-sleep_random_sec(3,5)
-driver.find_element(By.CLASS_NAME,PAGE_login_field).click()
-
-##########################################################계정정보 다른곳에 넣기################################################################
-##########################################################계정정보 다른곳에 넣기################################################################
-driver.find_element(By.CLASS_NAME,PAGE_login_field).send_keys("***")
-##########################################################계정정보 다른곳에 넣기################################################################
-##########################################################계정정보 다른곳에 넣기################################################################
-
-driver.find_element(By.CLASS_NAME,PAGE_login_field).send_keys(Keys.ENTER)
-driver.implicitly_wait(3)
-sleep_random_sec(3,5)
-
-driver.find_element(By.CLASS_NAME,PAGE_login_field).click()
-
-##########################################################계정정보 다른곳에 넣기################################################################
-##########################################################계정정보 다른곳에 넣기################################################################
-driver.find_element(By.CLASS_NAME,PAGE_login_field).send_keys("***")
-##########################################################계정정보 다른곳에 넣기################################################################
-##########################################################계정정보 다른곳에 넣기################################################################
-
-driver.find_element(By.CLASS_NAME,PAGE_login_field).send_keys(Keys.ENTER)
-driver.implicitly_wait(2)
-sleep_random_sec(3,6)
-
-##############################LOGIN_PHASE_DONE##############################
-
-data = pd.read_csv('final.csv') 
-id_list = data["계정아이디"] #비어있는 값들도 있음
 
 
-for i, item in enumerate(id_list[600:],600):
-    
-    if i > 1500:
-        print("목표 달성 종료. 루프를 중지합니다.")
-        break
-    if isinstance(item, float) and math.isnan(item):
-        print(f"{i}번째 셀에는 기록된 아이디가 없습니다.")
-    else:
-        #여기에 값 채워넣으세요.
-        ADD_account_name, ADD_num_of_follower, ADD_tweet_content, ADD_num_of_retweeted, ADD_num_of_liked, ADD_num_of_exposed=  get_twitter_user_data(driver,item)
-        print(i,'번째 루프...')
-        data.loc[i,'계정명'] = ADD_account_name
-        data.loc[i,"팔로워수"] = ADD_num_of_follower
-        data.loc[i,"최상단트윗_알티"] = ADD_num_of_retweeted
-        data.loc[i,"최상단트윗_마음"] = ADD_num_of_liked
-        data.loc[i,"최상단트윗_노출수"] = ADD_num_of_exposed
-        data.loc[i,"최상단트윗_내용"] = ADD_tweet_content
-        # print(data.iloc[i])
+if __name__== '__main__':
+
+    ##############################START##############################
+    # 브라우저 꺼짐 방지 옵션
+    chrome_options = Options()
+    chrome_options.add_experimental_option("detach", True)
+
+    # 크롬 드라이버 생성
+    driver = webdriver.Chrome(options=chrome_options)
+
+    # 페이지 로딩이 완료될 때 까지 기다리는 코드
+    driver.implicitly_wait(3)
+
+    # 사이트 접속하기
+    driver.get(url='https://twitter.com/i/flow/login')
+    sleep_random_sec(3,5)
+    driver.find_element(By.CLASS_NAME,PAGE_login_field).click()
+
+    ##########################################################계정정보 다른곳에 넣기################################################################
+    ##########################################################계정정보 다른곳에 넣기################################################################
+    driver.find_element(By.CLASS_NAME,PAGE_login_field).send_keys("YOUR_ACCOUNT")
+    ##########################################################계정정보 다른곳에 넣기################################################################
+    ##########################################################계정정보 다른곳에 넣기################################################################
+
+    driver.find_element(By.CLASS_NAME,PAGE_login_field).send_keys(Keys.ENTER)
+    driver.implicitly_wait(3)
+    sleep_random_sec(3,5)
+
+    driver.find_element(By.CLASS_NAME,PAGE_login_field).click()
+
+    ##########################################################계정정보 다른곳에 넣기################################################################
+    ##########################################################계정정보 다른곳에 넣기################################################################
+    driver.find_element(By.CLASS_NAME,PAGE_login_field).send_keys("YOUR_PASSWORD")
+    ##########################################################계정정보 다른곳에 넣기################################################################
+    ##########################################################계정정보 다른곳에 넣기################################################################
+
+    driver.find_element(By.CLASS_NAME,PAGE_login_field).send_keys(Keys.ENTER)
+    driver.implicitly_wait(2)
+    sleep_random_sec(3,6)
+
+    ##############################LOGIN_PHASE_DONE##############################
+
+    data = pd.read_csv('final202404.csv') 
+    id_list = data["계정아이디"] #비어있는 값들도 있음
 
 
-data.to_csv("final.csv",index=False,encoding="utf-8-sig")
-print("파일 저장 완료!")
+    for i, item in enumerate(id_list[0:],0):
+        
+        if i > 850:
+            print("목표 달성 종료. 루프를 중지합니다.")
+            break
+        if isinstance(item, float) and math.isnan(item):
+            print(f"{i}번째 셀에는 기록된 아이디가 없습니다.")
+        else:
+            #여기에 값 채워넣으세요.
+            ADD_account_name, ADD_num_of_follower, ADD_tweet_content, ADD_num_of_retweeted, ADD_num_of_liked, ADD_num_of_exposed=  get_twitter_user_data(driver,item)
+            print(i,'번째 루프...')
+            data.loc[i,'계정명'] = ADD_account_name
+            data.loc[i,"팔로워수"] = ADD_num_of_follower
+            data.loc[i,"최상단트윗_알티"] = ADD_num_of_retweeted
+            data.loc[i,"최상단트윗_마음"] = ADD_num_of_liked
+            data.loc[i,"최상단트윗_노출수"] = ADD_num_of_exposed
+            data.loc[i,"최상단트윗_내용"] = ADD_tweet_content
+            # print(data.iloc[i])
 
 
-
-driver.quit()
-print("프로그램을 종료합니다.")
-
+    data.to_csv("final202404.csv",index=False,encoding="utf-8-sig")
+    print("파일 저장 완료!")
 
 
 
-'''
-메인에 올림 << 삭제
-아이소N11마말 << 0
-@Marmal_0329 << 1
-· << 2
-1월 7일 << 3
+    driver.quit()
+    print("프로그램을 종료합니다.")
+`
 
-[RT]
-
-1월 아이소(일) N11 인포입니다
-선입금 없이 전체현장판매만 합니다.
-
-RT해주신분 두분을 추첨해서 포카 세트들과 새 굿즈들을 세트로 배송해드리겠습니다!
-추첨은 20일 11시에
-
-855 -3
-405 -2
-6.2만 -1
-'''
 
 
 # driver.find_element(By.XPATH,'//*[@id="APjFqb"]').send_keys("tistory")
 # driver.find_element(By.XPATH,'//*[@id="APjFqb"]').send_keys(Keys.ENTER)
+`
