@@ -2,6 +2,7 @@ import time
 import requests
 import json
 import pandas as pd
+import pickle
 
 print("*****************동인네트워크 부스 정리 프로그램 실행합니다*****************")
 print("****************MADE BY PPJ(Twitter: @Juicy_Wave)****************")
@@ -16,7 +17,7 @@ with open(json_file_path, 'r', encoding='utf-8') as json_file:
 
 
 # 특정 날짜를 선택 (예: "24년_1월")
-selected_date = "24년_1월"
+selected_date = "24년_9월"
 
 # 선택된 날짜에 해당하는 데이터 추출
 selected_events = [event for event in json_data if event['DATE'] == selected_date][0]['INFO']
@@ -25,6 +26,12 @@ selected_events = [event for event in json_data if event['DATE'] == selected_dat
 event_list = [event['CODE'] for event in selected_events]
 event_dict = {event['CODE']: event['NAME'] for event in selected_events}
 day_dict = {event['NAME']: event['DAY'] for event in selected_events}
+
+
+
+twitter_acc_list = [] # 트위터 유저 데이터 저장하는용으로...
+file_path = 'Account_info/raw_list.pkl'
+
 # event_list = ["df2301","novel03"] ###URL에 들어갈 행사 주소 문자열들을 리스트로 먼저 선언. #23년 1월
 
 
@@ -143,6 +150,9 @@ for currunt_event in event_list:
             twitter_acc_info = new_extra_values["twitter"]
             print(twitter_acc_info)
             info_dict["트위터"] = twitter_acc_info
+
+            twitter_acc_list.append(twitter_acc_info)
+
             
 
         info_dict["링크"] ="https://dongne.co/event/"+ str(currunt_event)+"/circles/" +str(j_data["list"][i]["application_srl"])
@@ -167,6 +177,12 @@ save_df.to_csv(selected_date+".csv",index=False,encoding="utf-8-sig")
 
 
 print("*****************실행 완료. 다음 실행은 다음 이 시간에...*****************")
+
+# Save the list to a .pkl file
+with open(file_path, 'wb') as file:
+    pickle.dump(twitter_acc_list, file)
+
+
 
 
 """
