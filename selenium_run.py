@@ -197,10 +197,9 @@ if __name__== '__main__':
 
     driver.quit()
     print("프로그램을 종료합니다.")
-`
+
 
 
 
 # driver.find_element(By.XPATH,'//*[@id="APjFqb"]').send_keys("tistory")
 # driver.find_element(By.XPATH,'//*[@id="APjFqb"]').send_keys(Keys.ENTER)
-`

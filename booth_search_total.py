@@ -17,7 +17,7 @@ with open(json_file_path, 'r', encoding='utf-8') as json_file:
 
 
 # 특정 날짜를 선택 (예: "24년_1월")
-selected_date = "24년_9월"
+selected_date = "25년_1월"
 
 # 선택된 날짜에 해당하는 데이터 추출
 selected_events = [event for event in json_data if event['DATE'] == selected_date][0]['INFO']
@@ -122,7 +122,8 @@ for currunt_event in event_list:
 
         if "petitzone" in new_extra_values: #쁘띠존
             petit_number =  new_extra_values["petitzone"]
-            petit_str = petit_dict[str(petit_number)]
+            if str(petit_number) in petit_dict: # 딕셔너리에 없는 경우가...놀랍게도 있더라 250104
+                petit_str = petit_dict[str(petit_number)]
             info_dict["쁘띠존"] = str(petit_str)
 
         if "10225" in new_extra_values: #10225: 캐릭터
@@ -152,8 +153,11 @@ for currunt_event in event_list:
             info_dict["트위터"] = twitter_acc_info
 
             twitter_acc_list.append(twitter_acc_info)
+        
+        # 갑자기 첨 보는 코드가 왜 나옴 _250104
+        if "10975" in new_extra_values: # 이거 뭐임??? 왜 커플링 코드가 두개임?
+            print("*****************************NEW_CODE_NUMBER********************")
 
-            
 
         info_dict["링크"] ="https://dongne.co/event/"+ str(currunt_event)+"/circles/" +str(j_data["list"][i]["application_srl"])
         info_dict["행사명"] = event_dict[currunt_event]
@@ -178,9 +182,9 @@ save_df.to_csv(selected_date+".csv",index=False,encoding="utf-8-sig")
 
 print("*****************실행 완료. 다음 실행은 다음 이 시간에...*****************")
 
-# Save the list to a .pkl file
-with open(file_path, 'wb') as file:
-    pickle.dump(twitter_acc_list, file)
+# # Save the list to a .pkl file
+# with open(file_path, 'wb') as file:
+#     pickle.dump(twitter_acc_list, file)
 
 
 
