@@ -73,5 +73,5 @@ pip install selenium pandas jupyter
 
 ## 문의
 
-궁금한 사항이 있으면 @Juicy_Wave로 문의하세요.
+궁금한 사항이 있으면 jinwoo327@gmail.com로 문의하세요.
 
