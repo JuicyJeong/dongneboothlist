@@ -17,7 +17,7 @@ with open(json_file_path, 'r', encoding='utf-8') as json_file:
 
 
 # 특정 날짜를 선택 (예: "24년_1월")
-selected_date = "25년_1월"
+selected_date = "25년_4월"
 
 # 선택된 날짜에 해당하는 데이터 추출
 selected_events = [event for event in json_data if event['DATE'] == selected_date][0]['INFO']
@@ -43,12 +43,12 @@ print("**********************오늘의 날짜는",time_now,"********************
 
 
 save_df = pd.DataFrame(
-        columns=['부스명', '대표자', '위치', '부스', '대표 작품(원작)', '그 외 다루는 작품', '쁘띠존', '캐릭터', '커플링', '커플링 성향', '그 외 커플링', '매체',
+        columns=['부스명', '대표자', '위치', '위치(열)', '위치(번호)', '반부스', '부스', '대표 작품(원작)', '그 외 다루는 작품', '쁘띠존', '캐릭터', '커플링', '커플링 성향', '그 외 커플링', '매체',
                  "트위터","링크","행사명","개최일"])
 
 for currunt_event in event_list:
     init_df = pd.DataFrame(
-        columns=['부스명', '대표자', '위치', '부스', '대표 작품(원작)', '그 외 다루는 작품', '쁘띠존', '캐릭터', '커플링', '커플링 성향', '그 외 커플링', '매체',
+        columns=['부스명', '대표자', '위치', '위치(열)', '위치(번호)', '반부스', '부스', '대표 작품(원작)', '그 외 다루는 작품', '쁘띠존', '캐릭터', '커플링', '커플링 성향', '그 외 커플링', '매체',
                  "트위터","링크","행사명","개최일"])
 
     try:
@@ -94,7 +94,30 @@ for currunt_event in event_list:
         # print(j_data["list"][i])
         info_dict["부스명"]= str(j_data["list"][i]["circle_name"])
         info_dict["대표자"] = str(j_data["list"][i]["owner_name"])
-        info_dict["위치"] = str(j_data["list"][i]["seat"])
+        
+        # 위치 정보 파싱
+        seat = str(j_data["list"][i]["seat"])
+        info_dict["위치"] = seat
+        
+        if seat:
+            # 위치(열): 첫 번째 문자
+            info_dict["위치(열)"] = seat[0]
+            
+            # 위치(번호): 첫 번째 문자를 제외한 나머지에서 마지막 문자가 숫자인지 확인
+            last_char = seat[-1]
+            if last_char.isdigit():
+                # 마지막 문자가 숫자인 경우 (예: A23)
+                info_dict["위치(번호)"] = seat[1:]
+                info_dict["반부스"] = ""
+            else:
+                # 마지막 문자가 문자인 경우 (예: A23b)
+                info_dict["위치(번호)"] = seat[1:-1]
+                info_dict["반부스"] = last_char
+        else:
+            info_dict["위치(열)"] = ""
+            info_dict["위치(번호)"] = ""
+            info_dict["반부스"] = ""
+            
         info_dict["부스"] = str(j_data["list"][i]["booth"])+"sp"
 
 

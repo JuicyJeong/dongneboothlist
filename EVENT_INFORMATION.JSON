@@ -111,17 +111,32 @@
     },
 
     {
-        "DATE": "25년_1월",
+        "DATE": "25년_4월",
         "INFO": [
                 {
                     "DAY" : "Day1",
-                    "CODE" :"df2501",
-                    "NAME" : "제28회 디. 페스타"
+                    "CODE" :"df2504",
+                    "NAME" : "제29회 디. 페스타"
                 },
                 {
                     "DAY" : "Day2",
-                    "CODE" :"novel05",
-                    "NAME" : "아아─, 이것이 『소설』이라는 것이다. Chapter 5"
+                    "CODE" :"df250402",
+                    "NAME" : "제29회 디. 페스타(일)"
+                },
+                {
+                    "DAY" : "Day2",
+                    "CODE" :"dice04",
+                    "NAME" : "다이스 페스타 #4"
+                },
+                {
+                    "DAY" : "Day2",
+                    "CODE" :"game06",
+                    "NAME" : "제6회 오락관"
+                },
+                {
+                    "DAY" : "Day2",
+                    "CODE" :"vidol07",
+                    "NAME" : "제7회 어나더 스테이지"
                 }
                 ]
 
