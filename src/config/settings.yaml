@@ -1,0 +1,24 @@
+# 동인네트워크 부스 크롤러 설정
+
+api:
+  base_url: "https://api.dongne.co"
+  endpoints:
+    circles: "/circles"
+    petits: "/events/petits"
+  default_params:
+    per_page: 1000
+    page: 1
+
+crawling:
+  # 행사 정보 파일 경로
+  event_info_path: "EVENT_INFORMATION.json"
+  
+  # 결과물 저장 경로
+  output_dir: "data/raw"
+  
+  # 요청 간 대기 시간 (초)
+  request_delay: 0.5
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
