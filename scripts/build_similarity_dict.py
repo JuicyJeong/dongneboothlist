@@ -42,6 +42,9 @@ class SimilarityDictBuilder:
     # 정규화 패턴 (앞뒤 공백, 특수문자)
     NORMALIZE_PATTERN = r'^[\s\-\.\:\:]+|[\s\-\.\:\:]+$'
     
+    # 넘버링 패턴 (아라비아 숫자, 로마숫자, 부제)
+    NUMBERING_PATTERN = r'(\d+|[IVXivx]+|[-:]\s*[^,\-/]+)$'
+    
     def __init__(self, data_dir: str = "data/raw", output_dir: str = "data/dict"):
         self.data_dir = Path(data_dir)
         self.output_dir = Path(output_dir)
@@ -203,6 +206,21 @@ class SimilarityDictBuilder:
         if s1 == s2:
             return 1.0
         
+        # 넘버링 추출 후 비교
+        series1, num1 = self._extract_series_and_number(s1)
+        series2, num2 = self._extract_series_and_number(s2)
+        
+        # 넘버링이 다르면 0 (같은 시리즈라도 다른 작품)
+        if num1 and num2 and num1 != num2:
+            return 0.0
+        
+        # 시리즈명이 같고 넘버링도 같으면 높은 유사도
+        if series1 == series2:
+            if num1 == num2:  # 둘 다 넘버링이 없거나 같음
+                return 0.9
+            elif not num1 or not num2:  # 한쪽만 넘버링 있음
+                return 0.5  # 낮은 유사도
+        
         # 하나가 다른 하나를 포함하면 높은 유사도
         if s1 in s2 or s2 in s1:
             shorter = min(len(s1), len(s2))
@@ -220,6 +238,38 @@ class SimilarityDictBuilder:
             return 0.0
         
         return intersection / union
+    
+    def _extract_series_and_number(self, title: str) -> Tuple[str, str]:
+        """
+        작품명에서 시리즈명과 넘버링 분리
+        
+        Args:
+            title: 작품명
+            
+        Returns:
+            (시리즈명, 넘버링) 튜플
+        """
+        # 로마숫자 변환 매핑
+        roman_map = {'i': '1', 'ii': '2', 'iii': '3', 'iv': '4', 'v': '5',
+                     'vi': '6', 'vii': '7', 'viii': '8', 'ix': '9', 'x': '10',
+                     'xi': '11', 'xii': '12', 'xiii': '13', 'xiv': '14', 'xv': '15', 'xvi': '16'}
+        
+        # 넘버링 추출 시도
+        match = re.search(self.NUMBERING_PATTERN, title)
+        
+        if match:
+            num_part = match.group(1).strip()
+            series = title[:match.start()].strip()
+            
+            # 로마숫자 변환
+            num_lower = num_part.lower()
+            if num_lower in roman_map:
+                num_part = roman_map[num_lower]
+            
+            return (series, num_part)
+        
+        # 넘버링 없음
+        return (title, "")
     
     def verify_and_build_dict(self, clusters: Dict[str, List[str]] = None) -> Dict[str, str]:
         """
