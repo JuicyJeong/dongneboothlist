@@ -2,19 +2,26 @@
 """
 모듈 2b: 대표작품 전처리
 
-대표작품(원작) 필드만 전처리하여 저장합니다.
-현재는 기본 정제만 수행하며, 유사도 사전 기능은 추후 추가 예정입니다.
+대표작품(원작) 필드를 정규화합니다.
+원본 데이터를 별도 컬럼에 보존합니다.
 
 Usage:
     python scripts/02b_preprocess_works.py --date "26년_4월"
 """
 
 import argparse
+import json
 import logging
 from pathlib import Path
 import sys
 
 import pandas as pd
+
+# 프로젝트 루트를 Python 경로에 추가
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
+
+from src.preprocessor.work_normalizer import WorkNormalizer
 
 # 로깅 설정
 logging.basicConfig(
@@ -55,19 +62,31 @@ def preprocess_works(date: str, input_dir: str = "data/preprocessed", output_dir
     df = pd.read_csv(input_path)
     logger.info(f"로드된 데이터: {len(df)}개 행")
     
-    # TODO: 유사도 사전 로드 (사전 파일이 있을 경우)
-    # TODO: 대표작품 정규화 적용
+    # 정규화기 초기화
+    normalizer = WorkNormalizer()
+    logger.info(f"사전 로드 완료: {len(normalizer.similarity_dict)}개 항목")
     
-    # 현재는 기본 정제만 수행
+    # 대표작품 컬럼 처리
     if '대표 작품(원작)' in df.columns:
-        logger.info("대표작품 기본 정제 중...")
+        logger.info("대표작품 정규화 중...")
         
-        # 기본 정제 (공백, 소문자 등)
-        df['대표 작품(원작)'] = df['대표 작품(원작)'].apply(
-            lambda x: str(x).strip() if pd.notna(x) else ""
+        # 원본 컬럼 보존
+        df['대표 작품(원작)_원본'] = df['대표 작품(원작)'].apply(
+            lambda x: str(x) if pd.notna(x) else ""
         )
         
-        logger.info("기본 정제 완료 (유사도 사전 미적용)")
+        # 정규화 적용
+        df['대표 작품(원작)'] = df['대표 작품(원작)_원본'].apply(normalizer.normalize)
+        
+        # SKIP된 것은 빈 문자열로
+        df.loc[df['대표 작품(원작)'] == 'SKIP', '대표 작품(원작)'] = ""
+        
+        # 통계
+        changed = (df['대표 작품(원작)'] != df['대표 작품(원작)_원본']).sum()
+        skipped = (df['대표 작품(원작)_원본'] != "") & (df['대표 작품(원작)'] == "").sum()
+        
+        logger.info(f"변경됨: {changed}개")
+        logger.info(f"SKIP (장르): {skipped}개")
     
     # 저장
     df.to_csv(output_path, index=False, encoding='utf-8-sig')
@@ -104,10 +123,6 @@ def main():
     print(f"전처리 날짜: {args.date}")
     print()
     
-    print("⚠️ 현재 유사도 사전이 없어 기본 정제만 수행합니다.")
-    print("   유사도 사전 구축 후 정식 기능이 활성화됩니다.")
-    print()
-    
     try:
         output_path = preprocess_works(
             date=args.date,
@@ -119,6 +134,8 @@ def main():
         print("=" * 60)
         print(f"✅ 전처리 완료!")
         print(f"📁 저장 위치: {output_path}")
+        print()
+        print("원본 데이터가 '대표 작품(원작)_원본' 컬럼에 보존되었습니다.")
         print("=" * 60)
         
     except FileNotFoundError as e:
