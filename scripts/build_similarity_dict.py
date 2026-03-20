@@ -271,12 +271,13 @@ class SimilarityDictBuilder:
         # 넘버링 없음
         return (title, "")
     
-    def verify_and_build_dict(self, clusters: Dict[str, List[str]] = None) -> Dict[str, str]:
+    def verify_and_build_dict(self, clusters: Dict[str, List[str]] = None, auto: bool = True) -> Dict[str, str]:
         """
         5-6단계: 웹검색 확인 + 사전 등록
         
         Args:
             clusters: {대표명: [유사작품들]} 클러스터
+            auto: 자동 모드 (기본 True)
             
         Returns:
             {별칭: 정식명} 사전
@@ -299,46 +300,60 @@ class SimilarityDictBuilder:
         
         new_dict = {}
         
-        # 클러스터가 여러 개인 것만 확인 필요
+        # 클러스터가 여러 개인 것만 처리
         multi_clusters = {k: v for k, v in clusters.items() if len(v) > 1}
         
-        logger.info(f"확인 필요한 클러스터: {len(multi_clusters)}개")
-        logger.info("대화형 모드로 전환합니다...")
+        logger.info(f"처리할 클러스터: {len(multi_clusters)}개")
         
-        for representative, variants in multi_clusters.items():
-            print()
-            print("=" * 60)
-            print(f"대표명: {representative}")
-            print(f"유사 작품들: {', '.join(variants)}")
-            print()
+        if auto:
+            # 자동 모드: 대표명을 정식 명칭으로 사용
+            logger.info("자동 모드로 실행 중...")
             
-            # TODO: 웹검색으로 정식 명칭 확인 (반자동)
-            # 현재는 사용자 입력으로만 처리
-            
-            print("옵션:")
-            print("  1. 대표명 사용")
-            print("  2. 직접 정식명 입력")
-            print("  3. 건너뛰기")
-            print("  q. 종료")
-            print()
-            
-            choice = input("선택: ").strip()
-            
-            if choice == 'q':
-                break
-            elif choice == '1':
+            for representative, variants in multi_clusters.items():
+                # 대표명을 정식 명칭으로 사용
                 official_name = representative
-            elif choice == '2':
-                official_name = input("정식 명칭 입력: ").strip()
-            else:
-                continue
+                
+                # 별칭 등록
+                for variant in variants:
+                    if variant != official_name:
+                        new_dict[variant] = official_name
             
-            # 사전에 등록
-            for variant in variants:
-                if variant != official_name:
-                    new_dict[variant] = official_name
+            logger.info(f"자동 등록 완료: {len(new_dict)}개 별칭")
+        else:
+            # 대화형 모드
+            logger.info("대화형 모드로 전환합니다...")
             
-            print(f"→ 등록: {len(variants) - 1}개 별칭 → '{official_name}'")
+            for representative, variants in multi_clusters.items():
+                print()
+                print("=" * 60)
+                print(f"대표명: {representative}")
+                print(f"유사 작품들: {', '.join(variants)}")
+                print()
+                
+                print("옵션:")
+                print("  1. 대표명 사용")
+                print("  2. 직접 정식명 입력")
+                print("  3. 건너뛰기")
+                print("  q. 종료")
+                print()
+                
+                choice = input("선택: ").strip()
+                
+                if choice == 'q':
+                    break
+                elif choice == '1':
+                    official_name = representative
+                elif choice == '2':
+                    official_name = input("정식 명칭 입력: ").strip()
+                else:
+                    continue
+                
+                # 사전에 등록
+                for variant in variants:
+                    if variant != official_name:
+                        new_dict[variant] = official_name
+                
+                print(f"→ 등록: {len(variants) - 1}개 별칭 → '{official_name}'")
         
         # 기존 사전과 병합
         final_dict = {**existing_dict, **new_dict}
@@ -368,7 +383,27 @@ def main():
     parser.add_argument(
         "--verify",
         action="store_true",
-        help="5-6단계: 웹검색 확인 + 사전 등록"
+        help="5-6단계: 웹검색 확인 + 사전 등록 (대화형)"
+    )
+    parser.add_argument(
+        "--auto-verify",
+        action="store_true",
+        help="5-6단계: 자동 사전 등록 (대화형 없이)"
+    )
+    parser.add_argument(
+        "--auto-verify",
+        action="store_true",
+        help="5-6단계: 자동 사전 등록 (대화형 없이)"
+    )
+    parser.add_argument(
+        "--auto",
+        action="store_true",
+        help="자동 모드: 모든 클러스터 자동 등록 (대화형 X)"
+    )
+    parser.add_argument(
+        "--auto",
+        action="store_true",
+        help="자동 모드: 모든 클러스터를 대표명으로 자동 등록 (대화형 생략)"
     )
     parser.add_argument(
         "--all",
@@ -388,8 +423,8 @@ def main():
     
     args = parser.parse_args()
     
-    if not (args.collect or args.cluster or args.verify or args.all):
-        parser.error("--collect, --cluster, --verify, --all 중 하나를 지정해야 합니다")
+    if not (args.collect or args.cluster or args.verify or args.auto_verify or args.all):
+        parser.error("--collect, --cluster, --verify, --auto-verify, --all 중 하나를 지정해야 합니다")
     
     builder = SimilarityDictBuilder(
         data_dir=args.data_dir,
@@ -406,7 +441,13 @@ def main():
             # 전체 실행
             works = builder.collect_works()
             clusters = builder.cluster_works(works)
-            builder.verify_and_build_dict(clusters)
+            builder.verify_and_build_dict(clusters, auto=True)
+        elif args.auto_verify:
+            # 자동 사전 등록
+            builder.verify_and_build_dict(auto=True)
+        elif args.verify:
+            # 대화형 사전 등록
+            builder.verify_and_build_dict(auto=False)
         else:
             # 개별 실행
             works = None

@@ -34,15 +34,18 @@ env/
 *~
 
 # Data files
-*.csv
 *.pkl
 *.pickle
-data/
-Results/
 
-# Test files
+# Raw data (exclude from git)
+data/raw/
+Results/
 test_*.json
 test_*.csv
+
+# Allow preprocessed & dict (these can be committed)
+# data/preprocessed/ - allowed
+# data/dict/ - allowed
 
 # OS
 .DS_Store
