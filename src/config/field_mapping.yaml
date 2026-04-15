@@ -2,10 +2,10 @@
 # API 응답의 extra_vars에 있는 코드를 읽기 쉬운 필드명으로 변환
 
 field_mapping:
-  "ruleMain": "대표 룰"
-  "ruleSub": "그 외 다루는 룰"
   "mainWork": "대표 작품(원작)"
+  "ruleMain": "대표 작품(원작)"
   "otherWorks": "그 외 다루는 작품"
+  "ruleSub": "그 외 다루는 작품"
   "character": "캐릭터"
   "coupleDouble": "커플링"
   "coupleInclination": "커플링 성향"
@@ -30,9 +30,7 @@ output_columns:
   - "반부스"
   - "부스"
   - "대표 작품(원작)"
-  - "대표 룰"
   - "그 외 다루는 작품"
-  - "그 외 다루는 룰"
   - "쁘띠존"
   - "캐릭터"
   - "커플링"

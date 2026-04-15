@@ -175,11 +175,15 @@ class DongneAPIClient:
         }
         
         for system_key, field_name in field_mapping.items():
-            if system_key == "twitter":
-                parsed[field_name] = str(fields_dict.get(system_key, ""))
-            else:
-                value = str(fields_dict.get(system_key, ""))
-                parsed[field_name] = value
+            if field_name not in parsed:
+                parsed[field_name] = ""
+            value = str(fields_dict.get(system_key, ""))
+            if value and value != "":
+                existing = parsed.get(field_name, "")
+                if existing:
+                    parsed[field_name] = f"{existing}, {value}"
+                else:
+                    parsed[field_name] = value
         
         return parsed
     
