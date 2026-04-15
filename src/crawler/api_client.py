@@ -20,12 +20,6 @@ class DongneAPIClient:
     """동인네트워크 API 클라이언트"""
     
     def __init__(self, config_path: Optional[str] = None):
-        """
-        초기화
-        
-        Args:
-            config_path: 설정 파일 경로 (기본값: src/config/settings.yaml)
-        """
         if config_path is None:
             config_path = Path(__file__).parent.parent / "config" / "settings.yaml"
         
@@ -42,29 +36,22 @@ class DongneAPIClient:
         쁘띠존 목록 조회
         
         Args:
-            event_id: 행사 ID
+            event_id: 행사 slug
             
         Returns:
             {petit_id: petit_title} 딕셔너리
         """
-        url = f"{self.base_url}{self.endpoints['petits']}"
-        params = {
-            "event_id": event_id,
-            "page": 1,
-            "per_page": 50,
-            "keyword": "",
-            "desc": "DESC",
-            "last": "false"
-        }
+        endpoint = self.endpoints['petits'].format(event_id=event_id)
+        url = f"{self.base_url}{endpoint}"
         
         try:
-            response = requests.get(url, params=params)
+            response = requests.get(url)
             response.raise_for_status()
             data = response.json()
             
             petit_dict = {}
-            for item in data.get("list", []):
-                petit_id = str(item.get("petit_id", ""))
+            for item in data.get("petitZones", []):
+                petit_id = str(item.get("id", ""))
                 petit_title = str(item.get("title", ""))
                 if petit_id:
                     petit_dict[petit_id] = petit_title
@@ -78,41 +65,44 @@ class DongneAPIClient:
     
     def get_circles(self, event_id: str) -> List[Dict]:
         """
-        부스(서클) 목록 조회
+        부스(서클) 목록 조회 (페이지네이션 지원)
         
         Args:
-            event_id: 행사 ID
+            event_id: 행사 slug
             
         Returns:
             부스 정보 리스트
         """
-        url = f"{self.base_url}{self.endpoints['circles']}"
-        params = {
-            "event_id": event_id,
-            "form": "owner_name,twitter,seat,booth,petit_promotion_booth,10155,10199,10229,rule_main,rule_sub,10200,"
-                    "petitzone,10202,10225,10204,10233,10226,10232,10208,10209",
-            "page": 1,
-            "per_page": 1000,
-            "original": "",
-            "petitzone": "",
-            "fav": "",
-            "color": "",
-            "target": "",
-            "keyword": "",
-            "orderby": "",
-            "sort": "",
-            "sorting": "false",
-            "last": "false"
-        }
+        endpoint = self.endpoints['circles'].format(event_id=event_id)
+        url = f"{self.base_url}{endpoint}"
+        limit = self.default_params.get('limit', 100)
+        
+        all_items = []
+        page = 1
         
         try:
-            response = requests.get(url, params=params)
-            response.raise_for_status()
-            data = response.json()
+            while True:
+                params = {"limit": limit, "page": page}
+                response = requests.get(url, params=params)
+                response.raise_for_status()
+                data = response.json()
+                
+                items = data.get("data", {}).get("items", [])
+                all_items.extend(items)
+                
+                pagination = data.get("data", {}).get("pagination", {})
+                total_pages = pagination.get("totalPages", 1)
+                
+                logger.info(f"부스 페이지 {page}/{total_pages} 로드 완료 ({len(items)}개)")
+                
+                if page >= total_pages:
+                    break
+                
+                page += 1
+                time.sleep(self.request_delay)
             
-            circles = data.get("list", [])
-            logger.info(f"부스 {len(circles)}개 로드 완료 (event_id: {event_id})")
-            return circles
+            logger.info(f"부스 총 {len(all_items)}개 로드 완료 (event_id: {event_id})")
+            return all_items
             
         except requests.RequestException as e:
             logger.error(f"부스 로드 실패 (event_id: {event_id}): {e}")
@@ -121,80 +111,56 @@ class DongneAPIClient:
     def crawl_event(self, event_id: str, event_name: str, event_day: str) -> List[Dict]:
         """
         단일 행사 크롤링
-        
-        Args:
-            event_id: 행사 ID
-            event_name: 행사명
-            event_day: 개최일
-            
-        Returns:
-            부스 정보 리스트 (파싱된 형태)
         """
         logger.info(f"행사 크롤링 시작: {event_name} (ID: {event_id})")
         
-        # 쁘띠존 목록 로드
-        petit_dict = self.get_petitzone_list(event_id)
-        petit_dict[""] = ""  # 빈 값 처리
-        
-        # 부스 목록 로드
         circles = self.get_circles(event_id)
         
         if not circles:
             logger.warning(f"부스 데이터가 없습니다: {event_name}")
             return []
         
-        # 각 부스 정보 파싱
         parsed_circles = []
         for circle in circles:
-            parsed = self._parse_circle(circle, petit_dict, event_id, event_name, event_day)
+            parsed = self._parse_circle(circle, event_id, event_name, event_day)
             parsed_circles.append(parsed)
-        
-        time.sleep(self.request_delay)
         
         logger.info(f"행사 크롤링 완료: {event_name} - {len(parsed_circles)}개 부스")
         return parsed_circles
     
     def _parse_circle(
         self, 
-        circle: Dict, 
-        petit_dict: Dict[str, str],
+        circle: Dict,
         event_id: str,
         event_name: str,
         event_day: str
     ) -> Dict:
         """
         단일 부스 정보 파싱
-        
-        Args:
-            circle: 원시 부스 데이터
-            petit_dict: 쁘띠존 매핑
-            event_id: 행사 ID
-            event_name: 행사명
-            event_day: 개최일
-            
-        Returns:
-            파싱된 부스 정보
         """
-        # 기본 정보
-        circle_name = str(circle.get("circle_name", ""))
-        owner_name = str(circle.get("owner_name", ""))
-        seat = str(circle.get("seat", ""))
-        booth = str(circle.get("booth", ""))
-        application_srl = circle.get("application_srl", "")
+        circle_name = str(circle.get("circleName", ""))
+        owner_name = str(circle.get("ownerName", ""))
+        seat_labels = circle.get("seatLabels", [])
+        booth_count = circle.get("boothCount", "")
+        application_id = circle.get("applicationId", "")
         
-        # 위치 파싱 (열, 번호, 반부스)
+        seat = seat_labels[0] if seat_labels else ""
+        
         location_col, location_num, half_booth = self._parse_seat(seat)
         
-        # 부스 사이즈
-        booth_size = f"{booth}sp" if booth else ""
+        booth_size = f"{booth_count}sp" if booth_count else ""
         
-        # extra_vars 파싱
-        extra_vars = circle.get("extra_vars", {})
+        fields = circle.get("fields", [])
+        fields_dict = {}
+        for field in fields:
+            system_key = field.get("systemKey", "")
+            value = field.get("value", "")
+            if isinstance(value, list):
+                value = ", ".join(str(v) for v in value)
+            fields_dict[system_key] = value
         
-        # 필드 매핑 로드
         field_mapping = self._load_field_mapping()
         
-        # 파싱된 데이터 구성
         parsed = {
             "부스명": circle_name,
             "대표자": owner_name,
@@ -203,62 +169,35 @@ class DongneAPIClient:
             "위치(번호)": location_num,
             "반부스": half_booth,
             "부스": booth_size,
-            "링크": f"https://dongne.co/event/{event_id}/circles/{application_srl}",
+            "링크": f"https://dongne.co/events/{event_id}/circles/{application_id}",
             "행사명": event_name,
             "개최일": event_day
         }
         
-        # extra_vars 필드 매핑
-        for api_code, field_name in field_mapping.items():
-            if api_code == "petitzone":
-                # 쁘띠존은 ID→이름 변환
-                petit_id = str(extra_vars.get(api_code, ""))
-                parsed[field_name] = petit_dict.get(petit_id, "")
-            elif api_code == "twitter":
-                # 트위터는 그대로
-                parsed[field_name] = str(extra_vars.get(api_code, ""))
-            elif api_code in ["rule_main", "rule_sub"]:
-                # 다이스페스타 전용 필드
-                parsed[field_name] = str(extra_vars.get(api_code, ""))
+        for system_key, field_name in field_mapping.items():
+            if system_key == "twitter":
+                parsed[field_name] = str(fields_dict.get(system_key, ""))
             else:
-                # 코드 기반 필드
-                value = str(extra_vars.get(api_code, ""))
-                # 커플링은 쉼표를 X로 변환
-                if api_code == "10233":
-                    value = value.replace(",", "X")
+                value = str(fields_dict.get(system_key, ""))
                 parsed[field_name] = value
         
         return parsed
     
     def _parse_seat(self, seat: str) -> tuple:
-        """
-        위치 문자열 파싱
-        
-        Args:
-            seat: 위치 문자열 (예: "A23", "B15c")
-            
-        Returns:
-            (열, 번호, 반부스) 튜플
-        """
         if not seat:
             return ("", "", "")
         
-        # 첫 문자 = 열
-        location_col = seat[0]
+        parts = seat.split("-")
+        if len(parts) >= 2:
+            col = parts[0]
+            num = parts[1]
+            last_char = num[-1] if num else ""
+            if last_char.isdigit():
+                return (col, num, "")
+            else:
+                return (col, num[:-1], last_char)
         
-        # 마지막 문자 확인
-        last_char = seat[-1]
-        
-        if last_char.isdigit():
-            # 마지막이 숫자 → 반부스 없음 (예: A23)
-            location_num = seat[1:]
-            half_booth = ""
-        else:
-            # 마지막이 문자 → 반부스 (예: A23b)
-            location_num = seat[1:-1]
-            half_booth = last_char
-        
-        return (location_col, location_num, half_booth)
+        return (seat, "", "")
     
     def _load_field_mapping(self) -> Dict[str, str]:
         """필드 매핑 로드"""

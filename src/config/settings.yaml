@@ -1,12 +1,12 @@
 # 동인네트워크 부스 크롤러 설정
 
 api:
-  base_url: "https://api.dongne.co"
+  base_url: "https://dongne.co/api/v2"
   endpoints:
-    circles: "/circles"
-    petits: "/events/petits"
+    circles: "/events/{event_id}/circles"
+    petits: "/events/{event_id}/petit-zones"
   default_params:
-    per_page: 1000
+    limit: 100
     page: 1
 
 crawling:

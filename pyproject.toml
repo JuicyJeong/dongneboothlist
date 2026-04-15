@@ -33,6 +33,9 @@ dongne-crawl = "src.crawler.raw_exporter:crawl_raw_data_cli"
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
 [tool.ruff]
 line-length = 100
 target-version = "py39"
