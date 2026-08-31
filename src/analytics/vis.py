@@ -1,7 +1,11 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-import re
+from pathlib import Path
+
 import matplotlib.font_manager as fm
+import matplotlib.pyplot as plt
+import pandas as pd
+import re
+
+ROOT_DIR = Path(__file__).resolve().parents[2]
 
 
 # 폰트 경로 설정 (예: 나눔고딕)
@@ -9,7 +13,7 @@ font_path = '/Users/juicy/Library/Fonts/NanumSquareNeoOTF-Rg.otf'
 fontprop = fm.FontProperties(fname=font_path)
 
 # CSV 파일 경로 설정
-csv_file_path = '24년_9월.csv'  # 여기서 your_file_path_here 부분을 실제 파일 경로로 바꿔주세요.
+csv_file_path = ROOT_DIR / 'data' / 'raw' / '24년_9월.csv'
 
 # CSV 파일 읽기
 data = pd.read_csv(csv_file_path)
@@ -20,7 +24,7 @@ def preprocess_data(df):
     df['대표 작품(원작)'] = df['대표 작품(원작)'].str.lower().str.strip()
 
     # 여러 공백을 하나로 줄이기
-    df['대표 작품(원작)'] = df['대표 작품(원작)'].replace('\s+', ' ', regex=True)
+    df['대표 작품(원작)'] = df['대표 작품(원작)'].replace(r'\s+', ' ', regex=True)
 
     # 구분자로 나누기 (쉼표, 슬래시 등)
     split_delimiters = [',', '/', '&', ' and ', ' 및 ']

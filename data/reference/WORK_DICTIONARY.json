@@ -1,0 +1,3208 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-07-10",
+    "naming_rule": "한국 정발명 우선, 없으면 한국에서 가장 많이 쓰는 풀네임",
+    "total_works": 211,
+    "origin_legend": {
+      "kr": "한국",
+      "jp": "일본",
+      "cn": "중국",
+      "en": "영미권",
+      "multi": "다국적",
+      "meta": "메타 카테고리"
+    },
+    "category_legend": {
+      "manga": "만화",
+      "anime": "애니메이션",
+      "game": "게임",
+      "webtoon": "웹툰",
+      "webnovel": "웹소설",
+      "novel": "소설",
+      "movie": "영화",
+      "drama": "드라마",
+      "vtuber": "버추얼 유튜버",
+      "trpg": "TRPG",
+      "tokusatsu": "특촬",
+      "franchise": "프랜차이즈",
+      "music": "음악",
+      "meta": "메타 카테고리"
+    }
+  },
+  "works": {
+    "W0001": {
+      "code": "W0001",
+      "canonical_name": "슬램덩크",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "슬램 덩크"
+      ],
+      "abbreviations": [],
+      "notes": "이노우에 타케히코. 더 퍼스트 슬램덩크(영화)와 구분"
+    },
+    "W0002": {
+      "code": "W0002",
+      "canonical_name": "가비지 타임",
+      "origin": "kr",
+      "category": "webtoon",
+      "aliases": [
+        "가비지타임"
+      ],
+      "abbreviations": []
+    },
+    "W0003": {
+      "code": "W0003",
+      "canonical_name": "화산귀환",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [],
+      "abbreviations": []
+    },
+    "W0004": {
+      "code": "W0004",
+      "canonical_name": "데뷔 못 하면 죽는 병 걸림",
+      "origin": "kr",
+      "category": "webtoon",
+      "aliases": [
+        "데뷔 못 하면 죽는 병걸림",
+        "데뷔 못 하면 죽는병 걸림",
+        "데뷔 못하면 죽는 병 걸림",
+        "데뷔 못하면 죽는 병걸림",
+        "데뷔 못하면 죽는병 걸림",
+        "데뷔못하면 죓는 병 걸림",
+        "데뷔못하면 죽는 병 걸림",
+        "데뷔못하면 죽는병 걸림",
+        "데뷔못하면죽는병걸림"
+      ],
+      "abbreviations": [
+        "데못죽"
+      ],
+      "notes": "정식 표기는 '데뷔 못 하면 죽는 병 걸림' (띄어쓰기 다수 변형 존재)"
+    },
+    "W0005": {
+      "code": "W0005",
+      "canonical_name": "괴담에 떨어져도 출근을 해야 하는구나",
+      "origin": "kr",
+      "category": "webtoon",
+      "aliases": [
+        "괴담에 떨어져도 출근을 해야 하는 구나",
+        "괴담에 떨어져도 출근을 해야하는 구나",
+        "괴담에 떨어져도 출근을 해야하는구나",
+        "괴담에떨어져도출근을해야하는구나"
+      ],
+      "abbreviations": [
+        "괴담출근",
+        "괴출"
+      ],
+      "notes": "약칭 '괴담출근'이 정식명보다 사용 빈도 높음 (445 vs 409)"
+    },
+    "W0006": {
+      "code": "W0006",
+      "canonical_name": "주술회전",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [],
+      "abbreviations": []
+    },
+    "W0007": {
+      "code": "W0007",
+      "canonical_name": "아이돌리쉬 세븐",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "IDOLiSH7",
+        "idolish7",
+        "아이돌리쉬세븐"
+      ],
+      "abbreviations": [
+        "아이나나"
+      ],
+      "notes": "일본 모바일 게임. 한국 정식 서비스 없음, 한글 표기는 '아이돌리쉬 세븐'"
+    },
+    "W0008": {
+      "code": "W0008",
+      "canonical_name": "프로젝트 세카이 컬러풀 스테이지! feat. 하츠네 미쿠",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "프로젝트 세카이",
+        "프로젝트 세카이 컬러풀 스테이지",
+        "프로젝트 세카이 컬러풀 스테이지 feat. 하츠네 미쿠",
+        "프로젝트 세카이 컬러풀 스테이지 feat.하츠네 미쿠",
+        "프로젝트 세카이 컬러풀 스테이지! feat.하츠네 미쿠",
+        "프로젝트세카이"
+      ],
+      "abbreviations": [
+        "프로세카",
+        "프세카"
+      ],
+      "notes": "정식명은 풀네임이나 통상 '프로젝트 세카이'로 약칭"
+    },
+    "W0009": {
+      "code": "W0009",
+      "canonical_name": "앙상블 스타즈!!",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "앙상블 스타즈",
+        "앙상블 스타즈!",
+        "앙상블스타즈",
+        "앙상블스타즈!",
+        "앙상블스타즈!!"
+      ],
+      "abbreviations": [
+        "앙스타"
+      ],
+      "notes": "원작 '앙상블 스타즈!'에서 '!!'로 리뉴얼. !! Music은 별개 등록"
+    },
+    "W0010": {
+      "code": "W0010",
+      "canonical_name": "앙상블 스타즈!! Music",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "앙상블 스타즈!! Music",
+        "앙상블스타즈!! Music"
+      ],
+      "abbreviations": [
+        "앙스타 Music"
+      ],
+      "notes": "리듬 게임. 시리즈와 구분"
+    },
+    "W0011": {
+      "code": "W0011",
+      "canonical_name": "블루 록",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "BLUE LOCK",
+        "Blue Lock",
+        "블루록"
+      ],
+      "abbreviations": [],
+      "notes": "한국 정발 단행본 표기 '블루록' vs 원표기 '블루 록'. review_needed"
+    },
+    "W0012": {
+      "code": "W0012",
+      "canonical_name": "오오에",
+      "origin": "kr",
+      "category": "webtoon",
+      "aliases": [],
+      "abbreviations": [],
+      "review_needed": true,
+      "notes": "한국 웹툰. 정식명 확인 필요"
+    },
+    "W0013": {
+      "code": "W0013",
+      "canonical_name": "진혼기",
+      "origin": "cn",
+      "category": "webnovel",
+      "aliases": [],
+      "abbreviations": [],
+      "review_needed": true,
+      "notes": "중국 웹소설 추정. 정식 한국명 확인 필요"
+    },
+    "W0014": {
+      "code": "W0014",
+      "canonical_name": "이세계 착각 헌터",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [
+        "이세계 착각헌터",
+        "이세계착각헌터"
+      ],
+      "abbreviations": [
+        "이착헌"
+      ]
+    },
+    "W0015": {
+      "code": "W0015",
+      "canonical_name": "어두운 바다의 등불이 되어",
+      "origin": "kr",
+      "category": "webtoon",
+      "aliases": [
+        "어두운 바다의 등불이되어",
+        "어두운바다의등불이되어"
+      ],
+      "abbreviations": [
+        "어바등"
+      ]
+    },
+    "W0016": {
+      "code": "W0016",
+      "canonical_name": "내가 키운 S급들",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [
+        "내가 키운 S급",
+        "내가 키운 s급들",
+        "내가키운 s급",
+        "내가키운S급들",
+        "내가키운s급들"
+      ],
+      "abbreviations": [
+        "내스급"
+      ]
+    },
+    "W0017": {
+      "code": "W0017",
+      "canonical_name": "하이큐!!",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "하이큐",
+        "하이큐!",
+        "하이큐!!"
+      ],
+      "abbreviations": []
+    },
+    "W0018": {
+      "code": "W0018",
+      "canonical_name": "붕괴: 스타레일",
+      "origin": "cn",
+      "category": "game",
+      "aliases": [
+        "붕괴 : 스타레일",
+        "붕괴 스타레일",
+        "붕괴:스타레일",
+        "붕괴스타레일",
+        "스타레일"
+      ],
+      "abbreviations": [],
+      "notes": "호요버스. '붕괴: 스타레일'이 한국 정발명"
+    },
+    "W0019": {
+      "code": "W0019",
+      "canonical_name": "트라이건",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "TRIGUN",
+        "Trigun",
+        "트라이건 맥시멈"
+      ],
+      "abbreviations": []
+    },
+    "W0020": {
+      "code": "W0020",
+      "canonical_name": "명일방주",
+      "origin": "cn",
+      "category": "game",
+      "aliases": [
+        "Arknights",
+        "아크나이츠"
+      ],
+      "abbreviations": [],
+      "notes": "한국 정발명 '명일방주'"
+    },
+    "W0021": {
+      "code": "W0021",
+      "canonical_name": "명탐정 코난",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "명탐정코난"
+      ],
+      "abbreviations": []
+    },
+    "W0022": {
+      "code": "W0022",
+      "canonical_name": "천관사복",
+      "origin": "cn",
+      "category": "webnovel",
+      "aliases": [
+        "천관사복",
+        "천관사사"
+      ],
+      "abbreviations": [],
+      "notes": "묵향동로(墨香동老) 원작 webnovel. 한국 정발명 '천관사복'"
+    },
+    "W0023": {
+      "code": "W0023",
+      "canonical_name": "원피스",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "ONE PIECE",
+        "One Piece"
+      ],
+      "abbreviations": []
+    },
+    "W0024": {
+      "code": "W0024",
+      "canonical_name": "플레이브",
+      "origin": "kr",
+      "category": "vtuber",
+      "aliases": [
+        "PLAVE"
+      ],
+      "abbreviations": [],
+      "notes": "한국 버추얼 아이돌 그룹"
+    },
+    "W0025": {
+      "code": "W0025",
+      "canonical_name": "닌자보이 란타로",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "닌타마",
+        "닌타마 란타로",
+        "닌타마란타로"
+      ],
+      "abbreviations": [],
+      "notes": "원작 만화 '닌자보이 란타로', 애니메이션 '닌타마 란타로'"
+    },
+    "W0026": {
+      "code": "W0026",
+      "canonical_name": "블랙 배저",
+      "origin": "kr",
+      "category": "webtoon",
+      "aliases": [
+        "블랙배저"
+      ],
+      "abbreviations": [],
+      "review_needed": true,
+      "notes": "한국 웹툰 추정. 정확한 정식명 확인 필요"
+    },
+    "W0027": {
+      "code": "W0027",
+      "canonical_name": "역전재판",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "Ace Attorney",
+        "역전재판 시리즈"
+      ],
+      "abbreviations": [],
+      "notes": "캡콤. 한국 정발명 '역전재판'. 시리즈 전체와 개별작 구분 필요"
+    },
+    "W0028": {
+      "code": "W0028",
+      "canonical_name": "MIU404",
+      "origin": "jp",
+      "category": "drama",
+      "aliases": [
+        "MIU 404",
+        "Miu404",
+        "miu404",
+        "미우 404",
+        "미우404"
+      ],
+      "abbreviations": [],
+      "notes": "일본 드라마"
+    },
+    "W0029": {
+      "code": "W0029",
+      "canonical_name": "발더스 게이트 3",
+      "origin": "en",
+      "category": "game",
+      "aliases": [
+        "BG3",
+        "Baldur's Gate 3",
+        "Baldurs Gate 3",
+        "발더스 게이트",
+        "발더스 게이트3",
+        "발더스게이트",
+        "발더스게이트 3",
+        "발더스게이트3"
+      ],
+      "abbreviations": []
+    },
+    "W0030": {
+      "code": "W0030",
+      "canonical_name": "히프노시스 마이크",
+      "origin": "jp",
+      "category": "franchise",
+      "aliases": [
+        "Hypnosis Mic",
+        "히프노시스마이크"
+      ],
+      "abbreviations": [],
+      "notes": "음원·만화·게임 미디어 믹스"
+    },
+    "W0031": {
+      "code": "W0031",
+      "canonical_name": "포켓몬스터",
+      "origin": "jp",
+      "category": "franchise",
+      "aliases": [
+        "Pokemon",
+        "Pokémon",
+        "포켓몬",
+        "포켓몬스터 시리즈"
+      ],
+      "abbreviations": [],
+      "notes": "프랜차이즈 전체. 개별 작품(스칼렛/바이올렛 등)은 별개"
+    },
+    "W0032": {
+      "code": "W0032",
+      "canonical_name": "전지적 독자 시점",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [
+        "전지적 독자시점",
+        "전지적독자시점"
+      ],
+      "abbreviations": [
+        "전독시"
+      ]
+    },
+    "W0033": {
+      "code": "W0033",
+      "canonical_name": "마법명가 차남으로 살아남는 법",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [
+        "마법 명가 차남으로 살아남는 법",
+        "마법 명가 차남으로 살아남는법",
+        "마법명가차남으로 살아남는 법",
+        "마법명가차남으로 살아남는법",
+        "마법명가차남으로살아남는법"
+      ],
+      "abbreviations": [
+        "마차살"
+      ]
+    },
+    "W0034": {
+      "code": "W0034",
+      "canonical_name": "니지산지",
+      "origin": "jp",
+      "category": "vtuber",
+      "aliases": [
+        "NIJISANJI",
+        "Nijisanji",
+        "니지산지"
+      ],
+      "abbreviations": [],
+      "notes": "버추얼 유튜버 소속사"
+    },
+    "W0035": {
+      "code": "W0035",
+      "canonical_name": "괴수 8호",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Kaiju No.8",
+        "괴물 8호",
+        "괴물8호",
+        "괴수8호"
+      ],
+      "abbreviations": [],
+      "review_needed": true,
+      "notes": "한국 정발명 '괴물 8호' vs 데이터 주표기 '괴수 8호'. 확인 필요"
+    },
+    "W0036": {
+      "code": "W0036",
+      "canonical_name": "마법사의 약속",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "마법사의약속"
+      ],
+      "abbreviations": [
+        "마호야쿠"
+      ],
+      "notes": "魔法使いの約束. 일본 모바일 게임"
+    },
+    "W0037": {
+      "code": "W0037",
+      "canonical_name": "페이트/그랜드 오더",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "FATE GRAND ORDER",
+        "Fate Grand Order",
+        "Fate Grand/Order",
+        "Fate grand order",
+        "Fate/Grand Order",
+        "Fate/Grand order",
+        "fate grand order",
+        "fate: grand order",
+        "페이트/그랜드오더",
+        "페이트그랜드오더"
+      ],
+      "abbreviations": [
+        "FGO"
+      ]
+    },
+    "W0038": {
+      "code": "W0038",
+      "canonical_name": "트랜스포머",
+      "origin": "en",
+      "category": "franchise",
+      "aliases": [
+        "Transformers",
+        "트랜스포머 시리즈"
+      ],
+      "abbreviations": []
+    },
+    "W0039": {
+      "code": "W0039",
+      "canonical_name": "세포신곡",
+      "origin": "kr",
+      "category": "webtoon",
+      "aliases": [
+        "세포신곡."
+      ],
+      "abbreviations": [],
+      "review_needed": true,
+      "notes": "한국 웹툰 추정"
+    },
+    "W0040": {
+      "code": "W0040",
+      "canonical_name": "원신",
+      "origin": "cn",
+      "category": "game",
+      "aliases": [
+        "Genshin Impact",
+        "겐신 임팩트"
+      ],
+      "abbreviations": [],
+      "notes": "호요버스"
+    },
+    "W0041": {
+      "code": "W0041",
+      "canonical_name": "페르소나 시리즈",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "PERSONA",
+        "Persona",
+        "페르소나",
+        "페르소나 시리즈"
+      ],
+      "abbreviations": [],
+      "notes": "시리즈 전체. 개별작(3/4/5)은 별개"
+    },
+    "W0042": {
+      "code": "W0042",
+      "canonical_name": "페르소나 5",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "P5",
+        "Persona 5",
+        "페르소나 5",
+        "페르소나5"
+      ],
+      "abbreviations": []
+    },
+    "W0043": {
+      "code": "W0043",
+      "canonical_name": "페르소나 3",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "P3",
+        "Persona 3",
+        "페르소나 3",
+        "페르소나3"
+      ],
+      "abbreviations": []
+    },
+    "W0044": {
+      "code": "W0044",
+      "canonical_name": "페르소나 4",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "P4",
+        "Persona 4",
+        "페르소나 4",
+        "페르소나4"
+      ],
+      "abbreviations": []
+    },
+    "W0045": {
+      "code": "W0045",
+      "canonical_name": "아이실드 21",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "아이실드21"
+      ],
+      "abbreviations": []
+    },
+    "W0046": {
+      "code": "W0046",
+      "canonical_name": "골든카무이",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "골든 카무이"
+      ],
+      "abbreviations": []
+    },
+    "W0047": {
+      "code": "W0047",
+      "canonical_name": "나의 히어로 아카데미아",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "나의히어로아카데미아"
+      ],
+      "abbreviations": []
+    },
+    "W0048": {
+      "code": "W0048",
+      "canonical_name": "혈계전선",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [],
+      "abbreviations": []
+    },
+    "W0049": {
+      "code": "W0049",
+      "canonical_name": "파이널 판타지 XIV",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "FF XIV",
+        "FF14",
+        "Final Fantasy XIV",
+        "파이널 판타지 14",
+        "파이널 판타지14",
+        "파이널판타지 14",
+        "파이널판타지14"
+      ],
+      "abbreviations": []
+    },
+    "W0050": {
+      "code": "W0050",
+      "canonical_name": "가정교사 히트맨 리본!",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "가정교사 히트맨 리본",
+        "가정교사히트맨리본",
+        "가정교사히트맨리본!"
+      ],
+      "abbreviations": []
+    },
+    "W0051": {
+      "code": "W0051",
+      "canonical_name": "오리지널",
+      "origin": "meta",
+      "category": "meta",
+      "aliases": [
+        "(창작)",
+        "1차 창작",
+        "1차창작",
+        "창작"
+      ],
+      "abbreviations": [],
+      "notes": "메타 카테고리: 2차창작이 아닌 오리지널 창작"
+    },
+    "W0052": {
+      "code": "W0052",
+      "canonical_name": "수공예",
+      "origin": "meta",
+      "category": "meta",
+      "aliases": [
+        "수공예.",
+        "핸드메이드 봉제인형"
+      ],
+      "abbreviations": [],
+      "notes": "메타 카테고리: 특정 원작 없이 수공예/굿즈 제작"
+    },
+    "W0053": {
+      "code": "W0053",
+      "canonical_name": "윈드브레이커",
+      "origin": "kr",
+      "category": "webtoon",
+      "aliases": [
+        "윈드 브레이커"
+      ],
+      "abbreviations": [
+        "윈브레"
+      ],
+      "notes": "조용석 작가 웹툰. 일본 애니메이션 'Wind Breaker'와 다름"
+    },
+    "W0054": {
+      "code": "W0054",
+      "canonical_name": "모브 사이코 100",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Mob Psycho 100",
+        "모브 사이코100",
+        "모브사이코",
+        "모브사이코 100",
+        "모브사이코100"
+      ],
+      "abbreviations": []
+    },
+    "W0055": {
+      "code": "W0055",
+      "canonical_name": "엘소드",
+      "origin": "kr",
+      "category": "game",
+      "aliases": [
+        "Elsword"
+      ],
+      "abbreviations": [],
+      "notes": "코그 모바일/PC 게임"
+    },
+    "W0056": {
+      "code": "W0056",
+      "canonical_name": "대역전재판",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [],
+      "abbreviations": [],
+      "notes": "역전재판 시리즈 스핀오프"
+    },
+    "W0057": {
+      "code": "W0057",
+      "canonical_name": "인간 본성이 반파된 자구계통",
+      "origin": "cn",
+      "category": "webnovel",
+      "aliases": [
+        "인간 본성이 반파된 자구계통",
+        "인사반파자구계통"
+      ],
+      "abbreviations": [
+        "인사반파"
+      ],
+      "review_needed": true,
+      "notes": "중국 웹소설 '人渣反派自救系统'의 한국어 번역명. 정식 번역명 확인 필요"
+    },
+    "W0058": {
+      "code": "W0058",
+      "canonical_name": "의원, 다시 살다",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [
+        "의원 다시 살다",
+        "의원,다시살다",
+        "의원다시살다"
+      ],
+      "abbreviations": [],
+      "notes": "콤마가 제목의 일부"
+    },
+    "W0059": {
+      "code": "W0059",
+      "canonical_name": "나루토",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "NARUTO",
+        "Naruto"
+      ],
+      "abbreviations": []
+    },
+    "W0060": {
+      "code": "W0060",
+      "canonical_name": "죠죠의 기묘한 모험",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "JoJo",
+        "JoJo's Bizarre Adventure",
+        "죠죠",
+        "죠죠의기묘한모험"
+      ],
+      "abbreviations": []
+    },
+    "W0061": {
+      "code": "W0061",
+      "canonical_name": "도검난무",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "Touken Ranbu"
+      ],
+      "abbreviations": []
+    },
+    "W0062": {
+      "code": "W0062",
+      "canonical_name": "로드 오브 히어로즈",
+      "origin": "kr",
+      "category": "game",
+      "aliases": [
+        "로드오브히어로즈"
+      ],
+      "abbreviations": [
+        "로오히"
+      ]
+    },
+    "W0063": {
+      "code": "W0063",
+      "canonical_name": "은혼",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Gintama",
+        "은혼"
+      ],
+      "abbreviations": []
+    },
+    "W0064": {
+      "code": "W0064",
+      "canonical_name": "마도조사",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [],
+      "abbreviations": [],
+      "review_needed": true,
+      "notes": "마작 게임 '麻雀' 관련 추정. 정확한 작품 확인 필요"
+    },
+    "W0065": {
+      "code": "W0065",
+      "canonical_name": "서브 남주가 파업하면 생기는 일",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [
+        "서브남주가 파업하면 생기는 일"
+      ],
+      "abbreviations": []
+    },
+    "W0066": {
+      "code": "W0066",
+      "canonical_name": "카리스마",
+      "origin": "jp",
+      "category": "franchise",
+      "aliases": [
+        "CHARISMA",
+        "카리스마 하우스"
+      ],
+      "abbreviations": [],
+      "review_needed": true,
+      "notes": "일본 미디어 믹스 추정. '카리스마 하우스' 포함 관계 확인 필요"
+    },
+    "W0067": {
+      "code": "W0067",
+      "canonical_name": "유희왕",
+      "origin": "jp",
+      "category": "franchise",
+      "aliases": [
+        "Yu-Gi-Oh!",
+        "유희왕 OCG",
+        "유희왕 듀얼 몬스터즈",
+        "유희왕 듀얼몬스터즈"
+      ],
+      "abbreviations": []
+    },
+    "W0068": {
+      "code": "W0068",
+      "canonical_name": "해즈빈 호텔",
+      "origin": "en",
+      "category": "anime",
+      "aliases": [
+        "Hazbin Hotel",
+        "해즈빈호텔"
+      ],
+      "abbreviations": []
+    },
+    "W0069": {
+      "code": "W0069",
+      "canonical_name": "18TRIP",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "18trip"
+      ],
+      "abbreviations": []
+    },
+    "W0070": {
+      "code": "W0070",
+      "canonical_name": "문과라도 안 죄송한 이세계로 감",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [
+        "문과라도 안죄송한 이세계로 감"
+      ],
+      "abbreviations": []
+    },
+    "W0071": {
+      "code": "W0071",
+      "canonical_name": "백작가의 망나니가 되었다",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [
+        "백작가의망나니가되었다"
+      ],
+      "abbreviations": []
+    },
+    "W0072": {
+      "code": "W0072",
+      "canonical_name": "쿠로코의 농구",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Kuroko's Basketball",
+        "쿠로코의농구"
+      ],
+      "abbreviations": []
+    },
+    "W0073": {
+      "code": "W0073",
+      "canonical_name": "이나즈마 일레븐",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "Inazuma Eleven",
+        "이나즈마일레븐"
+      ],
+      "abbreviations": []
+    },
+    "W0074": {
+      "code": "W0074",
+      "canonical_name": "테일즈런너",
+      "origin": "kr",
+      "category": "game",
+      "aliases": [
+        "Tales Runner",
+        "테일즈 런너"
+      ],
+      "abbreviations": []
+    },
+    "W0075": {
+      "code": "W0075",
+      "canonical_name": "보컬로이드",
+      "origin": "jp",
+      "category": "meta",
+      "aliases": [
+        "VOCALOID",
+        "Vocaloid",
+        "보컬로이드 시리즈"
+      ],
+      "abbreviations": [],
+      "notes": "메타 카테고리: 보컬로이드 캐릭터 전체"
+    },
+    "W0076": {
+      "code": "W0076",
+      "canonical_name": "명문고 EX급 조연의 리플레이",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [
+        "명문고 ex급 조연의 리플레이",
+        "명문고EX급조연의리플레이",
+        "명문고ex급 조연의 리플레이"
+      ],
+      "abbreviations": [
+        "명급리"
+      ]
+    },
+    "W0077": {
+      "code": "W0077",
+      "canonical_name": "사카모토 데이즈",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Sakamoto Days",
+        "사카모토데이즈"
+      ],
+      "abbreviations": []
+    },
+    "W0078": {
+      "code": "W0078",
+      "canonical_name": "테니스의 왕자",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "The Prince of Tennis",
+        "테니스의왕자"
+      ],
+      "abbreviations": []
+    },
+    "W0079": {
+      "code": "W0079",
+      "canonical_name": "도쿄 리벤저스",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Tokyo Revengers",
+        "도쿄 리벤져스",
+        "도쿄리벤저스"
+      ],
+      "abbreviations": []
+    },
+    "W0080": {
+      "code": "W0080",
+      "canonical_name": "누: 카니발",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "NU:Carnival",
+        "NU:카니발",
+        "NU카니발",
+        "Nu Carnival",
+        "Nu: carnival",
+        "Nu: 카니발",
+        "Nu:carnival",
+        "Nu:카니발",
+        "nu:carnival"
+      ],
+      "abbreviations": [
+        "누카니발",
+        "뉴카니발"
+      ]
+    },
+    "W0081": {
+      "code": "W0081",
+      "canonical_name": "모모찌",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Momochi",
+        "모모치"
+      ],
+      "abbreviations": [],
+      "review_needed": true,
+      "notes": "정확한 작품 확인 필요"
+    },
+    "W0082": {
+      "code": "W0082",
+      "canonical_name": "오버워치",
+      "origin": "en",
+      "category": "game",
+      "aliases": [
+        "Overwatch",
+        "오버워치 2"
+      ],
+      "abbreviations": []
+    },
+    "W0083": {
+      "code": "W0083",
+      "canonical_name": "에리오스 라이징 히어로즈",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "ELOS",
+        "Helios Rising Heroes",
+        "에리오스라이징히어로즈"
+      ],
+      "abbreviations": []
+    },
+    "W0084": {
+      "code": "W0084",
+      "canonical_name": "잔차품",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "残次品",
+        "잔차품"
+      ],
+      "abbreviations": [],
+      "review_needed": true,
+      "notes": "정확한 작품 확인 필요"
+    },
+    "W0085": {
+      "code": "W0085",
+      "canonical_name": "우마무스메 프리티 더비",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "Uma Musume Pretty Derby",
+        "우마무스메",
+        "우마무스메 프리티 더비"
+      ],
+      "abbreviations": [
+        "우마무스메"
+      ]
+    },
+    "W0086": {
+      "code": "W0086",
+      "canonical_name": "메달리스트",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Medalist"
+      ],
+      "abbreviations": []
+    },
+    "W0087": {
+      "code": "W0087",
+      "canonical_name": "닥터 스톤",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Dr. STONE",
+        "닥터스톤"
+      ],
+      "abbreviations": []
+    },
+    "W0088": {
+      "code": "W0088",
+      "canonical_name": "블루 자이언트",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Blue Giant",
+        "블루자이언트"
+      ],
+      "abbreviations": []
+    },
+    "W0089": {
+      "code": "W0089",
+      "canonical_name": "해리 포터",
+      "origin": "en",
+      "category": "novel",
+      "aliases": [
+        "Harry Potter",
+        "해리 포터",
+        "해리포터"
+      ],
+      "abbreviations": []
+    },
+    "W0090": {
+      "code": "W0090",
+      "canonical_name": "반월당의 기묘한 이야기",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [
+        "반월당의기묘한이야기"
+      ],
+      "abbreviations": [
+        "반월당"
+      ]
+    },
+    "W0091": {
+      "code": "W0091",
+      "canonical_name": "젤다의 전설",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "The Legend of Zelda",
+        "젤다의전설"
+      ],
+      "abbreviations": []
+    },
+    "W0092": {
+      "code": "W0092",
+      "canonical_name": "다이아몬드 에이스",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Ace of Diamond",
+        "다이아몬드에이스"
+      ],
+      "abbreviations": []
+    },
+    "W0093": {
+      "code": "W0093",
+      "canonical_name": "용과 같이",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "Like a Dragon",
+        "Yakuza",
+        "룰 더 다이",
+        "용과같이"
+      ],
+      "abbreviations": []
+    },
+    "W0094": {
+      "code": "W0094",
+      "canonical_name": "겁쟁이 페달",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Yowamushi Pedal",
+        "겁쟁이페달"
+      ],
+      "abbreviations": []
+    },
+    "W0095": {
+      "code": "W0095",
+      "canonical_name": "흡혈귀는 툭하면 죽는다",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "흡혈귀는툭하면죽는다"
+      ],
+      "abbreviations": []
+    },
+    "W0096": {
+      "code": "W0096",
+      "canonical_name": "리그 오브 레전드",
+      "origin": "en",
+      "category": "game",
+      "aliases": [
+        "League of Legends",
+        "LoL",
+        "리그오브레전드"
+      ],
+      "abbreviations": [
+        "롤"
+      ]
+    },
+    "W0097": {
+      "code": "W0097",
+      "canonical_name": "가라오케 가자!",
+      "origin": "kr",
+      "category": "webtoon",
+      "aliases": [
+        "가라오케 가자",
+        "가라오케가자"
+      ],
+      "abbreviations": []
+    },
+    "W0098": {
+      "code": "W0098",
+      "canonical_name": "사이퍼즈",
+      "origin": "kr",
+      "category": "game",
+      "aliases": [
+        "Cyphers"
+      ],
+      "abbreviations": []
+    },
+    "W0099": {
+      "code": "W0099",
+      "canonical_name": "열화요수",
+      "origin": "cn",
+      "category": "webnovel",
+      "aliases": [],
+      "abbreviations": [],
+      "review_needed": true,
+      "notes": "중국 웹소설 추정. 정식 한국명 확인 필요"
+    },
+    "W0100": {
+      "code": "W0100",
+      "canonical_name": "MCU",
+      "origin": "en",
+      "category": "franchise",
+      "aliases": [
+        "Marvel Cinematic Universe",
+        "Marvel Comics",
+        "마블",
+        "마블 시네마틱 유니버스",
+        "마블 코믹스",
+        "마블코믹스"
+      ],
+      "abbreviations": []
+    },
+    "W0101": {
+      "code": "W0101",
+      "canonical_name": "콜 오브 듀티",
+      "origin": "en",
+      "category": "game",
+      "aliases": [
+        "Call of Duty",
+        "CoD",
+        "콜 오브  듀티",
+        "콜오브듀티"
+      ],
+      "abbreviations": []
+    },
+    "W0102": {
+      "code": "W0102",
+      "canonical_name": "헌터×헌터",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "HUNTER×HUNTER",
+        "Hunter x Hunter",
+        "헌터X헌터",
+        "헌터x헌터",
+        "헌터헌터"
+      ],
+      "abbreviations": []
+    },
+    "W0103": {
+      "code": "W0103",
+      "canonical_name": "스타트렉",
+      "origin": "en",
+      "category": "franchise",
+      "aliases": [
+        "Star Trek"
+      ],
+      "abbreviations": []
+    },
+    "W0104": {
+      "code": "W0104",
+      "canonical_name": "무기미도",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [],
+      "abbreviations": [],
+      "review_needed": true,
+      "notes": "정확한 작품 확인 필요"
+    },
+    "W0105": {
+      "code": "W0105",
+      "canonical_name": "블리치",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "BLEACH",
+        "Bleach"
+      ],
+      "abbreviations": []
+    },
+    "W0106": {
+      "code": "W0106",
+      "canonical_name": "너희들은 변호됐다",
+      "origin": "kr",
+      "category": "webtoon",
+      "aliases": [
+        "변호됨"
+      ],
+      "abbreviations": []
+    },
+    "W0107": {
+      "code": "W0107",
+      "canonical_name": "100미터",
+      "origin": "kr",
+      "category": "webtoon",
+      "aliases": [
+        "100M",
+        "100m",
+        "100미터."
+      ],
+      "abbreviations": []
+    },
+    "W0108": {
+      "code": "W0108",
+      "canonical_name": "메타포: 리파타지오",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "Metaphor: ReFantazio",
+        "메타포 : 리판타지오",
+        "메타포 리판타지오",
+        "메타포: 리 판타지오",
+        "메타포:리판타지오"
+      ],
+      "abbreviations": [],
+      "review_needed": true,
+      "notes": "한국 정발명 '메타포: 리파타지오' vs 원제 'ReFantazio'. 확인 필요"
+    },
+    "W0109": {
+      "code": "W0109",
+      "canonical_name": "디지몬",
+      "origin": "jp",
+      "category": "franchise",
+      "aliases": [
+        "Digimon",
+        "Digital Monster",
+        "디지몬 시리즈"
+      ],
+      "abbreviations": []
+    },
+    "W0110": {
+      "code": "W0110",
+      "canonical_name": "스플래툰",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "Splatoon",
+        "스플래툰"
+      ],
+      "abbreviations": []
+    },
+    "W0111": {
+      "code": "W0111",
+      "canonical_name": "던전밥",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Dungeon Meshi",
+        "던전 먹방"
+      ],
+      "abbreviations": []
+    },
+    "W0112": {
+      "code": "W0112",
+      "canonical_name": "고서점가의 하시히메",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [],
+      "abbreviations": []
+    },
+    "W0113": {
+      "code": "W0113",
+      "canonical_name": "빛과 밤의 사랑",
+      "origin": "cn",
+      "category": "game",
+      "aliases": [
+        "光与夜之恋",
+        "빛과밤의사랑"
+      ],
+      "abbreviations": [],
+      "review_needed": true,
+      "notes": "중국 모바일 게임 '光与夜之恋'. 한국어 정식명 확인 필요"
+    },
+    "W0114": {
+      "code": "W0114",
+      "canonical_name": "역전재판 시리즈",
+      "origin": "jp",
+      "category": "franchise",
+      "aliases": [],
+      "abbreviations": [],
+      "notes": "역전재판 프랜차이즈 전체"
+    },
+    "W0115": {
+      "code": "W0115",
+      "canonical_name": "크툴루의 부름",
+      "origin": "en",
+      "category": "trpg",
+      "aliases": [
+        "COC",
+        "Call of Cthulhu",
+        "CoC",
+        "coc",
+        "크툴루 TRPG"
+      ],
+      "abbreviations": []
+    },
+    "W0116": {
+      "code": "W0116",
+      "canonical_name": "프로메아",
+      "origin": "jp",
+      "category": "anime",
+      "aliases": [
+        "Promare",
+        "프로메아",
+        "프로메어"
+      ],
+      "abbreviations": []
+    },
+    "W0117": {
+      "code": "W0117",
+      "canonical_name": "살파랑",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [],
+      "abbreviations": [],
+      "review_needed": true
+    },
+    "W0118": {
+      "code": "W0118",
+      "canonical_name": "파라독스 라이브",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "Paradox Live",
+        "파라독스라이브"
+      ],
+      "abbreviations": [
+        "파라라이"
+      ]
+    },
+    "W0119": {
+      "code": "W0119",
+      "canonical_name": "가면라이더",
+      "origin": "jp",
+      "category": "tokusatsu",
+      "aliases": [
+        "Kamen Rider",
+        "가면라이더 시리즈"
+      ],
+      "abbreviations": []
+    },
+    "W0120": {
+      "code": "W0120",
+      "canonical_name": "가면라이더 가브",
+      "origin": "jp",
+      "category": "tokusatsu",
+      "aliases": [
+        "Kamen Rider Gavv"
+      ],
+      "abbreviations": []
+    },
+    "W0121": {
+      "code": "W0121",
+      "canonical_name": "천마는 아이돌이 되었다",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [],
+      "abbreviations": [
+        "천마돌"
+      ]
+    },
+    "W0122": {
+      "code": "W0122",
+      "canonical_name": "드래곤볼",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Dragon Ball",
+        "드래곤 볼"
+      ],
+      "abbreviations": []
+    },
+    "W0123": {
+      "code": "W0123",
+      "canonical_name": "프로야구생존기",
+      "origin": "kr",
+      "category": "webtoon",
+      "aliases": [
+        "프로야구 생존기"
+      ],
+      "abbreviations": []
+    },
+    "W0124": {
+      "code": "W0124",
+      "canonical_name": "킹 오브 프리즘",
+      "origin": "jp",
+      "category": "anime",
+      "aliases": [
+        "King of Prism",
+        "킹오브프리즘"
+      ],
+      "abbreviations": []
+    },
+    "W0125": {
+      "code": "W0125",
+      "canonical_name": "더블크로스 3rd",
+      "origin": "jp",
+      "category": "trpg",
+      "aliases": [
+        "DX3",
+        "Double Cross 3rd",
+        "더블크로스3rd"
+      ],
+      "abbreviations": []
+    },
+    "W0126": {
+      "code": "W0126",
+      "canonical_name": "더 퍼스트 슬램덩크",
+      "origin": "jp",
+      "category": "anime",
+      "aliases": [
+        "The First Slam Dunk",
+        "더퍼스트슬램덩크"
+      ],
+      "abbreviations": []
+    },
+    "W0127": {
+      "code": "W0127",
+      "canonical_name": "SPY×FAMILY",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "SPY x FAMILY",
+        "Spy x Family",
+        "스파이 패밀리",
+        "스파이패밀리"
+      ],
+      "abbreviations": []
+    },
+    "W0128": {
+      "code": "W0128",
+      "canonical_name": "망각배터리",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Bokura no Arito",
+        "망각 배터리"
+      ],
+      "abbreviations": []
+    },
+    "W0129": {
+      "code": "W0129",
+      "canonical_name": "문호 스트레이 독스",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Bungo Stray Dogs",
+        "문호 스트레이 독스",
+        "문호스트레이독스"
+      ],
+      "abbreviations": []
+    },
+    "W0130": {
+      "code": "W0130",
+      "canonical_name": "적왕사",
+      "origin": "cn",
+      "category": "webnovel",
+      "aliases": [],
+      "abbreviations": [],
+      "review_needed": true
+    },
+    "W0131": {
+      "code": "W0131",
+      "canonical_name": "월야환담",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [],
+      "abbreviations": [],
+      "notes": "전민희 작가. 한국 판타지 소설"
+    },
+    "W0132": {
+      "code": "W0132",
+      "canonical_name": "무림제일폐: 월한강천록",
+      "origin": "cn",
+      "category": "webnovel",
+      "aliases": [],
+      "abbreviations": [],
+      "review_needed": true
+    },
+    "W0133": {
+      "code": "W0133",
+      "canonical_name": "울트라맨 엑스",
+      "origin": "jp",
+      "category": "tokusatsu",
+      "aliases": [
+        "Ultraman X"
+      ],
+      "abbreviations": []
+    },
+    "W0134": {
+      "code": "W0134",
+      "canonical_name": "울트라맨 오브",
+      "origin": "jp",
+      "category": "tokusatsu",
+      "aliases": [
+        "Ultraman Orb"
+      ],
+      "abbreviations": []
+    },
+    "W0135": {
+      "code": "W0135",
+      "canonical_name": "그랜드체이스",
+      "origin": "kr",
+      "category": "game",
+      "aliases": [
+        "Grand Chase",
+        "그랜드 체이스"
+      ],
+      "abbreviations": []
+    },
+    "W0136": {
+      "code": "W0136",
+      "canonical_name": "네가 죽어",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [
+        "네가죽어"
+      ],
+      "abbreviations": []
+    },
+    "W0137": {
+      "code": "W0137",
+      "canonical_name": "탑로더 탑꾸",
+      "origin": "kr",
+      "category": "webtoon",
+      "aliases": [
+        "탑로더,탑꾸"
+      ],
+      "abbreviations": [],
+      "review_needed": true,
+      "notes": "정확한 작품 확인 필요. 두 작품일 수도 있음"
+    },
+    "W0138": {
+      "code": "W0138",
+      "canonical_name": "진격의 거인",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "AoT",
+        "Attack on Titan",
+        "진격의거인"
+      ],
+      "abbreviations": []
+    },
+    "W0139": {
+      "code": "W0139",
+      "canonical_name": "케이팝 데몬 헌터스",
+      "origin": "en",
+      "category": "anime",
+      "aliases": [
+        "K-Pop Demon Hunters",
+        "Kpop Demon Hunters",
+        "케이팝 데몬헌터스",
+        "케이팝데몬헌터스"
+      ],
+      "abbreviations": []
+    },
+    "W0140": {
+      "code": "W0140",
+      "canonical_name": "리버스: 1999",
+      "origin": "cn",
+      "category": "game",
+      "aliases": [
+        "Reverse: 1999",
+        "리버스 1999",
+        "리버스1999"
+      ],
+      "abbreviations": []
+    },
+    "W0141": {
+      "code": "W0141",
+      "canonical_name": "시광대리인",
+      "origin": "cn",
+      "category": "webnovel",
+      "aliases": [],
+      "abbreviations": [],
+      "review_needed": true
+    },
+    "W0142": {
+      "code": "W0142",
+      "canonical_name": "밀그램",
+      "origin": "jp",
+      "category": "franchise",
+      "aliases": [
+        "MILGRAM"
+      ],
+      "abbreviations": []
+    },
+    "W0143": {
+      "code": "W0143",
+      "canonical_name": "검은방",
+      "origin": "kr",
+      "category": "game",
+      "aliases": [
+        "Dark Room?",
+        "검은 방"
+      ],
+      "abbreviations": [],
+      "notes": "한국 인디 게임/소설 추정"
+    },
+    "W0144": {
+      "code": "W0144",
+      "canonical_name": "프롬 아르고나비스",
+      "origin": "jp",
+      "category": "franchise",
+      "aliases": [
+        "ARGONAVIS",
+        "From Argonavis",
+        "from ARGONAVIS",
+        "from Argonavis",
+        "아르고나비스"
+      ],
+      "abbreviations": []
+    },
+    "W0145": {
+      "code": "W0145",
+      "canonical_name": "청의 엑소시스트",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Blue Exorcist",
+        "아오노 엑소시스트"
+      ],
+      "abbreviations": []
+    },
+    "W0146": {
+      "code": "W0146",
+      "canonical_name": "동경과 거짓말",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "동경과거짓말"
+      ],
+      "abbreviations": [],
+      "review_needed": true
+    },
+    "W0147": {
+      "code": "W0147",
+      "canonical_name": "기동전사 건담 수성의 마녀",
+      "origin": "jp",
+      "category": "anime",
+      "aliases": [
+        "Mobile Suit Gundam: The Witch from Mercury",
+        "기동전사 건담 수성의마녀"
+      ],
+      "abbreviations": []
+    },
+    "W0148": {
+      "code": "W0148",
+      "canonical_name": "기동전사 건담",
+      "origin": "jp",
+      "category": "franchise",
+      "aliases": [
+        "Gundam",
+        "Mobile Suit Gundam",
+        "건담"
+      ],
+      "abbreviations": []
+    },
+    "W0149": {
+      "code": "W0149",
+      "canonical_name": "술탄의 게임",
+      "origin": "kr",
+      "category": "game",
+      "aliases": [
+        "Sultan's Game",
+        "술탄의게임"
+      ],
+      "abbreviations": [],
+      "review_needed": true,
+      "notes": "인디 보드/카드 게임 추정"
+    },
+    "W0150": {
+      "code": "W0150",
+      "canonical_name": "이합화타적백묘사존",
+      "origin": "cn",
+      "category": "webnovel",
+      "aliases": [
+        "이합화타적 백묘사존"
+      ],
+      "abbreviations": [],
+      "review_needed": true
+    },
+    "W0151": {
+      "code": "W0151",
+      "canonical_name": "포켓몬스터 스칼렛·바이올렛",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "Pokémon Scarlet/Violet",
+        "포켓몬 스칼렛 바이올렛",
+        "포켓몬스터 스칼렛/바이올렛"
+      ],
+      "abbreviations": []
+    },
+    "W0152": {
+      "code": "W0152",
+      "canonical_name": "월드 트리거",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "World Trigger",
+        "월드트리거"
+      ],
+      "abbreviations": []
+    },
+    "W0153": {
+      "code": "W0153",
+      "canonical_name": "FKMT",
+      "origin": "jp",
+      "category": "meta",
+      "aliases": [
+        "Fkmt",
+        "fkmt",
+        "후쿠모토"
+      ],
+      "abbreviations": [],
+      "notes": "메타 카테고리: 후쿠모토 노리유키(카이지, 아카기 등) 작품 총칭"
+    },
+    "W0154": {
+      "code": "W0154",
+      "canonical_name": "초심 잃은 아이돌을 위한 회귀백서",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [
+        "초심 잃은 아이돌을 위한 회귀 백서",
+        "초심잃은아이돌을위한회귀백서"
+      ],
+      "abbreviations": []
+    },
+    "W0155": {
+      "code": "W0155",
+      "canonical_name": "마기카로기아",
+      "origin": "jp",
+      "category": "trpg",
+      "aliases": [
+        "Magicalogia",
+        "마기카 로기아"
+      ],
+      "abbreviations": []
+    },
+    "W0156": {
+      "code": "W0156",
+      "canonical_name": "광마회귀",
+      "origin": "cn",
+      "category": "webnovel",
+      "aliases": [],
+      "abbreviations": [],
+      "review_needed": true
+    },
+    "W0157": {
+      "code": "W0157",
+      "canonical_name": "회색도시",
+      "origin": "kr",
+      "category": "game",
+      "aliases": [
+        "Grey City",
+        "회색도시"
+      ],
+      "abbreviations": [],
+      "notes": "한국 인디 게임"
+    },
+    "W0158": {
+      "code": "W0158",
+      "canonical_name": "테일즈 오브 제스티리아",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "TOZ",
+        "Tales of Zestiria"
+      ],
+      "abbreviations": []
+    },
+    "W0159": {
+      "code": "W0159",
+      "canonical_name": "페이트 시리즈",
+      "origin": "jp",
+      "category": "franchise",
+      "aliases": [
+        "Fate",
+        "Fate 시리즈",
+        "fate 시리즈",
+        "페이트"
+      ],
+      "abbreviations": []
+    },
+    "W0160": {
+      "code": "W0160",
+      "canonical_name": "프리파라",
+      "origin": "jp",
+      "category": "anime",
+      "aliases": [
+        "PriPara"
+      ],
+      "abbreviations": []
+    },
+    "W0161": {
+      "code": "W0161",
+      "canonical_name": "더블크로스",
+      "origin": "jp",
+      "category": "trpg",
+      "aliases": [
+        "DX",
+        "Double Cross"
+      ],
+      "abbreviations": []
+    },
+    "W0162": {
+      "code": "W0162",
+      "canonical_name": "게게게의 키타로",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "GeGeGe no Kitaro",
+        "게게게의키타로"
+      ],
+      "abbreviations": []
+    },
+    "W0163": {
+      "code": "W0163",
+      "canonical_name": "용기폭발 뱅브레이번",
+      "origin": "jp",
+      "category": "anime",
+      "aliases": [
+        "Brave Bang Bravern!",
+        "용기폭발뱅브레이번"
+      ],
+      "abbreviations": []
+    },
+    "W0164": {
+      "code": "W0164",
+      "canonical_name": "베리드 스타즈",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "Buried Stars",
+        "Sherebed Stars",
+        "베리드스타즈"
+      ],
+      "abbreviations": []
+    },
+    "W0165": {
+      "code": "W0165",
+      "canonical_name": "키타로 탄생: 게게게의 수수께끼",
+      "origin": "jp",
+      "category": "anime",
+      "aliases": [
+        "The Birth of Kitaro",
+        "키타로 탄생 : 게게게의 수수께끼",
+        "키타로 탄생 게게게의 수수께끼",
+        "키타로탄생게게게의수수께끼"
+      ],
+      "abbreviations": []
+    },
+    "W0166": {
+      "code": "W0166",
+      "canonical_name": "VS AMBIVALENZ",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "VS AMBIVALENZ(비바렌)",
+        "VS AMBIVALENZ,비바렌",
+        "vs ambivalenz",
+        "vs ambivalenz 비바렌",
+        "vs ambivalenz,비바렌"
+      ],
+      "abbreviations": [
+        "비바렌"
+      ]
+    },
+    "W0167": {
+      "code": "W0167",
+      "canonical_name": "볼트론: 전설의 수호자",
+      "origin": "en",
+      "category": "anime",
+      "aliases": [
+        "Voltron: Legendary Defender",
+        "볼트론"
+      ],
+      "abbreviations": []
+    },
+    "W0168": {
+      "code": "W0168",
+      "canonical_name": "박앵귀",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "Hakuouki",
+        "박앵귀 시리즈"
+      ],
+      "abbreviations": []
+    },
+    "W0169": {
+      "code": "W0169",
+      "canonical_name": "아오페라",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "AOpera"
+      ],
+      "abbreviations": [],
+      "review_needed": true
+    },
+    "W0170": {
+      "code": "W0170",
+      "canonical_name": "시노비가미",
+      "origin": "jp",
+      "category": "trpg",
+      "aliases": [
+        "Shinobigami",
+        "시노비가미 전"
+      ],
+      "abbreviations": []
+    },
+    "W0171": {
+      "code": "W0171",
+      "canonical_name": "아이돌 마스터 SideM",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "THE IDOLM@STER SideM",
+        "아이돌 마스터 사이드엠",
+        "아이돌마스터 SideM",
+        "아이돌마스터 sideM"
+      ],
+      "abbreviations": []
+    },
+    "W0172": {
+      "code": "W0172",
+      "canonical_name": "망나니 PD 아이돌로 살아남기",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [
+        "망나니 pd 아이돌로 살아남기"
+      ],
+      "abbreviations": []
+    },
+    "W0173": {
+      "code": "W0173",
+      "canonical_name": "누이소품샵",
+      "origin": "kr",
+      "category": "webtoon",
+      "aliases": [
+        "누이 소품샵"
+      ],
+      "abbreviations": []
+    },
+    "W0174": {
+      "code": "W0174",
+      "canonical_name": "집이 없어",
+      "origin": "kr",
+      "category": "webtoon",
+      "aliases": [
+        "집이없어"
+      ],
+      "abbreviations": []
+    },
+    "W0175": {
+      "code": "W0175",
+      "canonical_name": "파이어 엠블렘 풍화설월",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "Fire Emblem: Three Houses",
+        "파이어 엠블렘",
+        "파이어 엠블렘 : 풍화설월",
+        "파이어엠블렘 풍화설월"
+      ],
+      "abbreviations": [],
+      "notes": "한국 정발명 '풍화설월' vs 원제 'Three Houses'. 확인 필요"
+    },
+    "W0176": {
+      "code": "W0176",
+      "canonical_name": "왕은 웃었다",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [],
+      "abbreviations": []
+    },
+    "W0177": {
+      "code": "W0177",
+      "canonical_name": "캐릭캐릭체인지",
+      "origin": "jp",
+      "category": "anime",
+      "aliases": [
+        "Shugo Chara!",
+        "아이엠스타",
+        "캐릭캐릭체인지(아이엠스타)"
+      ],
+      "abbreviations": []
+    },
+    "W0178": {
+      "code": "W0178",
+      "canonical_name": "격기3반",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Kakko 3-ban",
+        "격기 3반"
+      ],
+      "abbreviations": [],
+      "review_needed": true
+    },
+    "W0179": {
+      "code": "W0179",
+      "canonical_name": "길티기어",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "Guilty Gear",
+        "길티 기어"
+      ],
+      "abbreviations": []
+    },
+    "W0180": {
+      "code": "W0180",
+      "canonical_name": "아카기",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Akagi",
+        "아카기",
+        "천재 마작사 아카기"
+      ],
+      "abbreviations": []
+    },
+    "W0181": {
+      "code": "W0181",
+      "canonical_name": "크툴루 게임 속 천재 마법사가 되었다",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [],
+      "abbreviations": [
+        "크법사"
+      ]
+    },
+    "W0182": {
+      "code": "W0182",
+      "canonical_name": "태팅레이스",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [],
+      "abbreviations": [],
+      "review_needed": true
+    },
+    "W0183": {
+      "code": "W0183",
+      "canonical_name": "장송의 프리렌",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Frieren",
+        "Frieren: Beyond Journey's End",
+        "프리렌",
+        "프리렌: 초장의 끝에서"
+      ],
+      "abbreviations": []
+    },
+    "W0184": {
+      "code": "W0184",
+      "canonical_name": "단간론파",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "Danganronpa",
+        "단간론파 시리즈"
+      ],
+      "abbreviations": [],
+      "notes": "프랜차이즈 전체"
+    },
+    "W0185": {
+      "code": "W0185",
+      "canonical_name": "봇치더락!",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "BOCCHI THE ROCK!",
+        "Bocchi the Rock!",
+        "봇치더락"
+      ],
+      "abbreviations": [
+        "봇락"
+      ]
+    },
+    "W0186": {
+      "code": "W0186",
+      "canonical_name": "체인소 맨",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Chainsaw Man",
+        "체인소맨",
+        "총귀쇠인"
+      ],
+      "abbreviations": []
+    },
+    "W0187": {
+      "code": "W0187",
+      "canonical_name": "제5인격",
+      "origin": "cn",
+      "category": "game",
+      "aliases": [
+        "Identity V",
+        "아이덴티티 브이",
+        "아이덴티티V"
+      ],
+      "abbreviations": []
+    },
+    "W0188": {
+      "code": "W0188",
+      "canonical_name": "록맨",
+      "origin": "jp",
+      "category": "franchise",
+      "aliases": [
+        "Mega Man",
+        "록맨 시리즈",
+        "메가맨",
+        "메가맨 시리즈"
+      ],
+      "abbreviations": []
+    },
+    "W0189": {
+      "code": "W0189",
+      "canonical_name": "메탈카드봇",
+      "origin": "kr",
+      "category": "anime",
+      "aliases": [
+        "Metal Cardbot"
+      ],
+      "abbreviations": []
+    },
+    "W0190": {
+      "code": "W0190",
+      "canonical_name": "소닉 더 헤지혹",
+      "origin": "jp",
+      "category": "franchise",
+      "aliases": [
+        "Sonic",
+        "Sonic the Hedgehog",
+        "소닉",
+        "소닉 더 헤지혹 시리즈",
+        "소닉 시리즈"
+      ],
+      "abbreviations": []
+    },
+    "W0191": {
+      "code": "W0191",
+      "canonical_name": "아머드코어 VI",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "AC6",
+        "Armored Core 6",
+        "Armored Core VI",
+        "아머드 코어 6",
+        "아머드코어6"
+      ],
+      "abbreviations": []
+    },
+    "W0192": {
+      "code": "W0192",
+      "canonical_name": "라테일",
+      "origin": "kr",
+      "category": "game",
+      "aliases": [
+        "LaTale",
+        "라 테일"
+      ],
+      "abbreviations": []
+    },
+    "W0193": {
+      "code": "W0193",
+      "canonical_name": "은과 금",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Gin to Kin",
+        "은과금"
+      ],
+      "abbreviations": []
+    },
+    "W0194": {
+      "code": "W0194",
+      "canonical_name": "울트라맨 타이가",
+      "origin": "jp",
+      "category": "tokusatsu",
+      "aliases": [
+        "Ultraman Taiga"
+      ],
+      "abbreviations": []
+    },
+    "W0195": {
+      "code": "W0195",
+      "canonical_name": "가면라이더 리바이스",
+      "origin": "jp",
+      "category": "tokusatsu",
+      "aliases": [
+        "Kamen Rider Revice"
+      ],
+      "abbreviations": []
+    },
+    "W0196": {
+      "code": "W0196",
+      "canonical_name": "폭상전대 분붐저",
+      "origin": "jp",
+      "category": "tokusatsu",
+      "aliases": [
+        "Bakuage Sentai Boonboomger",
+        "분붐저"
+      ],
+      "abbreviations": []
+    },
+    "W0197": {
+      "code": "W0197",
+      "canonical_name": "헬루바",
+      "origin": "en",
+      "category": "anime",
+      "aliases": [
+        "Helluva Boss",
+        "헬루바보스"
+      ],
+      "abbreviations": []
+    },
+    "W0198": {
+      "code": "W0198",
+      "canonical_name": "스티븐 유니버스",
+      "origin": "en",
+      "category": "anime",
+      "aliases": [
+        "Steven Universe"
+      ],
+      "abbreviations": []
+    },
+    "W0199": {
+      "code": "W0199",
+      "canonical_name": "아울 하우스",
+      "origin": "en",
+      "category": "anime",
+      "aliases": [
+        "The Owl House",
+        "올빼미 집"
+      ],
+      "abbreviations": []
+    },
+    "W0200": {
+      "code": "W0200",
+      "canonical_name": "앰피비아",
+      "origin": "en",
+      "category": "anime",
+      "aliases": [
+        "Amphibia"
+      ],
+      "abbreviations": []
+    },
+    "W0201": {
+      "code": "W0201",
+      "canonical_name": "사이키 쿠스오의 재난",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "The Disastrous Life of Saiki K.",
+        "사이키쿠스오의 재난"
+      ],
+      "abbreviations": []
+    },
+    "W0202": {
+      "code": "W0202",
+      "canonical_name": "소울이터",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Soul Eater"
+      ],
+      "abbreviations": []
+    },
+    "W0203": {
+      "code": "W0203",
+      "canonical_name": "마법소녀 마도카 마기카",
+      "origin": "jp",
+      "category": "anime",
+      "aliases": [
+        "Puella Magi Madoka Magica",
+        "마마마"
+      ],
+      "abbreviations": []
+    },
+    "W0204": {
+      "code": "W0204",
+      "canonical_name": "오란고교 호스트부",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Ouran High School Host Club",
+        "오란고교",
+        "오렌 고교 호스트부"
+      ],
+      "abbreviations": []
+    },
+    "W0205": {
+      "code": "W0205",
+      "canonical_name": "달빛천사",
+      "origin": "jp",
+      "category": "manga",
+      "aliases": [
+        "Full Moon wo Sagashite",
+        "풀문을 찾아서"
+      ],
+      "abbreviations": []
+    },
+    "W0206": {
+      "code": "W0206",
+      "canonical_name": "할로우 나이트",
+      "origin": "en",
+      "category": "game",
+      "aliases": [
+        "Hollow Knight",
+        "할로우나이트"
+      ],
+      "abbreviations": []
+    },
+    "W0207": {
+      "code": "W0207",
+      "canonical_name": "니디 걸 오버도즈",
+      "origin": "jp",
+      "category": "game",
+      "aliases": [
+        "NEEDY GIRL OVERDOSE",
+        "NEEDY STREAMER OVERLOAD",
+        "니디걸오버도즈",
+        "니디즙 오버도즈"
+      ],
+      "abbreviations": []
+    },
+    "W0208": {
+      "code": "W0208",
+      "canonical_name": "회색도시 시리즈",
+      "origin": "kr",
+      "category": "game",
+      "aliases": [
+        "Grey City",
+        "회색도시",
+        "회색도시2"
+      ],
+      "abbreviations": [],
+      "notes": "한국 인디 추리 게임 시리즈"
+    },
+    "W0209": {
+      "code": "W0209",
+      "canonical_name": "유희왕 (토에이)",
+      "origin": "jp",
+      "category": "anime",
+      "aliases": [
+        "Yu-Gi-Oh! (Toei)",
+        "유희왕 DM",
+        "유희왕 듀얼몬스터즈 (토에이)",
+        "유희왕 토에이"
+      ],
+      "abbreviations": [],
+      "notes": "토에이 애니메이션 판"
+    },
+    "W0210": {
+      "code": "W0210",
+      "canonical_name": "주컨곤",
+      "origin": "cn",
+      "category": "webnovel",
+      "aliases": [],
+      "abbreviations": [],
+      "review_needed": true,
+      "notes": "정확한 작품 확인 필요"
+    },
+    "W0211": {
+      "code": "W0211",
+      "canonical_name": "길라잡이의 등불",
+      "origin": "kr",
+      "category": "webnovel",
+      "aliases": [],
+      "abbreviations": [],
+      "review_needed": true
+    }
+  },
+  "reverse_index": {
+    "슬램덩크": "W0001",
+    "슬램 덩크": "W0001",
+    "가비지 타임": "W0002",
+    "가비지타임": "W0002",
+    "화산귀환": "W0003",
+    "데뷔 못 하면 죽는 병 걸림": "W0004",
+    "데뷔 못 하면 죽는 병걸림": "W0004",
+    "데뷔 못 하면 죽는병 걸림": "W0004",
+    "데뷔 못하면 죽는 병 걸림": "W0004",
+    "데뷔 못하면 죽는 병걸림": "W0004",
+    "데뷔 못하면 죽는병 걸림": "W0004",
+    "데뷔못하면 죓는 병 걸림": "W0004",
+    "데뷔못하면 죽는 병 걸림": "W0004",
+    "데뷔못하면 죽는병 걸림": "W0004",
+    "데뷔못하면죽는병걸림": "W0004",
+    "데못죽": "W0004",
+    "괴담에 떨어져도 출근을 해야 하는구나": "W0005",
+    "괴담에 떨어져도 출근을 해야 하는 구나": "W0005",
+    "괴담에 떨어져도 출근을 해야하는 구나": "W0005",
+    "괴담에 떨어져도 출근을 해야하는구나": "W0005",
+    "괴담에떨어져도출근을해야하는구나": "W0005",
+    "괴담출근": "W0005",
+    "괴출": "W0005",
+    "주술회전": "W0006",
+    "아이돌리쉬 세븐": "W0007",
+    "idolish7": "W0007",
+    "아이돌리쉬세븐": "W0007",
+    "아이나나": "W0007",
+    "프로젝트 세카이 컬러풀 스테이지! feat. 하츠네 미쿠": "W0008",
+    "프로젝트 세카이": "W0008",
+    "프로젝트 세카이 컬러풀 스테이지": "W0008",
+    "프로젝트 세카이 컬러풀 스테이지 feat. 하츠네 미쿠": "W0008",
+    "프로젝트 세카이 컬러풀 스테이지 feat.하츠네 미쿠": "W0008",
+    "프로젝트 세카이 컬러풀 스테이지! feat.하츠네 미쿠": "W0008",
+    "프로젝트세카이": "W0008",
+    "프로세카": "W0008",
+    "프세카": "W0008",
+    "앙상블 스타즈!!": "W0009",
+    "앙상블 스타즈": "W0009",
+    "앙상블 스타즈!": "W0009",
+    "앙상블스타즈": "W0009",
+    "앙상블스타즈!": "W0009",
+    "앙상블스타즈!!": "W0009",
+    "앙스타": "W0009",
+    "앙상블 스타즈!! music": "W0010",
+    "앙상블스타즈!! music": "W0010",
+    "앙스타 music": "W0010",
+    "블루 록": "W0011",
+    "blue lock": "W0011",
+    "블루록": "W0011",
+    "오오에": "W0012",
+    "진혼기": "W0013",
+    "이세계 착각 헌터": "W0014",
+    "이세계 착각헌터": "W0014",
+    "이세계착각헌터": "W0014",
+    "이착헌": "W0014",
+    "어두운 바다의 등불이 되어": "W0015",
+    "어두운 바다의 등불이되어": "W0015",
+    "어두운바다의등불이되어": "W0015",
+    "어바등": "W0015",
+    "내가 키운 s급들": "W0016",
+    "내가 키운 s급": "W0016",
+    "내가키운 s급": "W0016",
+    "내가키운s급들": "W0016",
+    "내스급": "W0016",
+    "하이큐!!": "W0017",
+    "하이큐": "W0017",
+    "하이큐!": "W0017",
+    "붕괴: 스타레일": "W0018",
+    "붕괴 : 스타레일": "W0018",
+    "붕괴 스타레일": "W0018",
+    "붕괴:스타레일": "W0018",
+    "붕괴스타레일": "W0018",
+    "스타레일": "W0018",
+    "트라이건": "W0019",
+    "trigun": "W0019",
+    "트라이건 맥시멈": "W0019",
+    "명일방주": "W0020",
+    "arknights": "W0020",
+    "아크나이츠": "W0020",
+    "명탐정 코난": "W0021",
+    "명탐정코난": "W0021",
+    "천관사복": "W0022",
+    "천관사사": "W0022",
+    "원피스": "W0023",
+    "one piece": "W0023",
+    "플레이브": "W0024",
+    "plave": "W0024",
+    "닌자보이 란타로": "W0025",
+    "닌타마": "W0025",
+    "닌타마 란타로": "W0025",
+    "닌타마란타로": "W0025",
+    "블랙 배저": "W0026",
+    "블랙배저": "W0026",
+    "역전재판": "W0027",
+    "ace attorney": "W0027",
+    "역전재판 시리즈": "W0027",
+    "miu404": "W0028",
+    "miu 404": "W0028",
+    "미우 404": "W0028",
+    "미우404": "W0028",
+    "발더스 게이트 3": "W0029",
+    "bg3": "W0029",
+    "baldur's gate 3": "W0029",
+    "baldurs gate 3": "W0029",
+    "발더스 게이트": "W0029",
+    "발더스 게이트3": "W0029",
+    "발더스게이트": "W0029",
+    "발더스게이트 3": "W0029",
+    "발더스게이트3": "W0029",
+    "히프노시스 마이크": "W0030",
+    "hypnosis mic": "W0030",
+    "히프노시스마이크": "W0030",
+    "포켓몬스터": "W0031",
+    "pokemon": "W0031",
+    "pokémon": "W0031",
+    "포켓몬": "W0031",
+    "포켓몬스터 시리즈": "W0031",
+    "전지적 독자 시점": "W0032",
+    "전지적 독자시점": "W0032",
+    "전지적독자시점": "W0032",
+    "전독시": "W0032",
+    "마법명가 차남으로 살아남는 법": "W0033",
+    "마법 명가 차남으로 살아남는 법": "W0033",
+    "마법 명가 차남으로 살아남는법": "W0033",
+    "마법명가차남으로 살아남는 법": "W0033",
+    "마법명가차남으로 살아남는법": "W0033",
+    "마법명가차남으로살아남는법": "W0033",
+    "마차살": "W0033",
+    "니지산지": "W0034",
+    "nijisanji": "W0034",
+    "괴수 8호": "W0035",
+    "kaiju no.8": "W0035",
+    "괴물 8호": "W0035",
+    "괴물8호": "W0035",
+    "괴수8호": "W0035",
+    "마법사의 약속": "W0036",
+    "마법사의약속": "W0036",
+    "마호야쿠": "W0036",
+    "페이트/그랜드 오더": "W0037",
+    "fate grand order": "W0037",
+    "fate grand/order": "W0037",
+    "fate/grand order": "W0037",
+    "fate: grand order": "W0037",
+    "페이트/그랜드오더": "W0037",
+    "페이트그랜드오더": "W0037",
+    "fgo": "W0037",
+    "트랜스포머": "W0038",
+    "transformers": "W0038",
+    "트랜스포머 시리즈": "W0038",
+    "세포신곡": "W0039",
+    "세포신곡.": "W0039",
+    "원신": "W0040",
+    "genshin impact": "W0040",
+    "겐신 임팩트": "W0040",
+    "페르소나 시리즈": "W0041",
+    "persona": "W0041",
+    "페르소나": "W0041",
+    "페르소나 5": "W0042",
+    "p5": "W0042",
+    "persona 5": "W0042",
+    "페르소나5": "W0042",
+    "페르소나 3": "W0043",
+    "p3": "W0043",
+    "persona 3": "W0043",
+    "페르소나3": "W0043",
+    "페르소나 4": "W0044",
+    "p4": "W0044",
+    "persona 4": "W0044",
+    "페르소나4": "W0044",
+    "아이실드 21": "W0045",
+    "아이실드21": "W0045",
+    "골든카무이": "W0046",
+    "골든 카무이": "W0046",
+    "나의 히어로 아카데미아": "W0047",
+    "나의히어로아카데미아": "W0047",
+    "혈계전선": "W0048",
+    "파이널 판타지 xiv": "W0049",
+    "ff xiv": "W0049",
+    "ff14": "W0049",
+    "final fantasy xiv": "W0049",
+    "파이널 판타지 14": "W0049",
+    "파이널 판타지14": "W0049",
+    "파이널판타지 14": "W0049",
+    "파이널판타지14": "W0049",
+    "가정교사 히트맨 리본!": "W0050",
+    "가정교사 히트맨 리본": "W0050",
+    "가정교사히트맨리본": "W0050",
+    "가정교사히트맨리본!": "W0050",
+    "오리지널": "W0051",
+    "(창작)": "W0051",
+    "1차 창작": "W0051",
+    "1차창작": "W0051",
+    "창작": "W0051",
+    "수공예": "W0052",
+    "수공예.": "W0052",
+    "핸드메이드 봉제인형": "W0052",
+    "윈드브레이커": "W0053",
+    "윈드 브레이커": "W0053",
+    "윈브레": "W0053",
+    "모브 사이코 100": "W0054",
+    "mob psycho 100": "W0054",
+    "모브 사이코100": "W0054",
+    "모브사이코": "W0054",
+    "모브사이코 100": "W0054",
+    "모브사이코100": "W0054",
+    "엘소드": "W0055",
+    "elsword": "W0055",
+    "대역전재판": "W0056",
+    "인간 본성이 반파된 자구계통": "W0057",
+    "인사반파자구계통": "W0057",
+    "인사반파": "W0057",
+    "의원, 다시 살다": "W0058",
+    "의원 다시 살다": "W0058",
+    "의원,다시살다": "W0058",
+    "의원다시살다": "W0058",
+    "나루토": "W0059",
+    "naruto": "W0059",
+    "죠죠의 기묘한 모험": "W0060",
+    "jojo": "W0060",
+    "jojo's bizarre adventure": "W0060",
+    "죠죠": "W0060",
+    "죠죠의기묘한모험": "W0060",
+    "도검난무": "W0061",
+    "touken ranbu": "W0061",
+    "로드 오브 히어로즈": "W0062",
+    "로드오브히어로즈": "W0062",
+    "로오히": "W0062",
+    "은혼": "W0063",
+    "gintama": "W0063",
+    "마도조사": "W0064",
+    "서브 남주가 파업하면 생기는 일": "W0065",
+    "서브남주가 파업하면 생기는 일": "W0065",
+    "카리스마": "W0066",
+    "charisma": "W0066",
+    "카리스마 하우스": "W0066",
+    "유희왕": "W0067",
+    "yu-gi-oh!": "W0067",
+    "유희왕 ocg": "W0067",
+    "유희왕 듀얼 몬스터즈": "W0067",
+    "유희왕 듀얼몬스터즈": "W0067",
+    "해즈빈 호텔": "W0068",
+    "hazbin hotel": "W0068",
+    "해즈빈호텔": "W0068",
+    "18trip": "W0069",
+    "문과라도 안 죄송한 이세계로 감": "W0070",
+    "문과라도 안죄송한 이세계로 감": "W0070",
+    "백작가의 망나니가 되었다": "W0071",
+    "백작가의망나니가되었다": "W0071",
+    "쿠로코의 농구": "W0072",
+    "kuroko's basketball": "W0072",
+    "쿠로코의농구": "W0072",
+    "이나즈마 일레븐": "W0073",
+    "inazuma eleven": "W0073",
+    "이나즈마일레븐": "W0073",
+    "테일즈런너": "W0074",
+    "tales runner": "W0074",
+    "테일즈 런너": "W0074",
+    "보컬로이드": "W0075",
+    "vocaloid": "W0075",
+    "보컬로이드 시리즈": "W0075",
+    "명문고 ex급 조연의 리플레이": "W0076",
+    "명문고ex급조연의리플레이": "W0076",
+    "명문고ex급 조연의 리플레이": "W0076",
+    "명급리": "W0076",
+    "사카모토 데이즈": "W0077",
+    "sakamoto days": "W0077",
+    "사카모토데이즈": "W0077",
+    "테니스의 왕자": "W0078",
+    "the prince of tennis": "W0078",
+    "테니스의왕자": "W0078",
+    "도쿄 리벤저스": "W0079",
+    "tokyo revengers": "W0079",
+    "도쿄 리벤져스": "W0079",
+    "도쿄리벤저스": "W0079",
+    "누: 카니발": "W0080",
+    "nu:carnival": "W0080",
+    "nu:카니발": "W0080",
+    "nu카니발": "W0080",
+    "nu carnival": "W0080",
+    "nu: carnival": "W0080",
+    "nu: 카니발": "W0080",
+    "누카니발": "W0080",
+    "뉴카니발": "W0080",
+    "모모찌": "W0081",
+    "momochi": "W0081",
+    "모모치": "W0081",
+    "오버워치": "W0082",
+    "overwatch": "W0082",
+    "오버워치 2": "W0082",
+    "에리오스 라이징 히어로즈": "W0083",
+    "elos": "W0083",
+    "helios rising heroes": "W0083",
+    "에리오스라이징히어로즈": "W0083",
+    "잔차품": "W0084",
+    "残次品": "W0084",
+    "우마무스메 프리티 더비": "W0085",
+    "uma musume pretty derby": "W0085",
+    "우마무스메": "W0085",
+    "메달리스트": "W0086",
+    "medalist": "W0086",
+    "닥터 스톤": "W0087",
+    "dr. stone": "W0087",
+    "닥터스톤": "W0087",
+    "블루 자이언트": "W0088",
+    "blue giant": "W0088",
+    "블루자이언트": "W0088",
+    "해리 포터": "W0089",
+    "harry potter": "W0089",
+    "해리포터": "W0089",
+    "반월당의 기묘한 이야기": "W0090",
+    "반월당의기묘한이야기": "W0090",
+    "반월당": "W0090",
+    "젤다의 전설": "W0091",
+    "the legend of zelda": "W0091",
+    "젤다의전설": "W0091",
+    "다이아몬드 에이스": "W0092",
+    "ace of diamond": "W0092",
+    "다이아몬드에이스": "W0092",
+    "용과 같이": "W0093",
+    "like a dragon": "W0093",
+    "yakuza": "W0093",
+    "룰 더 다이": "W0093",
+    "용과같이": "W0093",
+    "겁쟁이 페달": "W0094",
+    "yowamushi pedal": "W0094",
+    "겁쟁이페달": "W0094",
+    "흡혈귀는 툭하면 죽는다": "W0095",
+    "흡혈귀는툭하면죽는다": "W0095",
+    "리그 오브 레전드": "W0096",
+    "league of legends": "W0096",
+    "lol": "W0096",
+    "리그오브레전드": "W0096",
+    "롤": "W0096",
+    "가라오케 가자!": "W0097",
+    "가라오케 가자": "W0097",
+    "가라오케가자": "W0097",
+    "사이퍼즈": "W0098",
+    "cyphers": "W0098",
+    "열화요수": "W0099",
+    "mcu": "W0100",
+    "marvel cinematic universe": "W0100",
+    "marvel comics": "W0100",
+    "마블": "W0100",
+    "마블 시네마틱 유니버스": "W0100",
+    "마블 코믹스": "W0100",
+    "마블코믹스": "W0100",
+    "콜 오브 듀티": "W0101",
+    "call of duty": "W0101",
+    "cod": "W0101",
+    "콜 오브  듀티": "W0101",
+    "콜오브듀티": "W0101",
+    "헌터×헌터": "W0102",
+    "hunter×hunter": "W0102",
+    "hunter x hunter": "W0102",
+    "헌터x헌터": "W0102",
+    "헌터헌터": "W0102",
+    "스타트렉": "W0103",
+    "star trek": "W0103",
+    "무기미도": "W0104",
+    "블리치": "W0105",
+    "bleach": "W0105",
+    "너희들은 변호됐다": "W0106",
+    "변호됨": "W0106",
+    "100미터": "W0107",
+    "100m": "W0107",
+    "100미터.": "W0107",
+    "메타포: 리파타지오": "W0108",
+    "metaphor: refantazio": "W0108",
+    "메타포 : 리판타지오": "W0108",
+    "메타포 리판타지오": "W0108",
+    "메타포: 리 판타지오": "W0108",
+    "메타포:리판타지오": "W0108",
+    "디지몬": "W0109",
+    "digimon": "W0109",
+    "digital monster": "W0109",
+    "디지몬 시리즈": "W0109",
+    "스플래툰": "W0110",
+    "splatoon": "W0110",
+    "던전밥": "W0111",
+    "dungeon meshi": "W0111",
+    "던전 먹방": "W0111",
+    "고서점가의 하시히메": "W0112",
+    "빛과 밤의 사랑": "W0113",
+    "光与夜之恋": "W0113",
+    "빛과밤의사랑": "W0113",
+    "크툴루의 부름": "W0115",
+    "coc": "W0115",
+    "call of cthulhu": "W0115",
+    "크툴루 trpg": "W0115",
+    "프로메아": "W0116",
+    "promare": "W0116",
+    "프로메어": "W0116",
+    "살파랑": "W0117",
+    "파라독스 라이브": "W0118",
+    "paradox live": "W0118",
+    "파라독스라이브": "W0118",
+    "파라라이": "W0118",
+    "가면라이더": "W0119",
+    "kamen rider": "W0119",
+    "가면라이더 시리즈": "W0119",
+    "가면라이더 가브": "W0120",
+    "kamen rider gavv": "W0120",
+    "천마는 아이돌이 되었다": "W0121",
+    "천마돌": "W0121",
+    "드래곤볼": "W0122",
+    "dragon ball": "W0122",
+    "드래곤 볼": "W0122",
+    "프로야구생존기": "W0123",
+    "프로야구 생존기": "W0123",
+    "킹 오브 프리즘": "W0124",
+    "king of prism": "W0124",
+    "킹오브프리즘": "W0124",
+    "더블크로스 3rd": "W0125",
+    "dx3": "W0125",
+    "double cross 3rd": "W0125",
+    "더블크로스3rd": "W0125",
+    "더 퍼스트 슬램덩크": "W0126",
+    "the first slam dunk": "W0126",
+    "더퍼스트슬램덩크": "W0126",
+    "spy×family": "W0127",
+    "spy x family": "W0127",
+    "스파이 패밀리": "W0127",
+    "스파이패밀리": "W0127",
+    "망각배터리": "W0128",
+    "bokura no arito": "W0128",
+    "망각 배터리": "W0128",
+    "문호 스트레이 독스": "W0129",
+    "bungo stray dogs": "W0129",
+    "문호스트레이독스": "W0129",
+    "적왕사": "W0130",
+    "월야환담": "W0131",
+    "무림제일폐: 월한강천록": "W0132",
+    "울트라맨 엑스": "W0133",
+    "ultraman x": "W0133",
+    "울트라맨 오브": "W0134",
+    "ultraman orb": "W0134",
+    "그랜드체이스": "W0135",
+    "grand chase": "W0135",
+    "그랜드 체이스": "W0135",
+    "네가 죽어": "W0136",
+    "네가죽어": "W0136",
+    "탑로더 탑꾸": "W0137",
+    "탑로더,탑꾸": "W0137",
+    "진격의 거인": "W0138",
+    "aot": "W0138",
+    "attack on titan": "W0138",
+    "진격의거인": "W0138",
+    "케이팝 데몬 헌터스": "W0139",
+    "k-pop demon hunters": "W0139",
+    "kpop demon hunters": "W0139",
+    "케이팝 데몬헌터스": "W0139",
+    "케이팝데몬헌터스": "W0139",
+    "리버스: 1999": "W0140",
+    "reverse: 1999": "W0140",
+    "리버스 1999": "W0140",
+    "리버스1999": "W0140",
+    "시광대리인": "W0141",
+    "밀그램": "W0142",
+    "milgram": "W0142",
+    "검은방": "W0143",
+    "dark room?": "W0143",
+    "검은 방": "W0143",
+    "프롬 아르고나비스": "W0144",
+    "argonavis": "W0144",
+    "from argonavis": "W0144",
+    "아르고나비스": "W0144",
+    "청의 엑소시스트": "W0145",
+    "blue exorcist": "W0145",
+    "아오노 엑소시스트": "W0145",
+    "동경과 거짓말": "W0146",
+    "동경과거짓말": "W0146",
+    "기동전사 건담 수성의 마녀": "W0147",
+    "mobile suit gundam: the witch from mercury": "W0147",
+    "기동전사 건담 수성의마녀": "W0147",
+    "기동전사 건담": "W0148",
+    "gundam": "W0148",
+    "mobile suit gundam": "W0148",
+    "건담": "W0148",
+    "술탄의 게임": "W0149",
+    "sultan's game": "W0149",
+    "술탄의게임": "W0149",
+    "이합화타적백묘사존": "W0150",
+    "이합화타적 백묘사존": "W0150",
+    "포켓몬스터 스칼렛·바이올렛": "W0151",
+    "pokémon scarlet/violet": "W0151",
+    "포켓몬 스칼렛 바이올렛": "W0151",
+    "포켓몬스터 스칼렛/바이올렛": "W0151",
+    "월드 트리거": "W0152",
+    "world trigger": "W0152",
+    "월드트리거": "W0152",
+    "fkmt": "W0153",
+    "후쿠모토": "W0153",
+    "초심 잃은 아이돌을 위한 회귀백서": "W0154",
+    "초심 잃은 아이돌을 위한 회귀 백서": "W0154",
+    "초심잃은아이돌을위한회귀백서": "W0154",
+    "마기카로기아": "W0155",
+    "magicalogia": "W0155",
+    "마기카 로기아": "W0155",
+    "광마회귀": "W0156",
+    "회색도시": "W0157",
+    "grey city": "W0157",
+    "테일즈 오브 제스티리아": "W0158",
+    "toz": "W0158",
+    "tales of zestiria": "W0158",
+    "페이트 시리즈": "W0159",
+    "fate": "W0159",
+    "fate 시리즈": "W0159",
+    "페이트": "W0159",
+    "프리파라": "W0160",
+    "pripara": "W0160",
+    "더블크로스": "W0161",
+    "dx": "W0161",
+    "double cross": "W0161",
+    "게게게의 키타로": "W0162",
+    "gegege no kitaro": "W0162",
+    "게게게의키타로": "W0162",
+    "용기폭발 뱅브레이번": "W0163",
+    "brave bang bravern!": "W0163",
+    "용기폭발뱅브레이번": "W0163",
+    "베리드 스타즈": "W0164",
+    "buried stars": "W0164",
+    "sherebed stars": "W0164",
+    "베리드스타즈": "W0164",
+    "키타로 탄생: 게게게의 수수께끼": "W0165",
+    "the birth of kitaro": "W0165",
+    "키타로 탄생 : 게게게의 수수께끼": "W0165",
+    "키타로 탄생 게게게의 수수께끼": "W0165",
+    "키타로탄생게게게의수수께끼": "W0165",
+    "vs ambivalenz": "W0166",
+    "vs ambivalenz(비바렌)": "W0166",
+    "vs ambivalenz,비바렌": "W0166",
+    "vs ambivalenz 비바렌": "W0166",
+    "비바렌": "W0166",
+    "볼트론: 전설의 수호자": "W0167",
+    "voltron: legendary defender": "W0167",
+    "볼트론": "W0167",
+    "박앵귀": "W0168",
+    "hakuouki": "W0168",
+    "박앵귀 시리즈": "W0168",
+    "아오페라": "W0169",
+    "aopera": "W0169",
+    "시노비가미": "W0170",
+    "shinobigami": "W0170",
+    "시노비가미 전": "W0170",
+    "아이돌 마스터 sidem": "W0171",
+    "the idolm@ster sidem": "W0171",
+    "아이돌 마스터 사이드엠": "W0171",
+    "아이돌마스터 sidem": "W0171",
+    "망나니 pd 아이돌로 살아남기": "W0172",
+    "누이소품샵": "W0173",
+    "누이 소품샵": "W0173",
+    "집이 없어": "W0174",
+    "집이없어": "W0174",
+    "파이어 엠블렘 풍화설월": "W0175",
+    "fire emblem: three houses": "W0175",
+    "파이어 엠블렘": "W0175",
+    "파이어 엠블렘 : 풍화설월": "W0175",
+    "파이어엠블렘 풍화설월": "W0175",
+    "왕은 웃었다": "W0176",
+    "캐릭캐릭체인지": "W0177",
+    "shugo chara!": "W0177",
+    "아이엠스타": "W0177",
+    "캐릭캐릭체인지(아이엠스타)": "W0177",
+    "격기3반": "W0178",
+    "kakko 3-ban": "W0178",
+    "격기 3반": "W0178",
+    "길티기어": "W0179",
+    "guilty gear": "W0179",
+    "길티 기어": "W0179",
+    "아카기": "W0180",
+    "akagi": "W0180",
+    "천재 마작사 아카기": "W0180",
+    "크툴루 게임 속 천재 마법사가 되었다": "W0181",
+    "크법사": "W0181",
+    "태팅레이스": "W0182",
+    "장송의 프리렌": "W0183",
+    "frieren": "W0183",
+    "frieren: beyond journey's end": "W0183",
+    "프리렌": "W0183",
+    "프리렌: 초장의 끝에서": "W0183",
+    "단간론파": "W0184",
+    "danganronpa": "W0184",
+    "단간론파 시리즈": "W0184",
+    "봇치더락!": "W0185",
+    "bocchi the rock!": "W0185",
+    "봇치더락": "W0185",
+    "봇락": "W0185",
+    "체인소 맨": "W0186",
+    "chainsaw man": "W0186",
+    "체인소맨": "W0186",
+    "총귀쇠인": "W0186",
+    "제5인격": "W0187",
+    "identity v": "W0187",
+    "아이덴티티 브이": "W0187",
+    "아이덴티티v": "W0187",
+    "록맨": "W0188",
+    "mega man": "W0188",
+    "록맨 시리즈": "W0188",
+    "메가맨": "W0188",
+    "메가맨 시리즈": "W0188",
+    "메탈카드봇": "W0189",
+    "metal cardbot": "W0189",
+    "소닉 더 헤지혹": "W0190",
+    "sonic": "W0190",
+    "sonic the hedgehog": "W0190",
+    "소닉": "W0190",
+    "소닉 더 헤지혹 시리즈": "W0190",
+    "소닉 시리즈": "W0190",
+    "아머드코어 vi": "W0191",
+    "ac6": "W0191",
+    "armored core 6": "W0191",
+    "armored core vi": "W0191",
+    "아머드 코어 6": "W0191",
+    "아머드코어6": "W0191",
+    "라테일": "W0192",
+    "latale": "W0192",
+    "라 테일": "W0192",
+    "은과 금": "W0193",
+    "gin to kin": "W0193",
+    "은과금": "W0193",
+    "울트라맨 타이가": "W0194",
+    "ultraman taiga": "W0194",
+    "가면라이더 리바이스": "W0195",
+    "kamen rider revice": "W0195",
+    "폭상전대 분붐저": "W0196",
+    "bakuage sentai boonboomger": "W0196",
+    "분붐저": "W0196",
+    "헬루바": "W0197",
+    "helluva boss": "W0197",
+    "헬루바보스": "W0197",
+    "스티븐 유니버스": "W0198",
+    "steven universe": "W0198",
+    "아울 하우스": "W0199",
+    "the owl house": "W0199",
+    "올빼미 집": "W0199",
+    "앰피비아": "W0200",
+    "amphibia": "W0200",
+    "사이키 쿠스오의 재난": "W0201",
+    "the disastrous life of saiki k.": "W0201",
+    "사이키쿠스오의 재난": "W0201",
+    "소울이터": "W0202",
+    "soul eater": "W0202",
+    "마법소녀 마도카 마기카": "W0203",
+    "puella magi madoka magica": "W0203",
+    "마마마": "W0203",
+    "오란고교 호스트부": "W0204",
+    "ouran high school host club": "W0204",
+    "오란고교": "W0204",
+    "오렌 고교 호스트부": "W0204",
+    "달빛천사": "W0205",
+    "full moon wo sagashite": "W0205",
+    "풀문을 찾아서": "W0205",
+    "할로우 나이트": "W0206",
+    "hollow knight": "W0206",
+    "할로우나이트": "W0206",
+    "니디 걸 오버도즈": "W0207",
+    "needy girl overdose": "W0207",
+    "needy streamer overload": "W0207",
+    "니디걸오버도즈": "W0207",
+    "니디즙 오버도즈": "W0207",
+    "회색도시 시리즈": "W0208",
+    "회색도시2": "W0208",
+    "유희왕 (토에이)": "W0209",
+    "yu-gi-oh! (toei)": "W0209",
+    "유희왕 dm": "W0209",
+    "유희왕 듀얼몬스터즈 (토에이)": "W0209",
+    "유희왕 토에이": "W0209",
+    "주컨곤": "W0210",
+    "길라잡이의 등불": "W0211"
+  }
+}

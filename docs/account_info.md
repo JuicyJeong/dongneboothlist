@@ -9,21 +9,21 @@
    - 수집된 데이터를 전처리하여 CSV 파일로 저장
    - 위치 정보를 파싱하여 열, 번호, 반부스 정보로 분리
 
-   ![Preprocess 결과](asset/preprocess_result.png)
+   ![Preprocess 결과](../artifacts/social/account_info/preprocess_result.png)
 
 2. `selenium_run.py`
    - 수집된 부스 정보에서 Twitter 계정 정보를 추출
    - Selenium을 사용하여 각 Twitter 계정의 상세 정보 수집
    - 수집된 데이터를 CSV 파일로 저장
 
-   ![Selenium 실행 결과](asset/run_selenium_result.png)
+   ![Selenium 실행 결과](../artifacts/social/account_info/run_selenium_result.png)
 
 3. `User_Booth_match.ipynb`
    - 수집된 부스 정보와 Twitter 계정 정보를 매칭
    - 데이터 분석 및 시각화 수행
    - 최종 결과물 생성
 
-   ![최종 결과물](asset/final_result.png)
+   ![최종 결과물](../artifacts/social/account_info/final_result.png)
 
 ## 요구 사항
 
