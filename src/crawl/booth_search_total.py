@@ -1,15 +1,21 @@
-import time
-import requests
-import json
 import argparse
+import json
+import time
+from pathlib import Path
+
 import pandas as pd
+import requests
+
+ROOT_DIR = Path(__file__).resolve().parents[2]
+REFERENCE_DIR = ROOT_DIR / 'data' / 'reference'
+RAW_DIR = ROOT_DIR / 'data' / 'raw'
 
 print("*****************동인네트워크 부스 정리 프로그램 실행합니다*****************")
 print("****************MADE BY PPJ(Twitter: @Juicy_Wave)****************")
 
 
 # JSON 파일 경로 설정
-json_file_path = 'EVENT_INFORMATION.json'
+json_file_path = REFERENCE_DIR / 'EVENT_INFORMATION.JSON'
 
 # JSON 파일 읽기
 with open(json_file_path, 'r', encoding='utf-8') as json_file:
@@ -151,7 +157,8 @@ for currunt_event in event_list:
     count = count + 1
 
 
-save_df.to_csv(selected_date + ".csv", index=False, encoding="utf-8-sig")
+RAW_DIR.mkdir(parents=True, exist_ok=True)
+save_df.to_csv(RAW_DIR / f"{selected_date}.csv", index=False, encoding="utf-8-sig")
 
 
 print("*****************실행 완료. 다음 실행은 다음 이 시간에...*****************")

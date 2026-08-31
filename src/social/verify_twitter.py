@@ -1,13 +1,16 @@
 import random
 import time
+from pathlib import Path
+
 import pandas as pd
 from collections import Counter
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
-INPUT = '26년_7월_clean.csv'
-OUTPUT = 'twitter_validity_sample.csv'
+ROOT_DIR = Path(__file__).resolve().parents[2]
+INPUT = ROOT_DIR / 'data' / 'processed' / '26년_7월_clean.csv'
+OUTPUT = ROOT_DIR / 'artifacts' / 'social' / 'twitter_validity_sample.csv'
 SAMPLE_N = 40
 SEED = 42
 
@@ -73,6 +76,7 @@ for i, h in enumerate(sample, 1):
 driver.quit()
 
 out = pd.DataFrame(results)
+OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 out.to_csv(OUTPUT, index=False, encoding='utf-8-sig')
 
 print()

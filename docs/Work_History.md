@@ -97,3 +97,15 @@
 - WORK_DICTIONARY.json: 211개 작품 (검토 필요 28개), 670 exact / 495 norm 인덱스
 - normalize_works.py 매칭 결과: 전체 14,765셀 중 매칭 성공 11,461 (77.6%), 빈 값 제외 87.3%
 - 매칭 방식: exact 84.1%, exact_paren_stripped 1.3%, normalized 0.8%, fuzzy 0.5%
+
+
+---
+
+## 2026-08-31 15:44 (KST)
+
+변경 파일: `src/`, `data/`, `artifacts/`, `README.md`, `docs/Structure.md`, `.gitignore`
+변경 내용: 루트에 혼재되어 있던 실행 코드, 행사 원본·정제 데이터, 참조 사전, 캐시, 이미지·로그·과거 결과를 역할별 디렉터리로 이동. 크롤러·전처리·배치·정규화·소셜·시각화 스크립트의 기본 입출력 경로를 새 구조로 갱신하고, 시작 안내 및 구조 문서를 업데이트.
+사유: 소스 코드와 산출물을 명확히 분리해 재실행·검토·버전 관리의 일관성을 확보.
+롤백: 이 커밋을 되돌리면 Git 이동 이력과 기존 루트 경로를 함께 복원할 수 있음.
+
+무결성 확인: Unicode 정규화가 다른 기존 유사도 사전 2개는 SHA-256 `38b72c8c00ada9c0e1f59f51de6e67d732ab65cad2fb72ba5f131f611e1746be`로 동일함을 확인. 파일 시스템 충돌을 피하기 위해 두 번째 사본은 `data/reference/booth_name_similarity_dictionary_legacy.csv`로 보존.

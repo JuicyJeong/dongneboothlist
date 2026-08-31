@@ -1,10 +1,16 @@
-import re
 import argparse
+import re
+from pathlib import Path
+
 import pandas as pd
 
+ROOT_DIR = Path(__file__).resolve().parents[2]
+RAW_DIR = ROOT_DIR / 'data' / 'raw'
+PROCESSED_DIR = ROOT_DIR / 'data' / 'processed'
+
 ap = argparse.ArgumentParser()
-ap.add_argument('--input', default='26년_7월.csv')
-ap.add_argument('--output', default='26년_7월_clean.csv')
+ap.add_argument('--input', default=RAW_DIR / '26년_7월.csv', type=Path)
+ap.add_argument('--output', default=PROCESSED_DIR / '26년_7월_clean.csv', type=Path)
 args = ap.parse_args()
 INPUT = args.input
 OUTPUT = args.output
@@ -52,6 +58,7 @@ df = pd.read_csv(INPUT, dtype=str).fillna('')
 
 before = df['트위터'].copy()
 df['트위터'] = before.apply(clean_handle)
+OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 df.to_csv(OUTPUT, index=False, encoding='utf-8-sig')
 
 total = len(df)

@@ -9,45 +9,26 @@
 
 ```
 dongneboothlist/
-├── AGENTS.md                      # 에이전트 기본 동작 규칙
-├── README.md                      # 프로젝트 소개
-├── EVENT_INFORMATION.json         # 행사 정보 설정 (12개월, slug/이름/개최일)
-├── 부스명 유사도 사전.csv          # 부스명 유사도 매핑 사전 (기존)
-│
-├── booth_search_total.py          # [핵심] v2 API 부스 크롤링
-├── preprocess_twitter.py          # 트위터 컬럼 정제
-├── fetch_followers.py             # 팔로워 수 크롤링 + 합산 (캐시/재개)
-├── verify_twitter.py              # 트위터 계정 유효성 검증
-├── batch_crawl.py                 # 월별 순회 배치 크롤링
-├── vis.py                         # 부스 빈도 시각화 (기존)
-│
-├── docs/                          # 문서 폴더
-│   ├── HISTORY.md                 # 전체 작업 히스토리
-│   ├── Work_History.md            # 변경 이력 (날짜/시간 KST)
-│   └── Structure.md               # 본 파일 (폴더 구조/코드 분석)
-│
-├── Account_info/                  # 트위터 계정 수집 파생 프로젝트
-│   ├── README.md
-│   ├── selenium_run.py            # Selenium 트위터 계정 정보 수집
-│   ├── preprocess.ipynb           # 부스 정보 전처리 노트북
-│   ├── User_Booth_match.ipynb     # 부스-계정 매칭/분석 노트북
-│   ├── acc_format.csv             # 계정 정보 포맷
-│   └── asset/
-│
-├── Results/                       # 과거 결과물 보관 (구 API 결과)
-│   ├── 24년_4월.csv
-│   ├── 24년_7월.csv
-│   ├── 24년_9월.csv
-│   └── 25년_1월.csv
-│
-├── {YY년_M월}.csv                 # 크롤링 raw 데이터 (월별)
-├── {YY년_M월}_clean.csv           # 트위터 정제 후 데이터
-├── {YY년_M월}_부스정보.csv        # 최종 산출물 (clean 복사본)
-│
-├── twitter_followers_cache.json   # 팔로워 수 캐시 (고유 계정 1,183개)
-├── twitter_validity_sample.csv    # 유효성 검증 샘플 (40개)
-├── top20_팔로워수.csv             # 팔로워수 Top 20
-└── fetch_followers.log            # 팔로워 크롤링 로그
+├── AGENTS.md                      # 에이전트 작업 규칙
+├── README.md                      # 프로젝트 시작 안내
+├── .gitignore                     # 로컬 캐시·런타임 파일 제외 규칙
+├── src/                           # 실행 소스 코드
+│   ├── crawl/                     # v2 API 부스 수집기
+│   ├── pipeline/                  # 배치 수집·트위터 전처리
+│   ├── normalization/             # 작품 사전 생성·정규화
+│   ├── social/                    # X 계정 수집·검증, 파생 노트북
+│   └── analytics/                 # 배치도·빈도 시각화
+├── data/                          # 입력·중간·참조 데이터
+│   ├── raw/                       # {YY년_M월}.csv 수집 원본
+│   ├── processed/                 # clean/부스정보/normalized CSV
+│   ├── reference/                 # 행사 설정·작품/부스 매핑 사전
+│   └── cache/                     # 재실행용 팔로워 캐시
+├── artifacts/                     # 재생성 가능한 산출물
+│   ├── maps/                      # 행사 부스 배치도 PNG
+│   ├── visualizations/            # 분석 시각화 이미지
+│   ├── social/                    # 계정 검증·팔로워 결과 및 로그
+│   └── legacy/results/            # 이전 API 기반 결과 보관
+└── docs/                          # 구조·변경 이력·분석·파생 프로젝트 문서
 ```
 
 ## 스크립트별 역할 및 프로세스 흐름
@@ -63,7 +44,7 @@ v2 API에서 부스 데이터를 수집하여 월별 CSV 생성.
 4. `seatLabels[]`에서 위치/열/번호/반부스 파싱
 5. `{date}.csv` 저장
 
-**실행**: `python3 booth_search_total.py --date 26년_7월`
+**실행**: `python3 src/crawl/booth_search_total.py --date 26년_7월`
 
 ### 2. preprocess_twitter.py (트위터 정제)
 
@@ -76,7 +57,7 @@ v2 API에서 부스 데이터를 수집하여 월별 CSV 생성.
 - 제어문자/한글 노이즈 제거
 - `.bsky.social` → `bsky:핸들` 명시
 
-**실행**: `python3 preprocess_twitter.py --input 26년_7월.csv --output 26년_7월_clean.csv`
+**실행**: `python3 src/pipeline/preprocess_twitter.py --input data/raw/26년_7월.csv --output data/processed/26년_7월_clean.csv`
 
 ### 3. fetch_followers.py (팔로워 수 수집)
 
@@ -155,10 +136,10 @@ v2 API에서 부스 데이터를 수집하여 월별 CSV 생성.
 ### 파일 구조 (추가)
 
 ```
-├── WORK_DICTIONARY.json            # 작품 마스터 딕셔너리 (211개 작품)
-├── build_work_dictionary.py        # 딕셔너리 빌드 스크립트
-├── normalize_works.py              # 정규화 스크립트 (4단계 매칭)
-├── {YY년_M월}_부스정보_normalized.csv # 정규화 결과 (원본 + 정규화/코드 컬럼 추가)
+├── data/reference/WORK_DICTIONARY.json    # 작품 마스터 딕셔너리 (211개 작품)
+├── src/normalization/build_work_dictionary.py # 딕셔너리 빌드 스크립트
+├── src/normalization/normalize_works.py   # 정규화 스크립트 (4단계 매칭)
+└── data/processed/{YY년_M월}_부스정보_normalized.csv # 정규화 결과
 ```
 
 ### WORK_DICTIONARY.json 구조

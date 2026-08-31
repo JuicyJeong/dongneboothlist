@@ -1492,7 +1492,10 @@ if __name__ == "__main__":
     import os
     data = build_dictionary()
 
-    outpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "WORK_DICTIONARY.json")
+    outpath = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
+        "data", "reference", "WORK_DICTIONARY.json"
+    )
 
     with open(outpath, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)

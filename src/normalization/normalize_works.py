@@ -17,8 +17,12 @@ import os
 import re
 import sys
 from collections import Counter, defaultdict
+from pathlib import Path
 
-DICT_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "WORK_DICTIONARY.json")
+ROOT_DIR = Path(__file__).resolve().parents[2]
+REFERENCE_DIR = ROOT_DIR / "data" / "reference"
+PROCESSED_DIR = ROOT_DIR / "data" / "processed"
+DICT_PATH = REFERENCE_DIR / "WORK_DICTIONARY.json"
 
 COLUMN_MAIN = "대표 작품(원작)"
 COLUMN_OTHER = "그 외 다루는 작품"
@@ -350,7 +354,7 @@ def main():
     if args.input:
         files = [args.input]
     elif args.all:
-        files = sorted(glob.glob("*_부스정보.csv"))
+        files = sorted(PROCESSED_DIR.glob("*_부스정보.csv"))
     else:
         parser.print_help()
         sys.exit(1)

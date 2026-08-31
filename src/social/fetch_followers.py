@@ -4,14 +4,20 @@ import os
 import random
 import re
 import time
+from pathlib import Path
+
 import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
-INPUT = '26년_7월_clean.csv'
-OUTPUT = '26년_7월_clean.csv'
-CACHE = 'twitter_followers_cache.json'
+ROOT_DIR = Path(__file__).resolve().parents[2]
+PROCESSED_DIR = ROOT_DIR / 'data' / 'processed'
+CACHE_DIR = ROOT_DIR / 'data' / 'cache'
+
+INPUT = PROCESSED_DIR / '26년_7월_clean.csv'
+OUTPUT = PROCESSED_DIR / '26년_7월_clean.csv'
+CACHE = CACHE_DIR / 'twitter_followers_cache.json'
 
 COUNT_RE = re.compile(r'^([\d.]+)\s*(천|만|K|M|B)?$')
 FOLLOWER_TEXT_RE = re.compile(r'([\d,.]+[천만KMB]?)\s*팔로워')
@@ -77,6 +83,7 @@ def load_cache():
 
 
 def save_cache(cache):
+    CACHE.parent.mkdir(parents=True, exist_ok=True)
     with open(CACHE, 'w', encoding='utf-8') as f:
         json.dump(cache, f, ensure_ascii=False, indent=2)
 

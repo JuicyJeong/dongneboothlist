@@ -14,6 +14,11 @@ import csv
 import os
 import sys
 from collections import defaultdict
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parents[2]
+PROCESSED_DIR = ROOT_DIR / "data" / "processed"
+MAPS_DIR = ROOT_DIR / "artifacts" / "maps"
 
 import matplotlib
 matplotlib.use("Agg")
@@ -305,11 +310,12 @@ def _draw_booth_cell(ax, x, y, w, h, booth, zone, label_type="full"):
 
 def main():
     parser = argparse.ArgumentParser(description="부스 배치도 PNG 생성")
-    parser.add_argument("--input", default="26년_7월_부스정보.csv", help="입력 CSV")
+    parser.add_argument("--input", default=PROCESSED_DIR / "26년_7월_부스정보.csv", type=Path, help="입력 CSV")
     parser.add_argument("--event", default="df2607", help="행사 slug")
     parser.add_argument("--day", choices=["토", "일", "all"], default="all", help="요일 필터")
-    parser.add_argument("--output-dir", default=".", help="출력 디렉토리")
+    parser.add_argument("--output-dir", default=MAPS_DIR, type=Path, help="출력 디렉터리")
     args = parser.parse_args()
+    args.output_dir.mkdir(parents=True, exist_ok=True)
 
     if not os.path.exists(args.input):
         print(f"오류: 파일을 찾을 수 없습니다: {args.input}")

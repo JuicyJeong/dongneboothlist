@@ -1,0 +1,12 @@
+# Python 실행 캐시
+__pycache__/
+*.py[cod]
+
+# 임시 검증 파일
+/temp/
+
+# 로컬 에이전트 및 IDE 메타데이터
+.agent_context/
+.kiro/
+.multica/
+.DS_Store
