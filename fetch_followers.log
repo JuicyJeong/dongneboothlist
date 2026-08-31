@@ -1,0 +1,1144 @@
+/Users/juicymini/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+고유 트위터 핸들: 1183개 (bsky 제외)
+캐시 확보: 49 / 미처리: 1134
+[   1/1134] 2my1stlov3                fol=       - (restricted) elapsed=12s eta=13596s
+[   2/1134] 59room_                   fol=       5 (ok) elapsed=17s eta=9622s
+[   3/1134] 5OM_10                    fol=      62 (ok) elapsed=21s eta=7917s
+[   4/1134] 5_145c                    fol=    1550 (ok) elapsed=25s eta=7062s
+[   5/1134] 5min_tennis               fol=      31 (ok) elapsed=29s eta=6548s
+[   6/1134] 66Rrrr99                  fol=     732 (ok) elapsed=34s eta=6392s
+[   7/1134] 6_e_sam                   fol=      27 (ok) elapsed=38s eta=6118s
+[   8/1134] 74NYU                     fol=     278 (ok) elapsed=43s eta=6052s
+[   9/1134] 77_us_77                  fol=    1723 (ok) elapsed=48s eta=6000s
+[  10/1134] 8k8w8                     fol=      58 (ok) elapsed=51s eta=5732s
+[  11/1134] 8ten_9                    fol=     807 (ok) elapsed=56s eta=5717s
+[  12/1134] 97wsts97                  fol=       - (restricted) elapsed=70s eta=6545s
+[  13/1134] 99round                   fol=   18400 (ok) elapsed=75s eta=6467s
+[  14/1134] 9HnM0                     fol=     283 (ok) elapsed=79s eta=6320s
+[  15/1134] 9_kkamkja                 fol=     146 (ok) elapsed=84s eta=6266s
+[  16/1134] 9damuun                   fol=      63 (ok) elapsed=88s eta=6149s
+[  17/1134] 9luto00                   fol=     336 (ok) elapsed=92s eta=6044s
+[  18/1134] 9x49x49x49x4              fol=    5556 (ok) elapsed=97s eta=6014s
+[  19/1134] A298400_2                 fol=   14100 (ok) elapsed=102s eta=5985s
+[  20/1134] AAHI_12                   fol=     122 (ok) elapsed=106s eta=5904s
+[  21/1134] A________DAM              fol=       7 (ok) elapsed=109s eta=5777s
+[  22/1134] A_ro_1021                 fol=     439 (ok) elapsed=113s eta=5711s
+[  23/1134] Airo_SlamDunk             fol=     179 (ok) elapsed=120s eta=5796s
+[  24/1134] Algamja__0927             fol=    5543 (ok) elapsed=125s eta=5781s
+[  25/1134] Amimo_acid224             fol=       - (restricted) elapsed=139s eta=6166s
+[  26/1134] Annbbang                  fol=     242 (ok) elapsed=143s eta=6094s
+[  27/1134] Ao_jiyang_2_21            fol=      79 (ok) elapsed=148s eta=6068s
+[  28/1134] Asha_prsk                 fol=     889 (ok) elapsed=152s eta=6004s
+[  29/1134] AtoZ_Wedding34            fol=     109 (ok) elapsed=157s eta=5982s
+[  30/1134] B4W8D                     fol=    7365 (ok) elapsed=162s eta=5961s
+[  31/1134] BB_RAEL                   fol=      27 (ok) elapsed=166s eta=5906s
+[  32/1134] BBoJJaKKyu                fol=    2985 (ok) elapsed=172s eta=5923s
+[  33/1134] BEMMUN                    fol=     822 (ok) elapsed=177s eta=5905s
+[  34/1134] BHa_103                   fol=     120 (ok) elapsed=181s eta=5855s
+[  35/1134] BIIN_Ri                   fol=     638 (ok) elapsed=186s eta=5840s
+[  36/1134] BIRI_TSDM                 fol=      87 (ok) elapsed=190s eta=5795s
+[  37/1134] BLue_310631               fol=     137 (ok) elapsed=194s eta=5751s
+[  38/1134] B_nary_                   fol=     852 (ok) elapsed=199s eta=5739s
+[  39/1134] Bam__ppy                  fol=     124 (ok) elapsed=203s eta=5699s
+[  40/1134] Bin_a1216                 fol=      10 (ok) elapsed=207s eta=5661s
+[  41/1134] Bin_ze__                  fol=    1054 (ok) elapsed=213s eta=5678s
+[  42/1134] Boo_my_00                 fol=    9031 (ok) elapsed=217s eta=5642s
+[  43/1134] CALB_booooook             fol=     488 (ok) elapsed=221s eta=5607s
+[  44/1134] CHA_E_moum                fol=   15800 (ok) elapsed=225s eta=5573s
+[  45/1134] CKM_18oz                  fol=     525 (ok) elapsed=231s eta=5590s
+[  46/1134] Celestine_Draw            fol=     697 (ok) elapsed=236s eta=5581s
+[  47/1134] Chanyan_ON                fol=     870 (ok) elapsed=241s eta=5573s
+[  48/1134] Charcoal_725              fol=     210 (ok) elapsed=245s eta=5543s
+[  49/1134] Charger_Rebel             fol=    7347 (ok) elapsed=249s eta=5513s
+[  50/1134] Cheesehole_desu           fol=       1 (ok) elapsed=253s eta=5485s
+[  51/1134] ChoiRyu_anthol            fol=     342 (ok) elapsed=257s eta=5457s
+[  52/1134] Chudoll_917               fol=    1035 (ok) elapsed=262s eta=5451s
+[  53/1134] Crayon_ATM                fol=     427 (ok) elapsed=267s eta=5445s
+[  54/1134] Cropple__                 fol=    2388 (ok) elapsed=273s eta=5460s
+[  55/1134] DAJAE_public              fol=   15900 (ok) elapsed=277s eta=5434s
+[  56/1134] DH_Ge4                    fol=     828 (ok) elapsed=282s eta=5428s
+[  57/1134] DJ_doujin                 fol=     475 (ok) elapsed=287s eta=5422s
+[  58/1134] DNm5rocFA8Yskqw           fol=    4151 (ok) elapsed=292s eta=5417s
+[  59/1134] D_2cha                    fol=     956 (ok) elapsed=296s eta=5393s
+[  60/1134] DaDa9191                  fol=     617 (ok) elapsed=300s eta=5370s
+[  61/1134] Daisy27from               fol=    3057 (ok) elapsed=305s eta=5365s
+[  62/1134] Dalya_png                 fol=   56100 (ok) elapsed=310s eta=5360s
+[  63/1134] Damyo_812                 fol=    5142 (ok) elapsed=315s eta=5355s
+[  64/1134] Danji_tri                 fol=   11400 (ok) elapsed=319s eta=5333s
+[  65/1134] Dasul0404                 fol=     324 (ok) elapsed=324s eta=5328s
+[  66/1134] Deneb_BG                  fol=     136 (ok) elapsed=327s eta=5291s
+[  67/1134] Deulle_Mm                 fol=    3857 (ok) elapsed=332s eta=5287s
+[  68/1134] Din_Din_circly            fol=      40 (ok) elapsed=337s eta=5282s
+[  69/1134] Do_gakk0                  fol=    6973 (ok) elapsed=342s eta=5278s
+[  70/1134] Do_kang_                  fol=     755 (ok) elapsed=347s eta=5274s
+[  71/1134] Dodaam_                   fol=    3864 (ok) elapsed=352s eta=5270s
+[  72/1134] DprtpF_Tor5X2             fol=   44500 (ok) elapsed=357s eta=5265s
+[  73/1134] Dreamy_garden             fol=     127 (ok) elapsed=361s eta=5246s
+[  74/1134] EstellaK47                fol=     250 (ok) elapsed=365s eta=5228s
+[  75/1134] Eterna1Faith              fol=     795 (ok) elapsed=371s eta=5238s
+[  76/1134] Eunsul_1109               fol=    1038 (ok) elapsed=375s eta=5220s
+[  77/1134] F1GW4SP                   fol=     184 (ok) elapsed=380s eta=5216s
+[  78/1134] FBchan11                  fol=     131 (ok) elapsed=384s eta=5198s
+[  79/1134] FIC__KLE                  fol=   10400 (ok) elapsed=387s eta=5168s
+[  80/1134] FPRGB_247                 fol=      55 (ok) elapsed=391s eta=5151s
+[  81/1134] FfFfFfF9FfFfFfF           fol=       - (restricted) elapsed=406s eta=5278s
+[  82/1134] FuruseolAM                fol=    1769 (ok) elapsed=411s eta=5272s
+[  83/1134] G4RB4GE_B0X               fol=     606 (ok) elapsed=416s eta=5267s
+[  84/1134] GAM_HELLA                 fol=     168 (ok) elapsed=420s eta=5250s
+[  85/1134] GBh_85                    fol=     225 (ok) elapsed=424s eta=5232s
+[  86/1134] GHSM_gg                   fol=    2508 (ok) elapsed=430s eta=5240s
+[  87/1134] GW_Taroo                  fol=      62 (ok) elapsed=435s eta=5235s
+[  88/1134] G_hywon                   fol=    7341 (ok) elapsed=440s eta=5230s
+[  89/1134] Gemg_GH                   fol=     975 (ok) elapsed=445s eta=5225s
+[  90/1134] GihaEee                   fol=     108 (ok) elapsed=450s eta=5220s
+[  91/1134] Glasss_Plate              fol=      94 (ok) elapsed=453s eta=5192s
+[  92/1134] Go_d_eater                fol=      87 (ok) elapsed=459s eta=5198s
+[  93/1134] Goyang0317                fol=     343 (ok) elapsed=463s eta=5182s
+[  94/1134] Greent_tn                 fol=    1234 (ok) elapsed=468s eta=5177s
+[  95/1134] Guarana_32                fol=     102 (ok) elapsed=473s eta=5173s
+[  96/1134] HASDRBB                   fol=      13 (ok) elapsed=477s eta=5157s
+[  97/1134] HIMNESIO                  fol=     332 (ok) elapsed=482s eta=5152s
+[  98/1134] HI_t1de                   fol=    1150 (ok) elapsed=487s eta=5148s
+[  99/1134] HQ_YUNAK                  fol=   88400 (ok) elapsed=491s eta=5133s
+[ 100/1134] Happy_nux_day             fol=      44 (ok) elapsed=495s eta=5118s
+[ 101/1134] HazbinHipper              fol=    8391 (ok) elapsed=499s eta=5103s
+[ 102/1134] HhMmwow_                  fol=       5 (ok) elapsed=503s eta=5089s
+[ 103/1134] Hodam_CC                  fol=     576 (ok) elapsed=507s eta=5074s
+[ 104/1134] Hodam_studio              fol=      23 (ok) elapsed=511s eta=5060s
+[ 105/1134] Holiyday__holy            fol=    1792 (ok) elapsed=516s eta=5056s
+[ 106/1134] Hollang6600               fol=    1247 (ok) elapsed=522s eta=5062s
+[ 107/1134] HouseX4_                  fol=     470 (ok) elapsed=526s eta=5048s
+[ 108/1134] Hpmi_DF                   fol=     553 (ok) elapsed=530s eta=5035s
+[ 109/1134] Hushew_PoT                fol=     147 (ok) elapsed=535s eta=5030s
+[ 110/1134] HwanT4L                   fol=     572 (ok) elapsed=540s eta=5026s
+[ 111/1134] Hyang_tt                  fol=    1148 (ok) elapsed=545s eta=5022s
+[ 112/1134] I231010                   fol=      23 (ok) elapsed=549s eta=5009s
+[ 113/1134] ISaebal78254              fol=    3119 (ok) elapsed=554s eta=5005s
+[ 114/1134] IhiYdjY                   fol=    1528 (ok) elapsed=558s eta=4992s
+[ 115/1134] ImUrEl1227                fol=     121 (ok) elapsed=562s eta=4979s
+[ 116/1134] InDiGo_LYN                fol=     215 (ok) elapsed=567s eta=4975s
+[ 117/1134] JAL_fn                    fol=    3780 (ok) elapsed=572s eta=4972s
+[ 118/1134] JD_CLOSET                 fol=    1950 (ok) elapsed=576s eta=4959s
+[ 119/1134] JJB_D_                    fol=      84 (ok) elapsed=580s eta=4947s
+[ 120/1134] JJ_goodjob                fol=    6113 (ok) elapsed=585s eta=4943s
+[ 121/1134] Jokillkill                fol=    3587 (ok) elapsed=588s eta=4922s
+[ 122/1134] Jueck_Sa_Sa               fol=       - (restricted) elapsed=603s eta=5001s
+[ 123/1134] Jung14xSong7              fol=     567 (ok) elapsed=607s eta=4989s
+[ 124/1134] KAS2A_RR                  fol=    5569 (ok) elapsed=612s eta=4984s
+[ 125/1134] KJ3R4G                    fol=    4090 (ok) elapsed=617s eta=4980s
+[ 126/1134] KKAX2__                   fol=     118 (ok) elapsed=623s eta=4984s
+[ 127/1134] KUR0__BARA                fol=      24 (ok) elapsed=627s eta=4971s
+[ 128/1134] K_CHE_SOL_                fol=    4764 (ok) elapsed=633s eta=4974s
+[ 129/1134] K_che_sol_                fol=    4764 (ok) elapsed=637s eta=4962s
+[ 130/1134] KaO__0oo                  fol=    2146 (ok) elapsed=642s eta=4958s
+[ 131/1134] Kaede___RE                fol=     488 (ok) elapsed=646s eta=4946s
+[ 132/1134] Kang_rebin_               fol=       7 (ok) elapsed=650s eta=4934s
+[ 133/1134] KimGyunyu                 fol=    7453 (ok) elapsed=654s eta=4922s
+[ 134/1134] Ks5wx                     fol=     169 (ok) elapsed=659s eta=4917s
+[ 135/1134] Kurobina_win              fol=   17500 (ok) elapsed=664s eta=4913s
+[ 136/1134] LLS_0529                  fol=   14900 (ok) elapsed=670s eta=4916s
+[ 137/1134] L_S_A_0521                fol=   14400 (ok) elapsed=674s eta=4904s
+[ 138/1134] LaTortilla714             fol=     356 (ok) elapsed=678s eta=4893s
+[ 139/1134] Lechate1ier               fol=     562 (ok) elapsed=683s eta=4889s
+[ 140/1134] Lemon_duck_pond           fol=       - (restricted) elapsed=697s eta=4948s
+[ 141/1134] Licht_blume_              fol=     120 (ok) elapsed=702s eta=4943s
+[ 142/1134] Light1nth3Dark            fol=     506 (ok) elapsed=707s eta=4939s
+[ 143/1134] Lord__person              fol=     890 (ok) elapsed=711s eta=4927s
+[ 144/1134] Lotus_flower432           fol=    1596 (ok) elapsed=715s eta=4915s
+[ 145/1134] LovelyMix_                fol=    2699 (ok) elapsed=719s eta=4904s
+[ 146/1134] Loviewer_0224             fol=    7238 (ok) elapsed=724s eta=4899s
+[ 147/1134] Lunabyss_kr               fol=    1119 (ok) elapsed=730s eta=4901s
+[ 148/1134] MD_S168                   fol=     534 (ok) elapsed=735s eta=4896s
+[ 149/1134] MUMUgamecumu777           fol=    2271 (ok) elapsed=740s eta=4891s
+[ 150/1134] M_PN_G                    fol=     124 (ok) elapsed=745s eta=4887s
+[ 151/1134] M_u_L_i_Y_a               fol=    1193 (ok) elapsed=750s eta=4882s
+[ 152/1134] Ma_Li_garden              fol=    3248 (ok) elapsed=755s eta=4877s
+[ 153/1134] Maii_050225               fol=    1219 (ok) elapsed=760s eta=4872s
+[ 154/1134] MandHeesha                fol=      15 (ok) elapsed=764s eta=4861s
+[ 155/1134] March_library             fol=      31 (ok) elapsed=768s eta=4850s
+[ 156/1134] Matina2930_               fol=     130 (ok) elapsed=772s eta=4839s
+[ 157/1134] Mcmtcmc                   fol=    7473 (ok) elapsed=777s eta=4835s
+[ 158/1134] MetalwarriorZ             fol=   12100 (ok) elapsed=783s eta=4836s
+[ 159/1134] Mi2l2riso                 fol=      30 (ok) elapsed=788s eta=4832s
+[ 160/1134] Mnna_pleasure             fol=     220 (ok) elapsed=793s eta=4827s
+[ 161/1134] MoonRackSeo               fol=     201 (ok) elapsed=798s eta=4822s
+[ 162/1134] Ms_Kal                    fol=     681 (ok) elapsed=802s eta=4812s
+[ 163/1134] MultissueUrn              fol=    2289 (ok) elapsed=807s eta=4807s
+[ 164/1134] Mwamwa41                  fol=      67 (ok) elapsed=811s eta=4796s
+[ 165/1134] My_Planet_Doll            fol=    6453 (ok) elapsed=816s eta=4792s
+[ 166/1134] Myanya_0                  fol=   81600 (ok) elapsed=821s eta=4787s
+[ 167/1134] Myeong7632                fol=     596 (ok) elapsed=826s eta=4782s
+[ 168/1134] Myeong_ba_0506            fol=   19000 (ok) elapsed=830s eta=4772s
+[ 169/1134] NAMTA_land                fol=     296 (ok) elapsed=835s eta=4767s
+[ 170/1134] NJ_Ksan                   fol=     241 (ok) elapsed=840s eta=4763s
+[ 171/1134] NPIUS_r                   fol=     455 (ok) elapsed=845s eta=4758s
+[ 172/1134] N_ep_tune2                fol=    3725 (ok) elapsed=849s eta=4748s
+[ 173/1134] Nado2cha                  fol=     836 (ok) elapsed=854s eta=4743s
+[ 174/1134] Ne0nnie_                  fol=     392 (ok) elapsed=860s eta=4744s
+[ 175/1134] Ninagashine               fol=    1550 (ok) elapsed=865s eta=4740s
+[ 176/1134] No_1_KASHIRA              fol=     803 (ok) elapsed=871s eta=4741s
+[ 177/1134] Nti_Retasu                fol=     964 (ok) elapsed=875s eta=4730s
+[ 178/1134] Nuga_harae                fol=    4528 (ok) elapsed=880s eta=4726s
+[ 179/1134] Nyong9U                   fol=     112 (ok) elapsed=884s eta=4716s
+[ 180/1134] OG__MAN                   fol=   21200 (ok) elapsed=889s eta=4711s
+[ 181/1134] O_chu_Pen                 fol=    3251 (ok) elapsed=894s eta=4707s
+[ 182/1134] Oc2a_                     fol=    3036 (ok) elapsed=899s eta=4702s
+[ 183/1134] OhnichanS2                fol=     441 (ok) elapsed=904s eta=4697s
+[ 184/1134] Oiri_0706                 fol=    1112 (ok) elapsed=909s eta=4693s
+[ 185/1134] Old_chicksoup             fol=    5450 (ok) elapsed=914s eta=4688s
+[ 186/1134] OntheRock_J3              fol=     660 (ok) elapsed=918s eta=4678s
+[ 187/1134] Ooh_coco                  fol=   21200 (ok) elapsed=922s eta=4669s
+[ 188/1134] OvO___VV7                 fol=    1618 (ok) elapsed=927s eta=4664s
+[ 189/1134] Over_714                  fol=     148 (ok) elapsed=931s eta=4655s
+[ 190/1134] P1_P2_P3_P4               fol=     851 (ok) elapsed=937s eta=4655s
+[ 191/1134] P9410709                  fol=    1565 (ok) elapsed=942s eta=4650s
+[ 192/1134] PD_0616                   fol=    3327 (ok) elapsed=946s eta=4641s
+[ 193/1134] PP_8808a                  fol=       2 (ok) elapsed=950s eta=4631s
+[ 194/1134] P_goods_factory           fol=    2847 (ok) elapsed=955s eta=4627s
+[ 195/1134] Pimpibone                 fol=    1141 (ok) elapsed=959s eta=4617s
+[ 196/1134] PockyPockycat             fol=    6841 (ok) elapsed=963s eta=4608s
+[ 197/1134] Pr2lov_Dear2              fol=     132 (ok) elapsed=967s eta=4599s
+[ 198/1134] Pru_531                   fol=     841 (ok) elapsed=971s eta=4590s
+[ 199/1134] PuNgx2E                   fol=      49 (ok) elapsed=975s eta=4581s
+[ 200/1134] R8dent                    fol=     274 (ok) elapsed=979s eta=4571s
+[ 201/1134] RABU_0913                 fol=      11 (ok) elapsed=983s eta=4562s
+[ 202/1134] RK711SA                   fol=      58 (ok) elapsed=988s eta=4558s
+[ 203/1134] RURU_MD                   fol=   11300 (ok) elapsed=993s eta=4554s
+[ 204/1134] Ragamuffin21              fol=       - (restricted) elapsed=1008s eta=4595s
+[ 205/1134] RedPotatoDragon           fol=    3602 (ok) elapsed=1013s eta=4590s
+[ 206/1134] Resha_082                 fol=    2125 (ok) elapsed=1018s eta=4585s
+[ 207/1134] RlLHel                    fol=     146 (ok) elapsed=1022s eta=4576s
+[ 208/1134] Roman_jagi                fol=      10 (ok) elapsed=1026s eta=4567s
+[ 209/1134] S2PINCONE                 fol=     273 (ok) elapsed=1031s eta=4563s
+[ 210/1134] S2ugar_S2                 fol=     308 (ok) elapsed=1035s eta=4554s
+[ 211/1134] SCBKCKR                   fol=    1020 (ok) elapsed=1040s eta=4549s
+[ 212/1134] SEKAI_PO                  fol=     134 (ok) elapsed=1044s eta=4540s
+[ 213/1134] SIRO666b                  fol=   18000 (ok) elapsed=1049s eta=4535s
+[ 214/1134] SOBI_J01                  fol=      12 (ok) elapsed=1054s eta=4531s
+[ 215/1134] SOSA3451                  fol=     517 (ok) elapsed=1058s eta=4522s
+[ 216/1134] SR305E                    fol=     437 (ok) elapsed=1061s eta=4509s
+[ 217/1134] SW33T13_                  fol=      15 (ok) elapsed=1066s eta=4504s
+[ 218/1134] Sad_jellyfish_p           fol=    1219 (ok) elapsed=1071s eta=4500s
+[ 219/1134] Saint_kiryeo              fol=     222 (ok) elapsed=1076s eta=4495s
+[ 220/1134] Sale_HM13                 fol=     717 (ok) elapsed=1080s eta=4486s
+[ 221/1134] Salmonsushi_910           fol=     139 (ok) elapsed=1084s eta=4478s
+[ 222/1134] Sbornmaker                fol=     197 (ok) elapsed=1088s eta=4469s
+[ 223/1134] Scottish_Fold12           fol=   51700 (ok) elapsed=1093s eta=4465s
+[ 224/1134] SemoPara                  fol=     576 (ok) elapsed=1097s eta=4456s
+[ 225/1134] SextaXQuince              fol=     804 (ok) elapsed=1102s eta=4452s
+[ 226/1134] SilentMoment_0            fol=     132 (ok) elapsed=1106s eta=4443s
+[ 227/1134] Silver_hoshi94            fol=      55 (ok) elapsed=1110s eta=4435s
+[ 228/1134] Simile725                 fol=     241 (ok) elapsed=1115s eta=4430s
+[ 229/1134] SkIvtt9zP8Fyyu2           fol=    6525 (ok) elapsed=1121s eta=4430s
+[ 230/1134] Sooooooo_f                fol=      51 (ok) elapsed=1125s eta=4421s
+[ 231/1134] SouChengri                fol=    8345 (ok) elapsed=1130s eta=4417s
+[ 232/1134] Su_in_gg                  fol=    2583 (ok) elapsed=1135s eta=4412s
+[ 233/1134] T4o3p                     fol=    3222 (ok) elapsed=1140s eta=4408s
+[ 234/1134] TANG180513                fol=    8980 (ok) elapsed=1145s eta=4403s
+[ 235/1134] TFfnxC37VYVUZQN           fol=      69 (ok) elapsed=1150s eta=4399s
+[ 236/1134] TTeeX2_prsk               fol=    3764 (ok) elapsed=1155s eta=4394s
+[ 237/1134] Twinkle_knoT              fol=      28 (ok) elapsed=1159s eta=4386s
+[ 238/1134] U44515895                 fol=    1878 (ok) elapsed=1163s eta=4378s
+[ 239/1134] UUUNEWO                   fol=    6647 (ok) elapsed=1168s eta=4373s
+[ 240/1134] UchetongU                 fol=     117 (ok) elapsed=1172s eta=4365s
+[ 241/1134] Udi_ee                    fol=    1781 (ok) elapsed=1178s eta=4364s
+[ 242/1134] Unknown_A_815             fol=    1308 (ok) elapsed=1183s eta=4360s
+[ 243/1134] Untitled_49943            fol=    1136 (ok) elapsed=1188s eta=4356s
+[ 244/1134] WHITE__SOM                fol=    4289 (ok) elapsed=1193s eta=4351s
+[ 245/1134] Watch_Condition           fol=   18600 (ok) elapsed=1199s eta=4350s
+[ 246/1134] What_Fried                fol=    1913 (ok) elapsed=1203s eta=4342s
+[ 247/1134] Whomangsang               fol=     539 (ok) elapsed=1208s eta=4338s
+[ 248/1134] WonjagE23490              fol=     843 (ok) elapsed=1212s eta=4329s
+[ 249/1134] Wonsaeng_e                fol=     600 (ok) elapsed=1217s eta=4325s
+[ 250/1134] YNoo526252                fol=    6229 (ok) elapsed=1221s eta=4317s
+[ 251/1134] YR_simin                  fol=    1421 (ok) elapsed=1225s eta=4309s
+[ 252/1134] Y_bbibbi                  fol=     159 (ok) elapsed=1230s eta=4305s
+[ 253/1134] Yuridino_0504             fol=     401 (ok) elapsed=1234s eta=4297s
+[ 254/1134] YuuYuzuponzu              fol=       3 (ok) elapsed=1238s eta=4289s
+[ 255/1134] ZE12__                    fol=     206 (ok) elapsed=1242s eta=4281s
+[ 256/1134] ZTZTZT___                 fol=     793 (ok) elapsed=1247s eta=4276s
+[ 257/1134] Zero_Q_0q                 fol=  233900 (ok) elapsed=1252s eta=4272s
+[ 258/1134] Zinn69611032              fol=    5406 (ok) elapsed=1256s eta=4264s
+[ 259/1134] _00365                    fol=    3573 (ok) elapsed=1261s eta=4260s
+[ 260/1134] _2BOOOO_                  fol=     343 (ok) elapsed=1266s eta=4255s
+[ 261/1134] _9_999                    fol=    4833 (ok) elapsed=1271s eta=4251s
+[ 262/1134] _DD_deep                  fol=     606 (ok) elapsed=1276s eta=4246s
+[ 263/1134] _GANZANG                  fol=     632 (ok) elapsed=1281s eta=4242s
+[ 264/1134] _KuH_K_                   fol=      38 (ok) elapsed=1285s eta=4234s
+[ 265/1134] _Moon_Luna                fol=     250 (ok) elapsed=1289s eta=4226s
+[ 266/1134] _S2__21_                  fol=     191 (ok) elapsed=1294s eta=4222s
+[ 267/1134] _W_i_n__                  fol=     489 (ok) elapsed=1298s eta=4214s
+[ 268/1134] _X1NA_owx                 fol=    1243 (ok) elapsed=1303s eta=4210s
+[ 269/1134] __MULJU                   fol=    4387 (ok) elapsed=1307s eta=4202s
+[ 270/1134] __maverick_life           fol=     813 (ok) elapsed=1312s eta=4198s
+[ 271/1134] __nongmin__               fol=   16600 (ok) elapsed=1318s eta=4197s
+[ 272/1134] _a_zt_                    fol=      85 (ok) elapsed=1322s eta=4189s
+[ 273/1134] _blue_milky_way           fol=       - (suspended) elapsed=1336s eta=4213s
+[ 274/1134] _cnzk12                   fol=    2607 (ok) elapsed=1340s eta=4205s
+[ 275/1134] _e11even_                 fol=       5 (ok) elapsed=1344s eta=4198s
+[ 276/1134] _ellllk                   fol=   30900 (ok) elapsed=1349s eta=4193s
+[ 277/1134] _ghanacho                 fol=    1795 (ok) elapsed=1353s eta=4185s
+[ 278/1134] _har_hare_                fol=     579 (ok) elapsed=1357s eta=4178s
+[ 279/1134] _ijyu_prsk                fol=     691 (ok) elapsed=1361s eta=4170s
+[ 280/1134] _kang1412                 fol=     173 (ok) elapsed=1367s eta=4169s
+[ 281/1134] _nongnoir                 fol=    5883 (ok) elapsed=1372s eta=4164s
+[ 282/1134] _pepper_powder            fol=      99 (ok) elapsed=1377s eta=4160s
+[ 283/1134] _plantlover               fol=     686 (ok) elapsed=1381s eta=4152s
+[ 284/1134] _rough_0                  fol=     400 (ok) elapsed=1386s eta=4148s
+[ 285/1134] _sanfont_                 fol=    1229 (ok) elapsed=1391s eta=4143s
+[ 286/1134] _suisuimit314             fol=    5854 (ok) elapsed=1397s eta=4142s
+[ 287/1134] _syueii                   fol=     247 (ok) elapsed=1400s eta=4131s
+[ 288/1134] _will_o_wisp__            fol=     246 (ok) elapsed=1405s eta=4127s
+[ 289/1134] a8_Duck7                  fol=    1248 (ok) elapsed=1409s eta=4119s
+[ 290/1134] a_yo1_13                  fol=    6175 (ok) elapsed=1414s eta=4115s
+[ 291/1134] a_zt_                     fol=       - (restricted) elapsed=1429s eta=4139s
+[ 292/1134] aawhffu                   fol=   14100 (ok) elapsed=1434s eta=4135s
+[ 293/1134] ahi21fixer                fol=     108 (ok) elapsed=1439s eta=4130s
+[ 294/1134] aibakuCPR                 fol=    1874 (ok) elapsed=1444s eta=4125s
+[ 295/1134] alchemist_for             fol=    6552 (ok) elapsed=1449s eta=4121s
+[ 296/1134] alcoholJJR                fol=     100 (ok) elapsed=1456s eta=4122s
+[ 297/1134] alien1over                fol=     214 (ok) elapsed=1461s eta=4117s
+[ 298/1134] altoran666                fol=      84 (ok) elapsed=1465s eta=4109s
+[ 299/1134] alzalz025                 fol=     845 (ok) elapsed=1470s eta=4105s
+[ 300/1134] amberiiiiv                fol=      29 (ok) elapsed=1474s eta=4097s
+[ 301/1134] amello_art                fol=      71 (ok) elapsed=1479s eta=4093s
+[ 302/1134] amphibia_E                fol=    3881 (ok) elapsed=1484s eta=4088s
+[ 303/1134] anaju_0805                fol=     102 (ok) elapsed=1487s eta=4078s
+[ 304/1134] anaksunam8n               fol=     229 (ok) elapsed=1491s eta=4070s
+[ 305/1134] anevilspirit__            fol=     329 (ok) elapsed=1495s eta=4063s
+[ 306/1134] angelinwaffle             fol=    1740 (ok) elapsed=1499s eta=4056s
+[ 307/1134] anything_jumeok           fol=     724 (ok) elapsed=1504s eta=4051s
+[ 308/1134] aoi_nami_koishi           fol=   12100 (ok) elapsed=1508s eta=4044s
+[ 309/1134] aong_illust               fol=      55 (ok) elapsed=1513s eta=4039s
+[ 310/1134] appleinthepot             fol=    1493 (ok) elapsed=1518s eta=4034s
+[ 311/1134] asari_n_go                fol=     298 (ok) elapsed=1523s eta=4030s
+[ 312/1134] asharfminor               fol=     270 (ok) elapsed=1528s eta=4025s
+[ 313/1134] asterisk1ng               fol=       1 (ok) elapsed=1532s eta=4018s
+[ 314/1134] atthe0to1                 fol=     642 (ok) elapsed=1535s eta=4008s
+[ 315/1134] awon_nyam                 fol=    1859 (ok) elapsed=1540s eta=4004s
+[ 316/1134] awoo_sd                   fol=     762 (ok) elapsed=1545s eta=3999s
+[ 317/1134] azazelNJ                  fol=     325 (ok) elapsed=1548s eta=3989s
+[ 318/1134] b4__after                 fol=     157 (ok) elapsed=1553s eta=3985s
+[ 319/1134] b__mdks                   fol=     161 (ok) elapsed=1558s eta=3980s
+[ 320/1134] babbie_0423               fol=    3685 (ok) elapsed=1563s eta=3975s
+[ 321/1134] babe_ur_mine              fol=      73 (ok) elapsed=1568s eta=3971s
+[ 322/1134] babohodu                  fol=     378 (ok) elapsed=1573s eta=3966s
+[ 323/1134] babohogu                  fol=   28100 (ok) elapsed=1578s eta=3962s
+[ 324/1134] baekeum_                  fol=     296 (ok) elapsed=1583s eta=3957s
+[ 325/1134] baekilmong91              fol=    1859 (ok) elapsed=1587s eta=3950s
+[ 326/1134] bak_dakbon                fol=       - (restricted) elapsed=1602s eta=3970s
+[ 327/1134] baksasla_                 fol=     502 (ok) elapsed=1606s eta=3963s
+[ 328/1134] bambread_                 fol=    6299 (ok) elapsed=1611s eta=3958s
+[ 329/1134] bamppang73                fol=     823 (ok) elapsed=1615s eta=3951s
+[ 330/1134] banbaji5                  fol=    4416 (ok) elapsed=1620s eta=3946s
+[ 331/1134] bandalbi_431              fol=      76 (ok) elapsed=1625s eta=3942s
+[ 332/1134] banilrapipi               fol=      86 (ok) elapsed=1629s eta=3935s
+[ 333/1134] barking_tree_             fol=     809 (ok) elapsed=1634s eta=3930s
+[ 334/1134] bb_ri_isling              fol=     210 (ok) elapsed=1639s eta=3925s
+[ 335/1134] bbakmakemecrazy           fol=     228 (ok) elapsed=1643s eta=3918s
+[ 336/1134] bbang222e                 fol=   14400 (ok) elapsed=1648s eta=3914s
+[ 337/1134] bbing_zzi                 fol=   11300 (ok) elapsed=1653s eta=3909s
+[ 338/1134] beeeqr                    fol=       8 (ok) elapsed=1658s eta=3904s
+[ 339/1134] bell_basket               fol=    1435 (ok) elapsed=1662s eta=3897s
+[ 340/1134] beomtu2443                fol=   10200 (ok) elapsed=1666s eta=3890s
+[ 341/1134] biBIBeeB                  fol=      90 (ok) elapsed=1671s eta=3885s
+[ 342/1134] biscuitttball             fol=     184 (ok) elapsed=1675s eta=3878s
+[ 343/1134] bksr179192                fol=     900 (ok) elapsed=1679s eta=3871s
+[ 344/1134] blacktea1315              fol=       7 (ok) elapsed=1683s eta=3865s
+[ 345/1134] blbd_green                fol=     309 (ok) elapsed=1688s eta=3860s
+[ 346/1134] blueing_k                 fol=    1343 (ok) elapsed=1693s eta=3855s
+[ 347/1134] blueloty                  fol=   17900 (ok) elapsed=1698s eta=3851s
+[ 348/1134] bobbi_bbbii__             fol=      27 (ok) elapsed=1702s eta=3844s
+[ 349/1134] bogbog10714               fol=     100 (ok) elapsed=1706s eta=3837s
+[ 350/1134] bom_4520                  fol=    1038 (ok) elapsed=1711s eta=3832s
+[ 351/1134] bombi_igu                 fol=    3659 (ok) elapsed=1715s eta=3825s
+[ 352/1134] boripatcha0               fol=       1 (ok) elapsed=1719s eta=3818s
+[ 353/1134] boseukkamgo               fol=     101 (ok) elapsed=1723s eta=3812s
+[ 354/1134] bposil                    fol=     738 (ok) elapsed=1729s eta=3809s
+[ 355/1134] br_0522_                  fol=     998 (ok) elapsed=1733s eta=3802s
+[ 356/1134] breadmouse1127            fol=     144 (ok) elapsed=1737s eta=3796s
+[ 357/1134] bub_bub20                 fol=    4536 (ok) elapsed=1743s eta=3793s
+[ 358/1134] bubujollajoa_19           fol=      35 (ok) elapsed=1747s eta=3786s
+[ 359/1134] bull_za                   fol=     116 (ok) elapsed=1751s eta=3780s
+[ 360/1134] burnedorifice             fol=      96 (ok) elapsed=1755s eta=3773s
+[ 361/1134] byeol_geung               fol=      42 (ok) elapsed=1759s eta=3766s
+[ 362/1134] byeol_lo                  fol=    2394 (ok) elapsed=1764s eta=3761s
+[ 363/1134] cabbagesmaster            fol=    4753 (ok) elapsed=1769s eta=3757s
+[ 364/1134] canm0_3                   fol=     841 (ok) elapsed=1773s eta=3750s
+[ 365/1134] capybara_roll             fol=   42800 (ok) elapsed=1779s eta=3748s
+[ 366/1134] carnstraw                 fol=     156 (ok) elapsed=1783s eta=3741s
+[ 367/1134] cava_owo                  fol=       6 (ok) elapsed=1787s eta=3734s
+[ 368/1134] cc_airborne               fol=    3285 (ok) elapsed=1793s eta=3732s
+[ 369/1134] cent_daydream9            fol=     182 (ok) elapsed=1798s eta=3727s
+[ 370/1134] cent_s_sirius             fol=     497 (ok) elapsed=1802s eta=3720s
+[ 371/1134] cf_otaku                  fol=    1474 (ok) elapsed=1807s eta=3716s
+[ 372/1134] ch_evnfo                  fol=      13 (ok) elapsed=1811s eta=3709s
+[ 373/1134] chabboong                 fol=     669 (ok) elapsed=1815s eta=3702s
+[ 374/1134] chackgongchung            fol=     576 (ok) elapsed=1819s eta=3696s
+[ 375/1134] chahua017                 fol=       2 (ok) elapsed=1824s eta=3691s
+[ 376/1134] chai_cha_2                fol=    2108 (ok) elapsed=1829s eta=3687s
+[ 377/1134] chakanganthol             fol=     147 (ok) elapsed=1833s eta=3680s
+[ 378/1134] chamooo0                  fol=       6 (ok) elapsed=1837s eta=3674s
+[ 379/1134] chaoslina                 fol=     388 (ok) elapsed=1841s eta=3667s
+[ 380/1134] charm2222sul              fol=    3914 (ok) elapsed=1846s eta=3662s
+[ 381/1134] cheshire_lls              fol=     332 (ok) elapsed=1851s eta=3658s
+[ 382/1134] chicken_kamui             fol=     475 (ok) elapsed=1856s eta=3653s
+[ 383/1134] chiezpD                   fol=       8 (ok) elapsed=1859s eta=3645s
+[ 384/1134] chii_AASR                 fol=       2 (ok) elapsed=1862s eta=3636s
+[ 385/1134] chiki_maki                fol=   27900 (ok) elapsed=1868s eta=3634s
+[ 386/1134] chipaching_               fol=     322 (ok) elapsed=1872s eta=3627s
+[ 387/1134] chiyo239                  fol=     107 (ok) elapsed=1877s eta=3623s
+[ 388/1134] cho_BHD                   fol=   11300 (ok) elapsed=1882s eta=3618s
+[ 389/1134] chqkq7748                 fol=    8667 (ok) elapsed=1887s eta=3613s
+[ 390/1134] chu_asdf                  fol=    9196 (ok) elapsed=1891s eta=3607s
+[ 391/1134] chuckseng                 fol=       - (restricted) elapsed=1904s eta=3618s
+[ 392/1134] chulgeunsiru              fol=    3349 (ok) elapsed=1910s eta=3615s
+[ 393/1134] cicada1231                fol=      91 (ok) elapsed=1913s eta=3606s
+[ 394/1134] cimrann_                  fol=   18100 (ok) elapsed=1917s eta=3600s
+[ 395/1134] clarirara                 fol=     187 (ok) elapsed=1922s eta=3595s
+[ 396/1134] cluxxing                  fol=    1585 (ok) elapsed=1927s eta=3591s
+[ 397/1134] cm_4040                   fol=     465 (ok) elapsed=1932s eta=3586s
+[ 398/1134] cmslash                   fol=    5074 (ok) elapsed=1936s eta=3580s
+[ 399/1134] cmzzhdosthf               fol=      69 (ok) elapsed=1940s eta=3573s
+[ 400/1134] cogj11                    fol=    6547 (ok) elapsed=1945s eta=3569s
+[ 401/1134] comet_xio                 fol=    7591 (ok) elapsed=1950s eta=3564s
+[ 402/1134] comori_room               fol=      56 (ok) elapsed=1954s eta=3558s
+[ 403/1134] comuevery                 fol=      11 (ok) elapsed=1959s eta=3553s
+[ 404/1134] congbat_                  fol=      23 (ok) elapsed=1962s eta=3545s
+[ 405/1134] congplay                  fol=    3481 (ok) elapsed=1968s eta=3542s
+[ 406/1134] coo_TeSTAR_kies           fol=     578 (ok) elapsed=1973s eta=3537s
+[ 407/1134] cookielike21              fol=    1508 (ok) elapsed=1978s eta=3533s
+[ 408/1134] coon_owo                  fol=     521 (ok) elapsed=1982s eta=3526s
+[ 409/1134] crazysensei_              fol=    3006 (ok) elapsed=1987s eta=3522s
+[ 410/1134] cup_of_salty              fol=     582 (ok) elapsed=1991s eta=3515s
+[ 411/1134] currycroqman              fol=     849 (ok) elapsed=1996s eta=3511s
+[ 412/1134] cururuping                fol=     364 (ok) elapsed=2001s eta=3506s
+[ 413/1134] d725_                     fol=     476 (ok) elapsed=2005s eta=3500s
+[ 414/1134] d_esper_                  fol=     264 (ok) elapsed=2010s eta=3495s
+[ 415/1134] da_life_conan             fol=    6774 (ok) elapsed=2015s eta=3491s
+[ 416/1134] dachshunddLT              fol=     293 (ok) elapsed=2020s eta=3486s
+[ 417/1134] daisa_waaaalll            fol=     345 (ok) elapsed=2025s eta=3481s
+[ 418/1134] dalkom_for                fol=     167 (ok) elapsed=2030s eta=3477s
+[ 419/1134] damchee_                  fol=      54 (ok) elapsed=2035s eta=3472s
+[ 420/1134] damq_pouo                 fol=    1592 (ok) elapsed=2039s eta=3466s
+[ 421/1134] dangerousgayoni           fol=    3595 (ok) elapsed=2044s eta=3461s
+[ 422/1134] dankixio                  fol=    1214 (ok) elapsed=2050s eta=3458s
+[ 423/1134] dansidumper               fol=     561 (ok) elapsed=2055s eta=3454s
+[ 424/1134] dareunsum06               fol=      34 (ok) elapsed=2059s eta=3447s
+[ 425/1134] dbfan_slwl                fol=      72 (ok) elapsed=2064s eta=3443s
+[ 426/1134] dbu_4068                  fol=    8372 (ok) elapsed=2069s eta=3438s
+[ 427/1134] dd_akam                   fol=     270 (ok) elapsed=2073s eta=3432s
+[ 428/1134] dd_sj_                    fol=     172 (ok) elapsed=2077s eta=3426s
+[ 429/1134] ddolddo8_8                fol=   40700 (ok) elapsed=2081s eta=3419s
+[ 430/1134] ddudadu44                 fol=    3171 (ok) elapsed=2086s eta=3415s
+[ 431/1134] dearnamelesss             fol=    6345 (ok) elapsed=2091s eta=3410s
+[ 432/1134] dedendededelete           fol=     207 (ok) elapsed=2097s eta=3407s
+[ 433/1134] deepdownsee_ome           fol=    1228 (ok) elapsed=2102s eta=3403s
+[ 434/1134] deepsea_3000m             fol=      58 (ok) elapsed=2106s eta=3396s
+[ 435/1134] dell_fPf                  fol=    2626 (ok) elapsed=2111s eta=3392s
+[ 436/1134] denturettakttak           fol=      54 (ok) elapsed=2115s eta=3385s
+[ 437/1134] deungchonhunter           fol=     102 (ok) elapsed=2119s eta=3379s
+[ 438/1134] difficu1t_R               fol=      47 (ok) elapsed=2123s eta=3373s
+[ 439/1134] digogo5220                fol=    1479 (ok) elapsed=2128s eta=3368s
+[ 440/1134] ding2pu                   fol=      68 (ok) elapsed=2133s eta=3364s
+[ 441/1134] dkshtps                   fol=    1548 (ok) elapsed=2137s eta=3358s
+[ 442/1134] dlrdmsrka08               fol=    1600 (ok) elapsed=2141s eta=3351s
+[ 443/1134] dlrjtdmsrhdrP             fol=       7 (ok) elapsed=2145s eta=3345s
+[ 444/1134] dobakkkun                 fol=      14 (ok) elapsed=2150s eta=3341s
+[ 445/1134] dogdog_22                 fol=    4929 (ok) elapsed=2155s eta=3336s
+[ 446/1134] dogreefly22               fol=     770 (ok) elapsed=2160s eta=3332s
+[ 447/1134] dogulbaka                 fol=       - (restricted) elapsed=2173s eta=3339s
+[ 448/1134] dokoo_y6                  fol=     255 (ok) elapsed=2178s eta=3335s
+[ 449/1134] dongsong_1111             fol=    1904 (ok) elapsed=2184s eta=3331s
+[ 450/1134] dopizzaclub               fol=     298 (ok) elapsed=2188s eta=3325s
+[ 451/1134] doramdarom                fol=    3984 (ok) elapsed=2194s eta=3322s
+[ 452/1134] dorong_mino               fol=     477 (ok) elapsed=2199s eta=3317s
+[ 453/1134] dp1nks                    fol=     292 (ok) elapsed=2203s eta=3311s
+[ 454/1134] dpqmsow                   fol=    5193 (ok) elapsed=2208s eta=3307s
+[ 455/1134] dr__HQ                    fol=     725 (ok) elapsed=2215s eta=3305s
+[ 456/1134] draca2na                  fol=    1518 (ok) elapsed=2219s eta=3299s
+[ 457/1134] drawing_for_nu            fol=      51 (ok) elapsed=2223s eta=3293s
+[ 458/1134] dreamtokki                fol=    2113 (ok) elapsed=2229s eta=3289s
+[ 459/1134] dried_carrot              fol=    1374 (ok) elapsed=2234s eta=3285s
+[ 460/1134] duckfari481               fol=       1 (ok) elapsed=2238s eta=3279s
+[ 461/1134] dueltildie                fol=    2096 (ok) elapsed=2243s eta=3274s
+[ 462/1134] dum_muj                   fol=     104 (ok) elapsed=2246s eta=3266s
+[ 463/1134] dungking_els              fol=    4012 (ok) elapsed=2251s eta=3262s
+[ 464/1134] dunk_desu47               fol=    2078 (ok) elapsed=2256s eta=3257s
+[ 465/1134] dus256                    fol=    1125 (ok) elapsed=2261s eta=3252s
+[ 466/1134] duwan1044834              fol=     748 (ok) elapsed=2266s eta=3248s
+[ 467/1134] dyadeudyal2299            fol=       - (restricted) elapsed=2281s eta=3257s
+[ 468/1134] dyud7302                  fol=       - (restricted) elapsed=2294s eta=3264s
+[ 469/1134] e2rina                    fol=     792 (ok) elapsed=2298s eta=3258s
+[ 470/1134] e_on_123                  fol=       4 (ok) elapsed=2303s eta=3253s
+[ 471/1134] eavdedd                   fol=     265 (ok) elapsed=2307s eta=3247s
+[ 472/1134] egeung_work               fol=   13400 (ok) elapsed=2313s eta=3244s
+[ 473/1134] eh_0o0                    fol=    1355 (ok) elapsed=2317s eta=3237s
+[ 474/1134] ehfld79                   fol=     326 (ok) elapsed=2321s eta=3231s
+[ 475/1134] eldtree                   fol=     246 (ok) elapsed=2325s eta=3225s
+[ 476/1134] ello_322                  fol=    1322 (ok) elapsed=2329s eta=3219s
+[ 477/1134] eln9au_pic                fol=    3001 (ok) elapsed=2334s eta=3214s
+[ 478/1134] elrito_to                 fol=     231 (ok) elapsed=2338s eta=3208s
+[ 479/1134] elulit2                   fol=   10000 (ok) elapsed=2343s eta=3203s
+[ 480/1134] em913em                   fol=   25500 (ok) elapsed=2347s eta=3197s
+[ 481/1134] en_caei                   fol=    3024 (ok) elapsed=2352s eta=3193s
+[ 482/1134] eollugkodudeoj1           fol=     165 (ok) elapsed=2356s eta=3186s
+[ 483/1134] eoltto                    fol=    4185 (ok) elapsed=2361s eta=3182s
+[ 484/1134] eoseo88                   fol=   13900 (ok) elapsed=2366s eta=3177s
+[ 485/1134] epzkk_gw                  fol=     761 (ok) elapsed=2371s eta=3172s
+[ 486/1134] eung20022                 fol=    3677 (ok) elapsed=2375s eta=3166s
+[ 487/1134] evaheaven                 fol=     462 (ok) elapsed=2379s eta=3160s
+[ 488/1134] everythingjoa             fol=    3128 (ok) elapsed=2384s eta=3155s
+[ 489/1134] extrarkrn                 fol=     345 (ok) elapsed=2388s eta=3149s
+[ 490/1134] fafodoco11                fol=     310 (ok) elapsed=2392s eta=3143s
+[ 491/1134] fegetiger                 fol=    1919 (ok) elapsed=2397s eta=3139s
+[ 492/1134] fennecjune                fol=    1085 (ok) elapsed=2401s eta=3133s
+[ 493/1134] final_arthur              fol=    1424 (ok) elapsed=2406s eta=3128s
+[ 494/1134] fire_cookies_             fol=     577 (ok) elapsed=2410s eta=3122s
+[ 495/1134] fivegiggun                fol=    9608 (ok) elapsed=2416s eta=3118s
+[ 496/1134] flatb201                  fol=     104 (ok) elapsed=2421s eta=3114s
+[ 497/1134] floodcanarium             fol=      30 (ok) elapsed=2425s eta=3108s
+[ 498/1134] fourth_exit               fol=    3235 (ok) elapsed=2430s eta=3103s
+[ 499/1134] freakin773h               fol=     606 (ok) elapsed=2434s eta=3097s
+[ 500/1134] frillydayz                fol=     459 (ok) elapsed=2438s eta=3091s
+[ 501/1134] frozenmayo_               fol=     568 (ok) elapsed=2443s eta=3086s
+[ 502/1134] full_moon_714             fol=      95 (ok) elapsed=2446s eta=3079s
+[ 503/1134] g_rbera_                  fol=      53 (ok) elapsed=2451s eta=3074s
+[ 504/1134] gabojagowww               fol=     176 (ok) elapsed=2456s eta=3069s
+[ 505/1134] gabuck53545               fol=    1469 (ok) elapsed=2462s eta=3066s
+[ 506/1134] gak_0                     fol=     458 (ok) elapsed=2466s eta=3060s
+[ 507/1134] gamtwi111                 fol=    6013 (ok) elapsed=2471s eta=3055s
+[ 508/1134] gangche_                  fol=    7128 (ok) elapsed=2476s eta=3051s
+[ 509/1134] gateau_ch0                fol=     627 (ok) elapsed=2480s eta=3045s
+[ 510/1134] gemgye195971              fol=       - (restricted) elapsed=2495s eta=3052s
+[ 511/1134] geonchi365163             fol=    3441 (ok) elapsed=2501s eta=3049s
+[ 512/1134] geongmil_                 fol=    1423 (ok) elapsed=2506s eta=3044s
+[ 513/1134] gga_soo                   fol=     120 (ok) elapsed=2509s eta=3037s
+[ 514/1134] ggugguming7               fol=    1529 (ok) elapsed=2514s eta=3032s
+[ 515/1134] ghO11229                  fol=       - (restricted) elapsed=2527s eta=3037s
+[ 516/1134] gigigoeg                  fol=     417 (ok) elapsed=2531s eta=3031s
+[ 517/1134] gileogim                  fol=     435 (ok) elapsed=2535s eta=3025s
+[ 518/1134] gin937                    fol=   22400 (ok) elapsed=2539s eta=3019s
+[ 519/1134] gisim1ma                  fol=    1261 (ok) elapsed=2543s eta=3013s
+[ 520/1134] givememhjh                fol=     925 (ok) elapsed=2548s eta=3008s
+[ 521/1134] givmegalaxy               fol=      71 (ok) elapsed=2553s eta=3003s
+[ 522/1134] giyaropi                  fol=     243 (ok) elapsed=2557s eta=2997s
+[ 523/1134] gj_puding                 fol=     372 (ok) elapsed=2562s eta=2993s
+[ 524/1134] gmalch_kim                fol=    2460 (ok) elapsed=2567s eta=2988s
+[ 525/1134] gmlwls2612                fol=   22200 (ok) elapsed=2573s eta=2984s
+[ 526/1134] gnoccchi_99               fol=       - (restricted) elapsed=2587s eta=2990s
+[ 527/1134] goge_lara572              fol=    1993 (ok) elapsed=2593s eta=2986s
+[ 528/1134] gonggusa                  fol=    5514 (ok) elapsed=2597s eta=2980s
+[ 529/1134] gongzzi____               fol=    2195 (ok) elapsed=2602s eta=2975s
+[ 530/1134] goodteethguys             fol=   11900 (ok) elapsed=2607s eta=2970s
+[ 531/1134] gorae443                  fol=    2265 (ok) elapsed=2611s eta=2965s
+[ 532/1134] goro114477                fol=     250 (ok) elapsed=2616s eta=2960s
+[ 533/1134] green_dsq                 fol=     107 (ok) elapsed=2619s eta=2953s
+[ 534/1134] guccigang_hip             fol=    1287 (ok) elapsed=2625s eta=2949s
+[ 535/1134] gugg_l                    fol=     104 (ok) elapsed=2628s eta=2942s
+[ 536/1134] guhwa0215                 fol=   16500 (ok) elapsed=2633s eta=2937s
+[ 537/1134] guineapig_papa            fol=    9183 (ok) elapsed=2638s eta=2932s
+[ 538/1134] gumbam_0_0                fol=     171 (ok) elapsed=2643s eta=2927s
+[ 539/1134] gungyeol_gg               fol=     810 (ok) elapsed=2647s eta=2922s
+[ 540/1134] gurimrkgk                 fol=     214 (ok) elapsed=2652s eta=2917s
+[ 541/1134] gustmd_50                 fol=      71 (ok) elapsed=2656s eta=2911s
+[ 542/1134] gwado336470               fol=     459 (ok) elapsed=2661s eta=2906s
+[ 543/1134] gwakdoopaal               fol=     219 (ok) elapsed=2666s eta=2901s
+[ 544/1134] gyulja_                   fol=      87 (ok) elapsed=2670s eta=2895s
+[ 545/1134] hSz4NukVPp32              fol=      98 (ok) elapsed=2675s eta=2890s
+[ 546/1134] haedalfruits              fol=     408 (ok) elapsed=2678s eta=2884s
+[ 547/1134] haejji0420                fol=     146 (ok) elapsed=2682s eta=2878s
+[ 548/1134] haeo_207                  fol=     138 (ok) elapsed=2686s eta=2872s
+[ 549/1134] haewoo_hb                 fol=     246 (ok) elapsed=2691s eta=2867s
+[ 550/1134] hahaebbang1               fol=   68300 (ok) elapsed=2695s eta=2861s
+[ 551/1134] hahinnom                  fol=     143 (ok) elapsed=2698s eta=2854s
+[ 552/1134] hajikara_iko              fol=    5353 (ok) elapsed=2705s eta=2852s
+[ 553/1134] hamco11ector              fol=    2655 (ok) elapsed=2710s eta=2847s
+[ 554/1134] hamo_art2                 fol=   12100 (ok) elapsed=2715s eta=2842s
+[ 555/1134] hamofwar36                fol=     211 (ok) elapsed=2720s eta=2837s
+[ 556/1134] hamsik2pakupaku           fol=     358 (ok) elapsed=2725s eta=2832s
+[ 557/1134] handai05                  fol=      14 (ok) elapsed=2729s eta=2826s
+[ 558/1134] hap_p___y                 fol=    1547 (ok) elapsed=2734s eta=2822s
+[ 559/1134] hapbu_                    fol=     225 (ok) elapsed=2738s eta=2816s
+[ 560/1134] happy7quokka              fol=     415 (ok) elapsed=2743s eta=2811s
+[ 561/1134] hazmo777                  fol=     233 (ok) elapsed=2748s eta=2806s
+[ 562/1134] hazuyouyu                 fol=    4653 (ok) elapsed=2754s eta=2803s
+[ 563/1134] heenhnn                   fol=     592 (ok) elapsed=2760s eta=2799s
+[ 564/1134] hellketa                  fol=    3413 (ok) elapsed=2764s eta=2793s
+[ 565/1134] herven_                   fol=    1605 (ok) elapsed=2769s eta=2788s
+[ 566/1134] hg635228                  fol=     978 (ok) elapsed=2773s eta=2782s
+[ 567/1134] hhoddoo                   fol=    6202 (ok) elapsed=2778s eta=2778s
+[ 568/1134] hickhick04                fol=     373 (ok) elapsed=2784s eta=2774s
+[ 569/1134] himtroll                  fol=    1961 (ok) elapsed=2789s eta=2769s
+[ 570/1134] hindhind_craft            fol=      34 (ok) elapsed=2794s eta=2764s
+[ 571/1134] hipi_bb                   fol=     112 (ok) elapsed=2800s eta=2760s
+[ 572/1134] hirami04                  fol=     634 (ok) elapsed=2803s eta=2753s
+[ 573/1134] hiryang                   fol=     596 (ok) elapsed=2811s eta=2752s
+[ 574/1134] hissun819                 fol=    1475 (ok) elapsed=2816s eta=2747s
+[ 575/1134] hitman88887               fol=     493 (ok) elapsed=2821s eta=2742s
+[ 576/1134] hns_iiiii                 fol=    2762 (ok) elapsed=2826s eta=2737s
+[ 577/1134] hobak88fa                 fol=    3781 (ok) elapsed=2831s eta=2732s
+[ 578/1134] hoesaone                  fol=     142 (ok) elapsed=2836s eta=2728s
+[ 579/1134] hoge23_                   fol=     246 (ok) elapsed=2839s eta=2721s
+[ 580/1134] homehomehomego            fol=    1087 (ok) elapsed=2844s eta=2716s
+[ 581/1134] homilpain                 fol=   29100 (ok) elapsed=2850s eta=2712s
+[ 582/1134] hongtt000                 fol=     108 (ok) elapsed=2854s eta=2706s
+[ 583/1134] honjanol                  fol=    5799 (ok) elapsed=2859s eta=2702s
+[ 584/1134] hotplan_hot               fol=      83 (ok) elapsed=2863s eta=2696s
+[ 585/1134] however1but               fol=     255 (ok) elapsed=2867s eta=2690s
+[ 586/1134] hpmi_BU                   fol=    1638 (ok) elapsed=2873s eta=2686s
+[ 587/1134] hpmic_old                 fol=     275 (ok) elapsed=2878s eta=2681s
+[ 588/1134] hqkksak                   fol=   28300 (ok) elapsed=2884s eta=2678s
+[ 589/1134] hr_rhlcnf                 fol=     577 (ok) elapsed=2889s eta=2673s
+[ 590/1134] hrdtaco                   fol=     978 (ok) elapsed=2893s eta=2667s
+[ 591/1134] hskh117354                fol=    1459 (ok) elapsed=2897s eta=2661s
+[ 592/1134] huke0sa                   fol=     170 (ok) elapsed=2901s eta=2655s
+[ 593/1134] hundredsof_               fol=     163 (ok) elapsed=2905s eta=2650s
+[ 594/1134] hushuki_0v0               fol=     487 (ok) elapsed=2910s eta=2645s
+[ 595/1134] hwa_the_flower            fol=     747 (ok) elapsed=2914s eta=2639s
+[ 596/1134] hy830207                  fol=    1655 (ok) elapsed=2919s eta=2634s
+[ 597/1134] i28425005                 fol=     464 (ok) elapsed=2924s eta=2630s
+[ 598/1134] iamyunji                  fol=     745 (ok) elapsed=2928s eta=2624s
+[ 599/1134] ichoesam                  fol=      24 (ok) elapsed=2932s eta=2618s
+[ 600/1134] ideatami                  fol=    4455 (ok) elapsed=2936s eta=2613s
+[ 601/1134] ido_sendoh                fol=    2643 (ok) elapsed=2942s eta=2609s
+[ 602/1134] ifekusa                   fol=    4264 (ok) elapsed=2946s eta=2603s
+[ 603/1134] ihlcty                    fol=     233 (ok) elapsed=2951s eta=2598s
+[ 604/1134] iiiiiite1                 fol=     274 (ok) elapsed=2956s eta=2593s
+[ 605/1134] illi884                   fol=    3483 (ok) elapsed=2963s eta=2590s
+[ 606/1134] iminbayern                fol=      40 (ok) elapsed=2966s eta=2584s
+[ 607/1134] imme_111                  fol=   43700 (ok) elapsed=2972s eta=2580s
+[ 608/1134] in_clam                   fol=    1936 (ok) elapsed=2976s eta=2574s
+[ 609/1134] ink_your_life             fol=    1333 (ok) elapsed=2981s eta=2569s
+[ 610/1134] inst27909544              fol=    6294 (ok) elapsed=2985s eta=2564s
+[ 611/1134] ionblue                   fol=     814 (ok) elapsed=2990s eta=2559s
+[ 612/1134] iren_lovel                fol=  107300 (ok) elapsed=2995s eta=2554s
+[ 613/1134] iri0012draw               fol=   14700 (ok) elapsed=3000s eta=2549s
+[ 614/1134] isare130                  fol=     134 (ok) elapsed=3005s eta=2544s
+[ 615/1134] isdallar                  fol=      90 (ok) elapsed=3008s eta=2538s
+[ 616/1134] iwaejin6                  fol=   21600 (ok) elapsed=3012s eta=2532s
+[ 617/1134] iwant_tm_merch            fol=     408 (ok) elapsed=3016s eta=2527s
+[ 618/1134] iyu3353                   fol=    4042 (ok) elapsed=3021s eta=2522s
+[ 619/1134] j3aaaaaaa                 fol=      66 (ok) elapsed=3025s eta=2516s
+[ 620/1134] j_yhyj                    fol=    2621 (ok) elapsed=3029s eta=2511s
+[ 621/1134] jabduck501                fol=     966 (ok) elapsed=3034s eta=2506s
+[ 622/1134] jabtang_yong__            fol=      41 (ok) elapsed=3038s eta=2500s
+[ 623/1134] jamcola33                 fol=     297 (ok) elapsed=3042s eta=2495s
+[ 624/1134] jamppong237883            fol=       - (restricted) elapsed=3057s eta=2498s
+[ 625/1134] jang_tte_rain             fol=    5718 (ok) elapsed=3062s eta=2493s
+[ 626/1134] jari_dcmk                 fol=     706 (ok) elapsed=3066s eta=2488s
+[ 627/1134] jawsbar_00                fol=    2211 (ok) elapsed=3072s eta=2484s
+[ 628/1134] jeojooseyo_p              fol=     139 (ok) elapsed=3077s eta=2479s
+[ 629/1134] jeok_o                    fol=    2090 (ok) elapsed=3083s eta=2475s
+[ 630/1134] jeomb1                    fol=    1697 (ok) elapsed=3089s eta=2471s
+[ 631/1134] jetki11er                 fol=     235 (ok) elapsed=3094s eta=2466s
+[ 632/1134] jiangdongjuzi             fol=     377 (ok) elapsed=3098s eta=2460s
+[ 633/1134] jingo1412_                fol=     359 (ok) elapsed=3103s eta=2455s
+[ 634/1134] jinjara126                fol=    2736 (ok) elapsed=3108s eta=2451s
+[ 635/1134] job_0408                  fol=     144 (ok) elapsed=3113s eta=2446s
+[ 636/1134] jojo_cey                  fol=    1775 (ok) elapsed=3117s eta=2440s
+[ 637/1134] juegettanim               fol=    1477 (ok) elapsed=3122s eta=2435s
+[ 638/1134] jungru1125                fol=     966 (ok) elapsed=3127s eta=2431s
+[ 639/1134] junkkou_999               fol=    1010 (ok) elapsed=3132s eta=2426s
+[ 640/1134] junpiljin                 fol=    1110 (ok) elapsed=3137s eta=2421s
+[ 641/1134] jurung_ge                 fol=     374 (ok) elapsed=3143s eta=2417s
+[ 642/1134] just_yamyam               fol=    7226 (ok) elapsed=3147s eta=2411s
+[ 643/1134] jyjxsjs_S2                fol=    3569 (ok) elapsed=3150s eta=2405s
+[ 644/1134] kahlerspace               fol=     232 (ok) elapsed=3155s eta=2400s
+[ 645/1134] kamihigh1112              fol=      66 (ok) elapsed=3159s eta=2394s
+[ 646/1134] kamsa_tang                fol=     293 (ok) elapsed=3164s eta=2390s
+[ 647/1134] karitz35                  fol=     422 (ok) elapsed=3169s eta=2385s
+[ 648/1134] ke_bebe_                  fol=     221 (ok) elapsed=3172s eta=2379s
+[ 649/1134] kemo_nya                  fol=     907 (ok) elapsed=3177s eta=2374s
+[ 650/1134] kenikth21                 fol=       - (restricted) elapsed=3191s eta=2376s
+[ 651/1134] kikislovealways           fol=      43 (ok) elapsed=3195s eta=2370s
+[ 652/1134] kil_the_silver            fol=    7031 (ok) elapsed=3199s eta=2364s
+[ 653/1134] kill_gyosunnim            fol=     186 (ok) elapsed=3203s eta=2359s
+[ 654/1134] kimeohandream_            fol=    1864 (ok) elapsed=3209s eta=2355s
+[ 655/1134] kimjang_kc                fol=    1916 (ok) elapsed=3214s eta=2350s
+[ 656/1134] kimnarbi                  fol=     208 (ok) elapsed=3218s eta=2344s
+[ 657/1134] kimsoulstudio             fol=     148 (ok) elapsed=3223s eta=2339s
+[ 658/1134] kingkami1                 fol=    3889 (ok) elapsed=3228s eta=2335s
+[ 659/1134] kiwitete_i                fol=    2870 (ok) elapsed=3231s eta=2328s
+[ 660/1134] kkam_kiwi                 fol=     314 (ok) elapsed=3237s eta=2324s
+[ 661/1134] kkebistore                fol=     916 (ok) elapsed=3241s eta=2319s
+[ 662/1134] kkokka0401                fol=      56 (ok) elapsed=3247s eta=2315s
+[ 663/1134] kkoog_TT                  fol=    5481 (ok) elapsed=3252s eta=2310s
+[ 664/1134] kkubi_HZ                  fol=     240 (ok) elapsed=3257s eta=2305s
+[ 665/1134] kkwaek_duck               fol=     104 (ok) elapsed=3260s eta=2299s
+[ 666/1134] koa06181111               fol=    1071 (ok) elapsed=3264s eta=2293s
+[ 667/1134] konyanyann                fol=     962 (ok) elapsed=3269s eta=2288s
+[ 668/1134] koorarin                  fol=     598 (ok) elapsed=3273s eta=2283s
+[ 669/1134] koozh1                    fol=       - (restricted) elapsed=3287s eta=2284s
+[ 670/1134] kulibanu                  fol=       9 (ok) elapsed=3292s eta=2279s
+[ 671/1134] kuma7824                  fol=    2280 (ok) elapsed=3297s eta=2274s
+[ 672/1134] kurobina_win              fol=   17500 (ok) elapsed=3302s eta=2270s
+[ 673/1134] kuuze_101                 fol=     514 (ok) elapsed=3306s eta=2264s
+[ 674/1134] kzhn8107                  fol=     172 (ok) elapsed=3310s eta=2259s
+[ 675/1134] l10070229                 fol=    5286 (ok) elapsed=3314s eta=2253s
+[ 676/1134] lady_may_ladys            fol=     907 (ok) elapsed=3319s eta=2248s
+[ 677/1134] lai_lucky_                fol=     253 (ok) elapsed=3324s eta=2243s
+[ 678/1134] lbddu3                    fol=      52 (ok) elapsed=3330s eta=2239s
+[ 679/1134] leedoonaa7                fol=     640 (ok) elapsed=3335s eta=2234s
+[ 680/1134] leeduckdam                fol=      39 (ok) elapsed=3338s eta=2228s
+[ 681/1134] letto9163                 fol=     851 (ok) elapsed=3342s eta=2223s
+[ 682/1134] likemarch_p               fol=      52 (ok) elapsed=3346s eta=2217s
+[ 683/1134] likitiii                  fol=     291 (ok) elapsed=3351s eta=2212s
+[ 684/1134] liliagrim                 fol=     374 (ok) elapsed=3355s eta=2207s
+[ 685/1134] limilim_otaku             fol=     287 (ok) elapsed=3360s eta=2202s
+[ 686/1134] linajeain731              fol=     108 (ok) elapsed=3364s eta=2196s
+[ 687/1134] littlehime02              fol=    2517 (ok) elapsed=3368s eta=2191s
+[ 688/1134] livingkkury               fol=    1510 (ok) elapsed=3374s eta=2187s
+[ 689/1134] lojetet                   fol=      44 (ok) elapsed=3377s eta=2181s
+[ 690/1134] looMloty                  fol=     124 (ok) elapsed=3382s eta=2176s
+[ 691/1134] look_at_yours             fol=    2988 (ok) elapsed=3387s eta=2171s
+[ 692/1134] loveblond_46              fol=   42200 (ok) elapsed=3393s eta=2167s
+[ 693/1134] lovelovepowerS2           fol=       0 (ok) elapsed=3398s eta=2162s
+[ 694/1134] loveonloop88              fol=      26 (ok) elapsed=3401s eta=2156s
+[ 695/1134] low0916                   fol=     336 (ok) elapsed=3406s eta=2151s
+[ 696/1134] lsf_21xxxx                fol=     127 (ok) elapsed=3412s eta=2147s
+[ 697/1134] lukkikki                  fol=    1337 (ok) elapsed=3416s eta=2141s
+[ 698/1134] luvablexreature           fol=     549 (ok) elapsed=3421s eta=2136s
+[ 699/1134] luvinruin725              fol=    1478 (ok) elapsed=3426s eta=2132s
+[ 700/1134] luvpyclub                 fol=    9635 (ok) elapsed=3431s eta=2127s
+[ 701/1134] lv21vor                   fol=    2601 (ok) elapsed=3436s eta=2122s
+[ 702/1134] lxng725                   fol=    2250 (ok) elapsed=3441s eta=2117s
+[ 703/1134] lzzzzzzzzsy               fol=    4069 (ok) elapsed=3445s eta=2112s
+[ 704/1134] m_arijuan__a              fol=   25100 (ok) elapsed=3450s eta=2107s
+[ 705/1134] ma64068248                fol=     742 (ok) elapsed=3455s eta=2102s
+[ 706/1134] ma_ppi_gif                fol=     298 (ok) elapsed=3460s eta=2097s
+[ 707/1134] madeinroong               fol=      50 (ok) elapsed=3464s eta=2092s
+[ 708/1134] magamimback               fol=      94 (ok) elapsed=3469s eta=2087s
+[ 709/1134] mam_mi_                   fol=     966 (ok) elapsed=3474s eta=2082s
+[ 710/1134] mangajug                  fol=    1230 (ok) elapsed=3479s eta=2077s
+[ 711/1134] mangccx                   fol=    1624 (ok) elapsed=3484s eta=2072s
+[ 712/1134] mangmu_lover              fol=   11500 (ok) elapsed=3490s eta=2068s
+[ 713/1134] manya_012606              fol=    2881 (ok) elapsed=3494s eta=2063s
+[ 714/1134] maplespirit30             fol=    1611 (ok) elapsed=3498s eta=2057s
+[ 715/1134] mardred0913               fol=    4979 (ok) elapsed=3503s eta=2052s
+[ 716/1134] marlin_pic                fol=    1699 (ok) elapsed=3507s eta=2047s
+[ 717/1134] mashdunk                  fol=    2834 (ok) elapsed=3513s eta=2043s
+[ 718/1134] mashumasaa                fol=      47 (ok) elapsed=3517s eta=2037s
+[ 719/1134] masitdaghost_77           fol=    7181 (ok) elapsed=3522s eta=2032s
+[ 720/1134] mayonezu_404              fol=     244 (ok) elapsed=3526s eta=2027s
+[ 721/1134] mc_ogura_toast            fol=     110 (ok) elapsed=3531s eta=2022s
+[ 722/1134] mcdnjsrhg0                fol=     170 (ok) elapsed=3536s eta=2017s
+[ 723/1134] mcrcmos                   fol=    7433 (ok) elapsed=3541s eta=2012s
+[ 724/1134] me_ya_ri                  fol=     763 (ok) elapsed=3547s eta=2008s
+[ 725/1134] megane_Akatsuki           fol=     450 (ok) elapsed=3551s eta=2003s
+[ 726/1134] meganetodice              fol=     374 (ok) elapsed=3556s eta=1998s
+[ 727/1134] mell3pt                   fol=     571 (ok) elapsed=3560s eta=1993s
+[ 728/1134] melt_666                  fol=      43 (ok) elapsed=3564s eta=1987s
+[ 729/1134] meow2ya                   fol=     288 (ok) elapsed=3569s eta=1982s
+[ 730/1134] merinme99                 fol=    9664 (ok) elapsed=3574s eta=1977s
+[ 731/1134] merry_blue_               fol=     328 (ok) elapsed=3578s eta=1972s
+[ 732/1134] mesame_HQ                 fol=    1285 (ok) elapsed=3582s eta=1967s
+[ 733/1134] mikkssbowl                fol=    1687 (ok) elapsed=3587s eta=1962s
+[ 734/1134] mill_kongtteock           fol=       3 (ok) elapsed=3592s eta=1957s
+[ 735/1134] mimi_jj03                 fol=   14400 (ok) elapsed=3597s eta=1952s
+[ 736/1134] min4deul                  fol=     303 (ok) elapsed=3601s eta=1947s
+[ 737/1134] ming2cha                  fol=      45 (ok) elapsed=3604s eta=1941s
+[ 738/1134] mingto_T2                 fol=     320 (ok) elapsed=3608s eta=1936s
+[ 739/1134] miraclesmay2              fol=      76 (ok) elapsed=3613s eta=1931s
+[ 740/1134] miryo_33                  fol=    1701 (ok) elapsed=3618s eta=1926s
+[ 741/1134] miserywithakira           fol=     579 (ok) elapsed=3622s eta=1920s
+[ 742/1134] miyu___miya               fol=   24600 (ok) elapsed=3626s eta=1915s
+[ 743/1134] miyuum680                 fol=      79 (ok) elapsed=3630s eta=1910s
+[ 744/1134] mkun606                   fol=    3401 (ok) elapsed=3635s eta=1905s
+[ 745/1134] mm_0801_ww                fol=    5122 (ok) elapsed=3639s eta=1900s
+[ 746/1134] mmmmmmrmn                 fol=    3528 (ok) elapsed=3644s eta=1895s
+[ 747/1134] mnaka0770                 fol=      15 (ok) elapsed=3648s eta=1889s
+[ 748/1134] mngmy_9b1                 fol=     771 (ok) elapsed=3652s eta=1884s
+[ 749/1134] mogua_4789                fol=    1662 (ok) elapsed=3657s eta=1879s
+[ 750/1134] molaedu02                 fol=    1221 (ok) elapsed=3662s eta=1874s
+[ 751/1134] moll_ga                   fol=      41 (ok) elapsed=3666s eta=1869s
+[ 752/1134] momumma_                  fol=     163 (ok) elapsed=3671s eta=1864s
+[ 753/1134] mong6681                  fol=    4363 (ok) elapsed=3676s eta=1859s
+[ 754/1134] mongddang__1              fol=    9694 (ok) elapsed=3681s eta=1855s
+[ 755/1134] mongsanghwa               fol=   22100 (ok) elapsed=3687s eta=1850s
+[ 756/1134] mono_prsk                 fol=    2601 (ok) elapsed=3692s eta=1846s
+[ 757/1134] moongguyam                fol=     172 (ok) elapsed=3696s eta=1840s
+[ 758/1134] mooollls                  fol=    1459 (ok) elapsed=3700s eta=1835s
+[ 759/1134] moooojiiiiiiii            fol=     200 (ok) elapsed=3704s eta=1830s
+[ 760/1134] more_cn                   fol=     598 (ok) elapsed=3710s eta=1825s
+[ 761/1134] most_brightest            fol=     659 (ok) elapsed=3714s eta=1820s
+[ 762/1134] mozar2224                 fol=     101 (ok) elapsed=3719s eta=1815s
+[ 763/1134] msaehin                   fol=     124 (ok) elapsed=3723s eta=1810s
+[ 764/1134] mtos9_                    fol=      37 (ok) elapsed=3728s eta=1805s
+[ 765/1134] mu_dog0202                fol=    1061 (ok) elapsed=3733s eta=1800s
+[ 766/1134] mu_r1r11                  fol=    6024 (ok) elapsed=3738s eta=1795s
+[ 767/1134] muac2482                  fol=      52 (ok) elapsed=3743s eta=1790s
+[ 768/1134] muamaupyo                 fol=     398 (ok) elapsed=3747s eta=1785s
+[ 769/1134] muhae_muhae               fol=    1197 (ok) elapsed=3752s eta=1780s
+[ 770/1134] muhwi555                  fol=     197 (ok) elapsed=3757s eta=1776s
+[ 771/1134] mui_S2                    fol=    1632 (ok) elapsed=3762s eta=1771s
+[ 772/1134] muingn1m                  fol=     246 (ok) elapsed=3767s eta=1766s
+[ 773/1134] mukbab_                   fol=     507 (ok) elapsed=3771s eta=1761s
+[ 774/1134] mumin1789                 fol=     132 (ok) elapsed=3774s eta=1755s
+[ 775/1134] muryoogon                 fol=    2036 (ok) elapsed=3779s eta=1750s
+[ 776/1134] mutt075                   fol=    3367 (ok) elapsed=3784s eta=1745s
+[ 777/1134] muya_say                  fol=    1618 (ok) elapsed=3788s eta=1740s
+[ 778/1134] myS_villain               fol=       - (restricted) elapsed=3802s eta=1739s
+[ 779/1134] my_moist_alien            fol=     472 (ok) elapsed=3806s eta=1734s
+[ 780/1134] mya_myang___              fol=    1341 (ok) elapsed=3811s eta=1729s
+[ 781/1134] myatoga                   fol=    2276 (ok) elapsed=3815s eta=1724s
+[ 782/1134] mydadisyours              fol=     213 (ok) elapsed=3819s eta=1719s
+[ 783/1134] myeolgi_bln               fol=   16700 (ok) elapsed=3824s eta=1714s
+[ 784/1134] myeonlyunjins4            fol=       - (restricted) elapsed=3839s eta=1713s
+[ 785/1134] mygga78                   fol=       - (restricted) elapsed=3853s eta=1712s
+[ 786/1134] myuwang                   fol=     100 (ok) elapsed=3859s eta=1708s
+[ 787/1134] n_nn_nnn11                fol=     256 (ok) elapsed=3863s eta=1703s
+[ 788/1134] naelleumson               fol=     118 (ok) elapsed=3866s eta=1697s
+[ 789/1134] nair_rf                   fol=   12000 (ok) elapsed=3871s eta=1692s
+[ 790/1134] nallali_nal               fol=    2299 (ok) elapsed=3875s eta=1687s
+[ 791/1134] nalsil21                  fol=     144 (ok) elapsed=3880s eta=1682s
+[ 792/1134] nangbi77                  fol=    2626 (ok) elapsed=3885s eta=1677s
+[ 793/1134] naro_akam                 fol=    3257 (ok) elapsed=3889s eta=1672s
+[ 794/1134] nasu_taku                 fol=    8557 (ok) elapsed=3894s eta=1667s
+[ 795/1134] nauigeaseki               fol=     413 (ok) elapsed=3899s eta=1662s
+[ 796/1134] ndaknt                    fol=     341 (ok) elapsed=3903s eta=1657s
+[ 797/1134] ndfrskr                   fol=   16100 (ok) elapsed=3910s eta=1653s
+[ 798/1134] neatun_1                  fol=     190 (ok) elapsed=3914s eta=1648s
+[ 799/1134] nel_kim_                  fol=    2321 (ok) elapsed=3919s eta=1643s
+[ 800/1134] neptuneblue_01            fol=    2047 (ok) elapsed=3924s eta=1638s
+[ 801/1134] ner0u0                    fol=      77 (ok) elapsed=3929s eta=1633s
+[ 802/1134] new_cmm                   fol=    2007 (ok) elapsed=3934s eta=1628s
+[ 803/1134] newbie_zaptang            fol=     341 (ok) elapsed=3938s eta=1623s
+[ 804/1134] next_meganekun            fol=    6097 (ok) elapsed=3943s eta=1618s
+[ 805/1134] nidy1028                  fol=    1581 (ok) elapsed=3947s eta=1613s
+[ 806/1134] niga__cherry              fol=      93 (ok) elapsed=3952s eta=1608s
+[ 807/1134] nigerungdayo              fol=      59 (ok) elapsed=3956s eta=1602s
+[ 808/1134] ninjago0932               fol=       8 (ok) elapsed=3959s eta=1597s
+[ 809/1134] ninninnindoi              fol=      41 (ok) elapsed=3964s eta=1592s
+[ 810/1134] ninzadamgom               fol=     330 (ok) elapsed=3969s eta=1587s
+[ 811/1134] nioc0_                    fol=      10 (ok) elapsed=3973s eta=1582s
+[ 812/1134] nitosaniwa                fol=    1419 (ok) elapsed=3978s eta=1577s
+[ 813/1134] nkgomS2_700               fol=      19 (ok) elapsed=3981s eta=1571s
+[ 814/1134] no_moral_dot              fol=      91 (ok) elapsed=3984s eta=1566s
+[ 815/1134] noameyescar               fol=     246 (ok) elapsed=3989s eta=1561s
+[ 816/1134] nokillassassin            fol=      98 (ok) elapsed=3993s eta=1556s
+[ 817/1134] nonggugong__7             fol=      45 (ok) elapsed=3997s eta=1550s
+[ 818/1134] nongja9713621             fol=     109 (ok) elapsed=4002s eta=1546s
+[ 819/1134] nono_with7                fol=       2 (ok) elapsed=4006s eta=1540s
+[ 820/1134] noop_kee                  fol=     465 (ok) elapsed=4011s eta=1535s
+[ 821/1134] noru_axxpolice            fol=     368 (ok) elapsed=4016s eta=1531s
+[ 822/1134] nowifeelalive             fol=      82 (ok) elapsed=4020s eta=1525s
+[ 823/1134] nowimhomeless             fol=      16 (ok) elapsed=4024s eta=1520s
+[ 824/1134] nowletmeg0                fol=     530 (ok) elapsed=4029s eta=1515s
+[ 825/1134] noye_mystic               fol=     623 (ok) elapsed=4033s eta=1510s
+[ 826/1134] nub_n_                    fol=     215 (ok) elapsed=4038s eta=1505s
+[ 827/1134] null_naaall               fol=     191 (ok) elapsed=4042s eta=1500s
+[ 828/1134] nvmg0                     fol=     154 (ok) elapsed=4047s eta=1495s
+[ 829/1134] nyagu_u                   fol=    3309 (ok) elapsed=4051s eta=1490s
+[ 830/1134] nyangcraft                fol=      19 (ok) elapsed=4055s eta=1485s
+[ 831/1134] nyoma6666                 fol=     680 (ok) elapsed=4059s eta=1479s
+[ 832/1134] o_tter_dal                fol=      53 (ok) elapsed=4063s eta=1474s
+[ 833/1134] ogatamanura               fol=      98 (ok) elapsed=4068s eta=1469s
+[ 834/1134] ohohkawa1133              fol=     832 (ok) elapsed=4072s eta=1464s
+[ 835/1134] olosalosa                 fol=     367 (ok) elapsed=4077s eta=1459s
+[ 836/1134] omodong_ace               fol=    1423 (ok) elapsed=4082s eta=1455s
+[ 837/1134] omolipguataku             fol=     438 (ok) elapsed=4088s eta=1450s
+[ 838/1134] on_yourhom3               fol=    5428 (ok) elapsed=4093s eta=1445s
+[ 839/1134] one_two_zer0              fol=    1211 (ok) elapsed=4097s eta=1440s
+[ 840/1134] ong6ik__999               fol=    6945 (ok) elapsed=4102s eta=1435s
+[ 841/1134] onjjyang                  fol=     702 (ok) elapsed=4108s eta=1431s
+[ 842/1134] only_do_an                fol=      19 (ok) elapsed=4111s eta=1425s
+[ 843/1134] oonpiturn_                fol=   17800 (ok) elapsed=4115s eta=1420s
+[ 844/1134] or77rb1                   fol=    1865 (ok) elapsed=4119s eta=1415s
+[ 845/1134] orange_d_podo             fol=      41 (ok) elapsed=4124s eta=1410s
+[ 846/1134] organicindanger           fol=      16 (ok) elapsed=4128s eta=1405s
+[ 847/1134] osumoudosukooi            fol=    1051 (ok) elapsed=4132s eta=1400s
+[ 848/1134] otakudesu_0               fol=     248 (ok) elapsed=4137s eta=1395s
+[ 849/1134] otav_572                  fol=   14800 (ok) elapsed=4141s eta=1390s
+[ 850/1134] otimku                    fol=    7187 (ok) elapsed=4147s eta=1385s
+[ 851/1134] oxe2oxe3                  fol=   11100 (ok) elapsed=4152s eta=1380s
+[ 852/1134] p0_book                   fol=    4491 (ok) elapsed=4156s eta=1375s
+[ 853/1134] p0licel1ne_               fol=    3972 (ok) elapsed=4161s eta=1370s
+[ 854/1134] p0z2i_lock                fol=    4219 (ok) elapsed=4166s eta=1365s
+[ 855/1134] p78_ll                    fol=   24000 (ok) elapsed=4171s eta=1361s
+[ 856/1134] p_u_____u_q               fol=     140 (ok) elapsed=4175s eta=1355s
+[ 857/1134] pa1e1ing                  fol=       - (restricted) elapsed=4189s eta=1353s
+[ 858/1134] paledawn_65               fol=    1721 (ok) elapsed=4194s eta=1349s
+[ 859/1134] panso_param               fol=     113 (ok) elapsed=4198s eta=1343s
+[ 860/1134] papa8_8                   fol=   13700 (ok) elapsed=4203s eta=1339s
+[ 861/1134] paranagain                fol=     244 (ok) elapsed=4208s eta=1334s
+[ 862/1134] parananhc                 fol=     183 (ok) elapsed=4213s eta=1329s
+[ 863/1134] pasan_S5                  fol=    9178 (ok) elapsed=4219s eta=1324s
+[ 864/1134] peach999island            fol=     487 (ok) elapsed=4224s eta=1320s
+[ 865/1134] periodic_salmom           fol=      31 (ok) elapsed=4228s eta=1314s
+[ 866/1134] persimmon613              fol=     161 (ok) elapsed=4232s eta=1309s
+[ 867/1134] pg_od_n1ght               fol=     327 (ok) elapsed=4237s eta=1304s
+[ 868/1134] piggggy9                  fol=     497 (ok) elapsed=4241s eta=1299s
+[ 869/1134] pimpompampomm             fol=     656 (ok) elapsed=4246s eta=1294s
+[ 870/1134] pinesntg                  fol=    1397 (ok) elapsed=4251s eta=1289s
+[ 871/1134] pinyong36                 fol=     227 (ok) elapsed=4256s eta=1285s
+[ 872/1134] pipe_370                  fol=     245 (ok) elapsed=4261s eta=1280s
+[ 873/1134] piyo_main                 fol=       - (restricted) elapsed=4276s eta=1278s
+[ 874/1134] pleegf                    fol=    3694 (ok) elapsed=4282s eta=1273s
+[ 875/1134] pllilive                  fol=    4424 (ok) elapsed=4286s eta=1268s
+[ 876/1134] plote96_                  fol=     506 (ok) elapsed=4292s eta=1264s
+[ 877/1134] plzfill_blank             fol=     550 (ok) elapsed=4295s eta=1258s
+[ 878/1134] poor_Doc_tor              fol=    1661 (ok) elapsed=4301s eta=1254s
+[ 879/1134] postpell_mobile           fol=     149 (ok) elapsed=4305s eta=1248s
+[ 880/1134] potin_is_adult            fol=     571 (ok) elapsed=4310s eta=1244s
+[ 881/1134] ppang0_z                  fol=    9963 (ok) elapsed=4314s eta=1238s
+[ 882/1134] ppangkoS2                 fol=    2327 (ok) elapsed=4318s eta=1233s
+[ 883/1134] pppjjj000jjjppp           fol=     258 (ok) elapsed=4324s eta=1229s
+[ 884/1134] pprk1122                  fol=   34900 (ok) elapsed=4329s eta=1224s
+[ 885/1134] ppyongmh                  fol=       4 (ok) elapsed=4334s eta=1219s
+[ 886/1134] ppyongmon_ster            fol=    1003 (ok) elapsed=4339s eta=1214s
+[ 887/1134] prayer_meta               fol=    2073 (ok) elapsed=4344s eta=1209s
+[ 888/1134] pre_c_h_n                 fol=      49 (ok) elapsed=4349s eta=1204s
+[ 889/1134] punchline0_0              fol=    1048 (ok) elapsed=4353s eta=1199s
+[ 890/1134] puoou_u                   fol=     277 (ok) elapsed=4358s eta=1194s
+[ 891/1134] purple_1line              fol=     183 (ok) elapsed=4362s eta=1189s
+[ 892/1134] purplexred_               fol=    1623 (ok) elapsed=4367s eta=1184s
+[ 893/1134] q0_0pa                    fol=     352 (ok) elapsed=4372s eta=1179s
+[ 894/1134] qb_hh_hb                  fol=    1758 (ok) elapsed=4377s eta=1175s
+[ 895/1134] qltn_ga                   fol=     184 (ok) elapsed=4382s eta=1170s
+[ 896/1134] qnamxoxo                  fol=   11000 (ok) elapsed=4386s eta=1165s
+[ 897/1134] qtcat_cc                  fol=      17 (ok) elapsed=4391s eta=1160s
+[ 898/1134] qwerseoa1234              fol=     200 (ok) elapsed=4395s eta=1155s
+[ 899/1134] raccoooon_1               fol=     347 (ok) elapsed=4400s eta=1150s
+[ 900/1134] ramkamuy                  fol=      63 (ok) elapsed=4404s eta=1145s
+[ 901/1134] ramsasaram                fol=     457 (ok) elapsed=4407s eta=1139s
+[ 902/1134] rata_heartP               fol=      48 (ok) elapsed=4411s eta=1134s
+[ 903/1134] rayca01                   fol=    7992 (ok) elapsed=4416s eta=1129s
+[ 904/1134] redmountainq              fol=     720 (ok) elapsed=4420s eta=1124s
+[ 905/1134] renka0303123              fol=      47 (ok) elapsed=4425s eta=1119s
+[ 906/1134] reorkkaxxa                fol=    5173 (ok) elapsed=4429s eta=1114s
+[ 907/1134] ringogyakuten             fol=     222 (ok) elapsed=4433s eta=1109s
+[ 908/1134] ririri_2121               fol=     771 (ok) elapsed=4438s eta=1104s
+[ 909/1134] riti_1014                 fol=       5 (ok) elapsed=4442s eta=1099s
+[ 910/1134] ritk_petit                fol=     258 (ok) elapsed=4447s eta=1094s
+[ 911/1134] riverflowsin_             fol=     649 (ok) elapsed=4451s eta=1089s
+[ 912/1134] rjtprjtp                  fol=       - (restricted) elapsed=4465s eta=1086s
+[ 913/1134] rksd1dur                  fol=    3223 (ok) elapsed=4470s eta=1082s
+[ 914/1134] rnchinchung               fol=     357 (ok) elapsed=4476s eta=1077s
+[ 915/1134] roido_00                  fol=    2454 (ok) elapsed=4481s eta=1072s
+[ 916/1134] rrealgreen_               fol=    3262 (ok) elapsed=4486s eta=1067s
+[ 917/1134] rrikka_0909               fol=      56 (ok) elapsed=4491s eta=1062s
+[ 918/1134] rua_iyi                   fol=     373 (ok) elapsed=4496s eta=1057s
+[ 919/1134] ruka_autumn               fol=     698 (ok) elapsed=4500s eta=1052s
+[ 920/1134] ruu_fa_                   fol=    5234 (ok) elapsed=4506s eta=1048s
+[ 921/1134] rvngofmackerel            fol=     665 (ok) elapsed=4510s eta=1043s
+[ 922/1134] ryoma_left                fol=     110 (ok) elapsed=4514s eta=1037s
+[ 923/1134] s1r1us_Beta               fol=      30 (ok) elapsed=4519s eta=1033s
+[ 924/1134] s_lemong                  fol=   16100 (ok) elapsed=4524s eta=1028s
+[ 925/1134] saladjoaa__               fol=       - (restricted) elapsed=4538s eta=1025s
+[ 926/1134] salasa075                 fol=     537 (ok) elapsed=4542s eta=1020s
+[ 927/1134] salt4265879               fol=   36200 (ok) elapsed=4546s eta=1015s
+[ 928/1134] sam3_913                  fol=     184 (ok) elapsed=4551s eta=1010s
+[ 929/1134] samabltv                  fol=     383 (ok) elapsed=4555s eta=1005s
+[ 930/1134] samsam_dc                 fol=    2067 (ok) elapsed=4559s eta=1000s
+[ 931/1134] san_nnn_light             fol=      25 (ok) elapsed=4565s eta=995s
+[ 932/1134] sandokkang                fol=    1573 (ok) elapsed=4570s eta=990s
+[ 933/1134] sangchoodoldol            fol=     926 (ok) elapsed=4574s eta=985s
+[ 934/1134] satoruubabo               fol=    7861 (ok) elapsed=4579s eta=980s
+[ 935/1134] saurus_trn                fol=      21 (ok) elapsed=4583s eta=975s
+[ 936/1134] sayhello3times            fol=     233 (ok) elapsed=4587s eta=970s
+[ 937/1134] sbluexbblack              fol=    1680 (ok) elapsed=4591s eta=965s
+[ 938/1134] scillanus                 fol=      59 (ok) elapsed=4595s eta=960s
+[ 939/1134] scissors_pic              fol=    1411 (ok) elapsed=4599s eta=955s
+[ 940/1134] sdkvl_bona                fol=     159 (ok) elapsed=4604s eta=950s
+[ 941/1134] se7en                     fol=     191 (ok) elapsed=4609s eta=945s
+[ 942/1134] sehun_0316_OwO            fol=    1669 (ok) elapsed=4614s eta=940s
+[ 943/1134] seiichikunno1             fol=       - (restricted) elapsed=4629s eta=937s
+[ 944/1134] selenophi1ic              fol=     131 (ok) elapsed=4633s eta=932s
+[ 945/1134] selling878                fol=     291 (ok) elapsed=4637s eta=927s
+[ 946/1134] sellingssal               fol=      43 (ok) elapsed=4641s eta=922s
+[ 947/1134] senru71111                fol=      28 (ok) elapsed=4645s eta=917s
+[ 948/1134] seobul_net                fol=      84 (ok) elapsed=4649s eta=912s
+[ 949/1134] seondo1309                fol=       0 (ok) elapsed=4653s eta=907s
+[ 950/1134] sesu_u                    fol=     824 (ok) elapsed=4657s eta=901s
+[ 951/1134] seulilu193680             fol=     150 (ok) elapsed=4661s eta=896s
+[ 952/1134] seungchil_sldk            fol=    3158 (ok) elapsed=4666s eta=892s
+[ 953/1134] sgranniv                  fol=    2017 (ok) elapsed=4671s eta=887s
+[ 954/1134] shdshfzmdh                fol=      23 (ok) elapsed=4675s eta=882s
+[ 955/1134] shimma_0531               fol=     868 (ok) elapsed=4680s eta=877s
+[ 956/1134] shino_HQ                  fol=     272 (ok) elapsed=4684s eta=872s
+[ 957/1134] showbizmapsosa            fol=     626 (ok) elapsed=4689s eta=867s
+[ 958/1134] shungnung_tndsb           fol=    2276 (ok) elapsed=4695s eta=862s
+[ 959/1134] shy_qmfqorP               fol=     365 (ok) elapsed=4699s eta=857s
+[ 960/1134] si_neba_iinoni            fol=     432 (ok) elapsed=4704s eta=852s
+[ 961/1134] sibaru_0506               fol=     229 (ok) elapsed=4708s eta=847s
+[ 962/1134] sibil011                  fol=       7 (ok) elapsed=4712s eta=842s
+[ 963/1134] sig_of                    fol=   12200 (ok) elapsed=4716s eta=837s
+[ 964/1134] sigbian                   fol=     892 (ok) elapsed=4721s eta=832s
+[ 965/1134] simsim_225                fol=     921 (ok) elapsed=4725s eta=827s
+[ 966/1134] sinsaloo                  fol=     651 (ok) elapsed=4730s eta=822s
+[ 967/1134] sipir02                   fol=    2841 (ok) elapsed=4734s eta=817s
+[ 968/1134] siyum_                    fol=     714 (ok) elapsed=4739s eta=812s
+[ 969/1134] skywolf_som               fol=    1131 (ok) elapsed=4744s eta=807s
+[ 970/1134] slow_0522                 fol=     160 (ok) elapsed=4749s eta=802s
+[ 971/1134] slug__904                 fol=     330 (ok) elapsed=4753s eta=797s
+[ 972/1134] sm5927602                 fol=    1250 (ok) elapsed=4759s eta=793s
+[ 973/1134] smoke_berry_              fol=     249 (ok) elapsed=4764s eta=788s
+[ 974/1134] snchwr                    fol=    2172 (ok) elapsed=4769s eta=783s
+[ 975/1134] so_rrrch                  fol=     854 (ok) elapsed=4772s eta=778s
+[ 976/1134] sobose_jin                fol=    1142 (ok) elapsed=4777s eta=773s
+[ 977/1134] social_yona               fol=     260 (ok) elapsed=4782s eta=768s
+[ 978/1134] sodabubbly_               fol=    1158 (ok) elapsed=4788s eta=763s
+[ 979/1134] sodhdsodhd                fol=     316 (ok) elapsed=4793s eta=758s
+[ 980/1134] softyor_tor               fol=   29200 (ok) elapsed=4798s eta=753s
+[ 981/1134] sogoplanet                fol=       7 (ok) elapsed=4802s eta=748s
+[ 982/1134] sogyumo38                 fol=     964 (ok) elapsed=4807s eta=744s
+[ 983/1134] sojang_o                  fol=    6517 (ok) elapsed=4813s eta=739s
+[ 984/1134] solvay0515                fol=       - (restricted) elapsed=4827s eta=735s
+[ 985/1134] somlang12688              fol=      11 (ok) elapsed=4832s eta=730s
+[ 986/1134] sonbulim                  fol=     156 (ok) elapsed=4836s eta=725s
+[ 987/1134] sosohan611004             fol=   34000 (ok) elapsed=4841s eta=721s
+[ 988/1134] sotdae_17                 fol=    4658 (ok) elapsed=4846s eta=716s
+[ 989/1134] sourcream0314             fol=    6185 (ok) elapsed=4850s eta=711s
+[ 990/1134] soyo__yoso                fol=   15200 (ok) elapsed=4854s eta=706s
+[ 991/1134] soyodang_works            fol=      57 (ok) elapsed=4858s eta=701s
+[ 992/1134] speedjilju                fol=      97 (ok) elapsed=4861s eta=695s
+[ 993/1134] sportsmanyesyes           fol=     764 (ok) elapsed=4866s eta=690s
+[ 994/1134] sru0401                   fol=    1167 (ok) elapsed=4872s eta=686s
+[ 995/1134] ssamanko030               fol=    3074 (ok) elapsed=4877s eta=681s
+[ 996/1134] sscnxw                    fol=     475 (ok) elapsed=4881s eta=676s
+[ 997/1134] ssew7777                  fol=     893 (ok) elapsed=4886s eta=671s
+[ 998/1134] ssiisaw                   fol=       6 (ok) elapsed=4890s eta=666s
+[ 999/1134] ssmm3r                    fol=      87 (ok) elapsed=4895s eta=661s
+[1000/1134] ssr_akam                  fol=     153 (ok) elapsed=4900s eta=656s
+[1001/1134] ssug_in                   fol=    1196 (ok) elapsed=4905s eta=651s
+[1002/1134] st2llarium                fol=     595 (ok) elapsed=4909s eta=646s
+[1003/1134] starten1000_              fol=   12300 (ok) elapsed=4914s eta=641s
+[1004/1134] ste_w00_                  fol=   12100 (ok) elapsed=4919s eta=636s
+[1005/1134] stone_ang                 fol=       1 (ok) elapsed=4923s eta=631s
+[1006/1134] str4wb3rryfi31d           fol=     261 (ok) elapsed=4928s eta=627s
+[1007/1134] stranger_2864             fol=      19 (ok) elapsed=4932s eta=622s
+[1008/1134] subjectxeno               fol=     307 (ok) elapsed=4936s eta=617s
+[1009/1134] sunjang_chujang           fol=     197 (ok) elapsed=4941s eta=612s
+[1010/1134] sunlatte_ooe              fol=     112 (ok) elapsed=4945s eta=607s
+[1011/1134] sunus_c                   fol=      45 (ok) elapsed=4949s eta=602s
+[1012/1134] supark_naru               fol=     503 (ok) elapsed=4954s eta=597s
+[1013/1134] suryeon_log               fol=     420 (ok) elapsed=4959s eta=592s
+[1014/1134] sutuki_                   fol=     171 (ok) elapsed=4963s eta=587s
+[1015/1134] sweven8go                 fol=    1687 (ok) elapsed=4968s eta=582s
+[1016/1134] sya2533                   fol=     104 (ok) elapsed=4973s eta=577s
+[1017/1134] syong636                  fol=    1548 (ok) elapsed=4979s eta=572s
+[1018/1134] syu625327                 fol=    3963 (ok) elapsed=4984s eta=567s
+[1019/1134] t5uk13                    fol=     128 (ok) elapsed=4988s eta=562s
+[1020/1134] t_h_e_chae                fol=     296 (ok) elapsed=4993s eta=558s
+[1021/1134] tabixkql                  fol=     529 (ok) elapsed=4996s eta=552s
+[1022/1134] tae5e0p                   fol=      10 (ok) elapsed=5000s eta=547s
+[1023/1134] taeseon63877              fol=      90 (ok) elapsed=5003s eta=542s
+[1024/1134] tama14run                 fol=     365 (ok) elapsed=5008s eta=537s
+[1025/1134] tamago_nintama            fol=     282 (ok) elapsed=5012s eta=532s
+[1026/1134] tamang_FRKZ               fol=      88 (ok) elapsed=5017s eta=528s
+[1027/1134] tang__o3o                 fol=     229 (ok) elapsed=5021s eta=523s
+[1028/1134] taptapt4p                 fol=     515 (ok) elapsed=5026s eta=518s
+[1029/1134] teamstarisgajok           fol=     131 (ok) elapsed=5031s eta=513s
+[1030/1134] teatime_white             fol=      13 (ok) elapsed=5035s eta=508s
+[1031/1134] teethoti                  fol=     324 (ok) elapsed=5039s eta=503s
+[1032/1134] telagente                 fol=    3534 (ok) elapsed=5044s eta=498s
+[1033/1134] temperature               fol=       - (suspended) elapsed=5058s eta=494s
+[1034/1134] tender_han                fol=    6560 (ok) elapsed=5062s eta=489s
+[1035/1134] the_sil_                  fol=       8 (ok) elapsed=5066s eta=484s
+[1036/1134] tikeumil_0                fol=     765 (ok) elapsed=5071s eta=479s
+[1037/1134] tjgkwls                   fol=    5777 (ok) elapsed=5077s eta=474s
+[1038/1134] tkanfkdlfjqm              fol=    1299 (ok) elapsed=5080s eta=469s
+[1039/1134] tldn1104                  fol=    2460 (ok) elapsed=5085s eta=464s
+[1040/1134] tlfghksi__                fol=     142 (ok) elapsed=5088s eta=459s
+[1041/1134] tls1834                   fol=     193 (ok) elapsed=5092s eta=454s
+[1042/1134] tlzn01                    fol=    8364 (ok) elapsed=5098s eta=450s
+[1043/1134] toe725                    fol=    6678 (ok) elapsed=5102s eta=445s
+[1044/1134] tofuootk                  fol=      96 (ok) elapsed=5107s eta=440s
+[1045/1134] tokijabi                  fol=    1446 (ok) elapsed=5110s eta=435s
+[1046/1134] tomodachi7741             fol=     207 (ok) elapsed=5115s eta=430s
+[1047/1134] topa_manse                fol=     429 (ok) elapsed=5120s eta=425s
+[1048/1134] tora94tora1114            fol=    2178 (ok) elapsed=5124s eta=420s
+[1049/1134] tore_hpmi                 fol=     147 (ok) elapsed=5129s eta=415s
+[1050/1134] tpqmsxdlffpqms            fol=     793 (ok) elapsed=5135s eta=410s
+[1051/1134] tree_ss_joa               fol=     270 (ok) elapsed=5140s eta=405s
+[1052/1134] ttk4086                   fol=     101 (ok) elapsed=5143s eta=400s
+[1053/1134] ttoeatagain               fol=   22000 (ok) elapsed=5149s eta=396s
+[1054/1134] ttong39387                fol=    5519 (ok) elapsed=5154s eta=391s
+[1055/1134] ttrio_studio              fol=      21 (ok) elapsed=5158s eta=386s
+[1056/1134] tulzzini                  fol=   25000 (ok) elapsed=5163s eta=381s
+[1057/1134] twozzeroo                 fol=    1437 (ok) elapsed=5167s eta=376s
+[1058/1134] ty9385                    fol=     220 (ok) elapsed=5171s eta=371s
+[1059/1134] tzuhi                     fol=     317 (ok) elapsed=5176s eta=366s
+[1060/1134] u_gauqa                   fol=    7451 (ok) elapsed=5181s eta=361s
+[1061/1134] u_uzz1                    fol=     223 (ok) elapsed=5185s eta=356s
+[1062/1134] ui__062123                fol=      49 (ok) elapsed=5189s eta=351s
+[1063/1134] umji_11                   fol=    5682 (ok) elapsed=5194s eta=346s
+[1064/1134] una_em                    fol=       - (restricted) elapsed=5208s eta=342s
+[1065/1134] uncannysom                fol=    2023 (ok) elapsed=5213s eta=337s
+[1066/1134] uneechip                  fol=   16400 (ok) elapsed=5218s eta=332s
+[1067/1134] unformedgotvg             fol=     328 (ok) elapsed=5223s eta=327s
+[1068/1134] unta_tnpr                 fol=    1957 (ok) elapsed=5229s eta=323s
+[1069/1134] until_stil                fol=     392 (ok) elapsed=5234s eta=318s
+[1070/1134] uu0310522                 fol=    1465 (ok) elapsed=5238s eta=313s
+[1071/1134] uuinnil                   fol=     319 (ok) elapsed=5243s eta=308s
+[1072/1134] uxxuxxkl                  fol=     231 (ok) elapsed=5246s eta=303s
+[1073/1134] v13salt                   fol=    1635 (ok) elapsed=5251s eta=298s
+[1074/1134] vRLQORv                   fol=       5 (ok) elapsed=5255s eta=293s
+[1075/1134] varibari_                 fol=      37 (ok) elapsed=5259s eta=288s
+[1076/1134] varionau                  fol=    5656 (ok) elapsed=5264s eta=283s
+[1077/1134] veilchenn_                fol=      10 (ok) elapsed=5269s eta=278s
+[1078/1134] verse_un_i                fol=      71 (ok) elapsed=5274s eta=273s
+[1079/1134] vgragon                   fol=      41 (ok) elapsed=5278s eta=269s
+[1080/1134] villager_zumin0           fol=       8 (ok) elapsed=5281s eta=264s
+[1081/1134] voldagit                  fol=    4045 (ok) elapsed=5287s eta=259s
+[1082/1134] walkincheese_sn           fol=     151 (ok) elapsed=5292s eta=254s
+[1083/1134] wauwa33                   fol=   12100 (ok) elapsed=5296s eta=249s
+[1084/1134] wayter_0918               fol=    1866 (ok) elapsed=5302s eta=244s
+[1085/1134] whdmltls_111              fol=     261 (ok) elapsed=5306s eta=239s
+[1086/1134] whdvkf9x4                 fol=    3489 (ok) elapsed=5311s eta=234s
+[1087/1134] whitecoat808              fol=      74 (ok) elapsed=5316s eta=229s
+[1088/1134] wifeofD68                 fol=     293 (ok) elapsed=5320s eta=224s
+[1089/1134] wintersea1029             fol=     194 (ok) elapsed=5324s eta=220s
+[1090/1134] wjwx_1154                 fol=     268 (ok) elapsed=5329s eta=215s
+[1091/1134] wkr0nyKS                  fol=     321 (ok) elapsed=5334s eta=210s
+[1092/1134] wkrmqwkwhrwnd             fol=    3265 (ok) elapsed=5338s eta=205s
+[1093/1134] wnlgfldl                  fol=      88 (ok) elapsed=5342s eta=200s
+[1094/1134] won_the_4                 fol=     438 (ok) elapsed=5348s eta=195s
+[1095/1134] wootaek00                 fol=     968 (ok) elapsed=5353s eta=190s
+[1096/1134] world_vs_you              fol=    2238 (ok) elapsed=5357s eta=185s
+[1097/1134] x_empty_name              fol=      70 (ok) elapsed=5361s eta=180s
+[1098/1134] xaruri88                  fol=    2028 (ok) elapsed=5366s eta=175s
+[1099/1134] xpsxpsqhf                 fol=     579 (ok) elapsed=5373s eta=171s
+[1100/1134] xu0_3_0                   fol=    1613 (ok) elapsed=5377s eta=166s
+[1101/1134] xx__noknok                fol=       - (restricted) elapsed=5391s eta=161s
+[1102/1134] y0unsu                    fol=    2405 (ok) elapsed=5396s eta=156s
+[1103/1134] ya__cham                  fol=     597 (ok) elapsed=5401s eta=151s
+[1104/1134] yakiniku524               fol=     925 (ok) elapsed=5406s eta=146s
+[1105/1134] yamS2pim                  fol=     570 (ok) elapsed=5409s eta=141s
+[1106/1134] yaru_132                  fol=     300 (ok) elapsed=5414s eta=137s
+[1107/1134] ybbaddy                   fol=    4599 (ok) elapsed=5419s eta=132s
+[1108/1134] ydhxstw_only              fol=      82 (ok) elapsed=5423s eta=127s
+[1109/1134] yehrae__                  fol=      47 (ok) elapsed=5428s eta=122s
+[1110/1134] yelimi2026                fol=   11800 (ok) elapsed=5432s eta=117s
+[1111/1134] yeobojagiaegi             fol=   12300 (ok) elapsed=5438s eta=112s
+[1112/1134] yeol_725                  fol=      57 (ok) elapsed=5441s eta=107s
+[1113/1134] yeongnam02                fol=    3018 (ok) elapsed=5447s eta=102s
+[1114/1134] yess__c                   fol=     189 (ok) elapsed=5450s eta=97s
+[1115/1134] ymingmyangO               fol=     206 (ok) elapsed=5454s eta=92s
+[1116/1134] ynmbankai                 fol=     433 (ok) elapsed=5458s eta=88s
+[1117/1134] yoixxchi                  fol=     229 (ok) elapsed=5462s eta=83s
+[1118/1134] yokong_bean               fol=      67 (ok) elapsed=5466s eta=78s
+[1119/1134] yon9ydr                   fol=      13 (ok) elapsed=5470s eta=73s
+[1120/1134] yongari_shin              fol=    3995 (ok) elapsed=5476s eta=68s
+[1121/1134] youfacerepubIic           fol=       - (restricted) elapsed=5490s eta=63s
+[1122/1134] yugioh_yol                fol=    1297 (ok) elapsed=5495s eta=58s
+[1123/1134] yum_ssalbab               fol=     487 (ok) elapsed=5500s eta=53s
+[1124/1134] yuu_less                  fol=     672 (ok) elapsed=5505s eta=48s
+[1125/1134] yuusei_bll                fol=    3974 (ok) elapsed=5510s eta=44s
+[1126/1134] yuyu_eun126               fol=      39 (ok) elapsed=5515s eta=39s
+[1127/1134] yy_411125                 fol=   11300 (ok) elapsed=5519s eta=34s
+[1128/1134] yyang                     fol=      11 (ok) elapsed=5523s eta=29s
+[1129/1134] za_yess                   fol=   57100 (ok) elapsed=5527s eta=24s
+[1130/1134] zaha_814                  fol=     128 (ok) elapsed=5531s eta=19s
+[1131/1134] zlzonegege                fol=     154 (ok) elapsed=5535s eta=14s
+[1132/1134] zzaktv                    fol=    1341 (ok) elapsed=5540s eta=9s
+[1133/1134] zzinma__                  fol=     229 (ok) elapsed=5544s eta=4s
+[1134/1134] zzzzahhhhi                fol=     810 (ok) elapsed=5549s eta=0s
+
+크롤링 완료: 확보 1150 / 1183
+
+저장 완료: 26년_7월_clean.csv
+  팔로워수 합(확보 행): 3856020
+  미확보 계정 포함 행: 34
