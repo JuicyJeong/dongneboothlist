@@ -77,7 +77,7 @@ def main():
                 )
                 for code, method, _conf in meta:
                     methods[method] += 1
-                    if method == "unmatched":
+                    if method in ("unmatched", "uncertain"):
                         freq_unmatched[raw] += 1
                         unmatched_by_file[fname][raw] += 1
                     elif code:
@@ -86,6 +86,7 @@ def main():
             "cells": cells,
             "methods": dict(methods),
             "matched_cells": cells - methods.get("unmatched", 0)
+                             - methods.get("uncertain", 0)
                              - methods.get("noise", 0) - methods.get("empty", 0),
         }
         total_methods += methods
@@ -97,6 +98,7 @@ def main():
               f"{len(unmatched_by_file[fname])}")
 
     matched_total = (total_cells - total_methods.get("unmatched", 0)
+                     - total_methods.get("uncertain", 0)
                      - total_methods.get("noise", 0) - total_methods.get("empty", 0))
     stats = {
         "dict_version": dict_version,

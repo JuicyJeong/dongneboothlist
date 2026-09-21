@@ -1,0 +1,230 @@
+{
+  "dict_version": "1.2",
+  "files": {
+    "24년_1월_부스정보.csv": {
+      "cells": 1254,
+      "methods": {
+        "empty": 75,
+        "exact": 1211,
+        "exact_fallback": 26,
+        "noise": 17,
+        "uncertain": 5,
+        "exact_paren_stripped": 12,
+        "unmatched": 16,
+        "normalized": 8,
+        "normalized_fallback": 3,
+        "fuzzy": 6,
+        "normalized_paren_stripped": 1,
+        "exact_paren_inner_fallback": 1,
+        "exact_paren_inner": 2
+      },
+      "matched_cells": 1141
+    },
+    "24년_4월_부스정보.csv": {
+      "cells": 1250,
+      "methods": {
+        "exact": 1073,
+        "empty": 182,
+        "unmatched": 16,
+        "exact_fallback": 18,
+        "uncertain": 5,
+        "noise": 24,
+        "normalized": 10,
+        "exact_paren_stripped": 37,
+        "fuzzy": 4,
+        "exact_paren_inner": 2,
+        "normalized_fallback": 1,
+        "normalized_paren_stripped": 1,
+        "fuzzy_paren_stripped": 1
+      },
+      "matched_cells": 1023
+    },
+    "24년_7월_부스정보.csv": {
+      "cells": 1246,
+      "methods": {
+        "exact": 1175,
+        "empty": 77,
+        "exact_paren_stripped": 10,
+        "unmatched": 4,
+        "exact_fallback": 16,
+        "normalized": 9,
+        "noise": 22,
+        "uncertain": 2,
+        "fuzzy": 2
+      },
+      "matched_cells": 1141
+    },
+    "24년_9월_부스정보.csv": {
+      "cells": 1118,
+      "methods": {
+        "exact": 949,
+        "empty": 145,
+        "exact_paren_stripped": 20,
+        "normalized": 12,
+        "noise": 45,
+        "exact_fallback": 23,
+        "unmatched": 29,
+        "uncertain": 18,
+        "normalized_fallback": 3,
+        "exact_paren_inner": 2,
+        "fuzzy": 2,
+        "fuzzy_paren_stripped": 1
+      },
+      "matched_cells": 881
+    },
+    "25년_10월_부스정보.csv": {
+      "cells": 1301,
+      "methods": {
+        "exact": 1126,
+        "empty": 157,
+        "noise": 35,
+        "normalized": 11,
+        "exact_fallback": 53,
+        "unmatched": 33,
+        "uncertain": 17,
+        "exact_paren_stripped": 9,
+        "exact_paren_inner": 2,
+        "fuzzy": 7,
+        "normalized_fallback": 1
+      },
+      "matched_cells": 1059
+    },
+    "25년_1월_부스정보.csv": {
+      "cells": 1394,
+      "methods": {
+        "empty": 126,
+        "exact": 1266,
+        "fuzzy": 11,
+        "unmatched": 14,
+        "exact_fallback": 23,
+        "uncertain": 14,
+        "normalized": 17,
+        "noise": 12,
+        "exact_paren_stripped": 20,
+        "normalized_paren_stripped": 2,
+        "normalized_fallback": 1,
+        "exact_paren_inner": 1
+      },
+      "matched_cells": 1228
+    },
+    "25년_4월_부스정보.csv": {
+      "cells": 1360,
+      "methods": {
+        "exact": 1222,
+        "empty": 136,
+        "noise": 32,
+        "unmatched": 64,
+        "uncertain": 21,
+        "exact_fallback": 34,
+        "normalized_fallback": 4,
+        "normalized": 16,
+        "exact_paren_stripped_fallback": 1,
+        "fuzzy": 8,
+        "exact_paren_stripped": 25,
+        "exact_paren_inner": 1
+      },
+      "matched_cells": 1107
+    },
+    "25년_7월_부스정보.csv": {
+      "cells": 1409,
+      "methods": {
+        "exact": 1273,
+        "noise": 27,
+        "empty": 168,
+        "unmatched": 25,
+        "normalized": 18,
+        "exact_paren_stripped": 11,
+        "uncertain": 11,
+        "fuzzy": 6,
+        "exact_fallback": 14,
+        "normalized_fallback": 1,
+        "fuzzy_paren_stripped": 1
+      },
+      "matched_cells": 1178
+    },
+    "26년_1월_부스정보.csv": {
+      "cells": 1411,
+      "methods": {
+        "exact": 1279,
+        "empty": 116,
+        "noise": 17,
+        "exact_paren_stripped": 30,
+        "exact_fallback": 56,
+        "unmatched": 36,
+        "uncertain": 11,
+        "exact_paren_inner": 1,
+        "exact_paren_stripped_fallback": 2,
+        "normalized": 15,
+        "fuzzy": 16,
+        "normalized_paren_stripped": 4,
+        "normalized_fallback": 2
+      },
+      "matched_cells": 1231
+    },
+    "26년_4월_부스정보.csv": {
+      "cells": 1483,
+      "methods": {
+        "exact": 1229,
+        "empty": 281,
+        "uncertain": 13,
+        "fuzzy": 11,
+        "exact_fallback": 42,
+        "unmatched": 42,
+        "exact_paren_stripped": 18,
+        "noise": 14,
+        "exact_paren_inner": 1,
+        "normalized": 11,
+        "normalized_paren_stripped": 1,
+        "normalized_fallback": 2
+      },
+      "matched_cells": 1133
+    },
+    "26년_7월_부스정보.csv": {
+      "cells": 1539,
+      "methods": {
+        "exact": 1471,
+        "empty": 151,
+        "exact_paren_stripped": 38,
+        "noise": 20,
+        "fuzzy": 12,
+        "exact_fallback": 39,
+        "uncertain": 16,
+        "unmatched": 44,
+        "normalized_paren_stripped_fallback": 1,
+        "normalized": 23,
+        "normalized_fallback": 1,
+        "exact_paren_inner": 3,
+        "fuzzy_paren_stripped": 3,
+        "normalized_paren_stripped": 2,
+        "normalized_paren_inner": 1
+      },
+      "matched_cells": 1308
+    }
+  },
+  "total": {
+    "cells": 14765,
+    "methods": {
+      "empty": 1614,
+      "exact": 13274,
+      "exact_fallback": 344,
+      "noise": 265,
+      "uncertain": 133,
+      "exact_paren_stripped": 230,
+      "unmatched": 323,
+      "normalized": 150,
+      "normalized_fallback": 19,
+      "fuzzy": 85,
+      "normalized_paren_stripped": 11,
+      "exact_paren_inner_fallback": 1,
+      "exact_paren_inner": 15,
+      "fuzzy_paren_stripped": 6,
+      "exact_paren_stripped_fallback": 3,
+      "normalized_paren_stripped_fallback": 1,
+      "normalized_paren_inner": 1
+    },
+    "matched_cells": 12430,
+    "match_rate": 84.19,
+    "unmatched_unique": 354,
+    "matched_unique_works": 444
+  }
+}

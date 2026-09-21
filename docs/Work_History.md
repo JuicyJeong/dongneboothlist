@@ -1,5 +1,85 @@
 # Work History
 
+## 2026-09-21 16:27 (KST)
+
+변경 파일: agent/agent/c8d9fd463f10 브랜치 (병합)
+변경 내용: Stage 1(JWMI-4) 산출물 병합 — WORK_DICTIONARY.json v1.1, scripts/ 4종, analysis/ 12종, docs/work_dictionary_v1.1_report.md, normalize_works.py 노이즈 필터 보강. WORK_DICTIONARY.json·docs/Work_History.md·docs/Structure.md·normalize_works.py 4파일 add/add 충돌은 Stage 1(theirs) 버전으로 해결
+사유: 이슈 JWMI-5 작업 시작 전 Stage 1 산출물 확보
+
+---
+
+변경 파일: docs/Work_History.md, docs/work_dictionary_v1.1_report.md, docs/Structure.md, .gitignore, scripts/__pycache__/ (삭제)
+변경 내용: Stage 1 인수인계 선행 정정. Work_History의 "2026-09-21 17:10 (KST)" 항목 시각을 실제 커밋 시각 15:22로 정정, v1.1 리포트 review_needed 수치 "총 31건(v1.0 승계 28 + 신규 3)" 명기, Structure.md review_needed 28→31건 갱신, scripts/__pycache__/*.pyc 제거 및 .gitignore 신설
+사유: Stage 1 검토 승인 시 지적된 선행 정정 3건 수행
+
+---
+
+변경 파일: docs/preprocessing_pipeline_design.md (신규)
+변경 내용: 전처리 방식 설계 문서. 순수 규칙/순수 LLM 배치/하이브리드 3안을 비용·정확도·재현성·확장성·감사 가능성 관점에서 비교하고 하이브리드(규칙 1차 + 미매핑 한정 LLM 배치 2차, 확정분은 사전 별칭/신규 코드로 환원) 채택 근거, 파이프라인 아키텍처, SQLite 스키마, 멱등성 보장·검증 계획 기술
+사유: 이슈 JWMI-5 완료 기준 중 "전처리 방식 설계 문서"
+
+---
+
+변경 파일: normalize_works.py (확장)
+변경 내용: 파트 전체 매칭 실패 시 2차 폴백 분리 추가 — 기호 경계(마침표·`/`·`&`·`+`·`·`·`|`) 세그먼트 분리 후 공백 토큰 최장 우선(greedy longest) exact/normalized 재매칭(fuzzy는 오탐 방지 위해 미적용). 연결어(등·등등·위주·드림 등)는 사전 metadata.split_stopwords로 제거. `판단 불가` 표기(metadata.llm_decisions의 uncertain 결정, 전체 매칭 실패 시 최종 적용), 같은 파트 내 중복 코드 제거, normalize_key에 꺾쇠 괄호 제거 추가. 매칭 방식에 uncertain/fallback 계열 신설
+사유: 콤마 외 구분자 병기 셀('데못죽.플레이브', '괴담출근 데못죽' 등) 미매핑 해소 및 추측 금지 원칙의 출력 반영
+
+---
+
+변경 파일: scripts/analyze_works.py (수정)
+변경 내용: uncertain(판단 불가) 방식을 매칭 실패와 동일하게 집계하도록 matched_cells 계산 수정
+사유: 정규화 엔진의 신규 매칭 방식 통계 반영
+
+---
+
+변경 파일: scripts/llm_batch_map.py (신규)
+변경 내용: LLM 병렬 배치 2차 처리 도구. --export로 규칙 1차 미매핑 고유 값(빈도·decision·target·reason 빈 양식)을 analysis/llm_batch_input_<tag>.csv로 내보내고, --apply로 alias(별칭 병합)/new(신규 코드)/noise(noise_terms 추가)/uncertain(판단 불가 영속화) 4분류 매핑을 검증 후 WORK_DICTIONARY.json에 반영. new의 canonical 지정·자동 코드 할당(W#### 순차), 기존 코드 재사용·재매핑·canonical 충돌 검증, reverse_index 재생성, 백업 및 analysis/v1.2_changeset.json 변경 세트 저장, --dry-run 지원
+사유: 하이브리드 파이프라인의 LLM 2차 단계 구현 및 재현 가능한 사전 갱신
+
+---
+
+변경 파일: WORK_DICTIONARY.json (v1.1 → v1.2)
+변경 내용: LLM 배치 매핑 360행 반영 — 신규 작품 77종(W0370~W0459, 기존 코드 미변경), 기존 76개 작품에 별칭 병합(예: 귀멸→W0212, 진격거→W0138, TFP→W0038, CoC7th_TRPG→W0115), noise_terms 72종 추가(굿즈·장르·창작 표기), metadata.llm_decisions 130건(판단 불가)·split_stopwords 8종 신설, reverse_index 재생성. 총 작품 369→446종
+사유: 규칙 1차 미매핑 336 고유 값에 대한 LLM 2차 처리 확정분 반영
+
+---
+
+변경 파일: scripts/build_db.py (신규), works.db (신규)
+변경 내용: SQLite 매핑 DB 구축 스크립트 및 DB. works(작품 마스터, 사전 기반 교체)/booth_work(부스 링크를 키로 작품 코드 연결, position으로 복수 작품 분해)/booth_work_raw(원문·정규화·코드·상태 보존)/meta 테이블. utf-8-sig 읽기로 BOM 컬럼 처리, INSERT OR REPLACE로 재실행 멱등. 적재 결과: 매핑 14,140행 / 원문 14,765행(matched 12,816 / unmatched 205 / uncertain 130 / empty 1,614)
+사유: 이슈 JWMI-5 완료 기준 중 "부스-작품 매핑 DB화"
+
+---
+
+변경 파일: pipeline.py (신규)
+변경 내용: 단일 진입점 CLI. --input(반복 지정)/--all 대상으로 ①정규화(normalized CSV 산출) ②미매핑 리포트(analysis/unmapped_review_<회차>.csv, 사람 확인용 decision 빈 양식 포함) ③DB 반영까지 자동 실행. --skip-db 옵션
+사유: 이슈 JWMI-5 완료 기준 중 "신규 회차 재실행 가능한 파이프라인 CLI"
+
+---
+
+변경 파일: scripts/generate_v1_2_report.py (신규), docs/work_dictionary_v1.2_report.md (신규)
+변경 내용: v1.2 갱신 보고서 자동 생성기 및 산출 보고서. 수치는 analysis 산출물에서 자동 산출 (매칭률 82.57%→84.19%, 등장 작품 367→444종, 처리율 97.81%, LLM 2차 분류 내역, 회차별 통계, 잔여 미매핑 상위 30건, 재현 방법)
+사유: 결과 요약 문서화 및 수치 불일치 방지
+
+---
+
+변경 파일: docs/pipeline_usage.md (신규)
+변경 내용: 파이프라인 사용법 문서. 신규 회차 처리 흐름, DB 스키마·조회 예시, 미매핑 사전 갱신 루프(배치 export → decision 기입 → apply → 재실행), 주의사항(코드 불변·판단 불가·부스 링크·멱등성)
+사유: 이슈 JWMI-5 완료 기준 중 "사용법 문서"
+
+---
+
+변경 파일: *_부스정보_normalized.csv 11개 (신규), analysis/ 산출물 갱신
+변경 내용: 전체 11개 회차 대표 작품(원작) 칼럼 v1.2 사전 정규화 결과. 26년_7월 기존 파일은 v1.2 기준으로 재생성. analysis에 matching_stats_v1.2.json, unmatched_v1.2.csv, llm_batch_input_v1.2.csv, llm_mapping_v1.2.csv, v1.2_changeset.json, WORK_DICTIONARY_v1.1_backup.json, unmapped_review_<회차>.csv 11개 저장
+사유: 이슈 JWMI-5 완료 기준 중 "전체 회차 *_normalized.csv"
+
+---
+
+검증 (2026-09-21): ① 멱등성 — pipeline --all 2회 실행, normalized CSV 11개 SHA-256 및 DB 레코드 수 일치 ② 샘플 정확도 — 26년_7월 무작위 50셀 검토, 오매핑 0건, 불확실 값은 판단 불가로 올바르게 표기 ③ 사전 검증 — --apply 단계에서 기존 코드 충돌·canonical 중복 전수 차단 확인
+
+사유(전체 작업): 이슈 JWMI-5 "[Stage 2] 하이브리드 전처리 파이프라인 구현 및 전체 회차 정규화·DB화" 완료
+
+---
+
 ## 2026-09-21 15:22 (KST)
 
 변경 파일: WORK_DICTIONARY.json

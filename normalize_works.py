@@ -25,6 +25,14 @@ COLUMN_OTHER = "그 외 다루는 작품"
 
 # 사전 metadata.noise_terms 로 채워짐 (load_dictionary에서 설정)
 NOISE_TERMS = set()
+# 사전 metadata.split_stopwords 로 채워짐 (분리 후 버리는 연결어)
+SPLIT_STOPWORDS = set()
+# 사전 metadata.llm_decisions 로 채워짐 (LLM 2차 확정 분류: value → decision)
+LLM_DECISIONS = {}
+UNCERTAIN_MARKER = "판단 불가"
+
+# 파트 전체 매칭 실패 시 2차 분리의 기호 경계 (공백은 greedy 토크나이저가 처리)
+SECONDARY_SPLIT_RE = re.compile(r'[./&+·|｜／]')
 
 
 # ============================================================
@@ -38,8 +46,11 @@ def load_dictionary(dict_path):
     works = data["works"]
 
     # 사전 metadata.noise_terms (작품 외 표기) 로드
-    global NOISE_TERMS
-    NOISE_TERMS = {n.strip().lower() for n in data.get("metadata", {}).get("noise_terms", []) if n.strip()}
+    global NOISE_TERMS, SPLIT_STOPWORDS, LLM_DECISIONS
+    meta = data.get("metadata", {})
+    NOISE_TERMS = {n.strip().lower() for n in meta.get("noise_terms", []) if n.strip()}
+    SPLIT_STOPWORDS = {s.strip() for s in meta.get("split_stopwords", []) if s.strip()}
+    LLM_DECISIONS = meta.get("llm_decisions", {})
 
     # exact index: 소문자 원형 → code
     exact_index = {}
@@ -63,8 +74,8 @@ def load_dictionary(dict_path):
 
 
 def normalize_key(s):
-    """공백, 특수문자, 구분자 제거 + 소문자화"""
-    s = re.sub(r'[\s\!\？\?\.\,\:\;\-\~\·\·\(\)（）\[\]\|\′／\@\#\*\^]', '', s)
+    """공백, 특수문자, 구분자, 꺾쇠 괄호 제거 + 소문자화"""
+    s = re.sub(r'[\s\!\？\?\.\,\:\;\-\~\·\·\(\)（）\[\]\|\′／\@\#\*\^\<\>《》〈〉「」『』]', '', s)
     return s.lower()
 
 
@@ -173,10 +184,12 @@ def strip_parentheses(raw):
 # 단일 작품명 정규화
 # ============================================================
 
-def normalize_one(raw, exact_index, norm_index, canonical, fuzzy_keys, fuzzy_threshold=0.85):
+def normalize_one(raw, exact_index, norm_index, canonical, fuzzy_keys,
+                  fuzzy_threshold=0.85, allow_fuzzy=True):
     """
     단일 작품명 → (정규화 결과, 코드, 매칭 방식, 신뢰도)
-    매칭 방식: exact / normalized / fuzzy / unmatched / noise
+    매칭 방식: exact / normalized / fuzzy / unmatched / noise / uncertain
+    allow_fuzzy=False 면 exact/normalized/괄호 처리만 시도 (폴백 분리 토큰용, 오탐 방지)
     """
     raw = raw.strip()
     if not raw:
@@ -205,6 +218,8 @@ def normalize_one(raw, exact_index, norm_index, canonical, fuzzy_keys, fuzzy_thr
                 return list(codes)[0], "normalized", 0.95
             best = min(codes, key=lambda c: len(canonical[c]))
             return best, "normalized_ambiguous", 0.85
+        if not allow_fuzzy:
+            return None, None, 0.0
         fk, sim = fuzzy_match(text, fuzzy_keys, threshold=fuzzy_threshold)
         if fk:
             codes = norm_index.get(fk, set())
@@ -230,19 +245,134 @@ def normalize_one(raw, exact_index, norm_index, canonical, fuzzy_keys, fuzzy_thr
         if code:
             return canonical[code], code, method + "_paren_inner", conf
 
-    # Step 4: unmatched
+    # Step 4: LLM 2차 확정 uncertain 판정은 파트 레벨 최종 단계에서 적용
+    # (여기서 반환하면 폴백 분리·부분 매칭 기회를 가로막음)
+
+    # Step 5: unmatched
     return raw, None, "unmatched", 0.0
+
+
+def split_fallback_segments(part):
+    """
+    파트 전체 매칭 실패 시 2차 분리: 기호 경계(마침표, /, &, +, ·, |)로 세그먼트 분리.
+    공백은 세그먼트 내 최장 매칭 토크나이저에서 처리한다.
+    """
+    return [s for s in SECONDARY_SPLIT_RE.split(part.strip()) if s and s.strip()]
+
+
+def match_segment_greedy(seg, exact_index, norm_index, canonical, fuzzy_keys,
+                         fuzzy_threshold=0.85):
+    """
+    세그먼트 내 공백 토큰을 최장 우선(greedy longest)으로 재매칭
+    (normalize_one의 exact/normalized/괄호 처리 사용, fuzzy는 오탐 방지 위해 미적용).
+    반환: [(텍스트, 코드|None, 방식), ...] — 세그먼트가 단일 토큰이면 None(원본 유지)
+    """
+    toks = seg.split()
+    if len(toks) <= 1:
+        return None
+
+    results, i = [], 0
+    while i < len(toks):
+        hit = None
+        for j in range(len(toks), i, -1):
+            cand = " ".join(toks[i:j]).strip()
+            if not cand:
+                continue
+            _n, code, method, _conf = normalize_one(
+                cand, exact_index, norm_index, canonical, fuzzy_keys,
+                fuzzy_threshold, allow_fuzzy=False
+            )
+            if code:
+                hit = (j, _n, code, method)
+                break
+        if hit:
+            j, norm_name, code, method = hit
+            results.append((norm_name, code, method))
+            i = j
+        else:
+            if toks[i] not in SPLIT_STOPWORDS:
+                results.append((toks[i], None, "unmatched"))
+            i += 1
+    return results
 
 
 # ============================================================
 # 셀 정규화 (다중 작품 대응)
 # ============================================================
 
+def _normalize_part(part, exact_index, norm_index, canonical, fuzzy_keys,
+                    fuzzy_threshold=0.85):
+    """
+    콤마 분리된 파트 1개 정규화.
+    파트 전체 매칭 실패 시 2차 폴백: 기호 경계 세그먼트 분리 후 공백 토큰 최장
+    매칭(exact/normalized만, fuzzy는 오탐 방지를 위해 미적용). 하나라도 매칭되면
+    매칭 토큰 + 잔여 텍스트로 구성, 하나도 매칭 없으면 원본 그대로 유지
+    (미지 작품명 붕괴 방지).
+    반환: (정규화 텍스트, [(코드, 방식, 신뢰도), ...])
+    """
+    p_norm, p_code, p_method, p_conf = normalize_one(
+        part, exact_index, norm_index, canonical, fuzzy_keys, fuzzy_threshold
+    )
+    if p_method not in ("unmatched", "noise"):
+        return (p_norm if p_norm else part), [(p_code, p_method, p_conf)]
+
+    segs = split_fallback_segments(part)
+    if not segs:
+        return (p_norm if p_norm else part), [(p_code, p_method, p_conf)]
+
+    results, meta, matched_any = [], [], False
+    seen_codes = set()
+    for seg in segs:
+        pieces = match_segment_greedy(
+            seg, exact_index, norm_index, canonical, fuzzy_keys, fuzzy_threshold
+        )
+        if pieces is None:
+            # 단일 토큰 세그먼트: exact/normalized만 재매칭 (fuzzy는 오탐 방지 위해 제외)
+            s = seg.strip()
+            if not s:
+                continue
+            s_norm, s_code, s_method, _conf = normalize_one(
+                s, exact_index, norm_index, canonical, fuzzy_keys,
+                fuzzy_threshold, allow_fuzzy=False
+            )
+            if s_code:
+                if s_code in seen_codes:
+                    continue
+                seen_codes.add(s_code)
+                results.append(s_norm if s_norm else s)
+                meta.append((s_code, s_method + "_fallback", 0.9))
+                matched_any = True
+            else:
+                if s_method == "noise":
+                    continue
+                results.append(s)
+                meta.append((None, "unmatched", 0.0))
+            continue
+        for text, code, method in pieces:
+            if code:
+                if code in seen_codes:
+                    continue
+                seen_codes.add(code)
+                matched_any = True
+                meta.append((code, method + "_fallback", 0.9))
+            else:
+                meta.append((None, "unmatched", 0.0))
+            results.append(text)
+
+    if not matched_any:
+        # LLM 2차 확정 uncertain(판단 불가) 분류 적용 — 모든 매칭 시도가 실패한 뒤
+        if LLM_DECISIONS.get(part.strip(), {}).get("decision") == "uncertain":
+            return UNCERTAIN_MARKER, [(None, "uncertain", 0.0)]
+        return (p_norm if p_norm else part), [(p_code, p_method, p_conf)]
+    return "; ".join(results), meta
+
+
 def normalize_cell(raw, exact_index, norm_index, canonical, fuzzy_keys, fuzzy_threshold=0.85):
     """
     하나의 셀 값 정규화.
     1. 전체 셀을 단일 작품으로 매칭 시도
     2. 매칭 안 되면 콤마로 분리 후 각각 매칭
+    3. 그래도 실패한 파트는 공백·마침표·기호 재분리(폴백) 후 재매칭
     반환: (정규화 결과, [(코드, 매칭방식, 신뢰도), ...])
     """
     if not raw or not raw.strip():
@@ -255,19 +385,21 @@ def normalize_cell(raw, exact_index, norm_index, canonical, fuzzy_keys, fuzzy_th
     if method not in ("unmatched", "noise", "empty"):
         return norm, [(code, method, conf)]
 
-    # Step 2: 콤마로 분리하여 각각 매칭
+    # Step 2: 콤마로 분리하여 각각 매칭 (파트 내 폴백 재분리 포함)
     parts = split_multi_work(raw)
     if len(parts) <= 1:
-        return norm if norm else raw, [(code, method, conf)]
+        return _normalize_part(
+            raw, exact_index, norm_index, canonical, fuzzy_keys, fuzzy_threshold
+        )
 
     results = []
     meta = []
     for part in parts:
-        p_norm, p_code, p_method, p_conf = normalize_one(
+        p_text, p_meta = _normalize_part(
             part, exact_index, norm_index, canonical, fuzzy_keys, fuzzy_threshold
         )
-        results.append(p_norm if p_norm else part)
-        meta.append((p_code, p_method, p_conf))
+        results.append(p_text)
+        meta.extend(p_meta)
 
     return "; ".join(results), meta
 
@@ -319,7 +451,7 @@ def process_file(filepath, exact_index, norm_index, canonical, fuzzy_keys,
             total_cells += 1
             for code, method, conf in meta:
                 method_counter[method] += 1
-                if method == "unmatched":
+                if method in ("unmatched", "uncertain"):
                     unmatched[raw] += 1
 
     if not dry_run:
@@ -385,9 +517,11 @@ def main():
         total_unmatched += unmatched
         total_cells += cells
 
-        matched = cells - methods.get("unmatched", 0) - methods.get("noise", 0) - methods.get("empty", 0)
+        matched = (cells - methods.get("unmatched", 0) - methods.get("uncertain", 0)
+                   - methods.get("noise", 0) - methods.get("empty", 0))
         print(f"  셀 {cells}개 | 매칭 {matched} ({matched/cells*100:.1f}%) | "
-              f"unmatched {methods.get('unmatched', 0)}")
+              f"unmatched {methods.get('unmatched', 0)} | "
+              f"판단 불가 {methods.get('uncertain', 0)}")
 
     # 전체 통계
     print("\n" + "=" * 60)
@@ -397,10 +531,13 @@ def main():
         pct = count / total_cells * 100 if total_cells else 0
         print(f"  {method:25s}: {count:6d} ({pct:5.1f}%)")
 
-    matched = total_cells - total_methods.get("unmatched", 0) - total_methods.get("noise", 0) - total_methods.get("empty", 0)
+    matched = (total_cells - total_methods.get("unmatched", 0)
+               - total_methods.get("uncertain", 0)
+               - total_methods.get("noise", 0) - total_methods.get("empty", 0))
     print(f"\n  총 셀: {total_cells}")
     print(f"  매칭 성공: {matched} ({matched/total_cells*100:.1f}%)")
-    print(f"  미매칭: {total_methods.get('unmatched', 0)}")
+    print(f"  미매칭: {total_methods.get('unmatched', 0)} | "
+          f"판단 불가: {total_methods.get('uncertain', 0)}")
 
     # unmatched Top 30
     if total_unmatched:
