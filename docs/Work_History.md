@@ -1,5 +1,13 @@
 # Work History
 
+## 2026-09-21 22:12 (KST)
+
+변경 파일: EVENT_INFORMATION.JSON, booth_search_total.py, normalize_works.py, pipeline.py, 26년_10월.csv, 26년_10월_clean.csv, 26년_10월_부스정보.csv, 26년_10월_부스정보_normalized.csv (신규), analysis/unmapped_review_26년_10월.csv (신규), works.db, docs/Work_History.md, docs/Structure.md, docs/pipeline_usage.md
+변경 내용: 26년 10월 회차 신규 수집·정규화. ① EVENT_INFORMATION.JSON에 26년_10월 4행사 등록(dongne.co API 실측 확인: df2610 제35회 디. 페스타(토) 10/3, df261002 제35회 디. 페스타(일)·25d09 제9회 쩜오 어워드·wt03 스크롤의 바다 3화 10/4, 추정 슬러그 미사용). ② booth_search_total.py로 4행사 1,430부스 크롤링(페이지 요청 간 time.sleep 0.5초 추가) → _clean → _부스정보 생성. ③ normalize_works.py process_file이 _코드/_정규화 칼럼을 원문 칼럼 바로 옆에 삽입하도록 변경(사용자 요구: 원문 옆에 작품코드·작품명 병기) 및 pipeline.py update_db가 built_at을 갱신하도록 보완. ④ pipeline.py 실행: 26년_10월_부스정보_normalized.csv(코드 부여 셀 1,168/1,430=81.7%, 유효 셀 분모 92.2%), 미매핑 리포트 170 고유 값, works.db booth_work 1,500행 반영. 참고: pipeline 콘솔 통계(952/66.6%)는 기존 세그먼트 혼재 산식 출력이며 셀 단위 실측과 상이(향후 정렬 과제), 사전(v1.2) 미확장·신규 작품은 리포트로만 남김
+사유: 이슈 JWMI-7 — 26년 10월 회차 CSV 생성 및 원작 칼럼 전처리(작품코드·작품명 병기)
+
+---
+
 ## 2026-09-21 18:32 (KST)
 
 변경 파일: scripts/analyze_works.py (수정), analysis/matching_stats_v1.2.json, analysis/unmatched_v1.2.csv, analysis/frequency_all_v1.2.csv, analysis/matched_works_v1.2.csv (재생성), scripts/generate_v1_2_report.py (수정), docs/work_dictionary_v1.2_report.md (재생성), docs/Structure.md (갱신)

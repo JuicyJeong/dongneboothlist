@@ -115,6 +115,7 @@ for currunt_event in event_list:
             total_pages = pagination.get('totalPages', 1)
             if page >= total_pages:
                 break
+            time.sleep(0.5)
             page += 1
 
         print(event_dict[currunt_event], "- 총 부스 수:", len(all_items))

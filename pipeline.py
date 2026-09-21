@@ -120,6 +120,11 @@ def update_db(dict_path, db_path, normalized_paths):
     cur.execute("DELETE FROM works")
     cur.executemany("INSERT INTO works VALUES (?,?,?,?,?,?,?,?,?)", works_rows)
     cur.execute("INSERT OR REPLACE INTO meta VALUES ('dict_version', ?)", (version,))
+    cur.execute("INSERT OR REPLACE INTO meta VALUES ('built_at', ?)", (
+        __import__("datetime").datetime.now(
+            __import__("datetime").timezone(__import__("datetime").timedelta(hours=9))
+        ).strftime("%Y-%m-%d %H:%M (KST)"),
+    ))
     conn.commit()
     print(f"③ DB: works 마스터 갱신 (사전 v{version}, {len(works_rows)}종)")
 

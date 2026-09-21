@@ -427,13 +427,16 @@ def process_file(filepath, exact_index, norm_index, canonical, fuzzy_keys,
 
     new_fieldnames = list(fieldnames)
 
+    # 원문 칼럼 바로 옆에 _코드, _정규화 칼럼 배치 (JWMI-7 사용자 요구)
     for col in columns:
-        out_col = f"{col}_정규화"
-        if out_col not in new_fieldnames:
-            new_fieldnames.append(out_col)
+        if col not in new_fieldnames:
+            continue
         code_col = f"{col}_코드"
-        if code_col not in new_fieldnames:
-            new_fieldnames.append(code_col)
+        out_col = f"{col}_정규화"
+        new_fieldnames.remove(code_col) if code_col in new_fieldnames else None
+        new_fieldnames.remove(out_col) if out_col in new_fieldnames else None
+        pos = new_fieldnames.index(col) + 1
+        new_fieldnames[pos:pos] = [code_col, out_col]
 
     for row in rows:
         for col in columns:
