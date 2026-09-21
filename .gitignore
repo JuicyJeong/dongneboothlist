@@ -1,0 +1,5 @@
+# Python
+__pycache__/
+*.pyc
+
+# DB 산출물 재생성 대상은 커밋함 (db/*.sqlite 는 커밋 대상)

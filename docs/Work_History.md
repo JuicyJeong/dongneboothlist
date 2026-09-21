@@ -1,6 +1,6 @@
 # Work History
 
-## 2026-09-21 17:10 (KST)
+## 2026-09-21 15:22 (KST)
 
 변경 파일: WORK_DICTIONARY.json
 변경 내용: v1.0 → v1.1 갱신. 신규 작품 158종 추가(W0212~W0369, 기존 코드 미변경), 기존 55개 작품에 별칭 98개 병합, W0117 살파랑 origin 정정(kr→cn, priest의 杀破狼), W0027·W0208·W0177 교차 중복/오귀속 별칭 제거, metadata.noise_terms 신설(60종), reverse_index 재생성(1,221키). 총 작품 211→369종
