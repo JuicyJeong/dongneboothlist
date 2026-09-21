@@ -1,0 +1,183 @@
+{
+  "dict_version": "1.0",
+  "files": {
+    "24년_1월_부스정보.csv": {
+      "cells": 1254,
+      "methods": {
+        "empty": 75,
+        "exact": 1166,
+        "unmatched": 89,
+        "exact_paren_stripped": 11,
+        "noise": 4,
+        "normalized": 8,
+        "fuzzy": 6,
+        "normalized_paren_stripped": 1,
+        "exact_paren_inner": 1
+      },
+      "matched_cells": 1086
+    },
+    "24년_4월_부스정보.csv": {
+      "cells": 1250,
+      "methods": {
+        "exact": 999,
+        "empty": 182,
+        "unmatched": 122,
+        "noise": 4,
+        "normalized": 9,
+        "exact_paren_inner": 4,
+        "exact_paren_stripped": 33,
+        "fuzzy": 2,
+        "normalized_paren_stripped": 1
+      },
+      "matched_cells": 942
+    },
+    "24년_7월_부스정보.csv": {
+      "cells": 1246,
+      "methods": {
+        "exact": 1150,
+        "empty": 77,
+        "unmatched": 59,
+        "normalized": 8,
+        "exact_paren_stripped": 7,
+        "noise": 4,
+        "fuzzy": 2
+      },
+      "matched_cells": 1106
+    },
+    "24년_9월_부스정보.csv": {
+      "cells": 1118,
+      "methods": {
+        "exact": 889,
+        "empty": 145,
+        "unmatched": 155,
+        "exact_paren_inner": 4,
+        "normalized": 9,
+        "noise": 6,
+        "exact_paren_stripped": 17
+      },
+      "matched_cells": 812
+    },
+    "25년_10월_부스정보.csv": {
+      "cells": 1301,
+      "methods": {
+        "exact": 1040,
+        "empty": 157,
+        "noise": 4,
+        "normalized": 9,
+        "unmatched": 190,
+        "exact_paren_stripped": 8,
+        "exact_paren_inner": 2,
+        "fuzzy": 5
+      },
+      "matched_cells": 950
+    },
+    "25년_1월_부스정보.csv": {
+      "cells": 1394,
+      "methods": {
+        "empty": 126,
+        "exact": 1204,
+        "fuzzy": 11,
+        "unmatched": 116,
+        "normalized": 12,
+        "exact_paren_inner": 4,
+        "exact_paren_stripped": 13,
+        "noise": 4,
+        "normalized_paren_stripped": 2
+      },
+      "matched_cells": 1148
+    },
+    "25년_4월_부스정보.csv": {
+      "cells": 1360,
+      "methods": {
+        "exact": 1109,
+        "empty": 136,
+        "unmatched": 237,
+        "fuzzy": 6,
+        "exact_paren_stripped": 22,
+        "normalized": 7,
+        "exact_paren_inner": 2,
+        "noise": 3
+      },
+      "matched_cells": 984
+    },
+    "25년_7월_부스정보.csv": {
+      "cells": 1409,
+      "methods": {
+        "exact": 1216,
+        "unmatched": 118,
+        "empty": 168,
+        "normalized": 17,
+        "exact_paren_stripped": 11,
+        "fuzzy": 6,
+        "noise": 6,
+        "fuzzy_paren_stripped": 1
+      },
+      "matched_cells": 1117
+    },
+    "26년_1월_부스정보.csv": {
+      "cells": 1411,
+      "methods": {
+        "exact": 1210,
+        "empty": 116,
+        "unmatched": 152,
+        "noise": 2,
+        "exact_paren_stripped": 27,
+        "exact_paren_inner": 2,
+        "normalized": 12,
+        "fuzzy": 16,
+        "normalized_paren_stripped": 3
+      },
+      "matched_cells": 1141
+    },
+    "26년_4월_부스정보.csv": {
+      "cells": 1483,
+      "methods": {
+        "exact": 1134,
+        "empty": 281,
+        "unmatched": 182,
+        "fuzzy": 8,
+        "exact_paren_stripped": 13,
+        "exact_paren_inner": 1,
+        "normalized": 9,
+        "normalized_paren_stripped": 1,
+        "noise": 1
+      },
+      "matched_cells": 1019
+    },
+    "26년_7월_부스정보.csv": {
+      "cells": 1539,
+      "methods": {
+        "exact": 1332,
+        "unmatched": 234,
+        "empty": 151,
+        "exact_paren_stripped": 32,
+        "noise": 5,
+        "fuzzy": 9,
+        "normalized": 24,
+        "exact_paren_inner": 5,
+        "fuzzy_paren_stripped": 3,
+        "normalized_paren_stripped": 2
+      },
+      "matched_cells": 1149
+    }
+  },
+  "total": {
+    "cells": 14765,
+    "methods": {
+      "empty": 1614,
+      "exact": 12449,
+      "unmatched": 1654,
+      "exact_paren_stripped": 194,
+      "noise": 43,
+      "normalized": 124,
+      "fuzzy": 71,
+      "normalized_paren_stripped": 10,
+      "exact_paren_inner": 25,
+      "fuzzy_paren_stripped": 4
+    },
+    "matched_cells": 11454,
+    "match_rate": 77.58,
+    "unmatched_unique": 1189,
+    "matched_unique_works": 210
+  }
+}
