@@ -194,3 +194,10 @@ v2 API에서 부스 데이터를 수집하여 월별 CSV 생성.
 - Account_info/ 파생 프로젝트는 본 크롤링 결과를 입력으로 Selenium 계정 수집 수행
 - 원작 작품 딕셔너리는 빈도 5 이상 기준 211개 작품 등록. 미매칭(unmatched)은 딕셔너리 확장으로 지속 개선 가능
 - 28개 작품은 `review_needed: true` (정식 한국명 확인 필요)
+
+
+## JWMI-3 병합 산출물
+
+승인 브랜치 `agent/agent/b5c8a31060a3`의 작품 정규화 산출물은 기존 루트 호환 경로에 함께 보관한다. `WORK_DICTIONARY.json`은 v1.2(446종) 작품 사전이고, `pipeline.py`는 정규화·미매핑 리포트·SQLite 반영을 순서대로 수행하는 단일 진입점이다. `works.db`에는 `works`, `booth_work`, `booth_work_raw`, `meta` 테이블을 저장한다.
+
+루트의 `*_부스정보_normalized.csv` 11개는 24년 1월부터 26년 7월까지의 회차별 정규화 결과이며, `analysis/`에는 v1.2 통계·미매핑 검토 목록·변경 세트, `scripts/`에는 분석·DB 구축·보고서 생성 도구를 둔다. 기존 `src/`, `data/`, `artifacts/` 디렉터리 구조와 이 루트 호환 산출물은 모두 유지한다.

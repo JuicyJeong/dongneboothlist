@@ -1,5 +1,154 @@
 # Work History
 
+## 2026-09-21 18:32 (KST)
+
+변경 파일: scripts/analyze_works.py (수정), analysis/matching_stats_v1.2.json, analysis/unmatched_v1.2.csv, analysis/frequency_all_v1.2.csv, analysis/matched_works_v1.2.csv (재생성), scripts/generate_v1_2_report.py (수정), docs/work_dictionary_v1.2_report.md (재생성), docs/Structure.md (갱신)
+변경 내용: 보고 레이어를 최종 산출물 기준으로 재수집. analyze_works.py를 셀 단위 상호배타 분류(matched/unmatched/uncertain/noise/empty, matched=코드 1개 이상 부여 셀, noise=셀 전체 값이 llm_decisions noise 결정값과 정확히 일치) 기준으로 개편하고 산식 정의를 stats JSON `metric_definitions`에 함께 기록. 재측정 결과: 매칭 12,816셀/86.80%(전체 14,765셀 분모, 빈 셀 1,614 포함), 유효 셀 분모 97.45%, 판단 불가 130셀, 노이즈 76셀, 잔여 미매핑 129셀/고유 55종, 처리율 88.20%(유효 셀 99.02%), 등장 작품 444종. unmatched_v1.2.csv는 이미 해소된 226셀분을 제외한 실제 사람 확인 목록(55종)으로 재생성. 리포트에 지표 산식 정의 섹션 신설 및 works.db 실측값(works 446/booth_work 14,139/booth_work_raw 14,765) 기재. 회차별 수치는 커밋된 *_부스정보_normalized.csv 실측과 정합 확인
+사유: JWMI-5 재검토 지적 시정 — 기존 통계가 최종 사전으로 측정은 되었으나 matched 계산에서 셀 수에서 토큰 수(unmatched/uncertain/noise/empty 세그먼트)를 차감하는 혼재 산식을 써 매칭률 과소(84.19%→86.80% 실측)·잔여 과대(323→129셀 실측) 계상되고, unmatched 목록에 이미 코드 부여된 값(354종 중 다수)이 남는 문제. 토큰/셀 단위 분리로 시정
+
+---
+
+## 2026-09-21 16:27 (KST)
+
+변경 파일: agent/agent/c8d9fd463f10 브랜치 (병합)
+변경 내용: Stage 1(JWMI-4) 산출물 병합 — WORK_DICTIONARY.json v1.1, scripts/ 4종, analysis/ 12종, docs/work_dictionary_v1.1_report.md, normalize_works.py 노이즈 필터 보강. WORK_DICTIONARY.json·docs/Work_History.md·docs/Structure.md·normalize_works.py 4파일 add/add 충돌은 Stage 1(theirs) 버전으로 해결
+사유: 이슈 JWMI-5 작업 시작 전 Stage 1 산출물 확보
+
+---
+
+변경 파일: docs/Work_History.md, docs/work_dictionary_v1.1_report.md, docs/Structure.md, .gitignore, scripts/__pycache__/ (삭제)
+변경 내용: Stage 1 인수인계 선행 정정. Work_History의 "2026-09-21 17:10 (KST)" 항목 시각을 실제 커밋 시각 15:22로 정정, v1.1 리포트 review_needed 수치 "총 31건(v1.0 승계 28 + 신규 3)" 명기, Structure.md review_needed 28→31건 갱신, scripts/__pycache__/*.pyc 제거 및 .gitignore 신설
+사유: Stage 1 검토 승인 시 지적된 선행 정정 3건 수행
+
+---
+
+변경 파일: docs/preprocessing_pipeline_design.md (신규)
+변경 내용: 전처리 방식 설계 문서. 순수 규칙/순수 LLM 배치/하이브리드 3안을 비용·정확도·재현성·확장성·감사 가능성 관점에서 비교하고 하이브리드(규칙 1차 + 미매핑 한정 LLM 배치 2차, 확정분은 사전 별칭/신규 코드로 환원) 채택 근거, 파이프라인 아키텍처, SQLite 스키마, 멱등성 보장·검증 계획 기술
+사유: 이슈 JWMI-5 완료 기준 중 "전처리 방식 설계 문서"
+
+---
+
+변경 파일: normalize_works.py (확장)
+변경 내용: 파트 전체 매칭 실패 시 2차 폴백 분리 추가 — 기호 경계(마침표·`/`·`&`·`+`·`·`·`|`) 세그먼트 분리 후 공백 토큰 최장 우선(greedy longest) exact/normalized 재매칭(fuzzy는 오탐 방지 위해 미적용). 연결어(등·등등·위주·드림 등)는 사전 metadata.split_stopwords로 제거. `판단 불가` 표기(metadata.llm_decisions의 uncertain 결정, 전체 매칭 실패 시 최종 적용), 같은 파트 내 중복 코드 제거, normalize_key에 꺾쇠 괄호 제거 추가. 매칭 방식에 uncertain/fallback 계열 신설
+사유: 콤마 외 구분자 병기 셀('데못죽.플레이브', '괴담출근 데못죽' 등) 미매핑 해소 및 추측 금지 원칙의 출력 반영
+
+---
+
+변경 파일: scripts/analyze_works.py (수정)
+변경 내용: uncertain(판단 불가) 방식을 매칭 실패와 동일하게 집계하도록 matched_cells 계산 수정
+사유: 정규화 엔진의 신규 매칭 방식 통계 반영
+
+---
+
+변경 파일: scripts/llm_batch_map.py (신규)
+변경 내용: LLM 병렬 배치 2차 처리 도구. --export로 규칙 1차 미매핑 고유 값(빈도·decision·target·reason 빈 양식)을 analysis/llm_batch_input_<tag>.csv로 내보내고, --apply로 alias(별칭 병합)/new(신규 코드)/noise(noise_terms 추가)/uncertain(판단 불가 영속화) 4분류 매핑을 검증 후 WORK_DICTIONARY.json에 반영. new의 canonical 지정·자동 코드 할당(W#### 순차), 기존 코드 재사용·재매핑·canonical 충돌 검증, reverse_index 재생성, 백업 및 analysis/v1.2_changeset.json 변경 세트 저장, --dry-run 지원
+사유: 하이브리드 파이프라인의 LLM 2차 단계 구현 및 재현 가능한 사전 갱신
+
+---
+
+변경 파일: WORK_DICTIONARY.json (v1.1 → v1.2)
+변경 내용: LLM 배치 매핑 360행 반영 — 신규 작품 77종(W0370~W0459, 기존 코드 미변경), 기존 76개 작품에 별칭 병합(예: 귀멸→W0212, 진격거→W0138, TFP→W0038, CoC7th_TRPG→W0115), noise_terms 72종 추가(굿즈·장르·창작 표기), metadata.llm_decisions 130건(판단 불가)·split_stopwords 8종 신설, reverse_index 재생성. 총 작품 369→446종
+사유: 규칙 1차 미매핑 336 고유 값에 대한 LLM 2차 처리 확정분 반영
+
+---
+
+변경 파일: scripts/build_db.py (신규), works.db (신규)
+변경 내용: SQLite 매핑 DB 구축 스크립트 및 DB. works(작품 마스터, 사전 기반 교체)/booth_work(부스 링크를 키로 작품 코드 연결, position으로 복수 작품 분해)/booth_work_raw(원문·정규화·코드·상태 보존)/meta 테이블. utf-8-sig 읽기로 BOM 컬럼 처리, INSERT OR REPLACE로 재실행 멱등. 적재 결과: 매핑 14,140행 / 원문 14,765행(matched 12,816 / unmatched 205 / uncertain 130 / empty 1,614)
+사유: 이슈 JWMI-5 완료 기준 중 "부스-작품 매핑 DB화"
+
+---
+
+변경 파일: pipeline.py (신규)
+변경 내용: 단일 진입점 CLI. --input(반복 지정)/--all 대상으로 ①정규화(normalized CSV 산출) ②미매핑 리포트(analysis/unmapped_review_<회차>.csv, 사람 확인용 decision 빈 양식 포함) ③DB 반영까지 자동 실행. --skip-db 옵션
+사유: 이슈 JWMI-5 완료 기준 중 "신규 회차 재실행 가능한 파이프라인 CLI"
+
+---
+
+변경 파일: scripts/generate_v1_2_report.py (신규), docs/work_dictionary_v1.2_report.md (신규)
+변경 내용: v1.2 갱신 보고서 자동 생성기 및 산출 보고서. 수치는 analysis 산출물에서 자동 산출 (매칭률 82.57%→84.19%, 등장 작품 367→444종, 처리율 97.81%, LLM 2차 분류 내역, 회차별 통계, 잔여 미매핑 상위 30건, 재현 방법)
+사유: 결과 요약 문서화 및 수치 불일치 방지
+
+---
+
+변경 파일: docs/pipeline_usage.md (신규)
+변경 내용: 파이프라인 사용법 문서. 신규 회차 처리 흐름, DB 스키마·조회 예시, 미매핑 사전 갱신 루프(배치 export → decision 기입 → apply → 재실행), 주의사항(코드 불변·판단 불가·부스 링크·멱등성)
+사유: 이슈 JWMI-5 완료 기준 중 "사용법 문서"
+
+---
+
+변경 파일: *_부스정보_normalized.csv 11개 (신규), analysis/ 산출물 갱신
+변경 내용: 전체 11개 회차 대표 작품(원작) 칼럼 v1.2 사전 정규화 결과. 26년_7월 기존 파일은 v1.2 기준으로 재생성. analysis에 matching_stats_v1.2.json, unmatched_v1.2.csv, llm_batch_input_v1.2.csv, llm_mapping_v1.2.csv, v1.2_changeset.json, WORK_DICTIONARY_v1.1_backup.json, unmapped_review_<회차>.csv 11개 저장
+사유: 이슈 JWMI-5 완료 기준 중 "전체 회차 *_normalized.csv"
+
+---
+
+검증 (2026-09-21): ① 멱등성 — pipeline --all 2회 실행, normalized CSV 11개 SHA-256 및 DB 레코드 수 일치 ② 샘플 정확도 — 26년_7월 무작위 50셀 검토, 오매핑 0건, 불확실 값은 판단 불가로 올바르게 표기 ③ 사전 검증 — --apply 단계에서 기존 코드 충돌·canonical 중복 전수 차단 확인
+
+사유(전체 작업): 이슈 JWMI-5 "[Stage 2] 하이브리드 전처리 파이프라인 구현 및 전체 회차 정규화·DB화" 완료
+
+---
+
+## 2026-09-21 15:22 (KST)
+
+변경 파일: WORK_DICTIONARY.json
+변경 내용: v1.0 → v1.1 갱신. 신규 작품 158종 추가(W0212~W0369, 기존 코드 미변경), 기존 55개 작품에 별칭 98개 병합, W0117 살파랑 origin 정정(kr→cn, priest의 杀破狼), W0027·W0208·W0177 교차 중복/오귀속 별칭 제거, metadata.noise_terms 신설(60종), reverse_index 재생성(1,221키). 총 작품 211→369종
+사유: 11개 회차 대표 작품 칼럼 전수 분석 기반 사전 보강. 웹 검증(나무위키·공식 사이트)으로 미확인 작품의 원작명·origin·category 확정
+
+---
+
+변경 파일: normalize_works.py
+변경 내용: 사전 metadata.noise_terms를 로드해 작품 외 표기(공예·굿즈·장르명)를 noise로 분류하도록 노이즈 필터 보강. 기존 하드코딩 노이즈 목록은 유지
+사유: 노이즈 기준을 사전 데이터로 이관해 재분석 시 동일 기준 적용
+
+---
+
+변경 파일: scripts/analyze_works.py (신규)
+변경 내용: 11개 회차 `대표 작품(원작)` 전수 분석 스크립트. 회차별/전체 매칭 통계, 전체 빈도, 미매핑·매칭 목록을 analysis/ 하위 파일로 저장
+사유: 분석 재현성 확보 및 세션 유실 대비 중간 산출물 영속화
+
+---
+
+변경 파일: scripts/extract_unmatched_parts.py (신규)
+변경 내용: 미매핑 셀을 콤마 분리·괄호 처리 후 작품 단위 실패 토큰 추출. 토큰 빈도+예시 셀을 analysis/unmatched_parts_*.csv 로 저장
+사유: 다중 작품 병기 셀 속 실제 실패 토큰 식별용
+
+---
+
+변경 파일: scripts/build_v1_1.py (신규)
+변경 내용: v1.0→v1.1 변경 세트(별칭·정정·신규 작품·noise_terms)를 코드화한 사전 빌드 스크립트. --dry-run 지원, 변경 요약을 analysis/v1.1_changeset.json 저장
+사유: 사전 갱신 내역의 재현성·추적성 확보
+
+---
+
+변경 파일: scripts/generate_v1_1_report.py (신규)
+변경 내용: analysis 산출물과 갱신된 사전을 읽어 docs/work_dictionary_v1.1_report.md 생성
+사유: 보고서 수치가 산출물에서 자동 산출되도록 하여 수치 불일치 방지
+
+---
+
+변경 파일: docs/work_dictionary_v1.1_report.md (신규)
+변경 내용: 11개 회차 전수 분석 보고서. 매칭 통계(77.58%→82.57%, 미매핑 고유 1,189→684), 웹 검증 내역, 신규 코드 목록(W0212~W0369), 별칭 추가 내역, 잔여 미매핑 상위 60건, 판단 불가·review_needed 항목, 재현 방법
+사유: 이슈 JWMI-4 완료 기준 중 분석 보고서 산출
+
+---
+
+변경 파일: analysis/ (신규 폴더)
+변경 내용: matching_stats_1.0.json, matching_stats_v1.1.json, frequency_all_1.0.csv, frequency_all_v1.1.csv, unmatched_1.0.csv, unmatched_v1.1.csv, matched_works_1.0.csv, matched_works_v1.1.csv, unmatched_parts_v1.0.csv, unmatched_parts_v1.1.csv, v1.1_changeset.json, WORK_DICTIONARY_v1.0_backup.json 저장
+사유: 분석 산출물 영속화 (v1.0 백업 포함 — build_v1_1.py 재실행 기준점)
+
+사유(전체 작업): 이슈 JWMI-4 "[Stage 1] 11개 회차 대표 작품 칼럼 전수 분석 및 작품 사전(WORK_DICTIONARY.json) v1.1 보강" 완료
+
+---
+
+## 2026-08-31 15:44 (KST)
+
+변경 파일: `src/`, `data/`, `artifacts/`, `README.md`, `docs/Structure.md`, `.gitignore`
+변경 내용: 루트에 혼재되어 있던 실행 코드, 행사 원본·정제 데이터, 참조 사전, 캐시, 이미지·로그·과거 결과를 역할별 디렉터리로 이동하고 기본 입출력 경로를 새 구조에 맞게 갱신했다.
+사유: 소스 코드와 산출물을 분리해 재실행·검토·버전 관리의 일관성을 확보했다.
+롤백: 해당 리팩터링 커밋을 되돌리면 Git 이동 이력과 기존 루트 경로를 함께 복원할 수 있다.
+
+---
+
 ## 2026-07-16 23:14 (KST)
 
 변경 파일: 26년_7월_부스정보.csv (및 26년_7월.csv, 26년_7월_clean.csv)
@@ -97,15 +246,3 @@
 - WORK_DICTIONARY.json: 211개 작품 (검토 필요 28개), 670 exact / 495 norm 인덱스
 - normalize_works.py 매칭 결과: 전체 14,765셀 중 매칭 성공 11,461 (77.6%), 빈 값 제외 87.3%
 - 매칭 방식: exact 84.1%, exact_paren_stripped 1.3%, normalized 0.8%, fuzzy 0.5%
-
-
----
-
-## 2026-08-31 15:44 (KST)
-
-변경 파일: `src/`, `data/`, `artifacts/`, `README.md`, `docs/Structure.md`, `.gitignore`
-변경 내용: 루트에 혼재되어 있던 실행 코드, 행사 원본·정제 데이터, 참조 사전, 캐시, 이미지·로그·과거 결과를 역할별 디렉터리로 이동. 크롤러·전처리·배치·정규화·소셜·시각화 스크립트의 기본 입출력 경로를 새 구조로 갱신하고, 시작 안내 및 구조 문서를 업데이트.
-사유: 소스 코드와 산출물을 명확히 분리해 재실행·검토·버전 관리의 일관성을 확보.
-롤백: 이 커밋을 되돌리면 Git 이동 이력과 기존 루트 경로를 함께 복원할 수 있음.
-
-무결성 확인: Unicode 정규화가 다른 기존 유사도 사전 2개는 SHA-256 `38b72c8c00ada9c0e1f59f51de6e67d732ab65cad2fb72ba5f131f611e1746be`로 동일함을 확인. 파일 시스템 충돌을 피하기 위해 두 번째 사본은 `data/reference/booth_name_similarity_dictionary_legacy.csv`로 보존.
