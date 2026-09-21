@@ -23,6 +23,9 @@ DICT_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "WORK_DICTI
 COLUMN_MAIN = "대표 작품(원작)"
 COLUMN_OTHER = "그 외 다루는 작품"
 
+# 사전 metadata.noise_terms 로 채워짐 (load_dictionary에서 설정)
+NOISE_TERMS = set()
+
 
 # ============================================================
 # 딕셔너리 로드 및 인덱스 구축
@@ -33,6 +36,10 @@ def load_dictionary(dict_path):
         data = json.load(f)
 
     works = data["works"]
+
+    # 사전 metadata.noise_terms (작품 외 표기) 로드
+    global NOISE_TERMS
+    NOISE_TERMS = {n.strip().lower() for n in data.get("metadata", {}).get("noise_terms", []) if n.strip()}
 
     # exact index: 소문자 원형 → code
     exact_index = {}
@@ -174,6 +181,10 @@ def normalize_one(raw, exact_index, norm_index, canonical, fuzzy_keys, fuzzy_thr
     raw = raw.strip()
     if not raw:
         return None, None, "empty", 1.0
+
+    # 사전 metadata.noise_terms 기반 노이즈 필터 (작품 외 굿즈/장르 표기)
+    if raw.lower() in NOISE_TERMS:
+        return None, None, "noise", 1.0
 
     # 노이즈 필터
     cleaned = re.sub(r'[\.\,\s]', '', raw)

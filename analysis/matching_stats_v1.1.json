@@ -1,0 +1,188 @@
+{
+  "dict_version": "1.1",
+  "files": {
+    "24년_1월_부스정보.csv": {
+      "cells": 1254,
+      "methods": {
+        "empty": 75,
+        "exact": 1206,
+        "unmatched": 35,
+        "exact_paren_stripped": 12,
+        "noise": 15,
+        "normalized": 8,
+        "fuzzy": 6,
+        "normalized_paren_stripped": 1,
+        "exact_paren_inner": 2
+      },
+      "matched_cells": 1129
+    },
+    "24년_4월_부스정보.csv": {
+      "cells": 1250,
+      "methods": {
+        "exact": 1069,
+        "empty": 182,
+        "unmatched": 32,
+        "noise": 19,
+        "normalized": 10,
+        "exact_paren_stripped": 37,
+        "fuzzy": 3,
+        "exact_paren_inner": 2,
+        "normalized_paren_stripped": 1,
+        "fuzzy_paren_stripped": 1
+      },
+      "matched_cells": 1017
+    },
+    "24년_7월_부스정보.csv": {
+      "cells": 1246,
+      "methods": {
+        "exact": 1167,
+        "empty": 77,
+        "unmatched": 26,
+        "exact_paren_stripped": 10,
+        "normalized": 9,
+        "noise": 16,
+        "fuzzy": 2
+      },
+      "matched_cells": 1127
+    },
+    "24년_9월_부스정보.csv": {
+      "cells": 1118,
+      "methods": {
+        "exact": 935,
+        "empty": 145,
+        "exact_paren_stripped": 20,
+        "normalized": 12,
+        "unmatched": 72,
+        "noise": 36,
+        "exact_paren_inner": 2,
+        "fuzzy": 2,
+        "fuzzy_paren_stripped": 1
+      },
+      "matched_cells": 865
+    },
+    "25년_10월_부스정보.csv": {
+      "cells": 1301,
+      "methods": {
+        "exact": 1106,
+        "empty": 157,
+        "noise": 22,
+        "normalized": 10,
+        "unmatched": 101,
+        "exact_paren_stripped": 9,
+        "exact_paren_inner": 2,
+        "fuzzy": 7
+      },
+      "matched_cells": 1021
+    },
+    "25년_1월_부스정보.csv": {
+      "cells": 1394,
+      "methods": {
+        "empty": 126,
+        "exact": 1253,
+        "fuzzy": 11,
+        "unmatched": 52,
+        "normalized": 16,
+        "noise": 10,
+        "exact_paren_stripped": 20,
+        "normalized_paren_stripped": 2,
+        "exact_paren_inner": 1
+      },
+      "matched_cells": 1206
+    },
+    "25년_4월_부스정보.csv": {
+      "cells": 1360,
+      "methods": {
+        "exact": 1196,
+        "empty": 136,
+        "noise": 26,
+        "unmatched": 113,
+        "normalized": 16,
+        "fuzzy": 8,
+        "exact_paren_stripped": 25,
+        "exact_paren_inner": 1
+      },
+      "matched_cells": 1085
+    },
+    "25년_7월_부스정보.csv": {
+      "cells": 1409,
+      "methods": {
+        "exact": 1262,
+        "noise": 22,
+        "empty": 168,
+        "unmatched": 56,
+        "normalized": 17,
+        "exact_paren_stripped": 11,
+        "fuzzy": 6,
+        "fuzzy_paren_stripped": 1
+      },
+      "matched_cells": 1163
+    },
+    "26년_1월_부스정보.csv": {
+      "cells": 1411,
+      "methods": {
+        "exact": 1271,
+        "empty": 116,
+        "noise": 9,
+        "exact_paren_stripped": 30,
+        "unmatched": 80,
+        "exact_paren_inner": 1,
+        "normalized": 13,
+        "fuzzy": 16,
+        "normalized_paren_stripped": 4
+      },
+      "matched_cells": 1206
+    },
+    "26년_4월_부스정보.csv": {
+      "cells": 1483,
+      "methods": {
+        "exact": 1208,
+        "empty": 281,
+        "unmatched": 94,
+        "fuzzy": 10,
+        "exact_paren_stripped": 18,
+        "noise": 7,
+        "exact_paren_inner": 1,
+        "normalized": 10,
+        "normalized_paren_stripped": 1
+      },
+      "matched_cells": 1101
+    },
+    "26년_7월_부스정보.csv": {
+      "cells": 1539,
+      "methods": {
+        "exact": 1449,
+        "empty": 151,
+        "exact_paren_stripped": 37,
+        "noise": 15,
+        "fuzzy": 11,
+        "unmatched": 101,
+        "normalized": 22,
+        "exact_paren_inner": 4,
+        "fuzzy_paren_stripped": 3,
+        "normalized_paren_stripped": 2,
+        "normalized_paren_inner": 1
+      },
+      "matched_cells": 1272
+    }
+  },
+  "total": {
+    "cells": 14765,
+    "methods": {
+      "empty": 1614,
+      "exact": 13122,
+      "unmatched": 762,
+      "exact_paren_stripped": 229,
+      "noise": 197,
+      "normalized": 143,
+      "fuzzy": 82,
+      "normalized_paren_stripped": 11,
+      "exact_paren_inner": 16,
+      "fuzzy_paren_stripped": 6,
+      "normalized_paren_inner": 1
+    },
+    "matched_cells": 12192,
+    "match_rate": 82.57,
+    "unmatched_unique": 684,
+    "matched_unique_works": 367
+  }
+}

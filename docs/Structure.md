@@ -20,11 +20,33 @@ dongneboothlist/
 ├── verify_twitter.py              # 트위터 계정 유효성 검증
 ├── batch_crawl.py                 # 월별 순회 배치 크롤링
 ├── vis.py                         # 부스 빈도 시각화 (기존)
+├── normalize_works.py             # 작품명 정규화 (사전 기반 3단계 매칭, noise_terms 참조)
+├── build_work_dictionary.py       # 작품 사전 빌드 (기존)
+│
+├── scripts/                       # 작품 사전 분석·빌드 스크립트 (JWMI-4)
+│   ├── analyze_works.py           # 11개 회차 전수 분석 → analysis/ 산출물 저장
+│   ├── extract_unmatched_parts.py # 미매핑 셀의 작품 단위 실패 토큰 추출
+│   ├── build_v1_1.py              # WORK_DICTIONARY v1.0→v1.1 변경 세트 빌드
+│   └── generate_v1_1_report.py    # docs 보고서 생성기
+│
+├── analysis/                      # 작품 사전 분석 산출물 (영속화)
+│   ├── matching_stats_{1.0,v1.1}.json   # 회차별/전체 매칭 통계
+│   ├── frequency_all_{1.0,v1.1}.csv     # 대표 작품 칼럼 전체 빈도
+│   ├── unmatched_{1.0,v1.1}.csv         # 미매핑 셀 값 + 빈도
+│   ├── unmatched_parts_{1.0,v1.1}.csv   # 실패 토큰 단위 추출
+│   ├── matched_works_{1.0,v1.1}.csv     # 매칭된 작품 코드 빈도
+│   ├── v1.1_changeset.json              # v1.1 변경 요약 (신규 코드 목록 등)
+│   └── WORK_DICTIONARY_v1.0_backup.json # v1.0 백업 (재빌드 기준점)
+│
+├── WORK_DICTIONARY.json           # 작품 사전 v1.1 (369종, W0001~W0369, noise_terms 포함)
 │
 ├── docs/                          # 문서 폴더
 │   ├── HISTORY.md                 # 전체 작업 히스토리
 │   ├── Work_History.md            # 변경 이력 (날짜/시간 KST)
-│   └── Structure.md               # 본 파일 (폴더 구조/코드 분석)
+│   ├── Structure.md               # 본 파일 (폴더 구조/코드 분석)
+│   ├── 원작명_정규화.md            # 정규화 규칙 문서 (기존)
+│   ├── work_normalization_report.md # 정규화 리포트 (기존)
+│   └── work_dictionary_v1.1_report.md # 11개 회차 전수 분석 + 사전 v1.1 보고서
 │
 ├── Account_info/                  # 트위터 계정 수집 파생 프로젝트
 │   ├── README.md

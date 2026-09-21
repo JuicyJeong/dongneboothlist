@@ -1,5 +1,57 @@
 # Work History
 
+## 2026-09-21 17:10 (KST)
+
+변경 파일: WORK_DICTIONARY.json
+변경 내용: v1.0 → v1.1 갱신. 신규 작품 158종 추가(W0212~W0369, 기존 코드 미변경), 기존 55개 작품에 별칭 98개 병합, W0117 살파랑 origin 정정(kr→cn, priest의 杀破狼), W0027·W0208·W0177 교차 중복/오귀속 별칭 제거, metadata.noise_terms 신설(60종), reverse_index 재생성(1,221키). 총 작품 211→369종
+사유: 11개 회차 대표 작품 칼럼 전수 분석 기반 사전 보강. 웹 검증(나무위키·공식 사이트)으로 미확인 작품의 원작명·origin·category 확정
+
+---
+
+변경 파일: normalize_works.py
+변경 내용: 사전 metadata.noise_terms를 로드해 작품 외 표기(공예·굿즈·장르명)를 noise로 분류하도록 노이즈 필터 보강. 기존 하드코딩 노이즈 목록은 유지
+사유: 노이즈 기준을 사전 데이터로 이관해 재분석 시 동일 기준 적용
+
+---
+
+변경 파일: scripts/analyze_works.py (신규)
+변경 내용: 11개 회차 `대표 작품(원작)` 전수 분석 스크립트. 회차별/전체 매칭 통계, 전체 빈도, 미매핑·매칭 목록을 analysis/ 하위 파일로 저장
+사유: 분석 재현성 확보 및 세션 유실 대비 중간 산출물 영속화
+
+---
+
+변경 파일: scripts/extract_unmatched_parts.py (신규)
+변경 내용: 미매핑 셀을 콤마 분리·괄호 처리 후 작품 단위 실패 토큰 추출. 토큰 빈도+예시 셀을 analysis/unmatched_parts_*.csv 로 저장
+사유: 다중 작품 병기 셀 속 실제 실패 토큰 식별용
+
+---
+
+변경 파일: scripts/build_v1_1.py (신규)
+변경 내용: v1.0→v1.1 변경 세트(별칭·정정·신규 작품·noise_terms)를 코드화한 사전 빌드 스크립트. --dry-run 지원, 변경 요약을 analysis/v1.1_changeset.json 저장
+사유: 사전 갱신 내역의 재현성·추적성 확보
+
+---
+
+변경 파일: scripts/generate_v1_1_report.py (신규)
+변경 내용: analysis 산출물과 갱신된 사전을 읽어 docs/work_dictionary_v1.1_report.md 생성
+사유: 보고서 수치가 산출물에서 자동 산출되도록 하여 수치 불일치 방지
+
+---
+
+변경 파일: docs/work_dictionary_v1.1_report.md (신규)
+변경 내용: 11개 회차 전수 분석 보고서. 매칭 통계(77.58%→82.57%, 미매핑 고유 1,189→684), 웹 검증 내역, 신규 코드 목록(W0212~W0369), 별칭 추가 내역, 잔여 미매핑 상위 60건, 판단 불가·review_needed 항목, 재현 방법
+사유: 이슈 JWMI-4 완료 기준 중 분석 보고서 산출
+
+---
+
+변경 파일: analysis/ (신규 폴더)
+변경 내용: matching_stats_1.0.json, matching_stats_v1.1.json, frequency_all_1.0.csv, frequency_all_v1.1.csv, unmatched_1.0.csv, unmatched_v1.1.csv, matched_works_1.0.csv, matched_works_v1.1.csv, unmatched_parts_v1.0.csv, unmatched_parts_v1.1.csv, v1.1_changeset.json, WORK_DICTIONARY_v1.0_backup.json 저장
+사유: 분석 산출물 영속화 (v1.0 백업 포함 — build_v1_1.py 재실행 기준점)
+
+사유(전체 작업): 이슈 JWMI-4 "[Stage 1] 11개 회차 대표 작품 칼럼 전수 분석 및 작품 사전(WORK_DICTIONARY.json) v1.1 보강" 완료
+
+---
+
 ## 2026-07-16 23:14 (KST)
 
 변경 파일: 26년_7월_부스정보.csv (및 26년_7월.csv, 26년_7월_clean.csv)
