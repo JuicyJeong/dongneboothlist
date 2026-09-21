@@ -1,5 +1,13 @@
 # Work History
 
+## 2026-09-21 18:32 (KST)
+
+변경 파일: scripts/analyze_works.py (수정), analysis/matching_stats_v1.2.json, analysis/unmatched_v1.2.csv, analysis/frequency_all_v1.2.csv, analysis/matched_works_v1.2.csv (재생성), scripts/generate_v1_2_report.py (수정), docs/work_dictionary_v1.2_report.md (재생성), docs/Structure.md (갱신)
+변경 내용: 보고 레이어를 최종 산출물 기준으로 재수집. analyze_works.py를 셀 단위 상호배타 분류(matched/unmatched/uncertain/noise/empty, matched=코드 1개 이상 부여 셀, noise=셀 전체 값이 llm_decisions noise 결정값과 정확히 일치) 기준으로 개편하고 산식 정의를 stats JSON `metric_definitions`에 함께 기록. 재측정 결과: 매칭 12,816셀/86.80%(전체 14,765셀 분모, 빈 셀 1,614 포함), 유효 셀 분모 97.45%, 판단 불가 130셀, 노이즈 76셀, 잔여 미매핑 129셀/고유 55종, 처리율 88.20%(유효 셀 99.02%), 등장 작품 444종. unmatched_v1.2.csv는 이미 해소된 226셀분을 제외한 실제 사람 확인 목록(55종)으로 재생성. 리포트에 지표 산식 정의 섹션 신설 및 works.db 실측값(works 446/booth_work 14,139/booth_work_raw 14,765) 기재. 회차별 수치는 커밋된 *_부스정보_normalized.csv 실측과 정합 확인
+사유: JWMI-5 재검토 지적 시정 — 기존 통계가 최종 사전으로 측정은 되었으나 matched 계산에서 셀 수에서 토큰 수(unmatched/uncertain/noise/empty 세그먼트)를 차감하는 혼재 산식을 써 매칭률 과소(84.19%→86.80% 실측)·잔여 과대(323→129셀 실측) 계상되고, unmatched 목록에 이미 코드 부여된 값(354종 중 다수)이 남는 문제. 토큰/셀 단위 분리로 시정
+
+---
+
 ## 2026-09-21 16:27 (KST)
 
 변경 파일: agent/agent/c8d9fd463f10 브랜치 (병합)
