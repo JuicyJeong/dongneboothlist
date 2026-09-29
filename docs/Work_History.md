@@ -1,5 +1,13 @@
 # Work History
 
+## 2026-09-29 17:35 (KST)
+
+변경 파일: 26년_10월.csv, 26년_10월_clean.csv, 26년_10월_부스정보.csv, 26년_10월_부스정보_normalized.csv (갱신), data/raw/26년_10월.csv, data/processed/26년_10월_clean.csv, data/processed/26년_10월_부스정보.csv (신규), analysis/unmapped_review_26년_10월.csv (재생성), works.db, batch_crawl.py, src/pipeline/batch_crawl.py, docs/Work_History.md
+변경 내용: 26년 10월 회차를 부스 위치 포함 최신 정보로 재수집. ① 행사 코드 API 실측 재확인(df2610 제35회 디. 페스타(토), df261002 제35회 디. 페스타(일), 25d09 제9회 쩜오 어워드, wt03 스크롤의 바다 3화 — EVENT_INFORMATION.JSON 기존 등록과 일치, 변경 없음). ② 4행사 총 1,422부스 크롤링(기존 1,430 대비 8부스 감소: 페스타 토/일 각 3, 쩜오 어워드 1, 스크롤의 바다 1 취소·링크 소멸, 신규·위치 변경 0) → 전처리 → _부스정보 생성, 루트·data/ 양쪽에 반영. 위치(좌석) 채움 1,422/1,422 = 100%(행사별 전부), 컬럼 스키마는 기본 19컬럼 기준 26년_7월과 동일(26년_7월만 팔로워수·미확보수 특수 컬럼 2개 보유). ③ pipeline.py 재실행: normalized 재생성, 셀 단위 실측 matched 1,166/1,422 = 82.00%(유효 셀 분모 1,261 기준 92.47%, 처리율 93.18%), uncertain 9, unmatched 86, empty 161, 미매핑 리포트 171 고유 값(사람 확인용, decision 미채움 상태로 재생성 — 사전 미확장, WORK_DICTIONARY.json 확장은 본 이슈 범위 외). ④ works.db: 26년_10월 기존 행(1,430) 사전 삭제 후 재적재(booth_work 1,511행 / booth_work_raw 1,422행), built_at 갱신. ⑤ batch_crawl.py MONTHS에 '26년_10월' 추가(루트·src 동일)
+사유: 이슈 JWMI-10 — 사용자 요청(부모 이슈)에 따라 26년 10월 부스 위치 포함 최신 데이터로 갱신
+
+---
+
 ## 2026-09-21 22:12 (KST)
 
 변경 파일: EVENT_INFORMATION.JSON, booth_search_total.py, normalize_works.py, pipeline.py, 26년_10월.csv, 26년_10월_clean.csv, 26년_10월_부스정보.csv, 26년_10월_부스정보_normalized.csv (신규), analysis/unmapped_review_26년_10월.csv (신규), works.db, docs/Work_History.md, docs/Structure.md, docs/pipeline_usage.md
