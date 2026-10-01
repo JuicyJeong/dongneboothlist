@@ -1,5 +1,13 @@
 # Work History
 
+## 2026-10-01 16:17 (KST)
+
+변경 파일: 26년_10월_clean.csv, 26년_10월_부스정보.csv, data/processed/26년_10월_부스정보.csv (갱신), fetch_followers.py (수정), docs/Work_History.md
+변경 내용: JWMI-12 리뷰 재작업 2건. ① 캐시 키 대소문자 불일치로 7월 값 재사용 조건을 위반한 9계정(10행)의 팔로워수를 7월 캐시 값으로 정합 — 리뷰 지적 7계정(dalya_png 61000→56100, jd_closet 2554→1950, lotus_flower432 3557→1596, YUU_LESS 666→672, dreamy_garden 136→127, Wayter_0918 1955→1866, hhmmwow_ 9→5) + 자체 재검증으로 추가 발견 2계정(furuseolam 1909→1769, B__MDKS 다중 핸들 행 241→204). 7월 키와 대소문자가 일치했던 행(Dreamy_garden 표기 행)은 기존부터 정상이므로 제외. 확보 행 972·미확보 21계정 등 기존 통계는 변동 없음. ② 팔로워수·미확보수 칼럼을 26년_10월_부스정보.csv에도 반영 — batch_crawl.py의 clean→부스정보 복제 방식 그대로 갱신된 clean에서 루트·data/processed 사본 재생성(21컬럼, 7월 부스정보 선례와 동일하게 칼럼 보유). 참고: data/processed/26년_10월_clean.csv는 7월 선례(clean에는 칼럼 없음)에 따라 19컬럼 미변경 유지. ③ 재발 방지로 fetch_followers.py 캐시 조회·저장 키를 소문자 정규화(충돌 시 기존 값 유지 — 7월 캐시 값 우선 보존)
+사유: 이슈 JWMI-12 — MIKA 리뷰 재작업 요청(7월 값 정합, 부스정보 칼럼 반영)
+
+---
+
 ## 2026-10-01 15:58 (KST)
 
 변경 파일: 26년_10월_clean.csv (갱신), fetch_followers.py (수정), docs/Work_History.md

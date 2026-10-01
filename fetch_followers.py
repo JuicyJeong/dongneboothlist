@@ -76,7 +76,13 @@ def get_followers(driver, handle):
 def load_cache():
     if os.path.exists(CACHE):
         with open(CACHE, 'r', encoding='utf-8') as f:
-            return json.load(f)
+            raw = json.load(f)
+        # 키를 소문자로 정규화해 대소문자 변형 키 생성·미매칭을 방지.
+        # 충돌 시 기존(먼저 저장된) 값을 유지 — 7월 캐시 값 우선 보존.
+        cache = {}
+        for k, v in raw.items():
+            cache.setdefault(k.lower(), v)
+        return cache
     return {}
 
 
@@ -95,7 +101,7 @@ def merge_into_csv(df, cache, output):
         total = 0
         miss = 0
         for h in tw:
-            rec = cache.get(h)
+            rec = cache.get(h.lower())
             if rec and rec.get('followers') is not None:
                 total += rec['followers']
             else:
@@ -147,7 +153,7 @@ def main():
     print(f'고유 트위터 핸들: {len(unique)}개 (bsky 제외)')
 
     cache = load_cache()
-    todo = [h for h in unique if h not in cache]
+    todo = [h for h in unique if h.lower() not in cache]
     print(f'캐시 확보: {len(unique) - len(todo)} / 미처리: {len(todo)}')
 
     if not args.merge_only:
@@ -163,7 +169,7 @@ def main():
         consec_bad = 0
         for i, h in enumerate(todo, 1):
             cnt, status = get_followers(driver, h)
-            cache[h] = {'followers': cnt, 'status': status}
+            cache[h.lower()] = {'followers': cnt, 'status': status}
             save_cache(cache)
             elapsed = int(time.time() - start)
             rate = elapsed / i if i else 0
