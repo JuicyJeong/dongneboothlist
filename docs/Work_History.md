@@ -1,5 +1,29 @@
 # Work History
 
+## 2026-10-01 16:29 (KST)
+
+변경 파일: 26년_10월_부스정보_normalized.csv (갱신), docs/Work_History.md
+변경 내용: 26년_10월_부스정보_normalized.csv(루트)에 팔로워수·미확보수 칼럼 추가(21 → 23컬럼). 값은 갱신된 26년_10월_clean.csv에서 부스 단위로 그대로 이식(재계산 없음). 7월 normalized 선례처럼 개최일 뒤 끝에 추가했으며, 기존 컬럼 순서와 대표 작품(원작)_코드·_정규화 값은 변경 없음. 적용 방식은 라인 단위 접미 추가라 기존 21컬럼은 바이트 단위 보존. 검증: 1,422행 clean 대조 팔로워수·미확보수 불일치 0행, 기존 컬럼 변경 0행, 팔로워수 채움 994행(clean과 일치)
+사유: 이슈 JWMI-14 — 7월 normalized(23컬럼) 선례 정합(사용자 조건 "7월 패턴 그대로")
+
+---
+
+## 2026-10-01 16:17 (KST)
+
+변경 파일: 26년_10월_clean.csv, 26년_10월_부스정보.csv, data/processed/26년_10월_부스정보.csv (갱신), fetch_followers.py (수정), docs/Work_History.md
+변경 내용: JWMI-12 리뷰 재작업 2건. ① 캐시 키 대소문자 불일치로 7월 값 재사용 조건을 위반한 9계정(10행)의 팔로워수를 7월 캐시 값으로 정합 — 리뷰 지적 7계정(dalya_png 61000→56100, jd_closet 2554→1950, lotus_flower432 3557→1596, YUU_LESS 666→672, dreamy_garden 136→127, Wayter_0918 1955→1866, hhmmwow_ 9→5) + 자체 재검증으로 추가 발견 2계정(furuseolam 1909→1769, B__MDKS 다중 핸들 행 241→204). 7월 키와 대소문자가 일치했던 행(Dreamy_garden 표기 행)은 기존부터 정상이므로 제외. 확보 행 972·미확보 21계정 등 기존 통계는 변동 없음. ② 팔로워수·미확보수 칼럼을 26년_10월_부스정보.csv에도 반영 — batch_crawl.py의 clean→부스정보 복제 방식 그대로 갱신된 clean에서 루트·data/processed 사본 재생성(21컬럼, 7월 부스정보 선례와 동일하게 칼럼 보유). 참고: data/processed/26년_10월_clean.csv는 7월 선례(clean에는 칼럼 없음)에 따라 19컬럼 미변경 유지. ③ 재발 방지로 fetch_followers.py 캐시 조회·저장 키를 소문자 정규화(충돌 시 기존 값 유지 — 7월 캐시 값 우선 보존)
+사유: 이슈 JWMI-12 — MIKA 리뷰 재작업 요청(7월 값 정합, 부스정보 칼럼 반영)
+
+---
+
+## 2026-10-01 15:58 (KST)
+
+변경 파일: 26년_10월_clean.csv (갱신), fetch_followers.py (수정), docs/Work_History.md
+변경 내용: 26년 10월 4행사 1,422부스 대상 트위터 팔로워 수집. 고유 계정 1,090 중 7월 겹침 161계정은 캐시 값 재사용(재조회 없음), 신규 929계정을 비로그인 Selenium으로 조회 — 성공 908(97.7%), 미확보 21(not_found 18, restricted 1, suspended 1, unknown 1). 26년_10월_clean.csv에 트위터 칼럼 바로 옆 팔로워수·미확보수 칼럼 추가(7월 선례와 동일 구성): 트위터 보유 행 994/1,422, 팔로워수 완전확보 행 972(전체 68.4%, 트위터 보유 행 기준 97.8%), 행사별 완전확보율 디.페스타(토) 67.2%·(일) 67.8%·쩜오 어워드 77.1%·스크롤의 바다 41.2%. fetch_followers.py에 --input/--output/--delay-min/--delay-max/--rest-every/--rest-min/--rest-max/--merge-only 인자 추가, 계정당 캐시 즉시 저장(중단 재개 시 유실 없음), 연속 실패 5건·rate limit 감지 시 자동 중단 서킷브레이커 추가. 딜레이 10~15초+무작위 지터, 50계정마다 2~3분 휴식 적용, 총 소요 약 4시간 40분, 차단 징후 없음. 캐시·크롤링 로그는 커밋 제외
+사유: 이슈 JWMI-12 — 26년 10월 부스 트위터 팔로워 수집(IP밴 방지 조건 준수, 7월 값 재사용)
+
+---
+
 ## 2026-09-29 17:35 (KST)
 
 변경 파일: 26년_10월.csv, 26년_10월_clean.csv, 26년_10월_부스정보.csv, 26년_10월_부스정보_normalized.csv (갱신), data/raw/26년_10월.csv, data/processed/26년_10월_clean.csv, data/processed/26년_10월_부스정보.csv (신규), analysis/unmapped_review_26년_10월.csv (재생성), works.db, batch_crawl.py, src/pipeline/batch_crawl.py, docs/Work_History.md
