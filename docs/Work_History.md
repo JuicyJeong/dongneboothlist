@@ -1,5 +1,13 @@
 # Work History
 
+## 2026-10-01 15:58 (KST)
+
+변경 파일: 26년_10월_clean.csv (갱신), fetch_followers.py (수정), docs/Work_History.md
+변경 내용: 26년 10월 4행사 1,422부스 대상 트위터 팔로워 수집. 고유 계정 1,090 중 7월 겹침 161계정은 캐시 값 재사용(재조회 없음), 신규 929계정을 비로그인 Selenium으로 조회 — 성공 908(97.7%), 미확보 21(not_found 18, restricted 1, suspended 1, unknown 1). 26년_10월_clean.csv에 트위터 칼럼 바로 옆 팔로워수·미확보수 칼럼 추가(7월 선례와 동일 구성): 트위터 보유 행 994/1,422, 팔로워수 완전확보 행 972(전체 68.4%, 트위터 보유 행 기준 97.8%), 행사별 완전확보율 디.페스타(토) 67.2%·(일) 67.8%·쩜오 어워드 77.1%·스크롤의 바다 41.2%. fetch_followers.py에 --input/--output/--delay-min/--delay-max/--rest-every/--rest-min/--rest-max/--merge-only 인자 추가, 계정당 캐시 즉시 저장(중단 재개 시 유실 없음), 연속 실패 5건·rate limit 감지 시 자동 중단 서킷브레이커 추가. 딜레이 10~15초+무작위 지터, 50계정마다 2~3분 휴식 적용, 총 소요 약 4시간 40분, 차단 징후 없음. 캐시·크롤링 로그는 커밋 제외
+사유: 이슈 JWMI-12 — 26년 10월 부스 트위터 팔로워 수집(IP밴 방지 조건 준수, 7월 값 재사용)
+
+---
+
 ## 2026-09-29 17:35 (KST)
 
 변경 파일: 26년_10월.csv, 26년_10월_clean.csv, 26년_10월_부스정보.csv, 26년_10월_부스정보_normalized.csv (갱신), data/raw/26년_10월.csv, data/processed/26년_10월_clean.csv, data/processed/26년_10월_부스정보.csv (신규), analysis/unmapped_review_26년_10월.csv (재생성), works.db, batch_crawl.py, src/pipeline/batch_crawl.py, docs/Work_History.md

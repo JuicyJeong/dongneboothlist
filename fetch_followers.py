@@ -3,6 +3,7 @@ import json
 import os
 import random
 import re
+import sys
 import time
 import pandas as pd
 from selenium import webdriver
@@ -15,6 +16,7 @@ CACHE = 'twitter_followers_cache.json'
 
 COUNT_RE = re.compile(r'^([\d.]+)\s*(천|만|K|M|B)?$')
 FOLLOWER_TEXT_RE = re.compile(r'([\d,.]+[천만KMB]?)\s*팔로워')
+CONSEC_FAIL_ABORT = 5
 
 
 def parse_count(s):
@@ -44,6 +46,8 @@ def get_followers(driver, handle):
                 break
         body = driver.find_element(By.TAG_NAME, 'body').text
         body_low = body.lower()
+        if 'rate limit' in body_low or 'rate limit' in title.lower():
+            return None, 'rate_limited'
         if f'@{handle}'.lower() not in title.lower():
             if 'unable to show this account' in body_low or 'may be private, deleted' in body_low:
                 return None, 'restricted'
@@ -77,58 +81,13 @@ def load_cache():
 
 
 def save_cache(cache):
-    with open(CACHE, 'w', encoding='utf-8') as f:
+    tmp = CACHE + '.tmp'
+    with open(tmp, 'w', encoding='utf-8') as f:
         json.dump(cache, f, ensure_ascii=False, indent=2)
+    os.replace(tmp, CACHE)
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument('--limit', type=int, default=0, help='고유 계정 중 상위 N개만 처리(테스트용). 0=전체')
-    ap.add_argument('--no-headless', action='store_true', help='브라우저 창 표시')
-    args = ap.parse_args()
-
-    df = pd.read_csv(INPUT, dtype=str).fillna('')
-
-    handles = []
-    for v in df['트위터']:
-        for h in v.split(','):
-            h = h.strip()
-            if h and not h.startswith('bsky:'):
-                handles.append(h)
-    unique = sorted(set(handles))
-    if args.limit > 0:
-        unique = unique[:args.limit]
-    print(f'고유 트위터 핸들: {len(unique)}개 (bsky 제외)')
-
-    cache = load_cache()
-    todo = [h for h in unique if h not in cache]
-    print(f'캐시 확보: {len(unique) - len(todo)} / 미처리: {len(todo)}')
-
-    opts = Options()
-    if not args.no_headless:
-        opts.add_argument('--headless=new')
-    opts.add_argument('--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36')
-    opts.add_argument('--disable-blink-features=AutomationControlled')
-
-    driver = webdriver.Chrome(options=opts)
-    start = time.time()
-    for i, h in enumerate(todo, 1):
-        cnt, status = get_followers(driver, h)
-        cache[h] = {'followers': cnt, 'status': status}
-        elapsed = int(time.time() - start)
-        rate = elapsed / i if i else 0
-        eta = int(rate * (len(todo) - i))
-        disp = cnt if cnt is not None else '-'
-        print(f'[{i:4d}/{len(todo)}] {h:25s} fol={disp!s:>8} ({status}) elapsed={elapsed}s eta={eta}s')
-        if i % 20 == 0:
-            save_cache(cache)
-        time.sleep(random.uniform(1.0, 2.5))
-    save_cache(cache)
-    driver.quit()
-
-    ok = sum(1 for v in cache.values() if v.get('status') == 'ok')
-    print(f'\n크롤링 완료: 확보 {ok} / {len(cache)}')
-
+def merge_into_csv(df, cache, output):
     fol_col, miss_col = [], []
     for v in df['트위터']:
         parts = [p.strip() for p in v.split(',') if p.strip()]
@@ -151,11 +110,92 @@ def main():
     insert_at = df.columns.get_loc('트위터') + 1
     df.insert(insert_at, '팔로워수', fol_col)
     df.insert(insert_at + 1, '미확보수', miss_col)
-    df.to_csv(OUTPUT, index=False, encoding='utf-8-sig')
+    df.to_csv(output, index=False, encoding='utf-8-sig')
 
-    print(f'\n저장 완료: {OUTPUT}')
+    print(f'\n저장 완료: {output}')
     print(f"  팔로워수 합(확보 행): {sum(x for x in fol_col if x != '')}")
     print(f'  미확보 계정 포함 행: {sum(1 for x in miss_col if x)}')
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--input', default=INPUT)
+    ap.add_argument('--output', default=None, help='기본값: --input과 동일')
+    ap.add_argument('--limit', type=int, default=0, help='고유 계정 중 상위 N개만 처리(테스트용). 0=전체')
+    ap.add_argument('--no-headless', action='store_true', help='브라우저 창 표시')
+    ap.add_argument('--delay-min', type=float, default=1.0, help='계정 간 최소 딜레이(초)')
+    ap.add_argument('--delay-max', type=float, default=2.5, help='계정 간 최대 딜레이(초)')
+    ap.add_argument('--rest-every', type=int, default=0, help='N계정마다 긴 휴식. 0=끔')
+    ap.add_argument('--rest-min', type=float, default=120, help='긴 휴식 최소(초)')
+    ap.add_argument('--rest-max', type=float, default=180, help='긴 휴식 최대(초)')
+    ap.add_argument('--merge-only', action='store_true', help='크롤링 생략, 캐시 기준 CSV 병합만 수행')
+    args = ap.parse_args()
+    output = args.output or args.input
+
+    df = pd.read_csv(args.input, dtype=str).fillna('')
+    print(f'입력: {args.input} (행 {len(df)}) → 출력: {output}')
+
+    handles = []
+    for v in df['트위터']:
+        for h in v.split(','):
+            h = h.strip()
+            if h and not h.startswith('bsky:'):
+                handles.append(h)
+    unique = sorted(set(handles))
+    if args.limit > 0:
+        unique = unique[:args.limit]
+    print(f'고유 트위터 핸들: {len(unique)}개 (bsky 제외)')
+
+    cache = load_cache()
+    todo = [h for h in unique if h not in cache]
+    print(f'캐시 확보: {len(unique) - len(todo)} / 미처리: {len(todo)}')
+
+    if not args.merge_only:
+        opts = Options()
+        if not args.no_headless:
+            opts.add_argument('--headless=new')
+        opts.add_argument('--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36')
+        opts.add_argument('--disable-blink-features=AutomationControlled')
+
+        driver = webdriver.Chrome(options=opts)
+        start = time.time()
+        abort = None
+        consec_bad = 0
+        for i, h in enumerate(todo, 1):
+            cnt, status = get_followers(driver, h)
+            cache[h] = {'followers': cnt, 'status': status}
+            save_cache(cache)
+            elapsed = int(time.time() - start)
+            rate = elapsed / i if i else 0
+            eta = int(rate * (len(todo) - i))
+            disp = cnt if cnt is not None else '-'
+            print(f'[{i:4d}/{len(todo)}] {h:25s} fol={disp!s:>8} ({status}) elapsed={elapsed}s eta={eta}s', flush=True)
+            if status == 'rate_limited':
+                abort = f'rate_limited 감지 — 즉시 중단 (계정: {h})'
+                break
+            if status == 'unknown' or status.startswith('error:'):
+                consec_bad += 1
+                if consec_bad >= CONSEC_FAIL_ABORT:
+                    abort = f'연속 실패 {consec_bad}건 — 차단 징후 의심, 중단 (계정: {h})'
+                    break
+            else:
+                consec_bad = 0
+            if i < len(todo):
+                time.sleep(random.uniform(args.delay_min, args.delay_max))
+            if args.rest_every and i % args.rest_every == 0 and i < len(todo):
+                rest = random.uniform(args.rest_min, args.rest_max)
+                print(f'--- {i}개 처리, {rest:.0f}초 휴식 ---', flush=True)
+                time.sleep(rest)
+        save_cache(cache)
+        driver.quit()
+        if abort:
+            print(f'중단: {abort}', flush=True)
+            sys.exit(2)
+
+        ok = sum(1 for v in cache.values() if v.get('status') == 'ok')
+        print(f'\n크롤링 완료: 확보 {ok} / {len(cache)}')
+
+    merge_into_csv(df, cache, output)
 
 
 if __name__ == '__main__':
