@@ -1,5 +1,13 @@
 # Work History
 
+## 2026-10-18 01:30 (KST)
+
+변경 파일: pipeline.py, normalize_works.py, scripts/build_db.py (수정), 루트 `*_부스정보_normalized.csv` 12개 (삭제), `data/processed/26년_7월_부스정보_normalized.csv` (삭제), `data/processed/normalized/*_부스정보_normalized.csv` 12개 (신규), analysis/matching_stats_v1.2.json·frequency_all_v1.2.csv·unmatched_v1.2.csv·matched_works_v1.2.csv (12회차 분모로 재생성), works.db, docs/Structure.md, docs/pipeline_usage.md, README.md
+변경 내용: RAW 12회차 전체(24년_1월~26년_10월) 장르·작품 코드 부여 전처리를 pipeline.py --all 로 전체 재실행하고 normalized 산출물을 단일 폴더 `data/processed/normalized/` 로 정리. ① pipeline.py·normalize_works.py에 `--outdir` 옵션 추가(pipeline 기본값 = data/processed/normalized/, normalize_works 기본값 = 기존대로 입력 옆), scripts/build_db.py 기본 glob도 동일 폴더로 변경. ② pipeline.py update_db를 회차 단위 DELETE 후 적재 방식으로 변경(부스 링크 집합이 줄어도 멱등 보장). ③ 루트에 흩어진 normalized 12개와 data/processed의 옛 26년_7월 normalized(행 순서·내용이 구버전)를 제거하고 12개를 data/processed/normalized/ 에 재생성 — 재생성 결과 기존 루트 산출물과 대표 작품(원작) 원문·코드·정규화 값이 전 회차 0셀 차이(칼럼 배치만 JWMI-7 방식으로 원작 옆 통일). ④ 검증: 회차별 normalized 행 수 = 부스정보 행 수 전부 일치(합계 16,187행), 셀 단위 매칭 matched 13,982/16,187 = 86.38%(유효 셀 기준 97.02%, 잔여 미매핑 214셀/103종, 판단 불가 139셀, 노이즈 77셀 — 기존 실측 11회차 matched 12,816셀/86.80%와 26년_10월 82.00% 정확히 재현), works.db booth_work 15,650행·booth_work_raw 16,187행·works 446종·built_at 갱신, pipeline 2회 연속 재실행 시 12개 normalized md5 전부 동일(결정적 재생성), 26년_7월·26년_10월의 팔로워수·미확보수 칼럼 행 단위 100% 보존(입력 부스정보와 불일치 0)
+사유: 이슈 JWMI-15/16 — normalized 산출물이 루트·data/processed 양쪽에 이원화된 문제 해소 및 전체 회차 재현성 확보
+
+---
+
 ## 2026-10-01 16:29 (KST)
 
 변경 파일: 26년_10월_부스정보_normalized.csv (갱신), docs/Work_History.md

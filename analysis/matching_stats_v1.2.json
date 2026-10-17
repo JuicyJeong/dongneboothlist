@@ -2,7 +2,7 @@
   "dict_version": "1.2",
   "metric_definitions": {
     "unit": "셀 단위 (대표 작품(원작) 칼럼 1셀 = 1 레코드)",
-    "denominator": "전체 셀 14,765 (빈 셀 포함)",
+    "denominator": "전체 셀 16,187 (빈 셀 포함)",
     "matched_cell": "작품 코드 1개 이상 부여된 셀",
     "match_rate": "matched_cells / cells (빈 셀 포함 분모)",
     "effective_match_rate": "matched_cells / (cells - empty_cells) — 빈 셀 제외 분모",
@@ -210,6 +210,33 @@
       },
       "matched_cells": 1212
     },
+    "26년_10월_부스정보.csv": {
+      "cells": 1422,
+      "cell_classes": {
+        "matched": 1166,
+        "unmatched": 85,
+        "uncertain": 9,
+        "noise": 1,
+        "empty": 161
+      },
+      "methods": {
+        "exact": 1298,
+        "empty": 161,
+        "unmatched": 292,
+        "noise": 16,
+        "exact_fallback": 109,
+        "exact_paren_inner": 11,
+        "exact_paren_stripped_fallback": 2,
+        "exact_paren_stripped": 46,
+        "uncertain": 10,
+        "normalized_fallback": 3,
+        "normalized": 17,
+        "fuzzy": 14,
+        "fuzzy_paren_stripped": 3,
+        "normalized_paren_inner": 8
+      },
+      "matched_cells": 1166
+    },
     "26년_1월_부스정보.csv": {
       "cells": 1411,
       "cell_classes": {
@@ -291,45 +318,45 @@
     }
   },
   "total": {
-    "cells": 14765,
+    "cells": 16187,
     "cell_classes": {
-      "matched": 12816,
-      "unmatched": 129,
-      "uncertain": 130,
-      "noise": 76,
-      "empty": 1614
+      "matched": 13982,
+      "unmatched": 214,
+      "uncertain": 139,
+      "noise": 77,
+      "empty": 1775
     },
     "methods": {
-      "empty": 1614,
-      "exact": 13274,
-      "exact_fallback": 344,
-      "noise": 265,
-      "uncertain": 133,
-      "exact_paren_stripped": 230,
-      "unmatched": 323,
-      "normalized": 150,
-      "normalized_fallback": 19,
-      "fuzzy": 85,
+      "empty": 1775,
+      "exact": 14572,
+      "exact_fallback": 453,
+      "noise": 281,
+      "uncertain": 143,
+      "exact_paren_stripped": 276,
+      "unmatched": 615,
+      "normalized": 167,
+      "normalized_fallback": 22,
+      "fuzzy": 99,
       "normalized_paren_stripped": 11,
       "exact_paren_inner_fallback": 1,
-      "exact_paren_inner": 15,
-      "fuzzy_paren_stripped": 6,
-      "exact_paren_stripped_fallback": 3,
-      "normalized_paren_stripped_fallback": 1,
-      "normalized_paren_inner": 1
+      "exact_paren_inner": 26,
+      "fuzzy_paren_stripped": 9,
+      "exact_paren_stripped_fallback": 5,
+      "normalized_paren_inner": 9,
+      "normalized_paren_stripped_fallback": 1
     },
-    "matched_cells": 12816,
-    "match_rate": 86.8,
-    "effective_cells": 13151,
-    "effective_match_rate": 97.45,
-    "processing_cells": 13022,
-    "processing_rate": 88.2,
-    "processing_rate_effective": 99.02,
-    "unmatched_cells": 129,
-    "unmatched_unique": 55,
-    "uncertain_cells": 130,
-    "noise_cells": 76,
-    "empty_cells": 1614,
+    "matched_cells": 13982,
+    "match_rate": 86.38,
+    "effective_cells": 14412,
+    "effective_match_rate": 97.02,
+    "processing_cells": 14198,
+    "processing_rate": 87.71,
+    "processing_rate_effective": 98.52,
+    "unmatched_cells": 214,
+    "unmatched_unique": 103,
+    "uncertain_cells": 139,
+    "noise_cells": 77,
+    "empty_cells": 1775,
     "matched_unique_works": 444
   }
 }

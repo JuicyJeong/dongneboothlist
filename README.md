@@ -13,7 +13,8 @@ src/          실행 소스 코드
   analytics/  부스 배치도·빈도 분석
 data/         버전 관리 대상 데이터
   raw/        API 수집 원본 CSV
-  processed/  정제·부스정보·정규화 CSV
+  processed/  정제·부스정보 CSV
+    normalized/  최종 정규화 산출물 (부스정보_normalized.csv 단일 폴더)
   reference/  행사 설정·작품 사전·매핑 사전
   cache/      재실행에 사용하는 팔로워 캐시
 artifacts/    재생성 가능한 결과물
@@ -37,6 +38,9 @@ python3 src/pipeline/batch_crawl.py
 
 # 작품명 정규화 통계(파일 미생성)
 python3 src/normalization/normalize_works.py --dry-run
+
+# 전체 회차 코드 부여·정규화 → data/processed/normalized/ + works.db 반영
+python3 pipeline.py --all
 
 # 26년 7월 부스 배치도 생성 → artifacts/maps/
 python3 src/analytics/generate_booth_map.py

@@ -20,7 +20,8 @@ dongneboothlist/
 │   └── analytics/                 # 배치도·빈도 시각화
 ├── data/                          # 입력·중간·참조 데이터
 │   ├── raw/                       # {YY년_M월}.csv 수집 원본
-│   ├── processed/                 # clean/부스정보/normalized CSV
+│   ├── processed/                 # clean/부스정보 중간 산출물
+│   │   └── normalized/            # 최종 정규화 산출물 단일 폴더 ({YY년_M월}_부스정보_normalized.csv 12개, JWMI-15/16)
 │   ├── reference/                 # 행사 설정·작품/부스 매핑 사전
 │   └── cache/                     # 재실행용 팔로워 캐시
 ├── artifacts/                     # 재생성 가능한 산출물
@@ -107,7 +108,7 @@ v2 API에서 부스 데이터를 수집하여 월별 CSV 생성.
 
 ## 데이터 현황
 
-### 월별 부스 데이터 (24년~26년, 11개월)
+### 월별 부스 데이터 (24년~26년, 12개월)
 | 월 | 부스 수 | 트위터 | 위치 |
 |---|---:|---:|---:|
 | 24년_1월 | 1,254 | 1,016 | 0 |
@@ -121,12 +122,13 @@ v2 API에서 부스 데이터를 수집하여 월별 CSV 생성.
 | 26년_1월 | 1,411 | 1,056 | 0 |
 | 26년_4월 | 1,483 | 1,135 | 1,483 |
 | 26년_7월 | 1,539 | 1,108 | 1,539 |
-| 26년_10월 | 1,430 | 997 | 1,430 |
-| **합계** | **16,195** | | |
+| 26년_10월 | 1,422 | 997 | 1,422 |
+| **합계** | **16,187** | | |
 
 > 위치 데이터는 26년_4월·7월·10월만 보유 (과거 행사는 dongne.co API에서 seatLabels 미제공)
-> 팔로워수는 26년_7월만 보유 (`팔로워수`·`미확보수` 컬럼)
-> 26년_10월은 2026-09-21 신규 수집분(JWMI-7)으로 v1.2 전체 매칭 통계(11개월 14,765셀) 분모에는 미포함
+> 팔로워수는 26년_7월·26년_10월 보유 (`팔로워수`·`미확보수` 컬럼)
+> RAW 부스정보 CSV는 루트와 data/processed 양쪽에 병존, 정규화 산출물(normalized)은
+> **data/processed/normalized/ 단일 폴더**에서만 관리 (JWMI-15/16, pipeline.py --all 재생성)
 
 ## 원작 작품명 정규화 시스템
 
@@ -138,10 +140,12 @@ v2 API에서 부스 데이터를 수집하여 월별 CSV 생성.
 ### 파일 구조 (추가)
 
 ```
-├── data/reference/WORK_DICTIONARY.json    # 작품 마스터 딕셔너리 (211개 작품)
-├── src/normalization/build_work_dictionary.py # 딕셔너리 빌드 스크립트
-├── src/normalization/normalize_works.py   # 정규화 스크립트 (4단계 매칭)
-└── data/processed/{YY년_M월}_부스정보_normalized.csv # 정규화 결과
+├── WORK_DICTIONARY.json                       # 작품 마스터 딕셔너리 (v1.2, 446종)
+├── pipeline.py                                # 정규화 → 미매핑 리포트 → DB 반영 단일 진입점
+├── normalize_works.py                         # 정규화 엔진
+├── scripts/build_db.py                        # normalized CSV → works.db 구축
+├── scripts/analyze_works.py                   # 셀 단위 매칭 통계 측정
+└── data/processed/normalized/{YY년_M월}_부스정보_normalized.csv  # 정규화 결과 (단일 폴더)
 ```
 
 ### WORK_DICTIONARY.json 구조
@@ -167,27 +171,28 @@ v2 API에서 부스 데이터를 수집하여 월별 CSV 생성.
 
 ### normalize_works.py 매칭 프로세스 (4단계)
 
-1. **exact**: 정확 매칭 (reverse_index 직접 조회)
+1. **exact**: 정확 매칭 (사전 인덱스 직접 조회)
 2. **normalized**: 공백/특수문자 제거 후 매칭
 3. **괄호 병기**: `정식명(약칭)` → 괄호 앞 텍스트 / 괄호 안 약칭 각각 매칭
 4. **fuzzy**: Levenshtein 거리 기반 유사도 매칭 (임계값 0.85)
 
 다중 작품(콤마 구분)은 전체 매칭 실패 시 분리 후 각각 적용.
 
-### 매칭 통계 (전체 14,765셀)
+### 매칭 통계 (v1.2 사전 기준 전체 12회차 16,187셀, 2026-10-18 실측)
 
-| 매칭 방식 | 건수 | 비율 |
+셀 단위 분류 (analyze_works.py 기준):
+
+| 셀 분류 | 건수 | 비율 |
 |---|---:|---:|
-| exact | 12,417 | 84.1% |
-| exact_paren_stripped | 191 | 1.3% |
-| normalized | 120 | 0.8% |
-| fuzzy | 68 | 0.5% |
-| exact_paren_inner | 23 | 0.2% |
-| **매칭 성공** | **11,461** | **77.6%** |
-| unmatched | 1,633 | 11.1% |
-| empty | 1,636 | 11.1% |
+| **matched** (코드 부여) | **13,982** | **86.38%** |
+| unmatched (사람 확인) | 214 | 1.32% |
+| uncertain (판단 불가) | 139 | 0.86% |
+| noise (작품 외 표기 확정) | 77 | 0.48% |
+| empty (빈 셀) | 1,775 | 10.97% |
 
-> 빈 값 제외 매칭률: **87.3%**
+- 빈 셀 제외 유효 매칭률: **97.02%**, 사용 작품 444종
+- 방식별(토큰 단위, 참고): exact 14,572 / exact_fallback 453 / exact_paren_stripped 276 / normalized 167 / fuzzy 99 외 소수
+- works.db: booth_work 15,650행 / booth_work_raw 16,187행 / works 446종
 
 ## 비고
 
@@ -198,8 +203,18 @@ v2 API에서 부스 데이터를 수집하여 월별 CSV 생성.
 - 28개 작품은 `review_needed: true` (정식 한국명 확인 필요)
 
 
-## JWMI-3 병합 산출물
+## 정규화 산출물 관리 (JWMI-15/16)
 
-승인 브랜치 `agent/agent/b5c8a31060a3`의 작품 정규화 산출물은 기존 루트 호환 경로에 함께 보관한다. `WORK_DICTIONARY.json`은 v1.2(446종) 작품 사전이고, `pipeline.py`는 정규화·미매핑 리포트·SQLite 반영을 순서대로 수행하는 단일 진입점이다. `works.db`에는 `works`, `booth_work`, `booth_work_raw`, `meta` 테이블을 저장한다.
+`*_부스정보_normalized.csv` 12개(24년_1월~26년_10월)는 `data/processed/normalized/`
+단일 폴더에서만 관리한다. 루트·data/processed 직하위의 normalized 파일은 제거되었으며,
+재생성은 `python3 pipeline.py --all` 로 수행한다(같은 폴더에 결정적 재생성 — 사전 버전이
+같으면 md5까지 동일). `pipeline.py --outdir <폴더>` 로 저장 위치를 바꿀 수 있다.
+26년_10월 파일은 `대표 작품(원작)` 바로 뒤에 `대표 작품(원작)_코드`, `대표 작품(원작)_정규화`
+칼럼을 두며(JWMI-7 방식), 전체 회차 재실행으로 전 회차가 동일 배치를 따른다.
+26년_7월·26년_10월은 `팔로워수`·`미확보수` 칼럼을 입력 부스정보에서 그대로 상속 보존한다.
 
-루트의 `*_부스정보_normalized.csv` 12개는 24년 1월부터 26년 10월까지의 회차별 정규화 결과이며, 26년 10월 파일은 `대표 작품(원작)` 바로 뒤에 `대표 작품(원작)_코드`, `대표 작품(원작)_정규화` 칼럼을 둔다. `analysis/`에는 v1.2 통계·미매핑 검토 목록·변경 세트, `scripts/`에는 분석·DB 구축·보고서 생성 도구를 둔다. 기존 `src/`, `data/`, `artifacts/` 디렉터리 구조와 이 루트 호환 산출물은 모두 유지한다.
+`works.db`에는 `works`, `booth_work`, `booth_work_raw`, `meta` 테이블을 저장하며,
+pipeline.py는 회차 단위로 기존 행을 삭제 후 적재하므로 재실행이 멱등하다.
+`analysis/`에는 v1.2 통계·미매핑 검토 목록(unmapped_review_*.csv)·변경 세트,
+`scripts/`에는 분석·DB 구축·보고서 생성 도구를 둔다. 기존 `src/`, `data/`, `artifacts/`
+디렉터리 구조와 RAW 부스정보의 루트·processed 병존은 유지한다.
