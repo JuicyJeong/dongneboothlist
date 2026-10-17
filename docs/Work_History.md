@@ -1,5 +1,13 @@
 # Work History
 
+## 2026-10-18 02:20 (KST)
+
+변경 파일: Agents/README.md·HISTORY.md·FEATURES.md (신규), docs/Structure.md (폴더 트리에 Agents/ 추가)
+변경 내용: 외부 플랫폼 에이전트가 저장소를 빠르게 이해할 수 있도록 Agents/ 요약 문서 3종 신설. README(개요·핵심 팩트·저장소 지도·주의사항), HISTORY(2024 초기 프로젝트부터 2026-10-18 재구조화까지 7단계 타임라인·남은 과제), FEATURES(기능 F1~F9 실행 방법·입출력, 파이프라인 도식, CSV/JSON/works.db 스키마, 12개월 데이터 보유 현황). 수치·경로는 master 최신 상태 기준(v1.2 사전 446종, 12회차 16,187부스, data/processed/normalized 단일 폴더, pipeline.py·works.db)으로 작성하고, 구버전 사본·클론 식별 주의사항 포함
+사유: 이슈 JWMI-17 — 다른 플랫폼 에이전트용 프로젝트 개요·진행 기록·기능 정리 문서 작성 및 master 반영
+
+---
+
 ## 2026-10-18 01:30 (KST)
 
 변경 파일: pipeline.py, normalize_works.py, scripts/build_db.py (수정), 루트 `*_부스정보_normalized.csv` 12개 (삭제), `data/processed/26년_7월_부스정보_normalized.csv` (삭제), `data/processed/normalized/*_부스정보_normalized.csv` 12개 (신규), analysis/matching_stats_v1.2.json·frequency_all_v1.2.csv·unmatched_v1.2.csv·matched_works_v1.2.csv (12회차 분모로 재생성), works.db, docs/Structure.md, docs/pipeline_usage.md, README.md

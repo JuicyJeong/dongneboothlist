@@ -10,6 +10,7 @@
 ```
 dongneboothlist/
 ├── AGENTS.md                      # 에이전트 작업 규칙
+├── Agents/                        # 외부 에이전트용 요약 문서 (README·HISTORY·FEATURES, JWMI-17)
 ├── README.md                      # 프로젝트 시작 안내
 ├── .gitignore                     # 로컬 캐시·런타임 파일 제외 규칙
 ├── src/                           # 실행 소스 코드
