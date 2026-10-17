@@ -7,13 +7,17 @@
 
 | 파일 | 역할 |
 |---|---|
-| `pipeline.py` | **단일 진입점** — 정규화 → 미매핑 리포트 → DB 반영 |
+| `pipeline.py` | **단일 진입점** — 정규화 → 미매핑 리포트 → DB 반영. normalized 출력 기본 위치: `data/processed/normalized/` |
 | `normalize_works.py` | 규칙 기반 정규화 엔진 (exact → normalized → 괄호 → fuzzy → 폴백 분리) |
 | `WORK_DICTIONARY.json` | 작품 사전 (v1.2, 446종). 별칭·약칭·노이즈·판단 불가 결정 포함 |
 | `scripts/llm_batch_map.py` | 미매핑 LLM 배치 2차: 내보내기/사전 반영 |
-| `scripts/build_db.py` | normalized CSV → SQLite(`works.db`) 구축 |
+| `scripts/build_db.py` | normalized CSV → SQLite(`works.db`) 구축 (기본 입력: `data/processed/normalized/`) |
 | `scripts/analyze_works.py` | 전체 회차 매칭 통계 측정 (`analysis/` 산출) |
 | `scripts/generate_v1_2_report.py` | v1.2 보고서 자동 생성 (`docs/work_dictionary_v1.2_report.md`) |
+
+> **산출물 위치 규칙 (JWMI-15/16)**: `*_부스정보_normalized.csv` 는
+> `data/processed/normalized/` 단일 폴더에서만 관리한다. 루트에 normalized 파일을
+> 만들지 않는다.
 
 ## 2. 신규 회차 처리 (기본 흐름)
 
@@ -25,7 +29,7 @@ python3 pipeline.py --input 26년_10월_부스정보.csv
 
 수행되는 단계:
 
-1. **① 정규화** — `26년_10월_부스정보_normalized.csv` 생성
+1. **① 정규화** — `data/processed/normalized/26년_10월_부스정보_normalized.csv` 생성
    - `대표 작품(원작)_코드` 컬럼: `W####` 코드 (`;` 구분) — **원문 칼럼 바로 옆**에 배치
      (2026-09-21, JWMI-7부터. 기존 회차 파일은 커밋 당시 산출물 유지, 재실행 시 새 배치 적용)
    - `대표 작품(원작)_정규화` 컬럼: 정규화된 작품명 (`;` 로 복수 작품 구분)
@@ -41,7 +45,11 @@ python3 pipeline.py --input a.csv --input b.csv   # 여러 파일 동시 처리
 python3 pipeline.py --all                          # 전체 회차 재구축
 python3 pipeline.py --input a.csv --skip-db        # DB 반영 생략
 python3 pipeline.py --input a.csv --db other.db --dict WORK_DICTIONARY.json
+python3 pipeline.py --all --outdir 임시폴더         # normalized 저장 폴더 변경 (기본: data/processed/normalized/)
 ```
+
+normalized 출력은 회차 단위 멱등 재구축이며, DB 반영도 해당 회차 기존 행을 삭제 후
+적재하므로 부스 링크 집합이 줄어든 회차를 다시 넣어도 잔여 행이 남지 않는다.
 
 ## 3. DB 스키마 (`works.db`)
 
@@ -105,6 +113,9 @@ python3 scripts/analyze_works.py --tag v1.3   # 커버리지 측정
 - **부스 링크**: DB 매핑의 키는 부스 링크(행사별 고유). 링크가 없는 행은
   `booth_work_raw`에만 기록되고 매핑 테이블에서 제외된다
 - **멱등성**: 같은 입력 + 같은 사전 버전이면 결과(정규화 CSV·DB)가 동일하다
-  (검증: `docs/preprocessing_pipeline_design.md` §6)
+  (검증: `docs/preprocessing_pipeline_design.md` §6, 12회차 전체 재실행 시
+  normalized 12개 md5 전부 동일 — 2026-10-18 실측)
+- **산출물 위치**: normalized CSV는 `data/processed/normalized/` 단일 폴더에만 존재한다.
+  루트 등 다른 위치에 생성된 옛 normalized 파일은 관리 대상이 아니다
 - `판단 불가` 결정은 사전 `metadata.llm_decisions`에 영속화되므로, 사전을 되돌리려면
   `analysis/WORK_DICTIONARY_v<이전버전>_backup.json`을 복원하면 된다

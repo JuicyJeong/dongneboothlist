@@ -4,10 +4,11 @@
 
 WORK_DICTIONARY.json 으로 works 마스터 테이블을, `*_부스정보_normalized.csv`로
 booth_work(부스-작품 매핑)·booth_work_raw(원문 보존) 테이블을 구축한다.
+normalized CSV 기본 위치는 `data/processed/normalized/` (JWMI-15/16).
 
 사용법:
   python3 scripts/build_db.py                     # 전체 회차 대상 (기본 works.db)
-  python3 scripts/build_db.py --input 26년_7월_부스정보_normalized.csv
+  python3 scripts/build_db.py --input data/processed/normalized/26년_7월_부스정보_normalized.csv
   python3 scripts/build_db.py --db works.db --append
 """
 
@@ -22,6 +23,8 @@ import sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DICT_PATH = os.path.join(BASE_DIR, "WORK_DICTIONARY.json")
+# normalized 산출물 단일 폴더 (JWMI-15/16 — pipeline.py DEFAULT_OUTDIR 와 동일)
+NORMALIZED_DIR = os.path.join(BASE_DIR, "data", "processed", "normalized")
 COLUMN_MAIN = "대표 작품(원작)"
 LINK_COL = "링크"
 UNCERTAIN_MARKER = "판단 불가"
@@ -180,7 +183,8 @@ def main():
     if args.input:
         files = [args.input]
     else:
-        files = sorted(glob.glob(os.path.join(BASE_DIR, "*_부스정보_normalized.csv")))
+        files = sorted(glob.glob(os.path.join(NORMALIZED_DIR,
+                                              "*_부스정보_normalized.csv")))
     if not files:
         sys.exit("입력 파일 없음 — normalize_works.py --all 먼저 실행")
 

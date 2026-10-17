@@ -409,8 +409,8 @@ def normalize_cell(raw, exact_index, norm_index, canonical, fuzzy_keys, fuzzy_th
 # ============================================================
 
 def process_file(filepath, exact_index, norm_index, canonical, fuzzy_keys,
-                 columns=None, dry_run=False, fuzzy_threshold=0.85):
-    """단일 CSV 파일 처리"""
+                 columns=None, dry_run=False, fuzzy_threshold=0.85, out_dir=None):
+    """단일 CSV 파일 처리 (out_dir 지정 시 해당 폴더에 normalized 저장, 기본은 입력 옆)"""
     if columns is None:
         columns = [COLUMN_MAIN]
 
@@ -459,6 +459,9 @@ def process_file(filepath, exact_index, norm_index, canonical, fuzzy_keys,
 
     if not dry_run:
         outpath = filepath.replace(".csv", "_normalized.csv")
+        if out_dir:
+            os.makedirs(out_dir, exist_ok=True)
+            outpath = os.path.join(out_dir, os.path.basename(outpath))
         with open(outpath, "w", encoding="utf-8", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=new_fieldnames)
             writer.writeheader()
@@ -478,6 +481,8 @@ def main():
                         help=f"정규화 대상 컬럼 (기본: '{COLUMN_MAIN}')")
     parser.add_argument("--fuzzy-threshold", type=float, default=0.85,
                         help="Fuzzy 매칭 임계값 (0~1, 기본: 0.85)")
+    parser.add_argument("--outdir", default=None,
+                        help="normalized CSV 저장 폴더 (미지정 시 입력 파일 옆)")
     parser.add_argument("--dict", default=DICT_PATH, help="딕셔너리 JSON 경로")
     args = parser.parse_args()
 
@@ -514,7 +519,7 @@ def main():
         methods, unmatched, cells = process_file(
             f, exact_index, norm_index, canonical, fuzzy_keys,
             columns=args.columns, dry_run=args.dry_run,
-            fuzzy_threshold=args.fuzzy_threshold
+            fuzzy_threshold=args.fuzzy_threshold, out_dir=args.outdir
         )
         total_methods += methods
         total_unmatched += unmatched

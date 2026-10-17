@@ -6,11 +6,12 @@
 
   ① 정규화 (규칙 기반, WORK_DICTIONARY.json v1.2+)
      → <회차>_부스정보_normalized.csv (_정규화/_코드 컬럼 추가)
+        저장 위치: data/processed/normalized/ (JWMI-15/16, --outdir 로 변경 가능)
   ② 미매핑 리포트 (사람 확인용)
      → analysis/unmapped_review_<event>.csv
      미매핑·판단 불가 고유 값 + 빈도 + 예시 부스. 조치 가이드 동봉
   ③ DB 반영 (SQLite)
-     → works 마스터 갱신 + booth_work/booth_work_raw 적재 (INSERT OR REPLACE, 멱등)
+     → works 마스터 갱신 + booth_work/booth_work_raw 적재 (회차 단위 재구축, 멱등)
 
 사용법:
   # 신규 회차 1건
@@ -54,17 +55,20 @@ from scripts.build_db import (  # noqa: E402
 )
 
 REPORT_DIR = os.path.join(BASE_DIR, "analysis")
+# normalized 산출물 단일 폴더 (JWMI-15/16 — 루트 산포 해소, Structure.md 참조)
+DEFAULT_OUTDIR = os.path.join(BASE_DIR, "data", "processed", "normalized")
 UNCERTAIN_MARKER = "판단 불가"
 
 
-def normalize_files(files, exact_index, norm_index, canonical, fuzzy_keys):
+def normalize_files(files, exact_index, norm_index, canonical, fuzzy_keys,
+                    out_dir=None):
     """① 정규화: 파일별 process_file 실행 → normalized CSV 저장. 결과 통계 반환"""
     results = []
     for path in files:
         fname = os.path.basename(path)
         print(f"① 정규화: {fname}")
         methods, unmatched, cells = process_file(
-            path, exact_index, norm_index, canonical, fuzzy_keys
+            path, exact_index, norm_index, canonical, fuzzy_keys, out_dir=out_dir
         )
         matched = (cells - methods.get("unmatched", 0) - methods.get("uncertain", 0)
                    - methods.get("noise", 0) - methods.get("empty", 0))
@@ -72,9 +76,12 @@ def normalize_files(files, exact_index, norm_index, canonical, fuzzy_keys):
               f"미매핑 {methods.get('unmatched', 0)} | "
               f"판단 불가 {methods.get('uncertain', 0)} | "
               f"노이즈 {methods.get('noise', 0)}")
+        outpath = path.replace(".csv", "_normalized.csv")
+        if out_dir:
+            outpath = os.path.join(out_dir, os.path.basename(outpath))
         results.append({
             "path": path,
-            "outpath": path.replace(".csv", "_normalized.csv"),
+            "outpath": outpath,
             "cells": cells,
             "methods": methods,
             "unmatched": unmatched,
@@ -128,6 +135,13 @@ def update_db(dict_path, db_path, normalized_paths):
     conn.commit()
     print(f"③ DB: works 마스터 갱신 (사전 v{version}, {len(works_rows)}종)")
 
+    # 회차 단위 재구축: 먼저 해당 회차 기존 행 제거 → 적재 (링크 축소 등 변화에도 멱등)
+    for path in normalized_paths:
+        event = extract_event(path)
+        cur.execute("DELETE FROM booth_work WHERE event = ?", (event,))
+        cur.execute("DELETE FROM booth_work_raw WHERE event = ?", (event,))
+    conn.commit()
+
     for path in normalized_paths:
         event = extract_event(path)
         n_map, n_raw, skipped = import_file(conn, path, event, cur)
@@ -149,6 +163,8 @@ def main():
     parser.add_argument("--all", action="store_true", help="전체 회차 대상")
     parser.add_argument("--dict", default=os.path.join(BASE_DIR, "WORK_DICTIONARY.json"))
     parser.add_argument("--db", default=os.path.join(BASE_DIR, "works.db"))
+    parser.add_argument("--outdir", default=DEFAULT_OUTDIR,
+                        help="normalized CSV 저장 폴더 (기본: data/processed/normalized/)")
     parser.add_argument("--skip-db", action="store_true", help="DB 반영 생략")
     args = parser.parse_args()
 
@@ -167,9 +183,11 @@ def main():
     data, exact_index, norm_index, canonical = load_dictionary(args.dict)
     fuzzy_keys = list(norm_index.keys())
     print(f"사전 v{data['metadata']['version']} "
-          f"({data['metadata']['total_works']}종) | 대상 {len(files)} 파일\n")
+          f"({data['metadata']['total_works']}종) | 대상 {len(files)} 파일")
+    print(f"정규화 출력 폴더: {args.outdir}\n")
 
-    results = normalize_files(files, exact_index, norm_index, canonical, fuzzy_keys)
+    results = normalize_files(files, exact_index, norm_index, canonical,
+                              fuzzy_keys, out_dir=args.outdir)
 
     print()
     for r in results:
